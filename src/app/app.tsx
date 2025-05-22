@@ -4,7 +4,7 @@ import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import { AuthProvider } from '@cnpm/context/AuthContext';
 import SignInPage from '@cnpm/pages/LoginPage';
-import SignUpPage from '@cnpm/pages/SignUpPage';
+import SignUpPage from '@cnpm/pages/SignUp';
 import LoginError from '@cnpm/pages/LoginError';
 import AuthLayout from '@cnpm/components/Protect/AuthLayout';
 import DashboardHoiOngThamInh from '@cnpm/pages/DashboardHoiOngThamInh';
