@@ -37,33 +37,34 @@
       "my-tailwind-app": [
         {
           "file": "my-tailwind-app/.gitignore",
-          "hash": "13046175384202504187"
+          "hash": "987422939859577920"
         },
         {
           "file": "my-tailwind-app/README.md",
-          "hash": "13160460843517416105"
+          "hash": "664786668162127796"
         },
         {
           "file": "my-tailwind-app/eslint.config.js",
-          "hash": "16145672096969245511",
+          "hash": "14295233468073832176",
           "deps": [
             "npm:@eslint/js",
             "npm:globals",
             "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
             "npm:typescript-eslint"
           ]
         },
         {
           "file": "my-tailwind-app/index.html",
-          "hash": "4025202329384162906"
+          "hash": "3523350244501711271"
         },
         {
           "file": "my-tailwind-app/package-lock.json",
-          "hash": "10479334102634539113"
+          "hash": "8192465933768645289"
         },
         {
           "file": "my-tailwind-app/package.json",
-          "hash": "2368834901205880777",
+          "hash": "1859934662684208150",
           "deps": [
             "npm:@eslint/js",
             "npm:@types/react",
@@ -72,6 +73,7 @@
             "npm:autoprefixer",
             "npm:eslint",
             "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
             "npm:globals",
             "npm:postcss",
             "npm:tailwindcss",
@@ -84,7 +86,7 @@
         },
         {
           "file": "my-tailwind-app/postcss.config.js",
-          "hash": "1121830044826443979"
+          "hash": "15693758819557691193"
         },
         {
           "file": "my-tailwind-app/public/vite.svg",
@@ -92,11 +94,11 @@
         },
         {
           "file": "my-tailwind-app/src/App.css",
-          "hash": "3739391659270974612"
+          "hash": "2229811984542628135"
         },
         {
           "file": "my-tailwind-app/src/App.tsx",
-          "hash": "11448401833549720588",
+          "hash": "2004724640422473290",
           "deps": [
             "npm:react"
           ]
@@ -107,11 +109,11 @@
         },
         {
           "file": "my-tailwind-app/src/index.css",
-          "hash": "13504153635654440336"
+          "hash": "1364477521051823897"
         },
         {
           "file": "my-tailwind-app/src/main.tsx",
-          "hash": "11038211546439381838",
+          "hash": "1718379431751548352",
           "deps": [
             "npm:react",
             "npm:react-dom"
@@ -119,27 +121,27 @@
         },
         {
           "file": "my-tailwind-app/src/vite-env.d.ts",
-          "hash": "12946363841406869089"
+          "hash": "7856441258253745083"
         },
         {
           "file": "my-tailwind-app/tailwind.config.js",
-          "hash": "1620497832093742526"
+          "hash": "8469637101210930101"
         },
         {
           "file": "my-tailwind-app/tsconfig.app.json",
-          "hash": "3992348939299782212"
+          "hash": "13666069508342255212"
         },
         {
           "file": "my-tailwind-app/tsconfig.json",
-          "hash": "2365188958523842680"
+          "hash": "11226547063925144724"
         },
         {
           "file": "my-tailwind-app/tsconfig.node.json",
-          "hash": "3588689360788834997"
+          "hash": "17396735955412213641"
         },
         {
           "file": "my-tailwind-app/vite.config.ts",
-          "hash": "16225914092815047172",
+          "hash": "13144531941992273019",
           "deps": [
             "npm:vite",
             "npm:@vitejs/plugin-react"
@@ -149,15 +151,15 @@
       "cnpm": [
         {
           "file": ".gitignore",
-          "hash": "1571298513858507829"
+          "hash": "6620801126839117273"
         },
         {
           "file": ".hintrc",
-          "hash": "17855454579832381556"
+          "hash": "12347858535335493825"
         },
         {
           "file": ".yarnrc.yml",
-          "hash": "9773565372686775399"
+          "hash": "2886304410880062839"
         },
         {
           "file": "README.md",
@@ -165,30 +167,30 @@
         },
         {
           "file": "components.json",
-          "hash": "15362494357004746468"
+          "hash": "12884828585499029755"
         },
         {
           "file": "eslint.config.js",
-          "hash": "18136715864555996736",
+          "hash": "9116547197535942104",
           "deps": [
             "npm:@nx/eslint-plugin"
           ]
         },
         {
           "file": "index.html",
-          "hash": "11808866594407685837"
+          "hash": "18138928427264801656"
         },
         {
           "file": "nx.json",
-          "hash": "9706462007831065814"
+          "hash": "12153306740945098677"
         },
         {
           "file": "package-lock.json",
-          "hash": "9952900550459174692"
+          "hash": "11802656907268674482"
         },
         {
           "file": "package.json",
-          "hash": "12988106625815515325",
+          "hash": "13884296118958105830",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/devkit",
@@ -302,11 +304,11 @@
         },
         {
           "file": "postcss.config.js",
-          "hash": "2759402739052110475"
+          "hash": "15486281244187232437"
         },
         {
           "file": "project.json",
-          "hash": "14690660575003423352"
+          "hash": "16482789854176462024"
         },
         {
           "file": "public/images.jpeg",
@@ -326,21 +328,21 @@
         },
         {
           "file": "src/api/auth.ts",
-          "hash": "11996697089215196794",
+          "hash": "12312489319429546331",
           "deps": [
             "npm:axios"
           ]
         },
         {
           "file": "src/app/app.spec.tsx",
-          "hash": "5542615320256913024",
+          "hash": "15782306847299412149",
           "deps": [
             "npm:@testing-library/react"
           ]
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "6276552307573247519",
+          "hash": "15049747444691700154",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -349,203 +351,73 @@
         },
         {
           "file": "src/app/nx-welcome.tsx",
-          "hash": "11014967127052082266"
+          "hash": "7595710991248642300"
         },
         {
           "file": "src/assets/react.svg",
           "hash": "16069471864800376455"
         },
         {
-          "file": "src/components/Admin/AddUserForm.tsx",
-          "hash": "3117616409403137317",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Admin/ApprovalSection.tsx",
-          "hash": "6248222495581945588",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Admin/UserTable.tsx",
-          "hash": "16398273684229505535",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Admin/types.ts",
-          "hash": "7298806207843946438"
-        },
-        {
           "file": "src/components/Header.tsx",
-          "hash": "872863086129378508",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/HoiDongThamDinh/PhaseProgress.tsx",
-          "hash": "3169348426670485946",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/HoiDongThamDinh/ProjectEvaluation.tsx",
-          "hash": "4145456362820857200",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/HoiDongThamDinh/StatusIndicator.tsx",
-          "hash": "11922208183338095203",
+          "hash": "12340524010842122468",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Icons/GoogleIcon.tsx",
-          "hash": "10511001869440559926"
+          "hash": "14633325218810905667"
         },
         {
           "file": "src/components/Icons/UserIcon.tsx",
-          "hash": "17374983800139100890"
+          "hash": "5574534104732821718"
         },
         {
           "file": "src/components/Log In Error/ErrorMessage.tsx",
-          "hash": "4883878513843537465",
+          "hash": "7977255784282006121",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Log In Error/FormInput.tsx",
-          "hash": "1542227349496807842"
+          "hash": "13631418849398563273"
         },
         {
           "file": "src/components/Log In Error/Icons.tsx",
-          "hash": "6925858403893277148"
+          "hash": "5104765649108822062"
         },
         {
           "file": "src/components/Log In Error/LoginFormError.tsx",
-          "hash": "15187895781217893766",
+          "hash": "13562066504886536175",
           "deps": [
             "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Protect/AuthLayout.tsx",
-          "hash": "9352693911210191922",
-          "deps": [
-            "npm:react-router-dom"
           ]
         },
         {
           "file": "src/components/Protect/PublicRoute.tsx",
-          "hash": "14962962224724910641",
+          "hash": "6683752617603433408",
           "deps": [
             "npm:react-router-dom"
           ]
         },
         {
-          "file": "src/components/QuanTriVien/MainContent.tsx",
-          "hash": "8612161610635363994",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/NavigationItem.tsx",
-          "hash": "8438804442671055972",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/RoleActionButton.tsx",
-          "hash": "13168722477354236029",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/RoleFilter.tsx",
-          "hash": "7046656600897764932",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/SidebarNavItem.tsx",
-          "hash": "1113363407271002044",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/SystemConfigCard.tsx",
-          "hash": "9034485194254704702",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/TimeFilter.tsx",
-          "hash": "11535788343518794059",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/UserInteractionChart.tsx",
-          "hash": "333260196519798546",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/UserList.tsx",
-          "hash": "13671392353787360918",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/UserPerformanceChart.tsx",
-          "hash": "3701925403606227163",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/QuanTriVien/UserRoleFilter.tsx",
-          "hash": "6356047739922516523",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
           "file": "src/components/Sidebar.tsx",
-          "hash": "8194806276900828835",
+          "hash": "9115997385443466361",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Sign In/LoginForm.tsx",
-          "hash": "13712254122929362318",
+          "hash": "10496357234045899109",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Sign In/NewPassWordForm.tsx",
-          "hash": "15043673869551513888",
+          "hash": "2845378227194428791",
           "deps": [
             "npm:react",
             "npm:formik",
@@ -554,7 +426,7 @@
         },
         {
           "file": "src/components/Sign In/ResetCodeForm.tsx",
-          "hash": "2117138873468026487",
+          "hash": "13716498688526510492",
           "deps": [
             "npm:react",
             "npm:formik",
@@ -563,35 +435,35 @@
         },
         {
           "file": "src/components/Sign Up/Button.tsx",
-          "hash": "11354922186170937865",
+          "hash": "15719585327528647783",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Sign Up/FormInput.tsx",
-          "hash": "11750277442836684145",
+          "hash": "9624141323740102807",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Sign Up/SelectField.tsx",
-          "hash": "15359637236448118182",
+          "hash": "3378347990678354019",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Sign Up/SignUpForm.tsx",
-          "hash": "3404350292423489185",
+          "hash": "11927229655863674293",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/ui/button.tsx",
-          "hash": "17804482923991153709",
+          "hash": "16235962216280831508",
           "deps": [
             "npm:react",
             "npm:@radix-ui/react-slot",
@@ -600,14 +472,14 @@
         },
         {
           "file": "src/components/ui/input.tsx",
-          "hash": "13649277834125760017",
+          "hash": "5805451879564388545",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/context/AuthContext.tsx",
-          "hash": "5472789045373484377",
+          "hash": "11807735539464729734",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -615,11 +487,11 @@
         },
         {
           "file": "src/env.d.ts",
-          "hash": "11016168124724967822"
+          "hash": "14899451248460824987"
         },
         {
           "file": "src/i18n/i18n.ts",
-          "hash": "17717553934123311592",
+          "hash": "6365392923146666818",
           "deps": [
             "npm:i18next",
             "npm:react-i18next"
@@ -627,14 +499,14 @@
         },
         {
           "file": "src/layouts/MainLayout.tsx",
-          "hash": "14028835702855839308",
+          "hash": "3515214870242998692",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/lib/utils.ts",
-          "hash": "6483145186850064023",
+          "hash": "12218829721157087250",
           "deps": [
             "npm:clsx",
             "npm:tailwind-merge"
@@ -642,15 +514,15 @@
         },
         {
           "file": "src/locales/en/home.json",
-          "hash": "15946693221110358903"
+          "hash": "5567571290447500493"
         },
         {
           "file": "src/locales/vi/home.json",
-          "hash": "18121643604651804553"
+          "hash": "11334599310903858532"
         },
         {
           "file": "src/main.tsx",
-          "hash": "6417444255490778096",
+          "hash": "6155404822026982462",
           "deps": [
             "npm:react",
             "npm:react-dom",
@@ -659,102 +531,67 @@
           ]
         },
         {
-          "file": "src/pages/AdminDashboard.tsx",
-          "hash": "13889735174598021943",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/pages/DashboardHoiOngThamInh.tsx",
-          "hash": "12728972097967722632",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/pages/DashboardQuanTriVien.tsx",
-          "hash": "1636776396463921597",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/pages/DashboardQuanTriVien1.tsx",
-          "hash": "14642264652893785362",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/pages/DashboardQuanTriVien2.tsx",
-          "hash": "16955646552853785250",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
           "file": "src/pages/LoginError.tsx",
-          "hash": "14277956673633728683",
+          "hash": "15981558077990413253",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/LoginPage.tsx",
-          "hash": "4463562937061738661",
+          "hash": "12807022449900120787",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/SignUp.tsx",
-          "hash": "14591053359267064792",
+          "hash": "10046134553616499244",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/services/authService.ts",
-          "hash": "1242027388459318114",
+          "hash": "12874550678221857218",
           "deps": [
             "npm:axios"
           ]
         },
         {
           "file": "src/services/googleAuthService..ts",
-          "hash": "6636172281195666804"
+          "hash": "10956469487862047109"
         },
         {
           "file": "src/services/userService.ts",
-          "hash": "1639761978780576579"
+          "hash": "11675150411643413906"
         },
         {
           "file": "src/styles.css",
-          "hash": "2842605344706737863"
+          "hash": "3405621592298858450"
         },
         {
           "file": "tailwind.config.js",
-          "hash": "7841738320396045976",
+          "hash": "16792088590203679767",
           "deps": [
             "npm:tailwindcss-animate"
           ]
         },
         {
           "file": "tsconfig.app.json",
-          "hash": "6671581860431718916"
+          "hash": "14378508959832581890"
         },
         {
           "file": "tsconfig.json",
-          "hash": "10731327959317677335"
+          "hash": "4644667494561397137"
         },
         {
           "file": "tsconfig.spec.json",
-          "hash": "11569345746867643185"
+          "hash": "6375373498342785011"
         },
         {
           "file": "vite.config.ts",
-          "hash": "9658526385393904696",
+          "hash": "9365291261218723075",
           "deps": [
             "npm:vite",
             "npm:@vitejs/plugin-react",
@@ -763,7 +600,7 @@
         },
         {
           "file": "yarn.lock",
-          "hash": "2288038161052201161"
+          "hash": "12188176521840263363"
         }
       ]
     }

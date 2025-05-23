@@ -15,7 +15,6 @@ export const SignUpForm: React.FC = () => {
       </p>
 
       <div className="self-stretch">
-        <FormInput placeholder="Mã thành viên" className="mb-6" />
         <FormInput
           label="Email:"
           placeholder="fe@ut.edu.vn"
@@ -28,8 +27,6 @@ export const SignUpForm: React.FC = () => {
           type="password"
           className="mb-6"
         />
-        <SelectField placeholder="Vai trò" />
-
         <div className="mt-5">
           <Button variant="primary" className="py-3.5 pb-5">
             Tạo

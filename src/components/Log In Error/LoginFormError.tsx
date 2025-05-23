@@ -31,9 +31,11 @@ export function LoginFormError() {
         </div>
         <h1 className="mt-4 text-3xl font-bold text-gray-700">XIN CHÀO !</h1>
       </div>
-      <div className="p-3.5 mb-6 text-base font-bold text-center text-red-900 bg-rose-200 rounded-lg" role="alert">
-        Đăng nhập không hợp lệ, vui lòng thử lại
-      </div>
+      <div className="p-3.5 mb-6 text-sm font-medium text-center text-red-900 bg-rose-200 rounded-lg"
+  role="alert">
+  Đăng nhập không hợp lệ, vui lòng thử lại
+    </div>
+
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <div className="flex flex-col gap-1">
           <label htmlFor="email" className="text-sm font-semibold text-gray-700">
