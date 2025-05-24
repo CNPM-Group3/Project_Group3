@@ -1,0 +1,608 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.8.2",
+  "pathMappings": {
+    "@cnpm/*": [
+      "src/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "my-tailwind-app": [
+        {
+          "file": "my-tailwind-app/.gitignore",
+          "hash": "987422939859577920"
+        },
+        {
+          "file": "my-tailwind-app/README.md",
+          "hash": "664786668162127796"
+        },
+        {
+          "file": "my-tailwind-app/eslint.config.js",
+          "hash": "14295233468073832176",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:globals",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:typescript-eslint"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/index.html",
+          "hash": "3523350244501711271"
+        },
+        {
+          "file": "my-tailwind-app/package-lock.json",
+          "hash": "8192465933768645289"
+        },
+        {
+          "file": "my-tailwind-app/package.json",
+          "hash": "1859934662684208150",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:autoprefixer",
+            "npm:eslint",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:globals",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/postcss.config.js",
+          "hash": "15693758819557691193"
+        },
+        {
+          "file": "my-tailwind-app/public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "my-tailwind-app/src/App.css",
+          "hash": "2229811984542628135"
+        },
+        {
+          "file": "my-tailwind-app/src/App.tsx",
+          "hash": "2004724640422473290",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/src/assets/react.svg",
+          "hash": "16069471864800376455"
+        },
+        {
+          "file": "my-tailwind-app/src/index.css",
+          "hash": "1364477521051823897"
+        },
+        {
+          "file": "my-tailwind-app/src/main.tsx",
+          "hash": "1718379431751548352",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/src/vite-env.d.ts",
+          "hash": "7856441258253745083"
+        },
+        {
+          "file": "my-tailwind-app/tailwind.config.js",
+          "hash": "8469637101210930101"
+        },
+        {
+          "file": "my-tailwind-app/tsconfig.app.json",
+          "hash": "13666069508342255212"
+        },
+        {
+          "file": "my-tailwind-app/tsconfig.json",
+          "hash": "11226547063925144724"
+        },
+        {
+          "file": "my-tailwind-app/tsconfig.node.json",
+          "hash": "17396735955412213641"
+        },
+        {
+          "file": "my-tailwind-app/vite.config.ts",
+          "hash": "13144531941992273019",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ],
+      "cnpm": [
+        {
+          "file": ".gitignore",
+          "hash": "6620801126839117273"
+        },
+        {
+          "file": ".hintrc",
+          "hash": "12347858535335493825"
+        },
+        {
+          "file": ".yarnrc.yml",
+          "hash": "2886304410880062839"
+        },
+        {
+          "file": "README.md",
+          "hash": "17672139874103256258"
+        },
+        {
+          "file": "components.json",
+          "hash": "12884828585499029755"
+        },
+        {
+          "file": "eslint.config.js",
+          "hash": "9116547197535942104",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "index.html",
+          "hash": "18138928427264801656"
+        },
+        {
+          "file": "nx.json",
+          "hash": "12153306740945098677"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "11802656907268674482"
+        },
+        {
+          "file": "package.json",
+          "hash": "13884296118958105830",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@nx/devkit",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/js",
+            "npm:@nx/playwright",
+            "npm:@nx/react",
+            "npm:@nx/vite",
+            "npm:@nx/web",
+            "npm:@nx/workspace",
+            "npm:@playwright/test",
+            "npm:@swc-node/register",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@tanstack/eslint-plugin-query",
+            "npm:@testing-library/react",
+            "npm:@types/d3-format",
+            "npm:@types/d3-time-format",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/react-router-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:@vitest/coverage-v8",
+            "npm:@vitest/ui",
+            "npm:autoprefixer",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-playwright",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:jsdom",
+            "npm:nx",
+            "npm:postcss",
+            "npm:prettier",
+            "npm:tailwindcss",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:vitest",
+            "npm:@casl/ability",
+            "npm:@casl/react",
+            "npm:@heroicons/react",
+            "npm:@radix-ui/react-alert-dialog",
+            "npm:@radix-ui/react-avatar",
+            "npm:@radix-ui/react-dialog",
+            "npm:@radix-ui/react-menubar",
+            "npm:@radix-ui/react-separator",
+            "npm:@radix-ui/react-slot",
+            "npm:@radix-ui/react-tooltip",
+            "npm:@react-financial-charts/annotations",
+            "npm:@react-financial-charts/axes",
+            "npm:@react-financial-charts/coordinates",
+            "npm:@react-financial-charts/indicators",
+            "npm:@react-financial-charts/interactive",
+            "npm:@react-financial-charts/series",
+            "npm:@react-financial-charts/tooltip",
+            "npm:@react-financial-charts/utils",
+            "npm:@react-oauth/google",
+            "npm:@tanstack/react-query",
+            "npm:@tanstack/react-query-devtools",
+            "npm:apexcharts",
+            "npm:axios",
+            "npm:chart.js",
+            "npm:chartjs-adapter-date-fns",
+            "npm:chartjs-chart-financial",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:d3",
+            "npm:d3-format",
+            "npm:d3-time-format",
+            "npm:dayjs",
+            "npm:dotenv",
+            "npm:formik",
+            "npm:i18next",
+            "npm:jwt-decode",
+            "npm:lucide-react",
+            "npm:moment",
+            "npm:moment-timezone",
+            "npm:react",
+            "npm:react-apexcharts",
+            "npm:react-chartjs-2",
+            "npm:react-d3-axis",
+            "npm:react-dom",
+            "npm:react-financial-charts",
+            "npm:react-i18next",
+            "npm:react-icons",
+            "npm:react-router-dom",
+            "npm:react-toastify",
+            "npm:recharts",
+            "npm:shadcn-cli",
+            "npm:shadcn-ui",
+            "npm:socket.io",
+            "npm:socket.io-client",
+            "npm:tailwind-merge",
+            "npm:tailwind-scrollbar-hide",
+            "npm:tailwindcss-animate",
+            "npm:toastify",
+            "npm:victory",
+            "npm:victory-chart",
+            "npm:vite-tsconfig-paths",
+            "npm:yarn",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "postcss.config.js",
+          "hash": "15486281244187232437"
+        },
+        {
+          "file": "project.json",
+          "hash": "16482789854176462024"
+        },
+        {
+          "file": "public/images.jpeg",
+          "hash": "2171559228581418362"
+        },
+        {
+          "file": "public/images/download (1).jpeg",
+          "hash": "711581090774610528"
+        },
+        {
+          "file": "public/images/images1.png",
+          "hash": "3479805116032819782"
+        },
+        {
+          "file": "public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "src/api/auth.ts",
+          "hash": "12312489319429546331",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/app/app.spec.tsx",
+          "hash": "15782306847299412149",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "src/app/app.tsx",
+          "hash": "15049747444691700154",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:@react-oauth/google"
+          ]
+        },
+        {
+          "file": "src/app/nx-welcome.tsx",
+          "hash": "7595710991248642300"
+        },
+        {
+          "file": "src/assets/react.svg",
+          "hash": "16069471864800376455"
+        },
+        {
+          "file": "src/components/Header.tsx",
+          "hash": "12340524010842122468",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Icons/GoogleIcon.tsx",
+          "hash": "14633325218810905667"
+        },
+        {
+          "file": "src/components/Icons/UserIcon.tsx",
+          "hash": "5574534104732821718"
+        },
+        {
+          "file": "src/components/Log In Error/ErrorMessage.tsx",
+          "hash": "7977255784282006121",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Log In Error/FormInput.tsx",
+          "hash": "13631418849398563273"
+        },
+        {
+          "file": "src/components/Log In Error/Icons.tsx",
+          "hash": "5104765649108822062"
+        },
+        {
+          "file": "src/components/Log In Error/LoginFormError.tsx",
+          "hash": "13562066504886536175",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Protect/PublicRoute.tsx",
+          "hash": "6683752617603433408",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/Sidebar.tsx",
+          "hash": "9115997385443466361",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign In/LoginForm.tsx",
+          "hash": "10496357234045899109",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign In/NewPassWordForm.tsx",
+          "hash": "2845378227194428791",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "src/components/Sign In/ResetCodeForm.tsx",
+          "hash": "13716498688526510492",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/Button.tsx",
+          "hash": "15719585327528647783",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/FormInput.tsx",
+          "hash": "9624141323740102807",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/SelectField.tsx",
+          "hash": "3378347990678354019",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/SignUpForm.tsx",
+          "hash": "11927229655863674293",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ui/button.tsx",
+          "hash": "16235962216280831508",
+          "deps": [
+            "npm:react",
+            "npm:@radix-ui/react-slot",
+            "npm:class-variance-authority"
+          ]
+        },
+        {
+          "file": "src/components/ui/input.tsx",
+          "hash": "5805451879564388545",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/context/AuthContext.tsx",
+          "hash": "11807735539464729734",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/env.d.ts",
+          "hash": "14899451248460824987"
+        },
+        {
+          "file": "src/i18n/i18n.ts",
+          "hash": "6365392923146666818",
+          "deps": [
+            "npm:i18next",
+            "npm:react-i18next"
+          ]
+        },
+        {
+          "file": "src/layouts/MainLayout.tsx",
+          "hash": "3515214870242998692",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/lib/utils.ts",
+          "hash": "12218829721157087250",
+          "deps": [
+            "npm:clsx",
+            "npm:tailwind-merge"
+          ]
+        },
+        {
+          "file": "src/locales/en/home.json",
+          "hash": "5567571290447500493"
+        },
+        {
+          "file": "src/locales/vi/home.json",
+          "hash": "11334599310903858532"
+        },
+        {
+          "file": "src/main.tsx",
+          "hash": "6155404822026982462",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@tanstack/react-query",
+            "npm:@tanstack/react-query-devtools"
+          ]
+        },
+        {
+          "file": "src/pages/LoginError.tsx",
+          "hash": "15981558077990413253",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/LoginPage.tsx",
+          "hash": "12807022449900120787",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/SignUp.tsx",
+          "hash": "10046134553616499244",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/services/authService.ts",
+          "hash": "12874550678221857218",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/googleAuthService..ts",
+          "hash": "10956469487862047109"
+        },
+        {
+          "file": "src/services/userService.ts",
+          "hash": "11675150411643413906"
+        },
+        {
+          "file": "src/styles.css",
+          "hash": "3405621592298858450"
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "16792088590203679767",
+          "deps": [
+            "npm:tailwindcss-animate"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "14378508959832581890"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "4644667494561397137"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "6375373498342785011"
+        },
+        {
+          "file": "vite.config.ts",
+          "hash": "9365291261218723075",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": "yarn.lock",
+          "hash": "12188176521840263363"
+        }
+      ]
+    }
+  }
+}
