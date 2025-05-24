@@ -9,7 +9,7 @@ export const Icons = {
     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g>
         <circle cx="10" cy="8" r="3" fill="#4DB686"/>
-        <circle cx="4" cy="6" r="2" fill="#4DB686"/>
+        <circle cx="5" cy="7" r="3" fill="#4DB686"/>
         <circle cx="16" cy="6" r="2" fill="#4DB686"/>
         <path d="M10 11C6.686 11 4 12.343 4 14V15H16V14C16 12.343 13.314 11 10 11Z" fill="#4DB686"/>
         <path d="M4 8C2.343 8 1 9.343 1 11V12H7V11C7 9.343 5.657 8 4 8Z" fill="#4DB686"/>
