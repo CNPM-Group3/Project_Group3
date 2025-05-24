@@ -28,13 +28,12 @@ namespace SRPM.Data.Entities
         public string? SocialLinks { get; set; }
 
         public string? GoogleId { get; set; }
-        public string? VerificationCode { get; set; }
-
-        public bool IsEmailVerified { get; set; } = false;
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? UpdatedAt { get; set; }
+        public string? VerificationCode { get; set; }
 
+        public bool IsEmailVerified { get; set; } = false;
         // Navigation properties
         public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
         public ICollection<ProjectMember> ProjectMembers { get; set; } = new List<ProjectMember>();
