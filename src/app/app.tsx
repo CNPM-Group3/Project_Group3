@@ -9,7 +9,7 @@ import LoginError from '@cnpm/pages/LoginError';
 import { PublicRoute } from '@cnpm/components/Protect/PublicRoute';
 import DuAn from '@cnpm/pages/DuAn';
 import Profile from '@cnpm/pages/Profile';
-
+import ThanhVienNghienCuu from '@cnpm/pages/ThanhVienNghienCuu';
 
 
 export function App() {
@@ -29,6 +29,7 @@ export function App() {
               <Route path="/login-error" element={<LoginError />} />
               <Route path="/duan" element={<DuAn />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu />} />
             </Route>
           </Routes>
         </Router>

@@ -336,7 +336,11 @@
         },
         {
           "file": "src/app/app.tsx",
+<<<<<<< HEAD
           "hash": "17363572672675639591",
+=======
+          "hash": "10443996830495414915",
+>>>>>>> main
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -484,6 +488,28 @@
           ]
         },
         {
+<<<<<<< HEAD
+=======
+          "file": "src/components/TrangChuThanhVienNghienCuu/Icons.tsx",
+          "hash": "2316674806411268416"
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/ProjectsTable.tsx",
+          "hash": "3974394702082708447"
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/Sidebar.tsx",
+          "hash": "4766608127895756965",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/StatsCard.tsx",
+          "hash": "10210749579393364225"
+        },
+        {
+>>>>>>> main
           "file": "src/components/ui/button.tsx",
           "hash": "17804482923991153709",
           "deps": [
@@ -588,6 +614,16 @@
           ]
         },
         {
+<<<<<<< HEAD
+=======
+          "file": "src/pages/ThanhVienNghienCuu.tsx",
+          "hash": "3869126228602738698",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+>>>>>>> main
           "file": "src/services/authService.ts",
           "hash": "1242027388459318114",
           "deps": [
