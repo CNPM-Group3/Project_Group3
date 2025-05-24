@@ -2,13 +2,15 @@ using Microsoft.IdentityModel.Tokens;
 using SRPM.API.Models;
 using SRPM.Data.Entities;
 using SRPM.Data.Repositories;
+using SRPM.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using Task = System.Threading.Tasks.Task;
-using Google.Apis.Auth;
+using Google.Apis.Auth; 
+using Microsoft.EntityFrameworkCore;
 
 namespace SRPM.API.Services
 {
@@ -16,28 +18,15 @@ namespace SRPM.API.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
-
+        private readonly ApplicationDbContext _dbContext;
+        // public AuthService(ApplicationDbContext dbContext)
+        // {
+        //     _dbContext = dbContext;
+        // }
         public AuthService(IUserRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
             _configuration = configuration;
-        }
-        private async Task<GoogleJsonWebSignature.Payload?> VerifyGoogleTokenAsync(string idToken)
-        {
-            try
-            {
-                var settings = new GoogleJsonWebSignature.ValidationSettings()
-                {
-                    Audience = new[] { _configuration["Google:ClientId"] } // ID này từ Google Cloud Console
-                };
-
-                var payload = await GoogleJsonWebSignature.ValidateAsync(idToken, settings);
-                return payload;
-            }
-            catch (Exception)
-            {
-                return null; // Token không hợp lệ
-            }
         }
 
         public async Task<AuthResponse> LoginAsync(LoginRequest request)
@@ -84,12 +73,12 @@ namespace SRPM.API.Services
         public async Task<AuthResponse> RegisterAsync(RegisterRequest request)
         {
             // Check if the email domain is valid
-            if (!request.Email.EndsWith("@fe.edu.vn"))
+            if (!request.Email.EndsWith("@ut.edu.vn"))
             {
                 return new AuthResponse
                 {
                     Success = false,
-                    Message = "Only users with @fe.edu.vn email domain are allowed to register."
+                    Message = "Only users with @ut.edu.vn email domain are allowed to register."
                 };
             }
 
@@ -166,7 +155,14 @@ namespace SRPM.API.Services
                 claims.Add(new Claim(ClaimTypes.Role, role.Name));
             }
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var jwtKey = _configuration["Jwt:Key"];
+            if (string.IsNullOrEmpty(jwtKey))
+            {
+                throw new InvalidOperationException("JWT key is missing from configuration.");
+            }
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
+
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expires = DateTime.Now.AddMinutes(Convert.ToDouble(_configuration["Jwt:ExpiryInMinutes"]));
 
@@ -266,6 +262,75 @@ namespace SRPM.API.Services
                     Name = user.Name,
                     Roles = (await _userRepository.GetUserRolesAsync(user.Id)).Select(r => r.Name).ToList()
                 }
+            };
+        }
+        
+        private async Task<GoogleJsonWebSignature.Payload?> VerifyGoogleTokenAsync(string googleToken)
+        {
+            try
+            {
+                var settings = new GoogleJsonWebSignature.ValidationSettings()
+                {
+                    Audience = new List<string> { _configuration["Google:ClientId"] }
+                };
+
+                var payload = await GoogleJsonWebSignature.ValidateAsync(googleToken, settings);
+                return payload;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Google token validation failed: " + ex.Message);
+                return null;
+            }
+        }
+        public async Task<AuthResponse> VerifyEmailAsync(VerifyEmailRequest request)
+        {
+            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == request.Email);
+            if (user == null)
+            {
+                return new AuthResponse
+                {
+                    Success = false,
+                    Message = "User not found"
+                };
+            }
+
+            if (user.VerificationCode != request.VerificationCode)
+            {
+                return new AuthResponse
+                {
+                    Success = false,
+                    Message = "Invalid verification code"
+                };
+            }
+
+            user.IsEmailVerified = true;
+            user.VerificationCode = null;
+            await _dbContext.SaveChangesAsync();
+
+            return new AuthResponse
+            {
+                Success = true,
+                Message = "Email verified successfully"
+            };
+        }
+        public async Task<AuthResponse> SendOtpForRegisterAsync(SendOtpRequest request)
+        {
+            // Dummy logic nếu chưa dùng MailKit:
+            if (string.IsNullOrWhiteSpace(request.Email))
+            {
+                return new AuthResponse { Success = false, Message = "Email is required." };
+            }
+
+            var otp = new Random().Next(100000, 999999).ToString();
+            Console.WriteLine($"[OTP] Sending to {request.Email}: {otp}");
+
+            // TODO: Lưu otp vào cache và gửi email bằng MailKit sau khi cài được package
+
+            return new AuthResponse
+            {
+                Success = true,
+                Message = "OTP has been sent to your email (mocked)."
             };
         }
 

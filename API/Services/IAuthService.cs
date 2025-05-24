@@ -10,6 +10,7 @@ namespace SRPM.API.Services
         Task<AuthResponse> RegisterAsync(RegisterRequest request);
         Task<string> GenerateJwtTokenAsync(User user);
         Task<AuthResponse> LoginWithGoogleAsync(GoogleLoginRequest request);
-
+        Task<AuthResponse> VerifyEmailAsync(VerifyEmailRequest request);
+        Task<AuthResponse> SendOtpForRegisterAsync(SendOtpRequest request);
     }
 }
