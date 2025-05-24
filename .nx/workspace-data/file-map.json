@@ -224,7 +224,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "11765876676977863318",
+          "hash": "7389677012524558879",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -541,6 +541,34 @@
           ]
         },
         {
+          "file": "src/components/Tài Trợ/ProgressBar.tsx",
+          "hash": "16160566171485536504",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Tài Trợ/SearchInput.tsx",
+          "hash": "10459861275788114305",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Tài Trợ/Sidebar.tsx",
+          "hash": "2420422619252127437",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Tài Trợ/SponsorshipTable.tsx",
+          "hash": "17653195880480388954",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
           "file": "src/components/ui/button.tsx",
           "hash": "17804482923991153709",
           "deps": [
@@ -675,6 +703,13 @@
         {
           "file": "src/pages/SignUp.tsx",
           "hash": "14591053359267064792",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/TaiTro.tsx",
+          "hash": "4016788262263711530",
           "deps": [
             "npm:react"
           ]
