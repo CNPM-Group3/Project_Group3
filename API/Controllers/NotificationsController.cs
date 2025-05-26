@@ -56,5 +56,15 @@ namespace SRPM.API.Controllers
 
             return NoContent();
         }
+        [HttpPatch("mark-all-as-read")]
+        public async Task<ActionResult> MarkAllAsRead()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var success = await _notificationService.MarkAllAsReadAsync(userId);
+            if (!success)
+                return BadRequest();
+
+            return NoContent();
+        }
     }
 }
