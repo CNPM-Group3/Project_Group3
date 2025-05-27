@@ -8,21 +8,17 @@ const navigationItems = [
     label: "Trang chủ",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/85737a58519740143f8a0d07ae6e8fab8207afd3?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
-    label: "Cấu hình hệ thống",
-  },
-  {
     icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
-    label: "Quản lý vai trò người dùng",
+    label: "Thông tin cá nhân",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dfd78c9b18431f8e2be69c90163b037d2588161c?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
-    label: "Báo cáo & thống kê",
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/ae698b98b93568dd174e2f9add83d3f9e930fc1f?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+    label: "Dự án",
+  },
+  {
+    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/977e109dab0085d0f85d49dd5619599eea0dfdea?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+    label: "Tài trợ",
     active: true,
-  },
-  {
-    icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/e84f75a28ad473788606c62583a5fed72ab176a5?placeholderIfAbsent=true",
-    label: "Cài Đặt",
   },
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/08232af02813e185a2f8fc37b028087b250d5b28?placeholderIfAbsent=true",
