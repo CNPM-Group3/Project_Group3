@@ -3259,11 +3259,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\hoc_hanh\\softwave\\lý thuyết\\minh\\SRPM\\SRPM.API.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\hoc_hanh\\softwave\\lý thuyết\\MinhNguyet\\Project_Group3\\SRPM.API.csproj",
       "projectName": "SRPM.API",
-      "projectPath": "C:\\Users\\ASUS\\Desktop\\hoc_hanh\\softwave\\lý thuyết\\minh\\SRPM\\SRPM.API.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Desktop\\hoc_hanh\\softwave\\lý thuyết\\MinhNguyet\\Project_Group3\\SRPM.API.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Desktop\\hoc_hanh\\softwave\\lý thuyết\\minh\\SRPM\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\hoc_hanh\\softwave\\lý thuyết\\MinhNguyet\\Project_Group3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
