@@ -1,7 +1,7 @@
 {
   "nodes": {
-    "my-tailwind-app": {
-      "name": "my-tailwind-app",
+    "undefined": {
+      "name": "undefined",
       "type": "app",
       "data": {
         "root": "my-tailwind-app",
@@ -176,7 +176,6 @@
             "parallelism": true
           }
         },
-        "name": "my-tailwind-app",
         "implicitDependencies": [],
         "tags": []
       }
@@ -13484,88 +13483,7 @@
     }
   },
   "dependencies": {
-    "my-tailwind-app": [
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:@eslint/js",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:globals",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:eslint-plugin-react-hooks",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:eslint-plugin-react-refresh",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:typescript-eslint",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:@types/react",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:@types/react-dom",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:@vitejs/plugin-react",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:autoprefixer",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:eslint",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:tailwindcss",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:typescript",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:vite",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "my-tailwind-app",
-        "target": "npm:react-dom",
-        "type": "static"
-      }
-    ],
+    "undefined": [],
     "cnpm": [
       {
         "source": "cnpm",
@@ -13575,6 +13493,86 @@
       {
         "source": "cnpm",
         "target": "npm:@eslint/js",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:globals@15.15.0",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:eslint-plugin-react-hooks",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:eslint-plugin-react-refresh",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:typescript-eslint",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:@types/react",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:@types/react-dom",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:@vitejs/plugin-react",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:autoprefixer",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:eslint",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:postcss",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:tailwindcss",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:typescript",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:vite",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:react",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "npm:react-dom",
+        "type": "static"
+      },
+      {
+        "source": "cnpm",
+        "target": "undefined",
         "type": "static"
       },
       {
@@ -13669,22 +13667,7 @@
       },
       {
         "source": "cnpm",
-        "target": "npm:@types/react",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:@types/react-dom",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
         "target": "npm:@types/react-router-dom",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:@vitejs/plugin-react",
         "type": "static"
       },
       {
@@ -13695,16 +13678,6 @@
       {
         "source": "cnpm",
         "target": "npm:@vitest/ui",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:autoprefixer",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:eslint",
         "type": "static"
       },
       {
@@ -13734,16 +13707,6 @@
       },
       {
         "source": "cnpm",
-        "target": "npm:eslint-plugin-react-hooks",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:eslint-plugin-react-refresh",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
         "target": "npm:jsdom",
         "type": "static"
       },
@@ -13754,37 +13717,12 @@
       },
       {
         "source": "cnpm",
-        "target": "npm:postcss",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
         "target": "npm:prettier",
         "type": "static"
       },
       {
         "source": "cnpm",
-        "target": "npm:tailwindcss",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
         "target": "npm:tslib",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:typescript",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:typescript-eslint",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:vite",
         "type": "static"
       },
       {
@@ -13989,11 +13927,6 @@
       },
       {
         "source": "cnpm",
-        "target": "npm:react",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
         "target": "npm:react-apexcharts",
         "type": "static"
       },
@@ -14005,11 +13938,6 @@
       {
         "source": "cnpm",
         "target": "npm:react-d3-axis",
-        "type": "static"
-      },
-      {
-        "source": "cnpm",
-        "target": "npm:react-dom",
         "type": "static"
       },
       {
@@ -30469,6 +30397,215 @@
     ]
   },
   "version": "6.0",
-  "errors": [],
-  "computedAt": 1748017906878
+  "errors": [
+    {
+      "projectRoots": [
+        "my-tailwind-app"
+      ],
+      "projects": {
+        "cnpm": {
+          "root": ".",
+          "projectType": "application",
+          "metadata": {
+            "targetGroups": {
+              "NPM Scripts": [
+                "start",
+                "build",
+                "test"
+              ]
+            },
+            "js": {
+              "packageName": "nckh-fe",
+              "isInPackageManagerWorkspaces": true
+            }
+          },
+          "targets": {
+            "build": {
+              "executor": "nx:run-script",
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Run Vite build",
+                "help": {
+                  "command": "yarn vite build --help",
+                  "example": {
+                    "options": {
+                      "sourcemap": true,
+                      "manifest": "manifest.json"
+                    }
+                  }
+                },
+                "scriptContent": "nx build",
+                "runCommand": "yarn build"
+              },
+              "options": {
+                "script": "build"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "serve": {
+              "executor": "@nx/vite:dev-server",
+              "options": {
+                "buildTarget": "cnpm:build"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "preview": {
+              "dependsOn": [
+                "build"
+              ],
+              "options": {
+                "cwd": ".",
+                "command": "vite preview"
+              },
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Locally preview Vite production build",
+                "help": {
+                  "command": "yarn vite preview --help",
+                  "example": {
+                    "options": {
+                      "port": 3000
+                    }
+                  }
+                }
+              },
+              "executor": "nx:run-commands",
+              "configurations": {},
+              "parallelism": true
+            },
+            "serve-static": {
+              "executor": "@nx/web:file-server",
+              "options": {
+                "buildTarget": "build",
+                "spa": true
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "typecheck": {
+              "cache": true,
+              "inputs": [
+                "production",
+                "^production",
+                {
+                  "externalDependencies": [
+                    "typescript"
+                  ]
+                }
+              ],
+              "options": {
+                "cwd": ".",
+                "command": "tsc --noEmit -p tsconfig.app.json"
+              },
+              "metadata": {
+                "description": "Run Typechecking",
+                "help": {
+                  "command": "yarn tsc --help -p tsconfig.app.json",
+                  "example": {
+                    "options": {
+                      "noEmit": true
+                    }
+                  }
+                }
+              },
+              "executor": "nx:run-commands",
+              "configurations": {},
+              "parallelism": true
+            },
+            "test": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "test"
+              },
+              "metadata": {
+                "technologies": [
+                  "vite"
+                ],
+                "description": "Run Vite tests",
+                "help": {
+                  "command": "yarn vitest --help",
+                  "example": {
+                    "options": {
+                      "bail": 1,
+                      "coverage": true
+                    }
+                  }
+                },
+                "scriptContent": "nx test",
+                "runCommand": "yarn test"
+              },
+              "configurations": {},
+              "parallelism": true
+            },
+            "lint": {
+              "cache": true,
+              "options": {
+                "cwd": ".",
+                "command": "eslint ./src"
+              },
+              "inputs": [
+                "default",
+                "^default",
+                "{workspaceRoot}/eslint.config.js",
+                "{workspaceRoot}/tools/eslint-rules/**/*",
+                {
+                  "externalDependencies": [
+                    "eslint"
+                  ]
+                }
+              ],
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "metadata": {
+                "technologies": [
+                  "eslint"
+                ],
+                "description": "Runs ESLint on project",
+                "help": {
+                  "command": "yarn eslint --help",
+                  "example": {
+                    "options": {
+                      "max-warnings": 0
+                    }
+                  }
+                }
+              },
+              "executor": "nx:run-commands",
+              "configurations": {},
+              "parallelism": true
+            },
+            "start": {
+              "executor": "nx:run-script",
+              "options": {
+                "script": "start"
+              },
+              "metadata": {
+                "scriptContent": "nx serve",
+                "runCommand": "yarn start"
+              },
+              "configurations": {},
+              "parallelism": true
+            }
+          },
+          "name": "cnpm",
+          "tags": [
+            "npm:private"
+          ],
+          "$schema": "node_modules/nx/schemas/project-schema.json",
+          "includedScripts": [],
+          "sourceRoot": "./src",
+          "implicitDependencies": []
+        }
+      },
+      "name": "ProjectsWithNoNameError"
+    }
+  ],
+  "computedAt": 1748411093911
 }
