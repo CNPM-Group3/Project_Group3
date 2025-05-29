@@ -1,0 +1,16 @@
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m
+[2m10:38:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:42:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemTaiLieuNghienCuuChinh.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:42:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemTaiLieuNghienCuuChinh.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:42:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemTaiLieuNghienCuuChinh.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:48:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:48:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:48:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:51:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:53:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:53:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:56:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:56:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m10:56:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx, /src/styles.css?direct, /src/styles.css[22m

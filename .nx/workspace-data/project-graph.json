@@ -27,7 +27,7 @@
               }
             ],
             "outputs": [
-              "{projectRoot}/dist"
+              "{projectRoot}\\dist"
             ],
             "metadata": {
               "technologies": [
@@ -1440,9 +1440,9 @@
         "hash": "sha512-TVhdVtQIFuVpIIR282btcGC2oGQoSfZfmBdTip2anCaVYcqWlZXGcdcKIUklfX2wj0JklNYgz39OBqh2cqXvcQ=="
       }
     },
-    "npm:@esbuild/darwin-arm64": {
+    "npm:@esbuild/darwin-arm64@0.25.4": {
       "type": "npm",
-      "name": "npm:@esbuild/darwin-arm64",
+      "name": "npm:@esbuild/darwin-arm64@0.25.4",
       "data": {
         "version": "0.25.4",
         "packageName": "@esbuild/darwin-arm64",
@@ -1620,9 +1620,9 @@
         "hash": "sha512-i1sW+1i+oWvQzSgfRcxxG2k4I9n3O9NRqy8U+uugaT2Dy7kLO9Y7wI72haOahxceMX8hZAzgGou1FhndRldxRg=="
       }
     },
-    "npm:@esbuild/win32-x64@0.25.4": {
+    "npm:@esbuild/win32-x64": {
       "type": "npm",
-      "name": "npm:@esbuild/win32-x64@0.25.4",
+      "name": "npm:@esbuild/win32-x64",
       "data": {
         "version": "0.25.4",
         "packageName": "@esbuild/win32-x64",
@@ -2034,9 +2034,9 @@
         "hash": "sha512-GqvXL0P8fZ+mQqG1g0o4AO9hJjQaeYG84FRfZaYjyJtZZZcMjXW5TwkL8Y8UApheJgyE13TQ4YNUssQaTgTyvA=="
       }
     },
-    "npm:@napi-rs/nice-darwin-arm64": {
+    "npm:@napi-rs/nice-darwin-arm64@1.0.1": {
       "type": "npm",
-      "name": "npm:@napi-rs/nice-darwin-arm64",
+      "name": "npm:@napi-rs/nice-darwin-arm64@1.0.1",
       "data": {
         "version": "1.0.1",
         "packageName": "@napi-rs/nice-darwin-arm64",
@@ -2151,9 +2151,9 @@
         "hash": "sha512-t7eBAyPUrWL8su3gDxw9xxxqNwZzAqKo0Szv3IjVQd1GpXXVkb6vBBQUuxfIYaXMzZLwlxRQ7uzM2vdUE9ULGw=="
       }
     },
-    "npm:@napi-rs/nice-win32-x64-msvc@1.0.1": {
+    "npm:@napi-rs/nice-win32-x64-msvc": {
       "type": "npm",
-      "name": "npm:@napi-rs/nice-win32-x64-msvc@1.0.1",
+      "name": "npm:@napi-rs/nice-win32-x64-msvc",
       "data": {
         "version": "1.0.1",
         "packageName": "@napi-rs/nice-win32-x64-msvc",
@@ -2322,9 +2322,9 @@
         "hash": "sha512-gnS5mtbaBAO5TJkl4T68rQaN/79MMWePavw2SOcFyFnIdAriGEZ+ZFDUE0B/xYJSs9CPWLaGHf+n7oqyxaGd9A=="
       }
     },
-    "npm:@nx/nx-darwin-arm64": {
+    "npm:@nx/nx-darwin-arm64@20.8.2": {
       "type": "npm",
-      "name": "npm:@nx/nx-darwin-arm64",
+      "name": "npm:@nx/nx-darwin-arm64@20.8.2",
       "data": {
         "version": "20.8.2",
         "packageName": "@nx/nx-darwin-arm64",
@@ -2565,9 +2565,9 @@
         "hash": "sha512-IfQf2axmCuSArhFGaocIDt8ajWDHXoVut5NOQH4eV2q9whP1j/LVB8EehEaolF5UenM7rhL4V25PXPuuBaUq4A=="
       }
     },
-    "npm:@nx/nx-win32-x64-msvc@20.8.2": {
+    "npm:@nx/nx-win32-x64-msvc": {
       "type": "npm",
-      "name": "npm:@nx/nx-win32-x64-msvc@20.8.2",
+      "name": "npm:@nx/nx-win32-x64-msvc",
       "data": {
         "version": "20.8.2",
         "packageName": "@nx/nx-win32-x64-msvc",
@@ -2646,9 +2646,9 @@
         "hash": "sha512-0XiiVM/B+tqN0OD2uOtRKp985zWdQR1pU3ZqU3LVHPc8rh65Bj6oPoYXQt9OpSHIy0t6masoicgPwHMTY85YAQ=="
       }
     },
-    "npm:@oxc-resolver/binding-darwin-arm64": {
+    "npm:@oxc-resolver/binding-darwin-arm64@5.3.0": {
       "type": "npm",
-      "name": "npm:@oxc-resolver/binding-darwin-arm64",
+      "name": "npm:@oxc-resolver/binding-darwin-arm64@5.3.0",
       "data": {
         "version": "5.3.0",
         "packageName": "@oxc-resolver/binding-darwin-arm64",
@@ -2754,9 +2754,9 @@
         "hash": "sha512-j1YYPLvUkMVNKmIFQZZJ7q6Do4cI3htUnyxNLwDSBVhSohvPIK2VG+IdtOAlWZGa7v+phEZsHfNbXVwB0oPYFQ=="
       }
     },
-    "npm:@oxc-resolver/binding-win32-x64-msvc@5.3.0": {
+    "npm:@oxc-resolver/binding-win32-x64-msvc": {
       "type": "npm",
-      "name": "npm:@oxc-resolver/binding-win32-x64-msvc@5.3.0",
+      "name": "npm:@oxc-resolver/binding-win32-x64-msvc",
       "data": {
         "version": "5.3.0",
         "packageName": "@oxc-resolver/binding-win32-x64-msvc",
@@ -3204,9 +3204,9 @@
         "hash": "sha512-13unNoZ8NzUmnndhPTkWPWbX3vtHodYmy+I9kuLxN+F+l+x3LdVF7UCu8TWVMt1POHLh6oDHhnOA04n8oJZhBw=="
       }
     },
-    "npm:@rollup/rollup-darwin-arm64": {
+    "npm:@rollup/rollup-darwin-arm64@4.40.2": {
       "type": "npm",
-      "name": "npm:@rollup/rollup-darwin-arm64",
+      "name": "npm:@rollup/rollup-darwin-arm64@4.40.2",
       "data": {
         "version": "4.40.2",
         "packageName": "@rollup/rollup-darwin-arm64",
@@ -3357,9 +3357,9 @@
         "hash": "sha512-dt1llVSGEsGKvzeIO76HToiYPNPYPkmjhMHhP00T9S4rDern8P2ZWvWAQUEJ+R1UdMWJ/42i/QqJ2WV765GZcA=="
       }
     },
-    "npm:@rollup/rollup-win32-x64-msvc@4.40.2": {
+    "npm:@rollup/rollup-win32-x64-msvc": {
       "type": "npm",
-      "name": "npm:@rollup/rollup-win32-x64-msvc@4.40.2",
+      "name": "npm:@rollup/rollup-win32-x64-msvc",
       "data": {
         "version": "4.40.2",
         "packageName": "@rollup/rollup-win32-x64-msvc",
@@ -3618,9 +3618,9 @@
         "hash": "sha512-ul2qIqjM5bfe9zWLqFDmHZCf9HXXSZZAlZLe4czn+lH4PewO+OWZnQcYCscnJKlbx6MuWjzXVR7gkspjNEJwJA=="
       }
     },
-    "npm:@swc/core-darwin-arm64": {
+    "npm:@swc/core-darwin-arm64@1.11.24": {
       "type": "npm",
-      "name": "npm:@swc/core-darwin-arm64",
+      "name": "npm:@swc/core-darwin-arm64@1.11.24",
       "data": {
         "version": "1.11.24",
         "packageName": "@swc/core-darwin-arm64",
@@ -3699,9 +3699,9 @@
         "hash": "sha512-9pKLIisE/Hh2vJhGIPvSoTK4uBSPxNVyXHmOrtdDot4E1FUUI74Vi8tFdlwNbaj8/vusVnb8xPXsxF1uB0VgiQ=="
       }
     },
-    "npm:@swc/core-win32-x64-msvc@1.11.24": {
+    "npm:@swc/core-win32-x64-msvc": {
       "type": "npm",
-      "name": "npm:@swc/core-win32-x64-msvc@1.11.24",
+      "name": "npm:@swc/core-win32-x64-msvc",
       "data": {
         "version": "1.11.24",
         "packageName": "@swc/core-win32-x64-msvc",
@@ -7875,9 +7875,9 @@
         "hash": "sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw=="
       }
     },
-    "npm:fsevents": {
+    "npm:fsevents@2.3.3": {
       "type": "npm",
-      "name": "npm:fsevents",
+      "name": "npm:fsevents@2.3.3",
       "data": {
         "version": "2.3.3",
         "packageName": "fsevents",
@@ -16379,7 +16379,7 @@
       },
       {
         "source": "npm:@napi-rs/nice",
-        "target": "npm:@napi-rs/nice-darwin-arm64",
+        "target": "npm:@napi-rs/nice-darwin-arm64@1.0.1",
         "type": "static"
       },
       {
@@ -16444,7 +16444,7 @@
       },
       {
         "source": "npm:@napi-rs/nice",
-        "target": "npm:@napi-rs/nice-win32-x64-msvc@1.0.1",
+        "target": "npm:@napi-rs/nice-win32-x64-msvc",
         "type": "static"
       }
     ],
@@ -18619,7 +18619,7 @@
       },
       {
         "source": "npm:@swc/core",
-        "target": "npm:@swc/core-darwin-arm64",
+        "target": "npm:@swc/core-darwin-arm64@1.11.24",
         "type": "static"
       },
       {
@@ -18664,7 +18664,7 @@
       },
       {
         "source": "npm:@swc/core",
-        "target": "npm:@swc/core-win32-x64-msvc@1.11.24",
+        "target": "npm:@swc/core-win32-x64-msvc",
         "type": "static"
       }
     ],
@@ -20625,7 +20625,7 @@
       },
       {
         "source": "npm:chokidar",
-        "target": "npm:fsevents",
+        "target": "npm:fsevents@2.3.3",
         "type": "static"
       }
     ],
@@ -22188,7 +22188,7 @@
       },
       {
         "source": "npm:esbuild",
-        "target": "npm:@esbuild/darwin-arm64",
+        "target": "npm:@esbuild/darwin-arm64@0.25.4",
         "type": "static"
       },
       {
@@ -22288,7 +22288,7 @@
       },
       {
         "source": "npm:esbuild",
-        "target": "npm:@esbuild/win32-x64@0.25.4",
+        "target": "npm:@esbuild/win32-x64",
         "type": "static"
       }
     ],
@@ -25615,7 +25615,7 @@
       },
       {
         "source": "npm:nx",
-        "target": "npm:@nx/nx-darwin-arm64",
+        "target": "npm:@nx/nx-darwin-arm64@20.8.2",
         "type": "static"
       },
       {
@@ -25660,7 +25660,7 @@
       },
       {
         "source": "npm:nx",
-        "target": "npm:@nx/nx-win32-x64-msvc@20.8.2",
+        "target": "npm:@nx/nx-win32-x64-msvc",
         "type": "static"
       }
     ],
@@ -26394,7 +26394,7 @@
     "npm:oxc-resolver": [
       {
         "source": "npm:oxc-resolver",
-        "target": "npm:@oxc-resolver/binding-darwin-arm64",
+        "target": "npm:@oxc-resolver/binding-darwin-arm64@5.3.0",
         "type": "static"
       },
       {
@@ -26454,7 +26454,7 @@
       },
       {
         "source": "npm:oxc-resolver",
-        "target": "npm:@oxc-resolver/binding-win32-x64-msvc@5.3.0",
+        "target": "npm:@oxc-resolver/binding-win32-x64-msvc",
         "type": "static"
       }
     ],
@@ -27311,7 +27311,7 @@
       },
       {
         "source": "npm:rollup",
-        "target": "npm:@rollup/rollup-darwin-arm64",
+        "target": "npm:@rollup/rollup-darwin-arm64@4.40.2",
         "type": "static"
       },
       {
@@ -27396,12 +27396,12 @@
       },
       {
         "source": "npm:rollup",
-        "target": "npm:@rollup/rollup-win32-x64-msvc@4.40.2",
+        "target": "npm:@rollup/rollup-win32-x64-msvc",
         "type": "static"
       },
       {
         "source": "npm:rollup",
-        "target": "npm:fsevents",
+        "target": "npm:fsevents@2.3.3",
         "type": "static"
       }
     ],
@@ -30022,7 +30022,7 @@
       },
       {
         "source": "npm:vite",
-        "target": "npm:fsevents",
+        "target": "npm:fsevents@2.3.3",
         "type": "static"
       }
     ],
@@ -30470,5 +30470,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1748104922848
+  "computedAt": 1748534455929
 }

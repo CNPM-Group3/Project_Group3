@@ -72,11 +72,11 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "9952900550459174692"
+          "hash": "11802656907268674482"
         },
         {
           "file": "package.json",
-          "hash": "12988106625815515325",
+          "hash": "13884296118958105830",
           "deps": [
             "npm:@eslint/js",
             "npm:@nx/devkit",
@@ -209,13 +209,6 @@
           "hash": "9754980678907211993"
         },
         {
-          "file": "src/api/auth.ts",
-          "hash": "11996697089215196794",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
           "file": "src/app/app.spec.tsx",
           "hash": "5542615320256913024",
           "deps": [
@@ -224,7 +217,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "1915939505229634012",
+          "hash": "13960011372063294268",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -251,6 +244,20 @@
         },
         {
           "file": "src/components/Dự Án/Sidebar.tsx",
+          "hash": "8466291735383713882",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Dự Án/Thêm Dự Án /DocumentUpload.tsx",
+          "hash": "2142414176750206496",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Dự Án/Thêm Dự Án /Sidebar.tsx",
           "hash": "8466291735383713882",
           "deps": [
             "npm:react"
@@ -461,7 +468,7 @@
         },
         {
           "file": "src/pages/DuAn.tsx",
-          "hash": "8514315655403561075",
+          "hash": "4836662341767086770",
           "deps": [
             "npm:react"
           ]
@@ -497,6 +504,13 @@
         {
           "file": "src/pages/ThanhVienNghienCuu.tsx",
           "hash": "3869126228602738698",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ThemTaiLieuNghienCuuChinh.tsx",
+          "hash": "9029644937427938948",
           "deps": [
             "npm:react"
           ]
@@ -550,7 +564,7 @@
         },
         {
           "file": "yarn.lock",
-          "hash": "2288038161052201161"
+          "hash": "12188176521840263363"
         }
       ],
       "my-tailwind-app": [

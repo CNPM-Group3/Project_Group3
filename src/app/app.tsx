@@ -10,6 +10,7 @@ import { PublicRoute } from '@cnpm/components/Protect/PublicRoute';
 import DuAn from '@cnpm/pages/DuAn';
 import Profile from '@cnpm/pages/Profile';
 import ThanhVienNghienCuu from '@cnpm/pages/ThanhVienNghienCuu';
+import ThemTaiLieuNghienCuuChinh from '@cnpm/pages/ThemTaiLieuNghienCuuChinh';
 
 
 export function App() {
@@ -30,6 +31,7 @@ export function App() {
               <Route path="/duan" element={<DuAn />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu />} />
+              <Route path="/themtailieunghiencuuchinh" element={<ThemTaiLieuNghienCuuChinh />} />
             </Route>
           </Routes>
         </Router>

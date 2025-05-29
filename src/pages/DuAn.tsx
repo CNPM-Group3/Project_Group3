@@ -1,9 +1,9 @@
 "use client";
 import * as React from "react";
 import Sidebar from "@cnpm/components/Dự Án/Sidebar";
-import Header from "../components/Header";
-import { ProjectCard } from "../components/Dự Án/ProjectCard";
-import { SearchInput } from "../components/Dự Án/SearchInput";
+import Header from "@cnpm/components/Header";
+import { ProjectCard } from "@cnpm/components/Dự Án/ProjectCard";
+import { SearchInput } from "@cnpm/components/Dự Án/SearchInput";
 
 export default function DuAn() {
   return (
