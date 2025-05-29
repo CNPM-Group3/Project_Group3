@@ -16,6 +16,8 @@ import DuAn from '@cnpm/pages/DuAn';
 import Profile from '@cnpm/pages/Profile';
 import TaiTro from '@cnpm/pages/TaiTro';
 import ThanhVienNghienCuu from '@cnpm/pages/ThanhVienNghienCuu';
+import TaoDuAnNghienCuuChinh from '@cnpm/pages/TaoDuAnNghienCuuChinh';
+import DuyetDuAn from '@cnpm/pages/DuyetDuAn';
 
 
 
@@ -43,6 +45,8 @@ export function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/taitro" element={<TaiTro />} />
               <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu />} />
+              <Route path="/taoduannghiencuuchinh" element={<TaoDuAnNghienCuuChinh />} />
+              <Route path="/duyetduan" element={<DuyetDuAn />} />
             </Route>
           </Routes>
         </Router>
