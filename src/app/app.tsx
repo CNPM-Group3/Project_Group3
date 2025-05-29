@@ -31,7 +31,7 @@ export function App() {
               <Route path="/duan" element={<DuAn />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu />} />
-              <Route path="/themtailieunghiencuuchinh" element={<ThemTaiLieuNghienCuuChinh />} />
+              <Route path="/themtailieu" element={<ThemTaiLieuNghienCuuChinh />} />
             </Route>
           </Routes>
         </Router>
