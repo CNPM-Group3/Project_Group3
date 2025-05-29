@@ -25,7 +25,7 @@ const pendingProjects: Project[] = [
   },
   {
     id: "25CN24",
-    name: "Project 1",
+    name: "Dự án 1",
     proposer: "Ths Nguyễn Văn A",
     date: "27/05/2025",
   },
@@ -49,7 +49,7 @@ const approvedProjects: Project[] = [
 const rejectedProjects: Project[] = [
   {
     id: "25CN24",
-    name: "Project 1",
+    name: "Dự án 1",
     proposer: "Ths Nguyễn Văn A",
     date: "27/05/2025",
   },
