@@ -9,14 +9,27 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(8080); // lắng nghe tất cả IP trên port 8080
+});
 // Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddScoped<IAuthService, AuthService>();
+// builder.Services.AddScoped<IGoogleAuthService, GoogleAuthService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure Swagger (always enabled)
+// Add HttpClient for Google API calls
+// builder.Services.AddHttpClient<IGoogleAuthService, GoogleAuthService>();
+
+// Cấu hình Swagger với base path "api/v1"
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "SRPM API", Version = "v1" });
+
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Description = "JWT Authorization header using the Bearer scheme",
@@ -25,6 +38,7 @@ builder.Services.AddSwaggerGen(c =>
         Type = SecuritySchemeType.ApiKey,
         Scheme = "Bearer"
     });
+
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
@@ -40,10 +54,6 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
-
-// Configure PostgreSQL
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configure Authentication
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -73,55 +83,42 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("RequireAppraisalCouncilRole", policy => policy.RequireRole("AppraisalCouncil"));
 });
 
-// Register repositories
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-builder.Services.AddScoped<ITaskRepository, TaskRepository>();
-builder.Services.AddScoped<IFundingRequestRepository, FundingRequestRepository>();
-builder.Services.AddScoped<IEvaluationRepository, EvaluationRepository>();
-builder.Services.AddScoped<IResearchTopicRepository, ResearchTopicRepository>();
-builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
-
-// Register services
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<ITaskService, TaskService>();
-builder.Services.AddScoped<IFundingRequestService, FundingRequestService>();
-builder.Services.AddScoped<IEvaluationService, EvaluationService>();
-builder.Services.AddScoped<IResearchTopicService, ResearchTopicService>();
-builder.Services.AddScoped<INotificationService, NotificationService>();
-
-// Add CORS
+// Register repositories and services (giữ nguyên)
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        policy => policy.WithOrigins("http://localhost:3000")
-                        .AllowAnyHeader()
-                        .AllowAnyMethod());
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:8081") // Địa chỉ FE của bạn
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                      });
 });
 
-// 👇 Thêm dòng này để chỉ định cổng (ví dụ: 5001)
-builder.WebHost.UseUrls("http://localhost:5001");
 var app = builder.Build();
 
-// Always enable Swagger
+// Swagger bật với base path /api/v1
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "SRPM API V1");
+    c.RoutePrefix = "api/v1"; // Khi truy cập http://domain:8080/api/v1 sẽ ra swagger UI
+});
 
-// Optional: comment out HTTPS redirection if not needed
-// app.UseHttpsRedirection();
+app.UseCors(MyAllowSpecificOrigins);
 
-app.UseCors("AllowSpecificOrigin");
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
 
-// Automatically apply migrations
+// Tự động apply migration
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     dbContext.Database.Migrate();
 }
 
+// Chạy server ở tất cả IP trên port 
 app.Run();
