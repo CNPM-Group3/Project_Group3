@@ -7,6 +7,7 @@ import SignInPage from '@cnpm/pages/LoginPage';
 import SignUpPage from '@cnpm/pages/SignUp';
 import LoginError from '@cnpm/pages/LoginError';
 import { PublicRoute } from '@cnpm/components/Protect/PublicRoute';
+import ProjectDetailPage from '@cnpm/pages/ProjectDetailPage';
 
 
 export function App() {
@@ -18,10 +19,13 @@ export function App() {
       <AuthProvider>
         <Router>
           <Routes>
+            <Route path="/" element={<Navigate to="/signin" replace />} />
+
             <Route element={<PublicRoute />}>
                 <Route path="/signin" element={<SignInPage />} />
                 <Route path="/signup" element={<SignUpPage />} />
                 <Route path="/login-error" element={<LoginError />} />
+                <Route path="/project/:projectId" element={<ProjectDetailPage />} />
               </Route>
           </Routes>
         </Router>
