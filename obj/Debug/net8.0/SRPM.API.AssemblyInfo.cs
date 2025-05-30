@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SRPM.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34698c7683f1c113935db800c531ae1adc6019f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c67e9eede4d28f055f8debb0654c9c7db955cab2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SRPM.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SRPM.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
