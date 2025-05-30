@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ProjectList } from "@cnpm/components/Duyệt Dự Án/ProjectList";
+import { Sponsorship, SponsorshipList } from "@cnpm/components/Duyệt Tài Trợ/SponsorshipList";
 
 export interface Project {
   id: string;
@@ -10,48 +10,54 @@ export interface Project {
 
 type TabType = "pending" | "approved" | "rejected";
 
-const pendingProjects: Project[] = [
+const pendingSponsorships: Sponsorship[] = [
   {
     id: "25CN22",
     name: "Bác sĩ online",
-    proposer: "Ths Nguyễn Văn Hồng",
+    proposer: "Nguyễn Văn Hồng",
     date: "25/05/2025",
+    amount: 30000000,
   },
   {
     id: "25NN23",
     name: "Ngữ pháp thời Edo",
-    proposer: "Ths Nguyễn Văn Minh",
+    proposer: "Nguyễn Văn Minh",
     date: "26/05/2025",
+    amount: 20000000,
   },
   {
     id: "25CN24",
     name: "Dự án 1",
-    proposer: "Ths Nguyễn Văn A",
+    proposer: "Nguyễn Văn A",
     date: "27/05/2025",
+    amount: 10000000,
   },
 ];
 
-const approvedProjects: Project[] = [
+const approvedSponsorships: Sponsorship[] = [
   {
     id: "25CN22",
     name: "Bác sĩ online",
-    proposer: "Ths Nguyễn Văn Hồng",
+    proposer: "Nguyễn Văn Hồng",
     date: "25/05/2025",
+    amount: 30000000,
   },
   {
     id: "25NN23",
     name: "Ngữ pháp thời Edo",
-    proposer: "Ths Nguyễn Văn Minh",
+    proposer: "Nguyễn Văn Minh",
     date: "26/05/2025",
+    amount: 20000000,
   },
 ];
 
-const rejectedProjects: Project[] = [
+const rejectedSponsorships: Sponsorship[] = [
   {
     id: "25CN24",
     name: "Dự án 1",
-    proposer: "Ths Nguyễn Văn A",
+    proposer: "Nguyễn Văn A",
     date: "27/05/2025",
+    amount: 10000000,
   },
 ];
 
@@ -59,10 +65,10 @@ export const TabSelector = () => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
 
-  let projects: Project[] = [];
-  if (activeTab === "pending") projects = pendingProjects;
-  if (activeTab === "approved") projects = approvedProjects;
-  if (activeTab === "rejected") projects = rejectedProjects;
+  let projects: Sponsorship[] = [];
+  if (activeTab === "pending") projects = pendingSponsorships;
+  if (activeTab === "approved") projects = approvedSponsorships;
+  if (activeTab === "rejected") projects = rejectedSponsorships;
 
   // Filter projects based on search keyword
   const filteredProjects = projects.filter(project => 
@@ -148,11 +154,8 @@ export const TabSelector = () => {
             />
           </svg>
         </div>
-        <h2 className="text-xl font-bold text-gray-700">
-          Danh sách dự án
-        </h2>
       </div>
-      <ProjectList 
+      <SponsorshipList 
         projects={filteredProjects} 
         actionType={
           activeTab === "pending" ? "both" :
