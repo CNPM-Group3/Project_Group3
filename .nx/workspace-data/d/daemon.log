@@ -8250,3 +8250,1369 @@ The `define` option contains an object with "PATH" for "process.env" key. It loo
 [NX v20.8.2 Daemon Server] - 2025-05-30T16:40:11.969Z - [SYNC]: project graph hash is the same, not collecting task sync generators
 [NX v20.8.2 Daemon Server] - 2025-05-30T16:40:11.969Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
 [NX v20.8.2 Daemon Server] - 2025-05-30T16:40:11.969Z - Time taken for 'total execution time for createProjectGraph()' 17.337599999736995ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:11.868Z - Started listening on: \\.\pipe\nx\C:\Users\QUYENB~1\AppData\Local\Temp\a9d23898a01e593d0e1a\d.sock
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:11.887Z - [WATCHER]: Subscribed to changes within: D:\CNPM\Project_Group3-Quyen (native)
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:11.889Z - Established a connection. Number of open connections: 1
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:11.889Z - Established a connection. Number of open connections: 2
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:11.891Z - Closed a connection. Number of open connections: 1
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:11.893Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:12.330Z - Time taken for 'Load Nx Plugin: D:\CNPM\Project_Group3-Quyen\node_modules\nx\src\plugins\package-json' 429.78909999999996ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:12.371Z - Time taken for 'Load Nx Plugin: D:\CNPM\Project_Group3-Quyen\node_modules\nx\src\plugins\js' 471.11060000000003ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:12.395Z - Time taken for 'loadDefaultNxPlugins' 495.8585ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:12.916Z - Time taken for 'Load Nx Plugin: @nx/eslint/plugin' 1020.6733ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.731Z - Time taken for 'Load Nx Plugin: @nx/vite/plugin' 1838.058ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.853Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.853Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.853Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.862Z - Time taken for 'loadSpecifiedNxPlugins' 1958.7338ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.865Z - Established a connection. Number of open connections: 2
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.865Z - Closed a connection. Number of open connections: 1
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.866Z - Established a connection. Number of open connections: 2
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.869Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.869Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.869Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.875Z - Established a connection. Number of open connections: 3
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.875Z - Established a connection. Number of open connections: 4
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.876Z - Closed a connection. Number of open connections: 3
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.878Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.878Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.878Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.886Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.886Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:13.887Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.511Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.511Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.511Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.514Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.514Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.514Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.543Z - Time taken for 'build-project-configs' 665.0821999999998ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.560Z - Time taken for 'nx/js/dependencies-and-lockfile:createDependencies' 18.01989999999978ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.842Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.843Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.843Z - Time taken for 'total for creating and serializing project graph' 2950.2376000000004ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.844Z - Done responding to the client project-graph
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.844Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 2951. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.852Z - [REQUEST]: Responding to the client. handleRunPreTasksExecution
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.852Z - Time taken for 'preTasksExecution' 0.6970999999998639ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.852Z - Done responding to the client handleRunPreTasksExecution
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.852Z - Handled PRE_TASKS_EXECUTION. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.907Z - [REQUEST]: Responding to the client. handleHashTasks
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.907Z - Done responding to the client handleHashTasks
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:14.907Z - Handled HASH_TASKS. Handling time: 13. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:17.988Z - [REQUEST]: Responding to the client. handleGetEstimatedTaskTimings
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:17.988Z - Done responding to the client handleGetEstimatedTaskTimings
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:17.988Z - Handled GET_ESTIMATED_TASK_TIMINGS. Handling time: 4. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.143Z - Established a connection. Number of open connections: 4
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.143Z - Closed a connection. Number of open connections: 3
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.143Z - Established a connection. Number of open connections: 4
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.145Z - [REQUEST]: Client Request for Project Graph Received
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.146Z - [REQUEST]: Responding to the client. project-graph
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.146Z - Time taken for 'total for creating and serializing project graph' 0.3469999999997526ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.150Z - Done responding to the client project-graph
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.151Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 1. Response time: 5.
+[NX v20.8.2 Daemon Server] - 2025-05-31T11:46:19.155Z - Established a connection. Number of open connections: 5
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.749Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.752Z - [WATCHER]: 0 file(s) created or restored, 7 file(s) modified, 0 file(s) deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.753Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.753Z - Time taken for 'changed-projects' 0.08860000013373792ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.753Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.753Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.805Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.806Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.807Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.807Z - Time taken for 'changed-projects' 0.1932000000961125ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.807Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.807Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.856Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.856Z - [REQUEST]: src/components/ChiTietNhiemVu/SubmitButton.tsx,src/components/ChiTietNhiemVu/TaskDetails.tsx,src/components/ChiTietNhiemVu/TaskHeader.tsx,src/components/ChiTietNhiemVu/PresentationForm.tsx,src/components/ChiTietNhiemVu/Sidebar.tsx,src/components/ChiTietNhiemVu/Header.tsx,src/components/ChiTietNhiemVu/FileUpload.tsx,src/components/ChiTietNhiemVu/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.856Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.861Z - Time taken for 'hash changed files from watcher' 0.5191000001505017ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.864Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.865Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.865Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.866Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.866Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.866Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.870Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.872Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.874Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.874Z - Handled HASH_GLOB. Handling time: 0. Response time: 4.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.874Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.874Z - Handled HASH_GLOB. Handling time: 1. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.876Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.877Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:42.877Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:46.930Z - Time taken for 'build-project-configs' 4064.949300000211ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:46.931Z - Time taken for '@nx/vite/plugin:createDependencies' 4.53429999994114ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:46.984Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:46.984Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:46.984Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:06:46.984Z - Time taken for 'total execution time for createProjectGraph()' 32.57520000007935ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.045Z - [WATCHER]: src/components/ChiTietNhiemVu/Header.tsx was deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.046Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.046Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.046Z - Time taken for 'changed-projects' 0.17949999985285103ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.047Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.047Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.261Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.261Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.261Z - [REQUEST]: src/components/ChiTietNhiemVu/Header.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.265Z - Time taken for 'hash changed files from watcher' 0.09299999987706542ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.269Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.269Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.269Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.271Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.271Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.271Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.273Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.273Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.273Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.279Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.279Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.280Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.282Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.282Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.282Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.334Z - Time taken for 'build-project-configs' 65.47970000002533ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.335Z - Time taken for '@nx/vite/plugin:createDependencies' 4.421399999875575ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.402Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.403Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.403Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:07.403Z - Time taken for 'total execution time for createProjectGraph()' 22.401199999963865ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.270Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.272Z - [WATCHER]: 0 file(s) created or restored, 1 file(s) modified, 1 file(s) deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.272Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.272Z - Time taken for 'changed-projects' 0.055500000016763806ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.272Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.272Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.674Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.674Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.674Z - [REQUEST]: src/components/ChiTietNhiemVu/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.678Z - Time taken for 'hash changed files from watcher' 0.32220000005327165ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.682Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.682Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.682Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.684Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.684Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.684Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.687Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.689Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.689Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.689Z - Handled HASH_GLOB. Handling time: 1. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.692Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.692Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.693Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.694Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.694Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.756Z - Time taken for 'build-project-configs' 72.810499999905ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.758Z - Time taken for '@nx/vite/plugin:createDependencies' 5.144399999873713ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.817Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.818Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.818Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:07:36.818Z - Time taken for 'total execution time for createProjectGraph()' 26.861000000033528ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:24.862Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:24.863Z - [WATCHER]: src/components/ChiTietNhiemVu/Sidebar copy.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:24.864Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:24.864Z - Time taken for 'changed-projects' 0.0503000000026077ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:24.864Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:24.864Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.669Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.669Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar copy.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.669Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.672Z - Time taken for 'hash changed files from watcher' 0.31560000008903444ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.675Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.676Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.676Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.677Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.677Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.678Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.680Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.680Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.680Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.685Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.685Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.685Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.688Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.688Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.688Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.731Z - Time taken for 'build-project-configs' 54.203200000105426ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.732Z - Time taken for '@nx/vite/plugin:createDependencies' 4.715099999913946ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.769Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.770Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.770Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:25.771Z - Time taken for 'total execution time for createProjectGraph()' 29.887799999909475ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:58.316Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:58.317Z - [WATCHER]: src/components/ChiTietNhiemVu/Sidebar.tsx was deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:58.317Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:58.318Z - Time taken for 'changed-projects' 0.08850000007078052ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:58.318Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:58.318Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.920Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.920Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.920Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.924Z - Time taken for 'hash changed files from watcher' 0.09109999984502792ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.928Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.928Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.928Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.930Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.931Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.931Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.933Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.935Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.935Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.935Z - Handled HASH_GLOB. Handling time: 0. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.935Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.935Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.939Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.940Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.940Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.979Z - Time taken for 'build-project-configs' 52.254200000083074ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:08:59.980Z - Time taken for '@nx/vite/plugin:createDependencies' 3.6594999998342246ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:00.004Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:00.004Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:00.005Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:00.005Z - Time taken for 'total execution time for createProjectGraph()' 17.690500000026077ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.842Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.844Z - [WATCHER]: 1 file(s) created or restored, 0 file(s) modified, 1 file(s) deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.844Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.844Z - Time taken for 'changed-projects' 0.044599999906495214ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.844Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.845Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.945Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.945Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.945Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar copy.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.949Z - Time taken for 'hash changed files from watcher' 0.20090000005438924ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.952Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.953Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.953Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.955Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.955Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.955Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.957Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.960Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.960Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.960Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.964Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.964Z - Handled HASH_GLOB. Handling time: 1. Response time: 4.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.965Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.966Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:07.966Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.019Z - Time taken for 'build-project-configs' 63.84789999993518ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.021Z - Time taken for '@nx/vite/plugin:createDependencies' 7.1970000001601875ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.055Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.056Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.056Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.057Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.057Z - Time taken for 'total execution time for createProjectGraph()' 29.643500000005588ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.057Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:09:08.057Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.702Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.703Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.703Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.703Z - Time taken for 'changed-projects' 0.03260000003501773ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.703Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.703Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.914Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.914Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.914Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.917Z - Time taken for 'hash changed files from watcher' 0.18779999995604157ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.920Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.920Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.921Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.922Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.922Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.922Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.923Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.924Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.924Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.930Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.930Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.930Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.932Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.932Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.932Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.976Z - Time taken for 'build-project-configs' 51.99359999992885ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:13.978Z - Time taken for '@nx/vite/plugin:createDependencies' 6.73769999993965ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:14.019Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:14.020Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:14.020Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:10:14.020Z - Time taken for 'total execution time for createProjectGraph()' 36.1351999999024ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.052Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.052Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.052Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.052Z - Time taken for 'changed-projects' 0.034500000067055225ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.053Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.053Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.457Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.457Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.457Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.460Z - Time taken for 'hash changed files from watcher' 0.16539999982342124ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.463Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.464Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.464Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.465Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.465Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.465Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.467Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.467Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.467Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.471Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.471Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.471Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.473Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.474Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.474Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.514Z - Time taken for 'build-project-configs' 50.661700000055134ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.516Z - Time taken for '@nx/vite/plugin:createDependencies' 4.298600000096485ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.548Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.549Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.549Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:11:09.549Z - Time taken for 'total execution time for createProjectGraph()' 25.90970000019297ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:03.242Z - [WATCHER]: src/app/app.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:03.243Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:03.243Z - Time taken for 'changed-projects' 0.06689999997615814ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:03.244Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:03.244Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:03.244Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.046Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.047Z - [REQUEST]: src/app/app.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.047Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.050Z - Time taken for 'hash changed files from watcher' 0.1770999999716878ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.053Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.053Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.053Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.054Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.055Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.055Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.056Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.056Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.057Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.058Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.060Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.060Z - Handled HASH_GLOB. Handling time: 0. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.062Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.063Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.063Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.102Z - Time taken for 'build-project-configs' 49.03509999997914ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.103Z - Time taken for '@nx/vite/plugin:createDependencies' 3.7730000000447035ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.131Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.131Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.131Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:12:04.131Z - Time taken for 'total execution time for createProjectGraph()' 20.529700000071898ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:56.665Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:56.665Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:56.665Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:56.665Z - Time taken for 'changed-projects' 0.04389999993145466ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:56.665Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:56.665Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.268Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.268Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.268Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.273Z - Time taken for 'hash changed files from watcher' 0.26579999970272183ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.279Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.279Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.279Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.282Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.282Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.282Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.285Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.285Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.285Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.287Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.287Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.287Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.296Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.297Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.297Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.344Z - Time taken for 'build-project-configs' 67.53609999967739ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.345Z - Time taken for '@nx/vite/plugin:createDependencies' 4.839800000190735ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.423Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.424Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.424Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.424Z - Time taken for 'total execution time for createProjectGraph()' 25.542900000233203ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.800Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.801Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.802Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.802Z - Time taken for 'changed-projects' 0.21680000005289912ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.803Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:28:58.803Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.004Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.004Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.004Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.009Z - Time taken for 'hash changed files from watcher' 0.1957999998703599ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.012Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.013Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.013Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.015Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.016Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.016Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.018Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.018Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.019Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.020Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.023Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.023Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.025Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.027Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.027Z - Handled HASH_GLOB. Handling time: 0. Response time: 2.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.052Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.053Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.054Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.054Z - Time taken for 'changed-projects' 0.03539999993517995ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.064Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.064Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 10.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.064Z - Time taken for 'build-project-configs' 51.138899999670684ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.067Z - Time taken for '@nx/vite/plugin:createDependencies' 6.490300000179559ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.095Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.096Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.096Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:02.096Z - Time taken for 'total execution time for createProjectGraph()' 23.74019999988377ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.460Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.460Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.460Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.463Z - Time taken for 'hash changed files from watcher' 0.08520000008866191ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.467Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.467Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.467Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.468Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.468Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.468Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.470Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.470Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.470Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.471Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.474Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.474Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.476Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.476Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.476Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.509Z - Time taken for 'build-project-configs' 42.313300000038ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.510Z - Time taken for '@nx/vite/plugin:createDependencies' 4.705099999904633ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.534Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.534Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.534Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:29:08.534Z - Time taken for 'total execution time for createProjectGraph()' 19.56469999998808ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.467Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.469Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.469Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.469Z - Time taken for 'changed-projects' 0.03560000006109476ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.469Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.469Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.715Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.716Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.717Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.717Z - Time taken for 'changed-projects' 0.05080000031739473ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.717Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:01.717Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.871Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.871Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.871Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.875Z - Time taken for 'hash changed files from watcher' 0.25319999968633056ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.879Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.879Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.879Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.880Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.881Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.881Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.882Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.885Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.885Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.886Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.887Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.887Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.889Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.889Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.889Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.928Z - Time taken for 'build-project-configs' 49.718800000380725ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.929Z - Time taken for '@nx/vite/plugin:createDependencies' 4.021199999842793ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.957Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.957Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.957Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:07.957Z - Time taken for 'total execution time for createProjectGraph()' 21.701099999714643ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:21.319Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:21.320Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:21.320Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:21.321Z - Time taken for 'changed-projects' 0.052900000009685755ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:21.321Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:21.321Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.114Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.115Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.115Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.115Z - Time taken for 'changed-projects' 0.032300000078976154ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.115Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.115Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.725Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.725Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.725Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.729Z - Time taken for 'hash changed files from watcher' 0.1965000000782311ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.733Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.733Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.733Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.734Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.735Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.735Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.736Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.736Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.736Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.738Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.738Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.738Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.743Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.743Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.743Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.769Z - Time taken for 'build-project-configs' 37.232799999881536ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.770Z - Time taken for '@nx/vite/plugin:createDependencies' 4.245499999728054ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.795Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.796Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.796Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:27.796Z - Time taken for 'total execution time for createProjectGraph()' 19.24390000011772ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:52.300Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:52.301Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx was deleted
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:52.301Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:52.301Z - Time taken for 'changed-projects' 0.041000000201165676ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:52.301Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:52.301Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.710Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.710Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.710Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuuChinh.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.713Z - Time taken for 'hash changed files from watcher' 0.10210000025108457ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.715Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.716Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.716Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.717Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.717Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.717Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.718Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.719Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.719Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.721Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.724Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.724Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.725Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.725Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.725Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.749Z - Time taken for 'build-project-configs' 33.561999999918044ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.750Z - Time taken for '@nx/vite/plugin:createDependencies' 3.364399999845773ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.773Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.773Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.774Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:33:58.774Z - Time taken for 'total execution time for createProjectGraph()' 17.240000000223517ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:00.400Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:00.401Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:00.401Z - Time taken for 'changed-projects' 0.04620000021532178ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:00.401Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:00.401Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:00.401Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.812Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.812Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.812Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.815Z - Time taken for 'hash changed files from watcher' 0.15950000006705523ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.817Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.818Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.818Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.819Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.819Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.819Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.821Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.821Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.821Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.825Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.826Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.826Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.827Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.828Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.828Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.865Z - Time taken for 'build-project-configs' 46.74850000021979ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.866Z - Time taken for '@nx/vite/plugin:createDependencies' 4.161100000143051ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.895Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.895Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.895Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:06.895Z - Time taken for 'total execution time for createProjectGraph()' 22.600499999709427ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:11.100Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:11.100Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:11.100Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:11.100Z - Time taken for 'changed-projects' 0.02969999983906746ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:11.100Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:11.100Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.505Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.505Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.505Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.509Z - Time taken for 'hash changed files from watcher' 0.1695000003091991ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.512Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.512Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.512Z - Handled GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.513Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.514Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.514Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.515Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.516Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.516Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.516Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.519Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.519Z - Handled HASH_GLOB. Handling time: 1. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.520Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.521Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.521Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.545Z - Time taken for 'build-project-configs' 33.08229999989271ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.546Z - Time taken for '@nx/vite/plugin:createDependencies' 3.4844999997876585ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.568Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.569Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.569Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:17.569Z - Time taken for 'total execution time for createProjectGraph()' 17.27889999980107ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:43.550Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:43.552Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:43.552Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:43.552Z - Time taken for 'changed-projects' 0.04600000008940697ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:43.553Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:43.553Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.955Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.955Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.955Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.959Z - Time taken for 'hash changed files from watcher' 0.15589999966323376ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.961Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.962Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.962Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.963Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.963Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.963Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.965Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.965Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.965Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.969Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.969Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.969Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.973Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.974Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:49.974Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:50.008Z - Time taken for 'build-project-configs' 46.289900000207126ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:50.010Z - Time taken for '@nx/vite/plugin:createDependencies' 5.056299999821931ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:50.033Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:50.034Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:50.034Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:34:50.034Z - Time taken for 'total execution time for createProjectGraph()' 19.271199999842793ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:35:56.827Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:35:56.830Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:35:56.830Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:35:56.830Z - Time taken for 'changed-projects' 0.07069999957457185ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:35:56.831Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:35:56.831Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.240Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.241Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.241Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.244Z - Time taken for 'hash changed files from watcher' 0.18210000032559037ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.247Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.247Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.247Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.248Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.248Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.248Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.249Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.250Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.250Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.252Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.256Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.256Z - Handled HASH_GLOB. Handling time: 0. Response time: 4.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.258Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.258Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.259Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.295Z - Time taken for 'build-project-configs' 47.308000000193715ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.296Z - Time taken for '@nx/vite/plugin:createDependencies' 3.758400000166148ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.332Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.333Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.333Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:03.333Z - Time taken for 'total execution time for createProjectGraph()' 29.933800000231713ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:09.647Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:09.649Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:09.649Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:09.649Z - Time taken for 'changed-projects' 0.05389999970793724ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:09.650Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:09.650Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.055Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.055Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.055Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.060Z - Time taken for 'hash changed files from watcher' 0.1969999996945262ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.063Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.064Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.064Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.065Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.065Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.065Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.067Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.069Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.069Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.069Z - Handled HASH_GLOB. Handling time: 0. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.072Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.072Z - Handled HASH_GLOB. Handling time: 1. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.073Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.073Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.073Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.112Z - Time taken for 'build-project-configs' 50.19579999987036ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.113Z - Time taken for '@nx/vite/plugin:createDependencies' 3.7503999997861683ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.139Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.139Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.139Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:16.139Z - Time taken for 'total execution time for createProjectGraph()' 21.20269999979064ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:32.658Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:32.659Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:32.660Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:32.660Z - Time taken for 'changed-projects' 0.05120000010356307ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:32.660Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:32.660Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.066Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.066Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.066Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.069Z - Time taken for 'hash changed files from watcher' 0.1988999997265637ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.072Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.072Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.072Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.073Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.074Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.074Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.075Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.075Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.075Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.076Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.078Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.078Z - Handled HASH_GLOB. Handling time: 0. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.080Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.080Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.080Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.105Z - Time taken for 'build-project-configs' 33.59910000022501ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.106Z - Time taken for '@nx/vite/plugin:createDependencies' 3.187600000295788ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.128Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.128Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.128Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:36:39.128Z - Time taken for 'total execution time for createProjectGraph()' 16.76589999999851ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:16.406Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:16.407Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:16.407Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:16.407Z - Time taken for 'changed-projects' 0.06350000016391277ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:16.408Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:16.408Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:19.779Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:19.780Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:19.781Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:19.781Z - Time taken for 'changed-projects' 0.05250000022351742ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:19.781Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:19.781Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.821Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.821Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.821Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.824Z - Time taken for 'hash changed files from watcher' 0.17149999970570207ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.827Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.827Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.827Z - Handled GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.829Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.829Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.829Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.831Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.831Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.831Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.833Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.833Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.833Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.837Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.838Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.838Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.879Z - Time taken for 'build-project-configs' 51.19400000013411ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.880Z - Time taken for '@nx/vite/plugin:createDependencies' 3.8795999996364117ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.910Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.911Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.911Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:22.911Z - Time taken for 'total execution time for createProjectGraph()' 23.626699999906123ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:28.111Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:28.112Z - [WATCHER]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:28.112Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:28.112Z - Time taken for 'changed-projects' 0.04550000000745058ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:28.113Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:28.113Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.514Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.514Z - [REQUEST]: src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.514Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.518Z - Time taken for 'hash changed files from watcher' 0.24580000014975667ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.521Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.521Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.521Z - Handled GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.523Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.523Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.523Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.524Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.525Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.525Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.527Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.530Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.531Z - Handled HASH_GLOB. Handling time: 0. Response time: 4.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.532Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.532Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.532Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.564Z - Time taken for 'build-project-configs' 41.91179999988526ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.565Z - Time taken for '@nx/vite/plugin:createDependencies' 5.676599999889731ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.599Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.599Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.599Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:45:34.599Z - Time taken for 'total execution time for createProjectGraph()' 26.225300000049174ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:47.545Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:47.548Z - [WATCHER]: src/components/ChiTietNhiemVu/FileUpload.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:47.549Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:47.550Z - Time taken for 'changed-projects' 0.14410000015050173ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:47.550Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:47.550Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:52.671Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:52.673Z - [WATCHER]: src/components/ChiTietNhiemVu/FileUpload.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:52.674Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:52.674Z - Time taken for 'changed-projects' 0.07089999970048666ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:52.674Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:52.674Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.951Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.951Z - [REQUEST]: src/components/ChiTietNhiemVu/FileUpload.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.951Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.954Z - Time taken for 'hash changed files from watcher' 0.2284999997355044ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.959Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.959Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.959Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.961Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.961Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.961Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.963Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.963Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.963Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.967Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.967Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.967Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.969Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.969Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:53.969Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:54.007Z - Time taken for 'build-project-configs' 49.56400000024587ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:54.008Z - Time taken for '@nx/vite/plugin:createDependencies' 4.269600000232458ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:54.039Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:54.039Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:54.039Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:54.039Z - Time taken for 'total execution time for createProjectGraph()' 24.241799999959767ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:58.579Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:58.581Z - [WATCHER]: src/components/ChiTietNhiemVu/FileUpload.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:58.581Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:58.581Z - Time taken for 'changed-projects' 0.043800000101327896ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:58.581Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:49:58.581Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.981Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.981Z - [REQUEST]: src/components/ChiTietNhiemVu/FileUpload.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.981Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.984Z - Time taken for 'hash changed files from watcher' 0.17299999995157123ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.987Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.987Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.987Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.988Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.988Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.988Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.989Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.990Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.990Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.992Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.995Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.995Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.996Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.996Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:04.996Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:05.021Z - Time taken for 'build-project-configs' 33.944200000260025ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:05.021Z - Time taken for '@nx/vite/plugin:createDependencies' 3.1781999999657273ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:05.044Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:05.045Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:05.045Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:50:05.045Z - Time taken for 'total execution time for createProjectGraph()' 17.110799999907613ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:22.301Z - [WATCHER]: src/components/ChiTietNhiemVu/PresentationForm.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:22.301Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:22.301Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:22.301Z - Time taken for 'changed-projects' 0.04879999998956919ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:22.302Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:22.302Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:24.706Z - [WATCHER]: src/components/ChiTietNhiemVu/PresentationForm.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:24.708Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:24.708Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:24.709Z - Time taken for 'changed-projects' 0.6757999998517334ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:24.709Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:24.709Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:27.250Z - [WATCHER]: src/components/ChiTietNhiemVu/PresentationForm.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:27.250Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:27.250Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:27.250Z - Time taken for 'changed-projects' 0.055699999909847975ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:27.251Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:27.251Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.704Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.704Z - [REQUEST]: src/components/ChiTietNhiemVu/PresentationForm.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.704Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.708Z - Time taken for 'hash changed files from watcher' 0.16680000023916364ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.710Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.711Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.711Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.712Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.712Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.712Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.714Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.714Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.714Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.717Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.719Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.719Z - Handled HASH_GLOB. Handling time: 1. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.720Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.721Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.721Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.755Z - Time taken for 'build-project-configs' 43.94660000037402ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.756Z - Time taken for '@nx/vite/plugin:createDependencies' 3.8788999998942018ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.782Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.783Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.783Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:51:28.783Z - Time taken for 'total execution time for createProjectGraph()' 20.847399999853224ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:17.340Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:17.342Z - [WATCHER]: src/components/ChiTietNhiemVu/TaskDetails.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:17.342Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:17.342Z - Time taken for 'changed-projects' 0.03959999978542328ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:17.342Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:17.343Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:19.555Z - [WATCHER]: src/components/ChiTietNhiemVu/TaskDetails.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:19.556Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:19.556Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:19.556Z - Time taken for 'changed-projects' 0.03420000011101365ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:19.556Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:19.556Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.756Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.756Z - [REQUEST]: src/components/ChiTietNhiemVu/TaskDetails.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.756Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.760Z - Time taken for 'hash changed files from watcher' 0.16870000027120113ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.765Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.765Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.765Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.766Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.767Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.767Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.769Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.770Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.770Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.770Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.773Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.773Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.774Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.774Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.774Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.815Z - Time taken for 'build-project-configs' 51.721299999859184ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.816Z - Time taken for '@nx/vite/plugin:createDependencies' 3.9854000001214445ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.848Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.848Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.848Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:23.848Z - Time taken for 'total execution time for createProjectGraph()' 23.142500000074506ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:46.961Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:46.963Z - [WATCHER]: src/components/ChiTietNhiemVu/TaskHeader.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:46.963Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:46.964Z - Time taken for 'changed-projects' 0.09250000026077032ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:46.964Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:46.964Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:48.495Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:48.497Z - [WATCHER]: src/components/ChiTietNhiemVu/TaskHeader.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:48.498Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:48.498Z - Time taken for 'changed-projects' 0.18550000013783574ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:48.498Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:48.498Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:51.177Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:51.179Z - [WATCHER]: src/components/ChiTietNhiemVu/TaskHeader.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:51.179Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:51.179Z - Time taken for 'changed-projects' 0.0333999996073544ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:51.180Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:51.180Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.367Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.367Z - [REQUEST]: src/components/ChiTietNhiemVu/TaskHeader.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.367Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.370Z - Time taken for 'hash changed files from watcher' 0.20629999972879887ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.374Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.374Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.374Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.375Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.376Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.376Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.378Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.378Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.378Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.379Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.382Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.382Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.383Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.384Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.384Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.422Z - Time taken for 'build-project-configs' 47.974500000011176ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.422Z - Time taken for '@nx/vite/plugin:createDependencies' 3.578799999784678ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.451Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.451Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.451Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:54:53.451Z - Time taken for 'total execution time for createProjectGraph()' 22.999400000087917ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:21.315Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:21.316Z - [WATCHER]: src/components/ChiTietNhiemVu/Sidebar.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:21.317Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:21.317Z - Time taken for 'changed-projects' 0.05389999970793724ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:21.317Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:21.317Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.729Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.729Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.729Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.732Z - Time taken for 'hash changed files from watcher' 0.169000000692904ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.735Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.735Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.735Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.736Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.736Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.737Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.738Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.738Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.738Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.743Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.744Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.744Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.746Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.746Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.746Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.781Z - Time taken for 'build-project-configs' 45.326500000432134ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.784Z - Time taken for '@nx/vite/plugin:createDependencies' 5.514200000092387ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.812Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.813Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.813Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:27.813Z - Time taken for 'total execution time for createProjectGraph()' 24.950899999588728ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:29.411Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:29.412Z - [WATCHER]: src/components/ChiTietNhiemVu/Sidebar.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:29.413Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:29.413Z - Time taken for 'changed-projects' 0.061199999414384365ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:29.413Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:29.414Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:33.025Z - [WATCHER]: src/components/ChiTietNhiemVu/Sidebar.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:33.025Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:33.025Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:33.025Z - Time taken for 'changed-projects' 0.044799999333918095ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:33.025Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:33.025Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.816Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.816Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.816Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.820Z - Time taken for 'hash changed files from watcher' 0.16459999978542328ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.823Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.823Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.823Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.824Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.825Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.825Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.826Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.826Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.826Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.832Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.832Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.832Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.834Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.834Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.834Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.860Z - Time taken for 'build-project-configs' 37.57490000035614ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.861Z - Time taken for '@nx/vite/plugin:createDependencies' 3.452499999664724ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.884Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.885Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.885Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:56:35.885Z - Time taken for 'total execution time for createProjectGraph()' 18.25230000074953ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:48.299Z - [WATCHER]: src/components/ChiTietDuAn/AttachmentList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:48.299Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:48.299Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:48.299Z - Time taken for 'changed-projects' 0.05299999937415123ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:48.299Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:48.300Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:50.647Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:50.648Z - [WATCHER]: src/components/ChiTietDuAn/AttachmentList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:50.648Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:50.649Z - Time taken for 'changed-projects' 0.06039999984204769ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:50.649Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:50.649Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.701Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.701Z - [REQUEST]: src/components/ChiTietDuAn/AttachmentList.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.701Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.704Z - Time taken for 'hash changed files from watcher' 0.1990999998524785ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.707Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.708Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.708Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.709Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.710Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.710Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.711Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.712Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.712Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.718Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.718Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.718Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.720Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.720Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.720Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.760Z - Time taken for 'build-project-configs' 51.732200000435114ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.761Z - Time taken for '@nx/vite/plugin:createDependencies' 4.563799999654293ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.793Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.794Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.794Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:57:54.794Z - Time taken for 'total execution time for createProjectGraph()' 26.123300000093877ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:20.686Z - [WATCHER]: src/components/ChiTietDuAn/ProjectInfo.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:20.691Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:20.691Z - Time taken for 'changed-projects' 0.1143000004813075ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:20.691Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:20.692Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:20.692Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:25.225Z - [WATCHER]: src/components/ChiTietDuAn/ProjectInfo.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:25.226Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:25.226Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:25.226Z - Time taken for 'changed-projects' 0.034500000067055225ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:25.226Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:25.226Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.092Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.092Z - [REQUEST]: src/components/ChiTietDuAn/ProjectInfo.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.093Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.096Z - Time taken for 'hash changed files from watcher' 0.19419999979436398ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.101Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.101Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.101Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.102Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.103Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.103Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.104Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.106Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.106Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.106Z - Handled HASH_GLOB. Handling time: 0. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.109Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.109Z - Handled HASH_GLOB. Handling time: 1. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.110Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.111Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.111Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.154Z - Time taken for 'build-project-configs' 53.69639999978244ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.155Z - Time taken for '@nx/vite/plugin:createDependencies' 4.5740999998524785ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.186Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.186Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.187Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:27.187Z - Time taken for 'total execution time for createProjectGraph()' 25.186200000345707ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:57.241Z - [WATCHER]: src/components/ChiTietNhiemVu/Sidebar.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:57.242Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:57.242Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:57.242Z - Time taken for 'changed-projects' 0.049600000493228436ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:57.242Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T12:59:57.242Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.645Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.645Z - [REQUEST]: src/components/ChiTietNhiemVu/Sidebar.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.645Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.647Z - Time taken for 'hash changed files from watcher' 0.1709000002592802ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.651Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.652Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.652Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.653Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.654Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.654Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.655Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.656Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.656Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.660Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.661Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.661Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.664Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.664Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.664Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.694Z - Time taken for 'build-project-configs' 43.23219999950379ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.696Z - Time taken for '@nx/vite/plugin:createDependencies' 4.528599999845028ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.722Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.722Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.722Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:00:03.723Z - Time taken for 'total execution time for createProjectGraph()' 19.345900000073016ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:07.746Z - [WATCHER]: src/components/ChiTietDuAn/Sidebar.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:07.747Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:07.747Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:07.747Z - Time taken for 'changed-projects' 0.056499999947845936ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:07.747Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:07.747Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.156Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.156Z - [REQUEST]: src/components/ChiTietDuAn/Sidebar.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.156Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.159Z - Time taken for 'hash changed files from watcher' 0.17340000066906214ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.163Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.163Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.163Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.164Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.164Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.165Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.167Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.168Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.168Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.168Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.171Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.171Z - Handled HASH_GLOB. Handling time: 1. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.172Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.173Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.173Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.215Z - Time taken for 'build-project-configs' 52.17539999913424ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.216Z - Time taken for '@nx/vite/plugin:createDependencies' 3.857599999755621ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.245Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.246Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.246Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:01:14.246Z - Time taken for 'total execution time for createProjectGraph()' 23.481800000183284ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:15.037Z - [WATCHER]: src/components/ChiTietDuAn/TaskList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:15.037Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:15.037Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:15.037Z - Time taken for 'changed-projects' 0.0435999995097518ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:15.037Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:15.037Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:16.982Z - [WATCHER]: src/components/ChiTietDuAn/TaskList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:16.982Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:16.982Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:16.982Z - Time taken for 'changed-projects' 0.03870000038295984ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:16.982Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:16.982Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.446Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.446Z - [REQUEST]: src/components/ChiTietDuAn/TaskList.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.446Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.450Z - Time taken for 'hash changed files from watcher' 0.1770999999716878ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.454Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.454Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.454Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.455Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.455Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.455Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.457Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.457Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.457Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.460Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.461Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.461Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.462Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.463Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.463Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.497Z - Time taken for 'build-project-configs' 44.47140000015497ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.499Z - Time taken for '@nx/vite/plugin:createDependencies' 3.904500000178814ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.526Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.526Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.526Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:03:21.526Z - Time taken for 'total execution time for createProjectGraph()' 20.93779999949038ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:00.213Z - [WATCHER]: src/components/ChiTietDuAn/TaskList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:00.213Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:00.214Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:00.214Z - Time taken for 'changed-projects' 0.08049999922513962ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:00.214Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:00.214Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.614Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.614Z - [REQUEST]: src/components/ChiTietDuAn/TaskList.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.614Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.617Z - Time taken for 'hash changed files from watcher' 0.18850000016391277ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.620Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.621Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.621Z - Handled GLOB. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.622Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.622Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.622Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.623Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.623Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.623Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.627Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.629Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.629Z - Handled HASH_GLOB. Handling time: 1. Response time: 2.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.630Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.631Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.631Z - Handled HASH_GLOB. Handling time: 0. Response time: 1.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.654Z - Time taken for 'build-project-configs' 34.06680000014603ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.656Z - Time taken for '@nx/vite/plugin:createDependencies' 3.7200999995693564ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.679Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.680Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.680Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:06.680Z - Time taken for 'total execution time for createProjectGraph()' 17.60149999987334ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:18.451Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:18.453Z - [WATCHER]: src/components/ChiTietDuAn/TaskList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:18.453Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:18.453Z - Time taken for 'changed-projects' 0.04210000019520521ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:18.454Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:18.454Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.854Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.854Z - [REQUEST]: src/components/ChiTietDuAn/TaskList.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.854Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.857Z - Time taken for 'hash changed files from watcher' 0.23089999984949827ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.860Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.861Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.861Z - Handled GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.863Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.863Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.863Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.864Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.867Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.867Z - Handled HASH_GLOB. Handling time: 0. Response time: 3.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.869Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.869Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.870Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.871Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.871Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.871Z - Handled HASH_GLOB. Handling time: 1. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.897Z - Time taken for 'build-project-configs' 36.43530000001192ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.898Z - Time taken for '@nx/vite/plugin:createDependencies' 3.6918000001460314ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.923Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.923Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.923Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:04:24.923Z - Time taken for 'total execution time for createProjectGraph()' 18.813500000163913ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:33.151Z - [WATCHER]: src/components/ChiTietDuAn/TaskList.tsx was modified
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:33.151Z - [REQUEST]: Responding to the client. File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:33.152Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:33.152Z - Time taken for 'changed-projects' 0.044600000604987144ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:33.152Z - Done responding to the client File watch changed
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:33.152Z - Handled FILE-WATCH-CHANGED. Handling time: 0. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.566Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.566Z - [REQUEST]: src/components/ChiTietDuAn/TaskList.tsx
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.566Z - [REQUEST]: 
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.569Z - Time taken for 'hash changed files from watcher' 0.16160000022500753ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.573Z - [REQUEST]: Responding to the client. handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.573Z - Done responding to the client handleGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.573Z - Handled GLOB. Handling time: 1. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.574Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.574Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.574Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.575Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.575Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.575Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.583Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.584Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.584Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.585Z - [REQUEST]: Responding to the client. handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.585Z - Done responding to the client handleHashGlob
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.585Z - Handled HASH_GLOB. Handling time: 0. Response time: 0.
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.609Z - Time taken for 'build-project-configs' 36.58490000013262ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.611Z - Time taken for '@nx/vite/plugin:createDependencies' 3.685200000181794ms
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.633Z - [SYNC]: collect registered sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.633Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.633Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.2 Daemon Server] - 2025-05-31T13:05:39.633Z - Time taken for 'total execution time for createProjectGraph()' 16.949900000356138ms
