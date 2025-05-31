@@ -2,6 +2,17 @@
 
 import React from "react";
 
+interface NavigationItem {
+  icon: string;
+  label: string;
+  active?: boolean;
+}
+
+interface SidebarProps {
+  navigationItems?: NavigationItem[];
+  logoUrl?: string;
+}
+
 const navigationItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/85737a58519740143f8a0d07ae6e8fab8207afd3?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",

@@ -5,7 +5,16 @@ import Header from "@cnpm/components/Header";
 import { UserDetails } from "@cnpm/components/Profile/UserDetails";
 import { ResearchInfo } from "@cnpm/components/Profile/ResearchInfo";
 
-const ThongTinCaNhanThanhVienNghienCuu = () => {
+interface ThongTinCaNhanThanhVienNghienCuuProps {
+  userId: string; // Example prop: ID of the user whose profile is being viewed
+}
+
+const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCuuProps> = ({
+  userId
+}) => {
+  // You would typically use userId here to fetch the user's profile data
+  console.log("Displaying profile for user with ID:", userId);
+
   const [previewImg, setPreviewImg] = useState<string>(
     "https://cdn.builder.io/api/v1/image/assets/TEMP/b8abed92c5361a5449f407906e028f52aee28e22?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
   );
@@ -30,7 +39,7 @@ const ThongTinCaNhanThanhVienNghienCuu = () => {
       alert("Vui lòng chọn ảnh trước khi lưu.");
       return;
     }
-    // TODO: Xử lý upload ảnh lên server tại đây
+    // TODO: Xử lý upload ảnh lên server tại đây, potentially using userId
     alert("Ảnh đại diện đã được cập nhật (demo).");
     setSelectedFile(null);
   };
@@ -50,18 +59,20 @@ const ThongTinCaNhanThanhVienNghienCuu = () => {
     <main className="bg-slate-50 min-h-screen w-full">
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
-        <div className="w-[18%] border-r border-slate-200 bg-gray">
+        <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
           <Sidebar />
         </div>
         {/* Main content */}
-        <div className="w-[82%] flex flex-col">
+        <div className="flex-1 flex flex-col ml-64">
           {/* Header */}
-          <Header />
+          <div className="fixed w-full z-10">
+            <Header />
+          </div>
           {/* Content */}
-          <section className="flex flex-col items-center pb-60 w-full max-w-full">
+          <section className="flex flex-col items-center pb-60 w-full max-w-full mt-16">
             {/* Ảnh đại diện với overlay hover */}
             <div
-              className="relative w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer"
+              className="relative w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer mt-10"
               onClick={triggerFileSelect}
               title="Click để thay đổi ảnh đại diện"
             >
@@ -119,9 +130,11 @@ const ThongTinCaNhanThanhVienNghienCuu = () => {
             <div className="mt-16 w-full max-w-[984px] max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col">
                 <div className="w-6/12 max-md:ml-0 max-md:w-full">
+                  {/* You might pass userId down to UserDetails */}
                   <UserDetails />
                 </div>
                 <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                  {/* You might pass userId down to ResearchInfo */}
                   <ResearchInfo />
                 </div>
               </div>

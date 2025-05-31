@@ -4,7 +4,16 @@ import Header from "@cnpm/components/Header";
 import { SearchInput } from "@cnpm/components/Tài Trợ/SearchInput";
 import { SponsorshipTable } from "@cnpm/components/Tài Trợ/SponsorshipTable";
 
-function TaiTroThanhVienNghienCuu() {
+interface TaiTroThanhVienNghienCuuProps {
+  userId: string; // Example prop: ID of the logged-in user
+}
+
+function TaiTroThanhVienNghienCuu({
+  userId
+}: TaiTroThanhVienNghienCuuProps) {
+  // You might use userId here to fetch user-specific data or filter requests
+  console.log("Accessing TaiTro page for user:", userId);
+
   const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("asc");
   const [showForm, setShowForm] = React.useState(false);
 
@@ -14,7 +23,7 @@ function TaiTroThanhVienNghienCuu() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: xử lý submit dữ liệu
+    // TODO: xử lý submit dữ liệu, possibly using userId
     alert("Đã gửi yêu cầu tài trợ (giả lập)");
     setShowForm(false); // ẩn form sau khi gửi
   };
@@ -23,15 +32,17 @@ function TaiTroThanhVienNghienCuu() {
     <main className="bg-slate-50 min-h-screen w-full">
       <div className="flex min-h-screen flex-row">
         {/* Sidebar */}
-        <aside className="w-[18%] border-r border-slate-200 bg-gray-50">
+        <aside className="w-64 border-r border-slate-200 bg-gray-50 fixed h-full">
           <Sidebar />
         </aside>
 
         {/* Main Content */}
-        <section className="w-[82%] flex flex-col">
-          <Header />
+        <section className="flex-1 flex flex-col ml-64">
+          <div className="fixed w-full z-10">
+            <Header />
+          </div>
 
-          <div className="flex flex-col mx-auto w-full pb-64 max-md:pb-24 max-md:max-w-full">
+          <div className="flex flex-col mx-auto w-full pb-64 max-md:pb-24 max-md:max-w-full mt-16">
             <h1 className="self-center mt-12 text-3xl font-bold text-gray-700 max-md:mt-10">
               Yêu cầu tài trợ
             </h1>

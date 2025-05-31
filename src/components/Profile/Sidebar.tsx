@@ -2,6 +2,17 @@
 
 import React from "react";
 
+interface NavigationItem {
+  icon: string;
+  label: string;
+  active?: boolean;
+}
+
+interface SidebarProps {
+  navigationItems?: NavigationItem[];
+  logoUrl?: string;
+}
+
 const navigationItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/eab83ce3769a682628746e736e2c44dbf0bdad9e?placeholderIfAbsent=true",

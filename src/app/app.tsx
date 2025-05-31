@@ -19,6 +19,10 @@ import ThanhVienNghienCuu from '@cnpm/pages/ThanhVienNghienCuu';
 import TaoDuAnNghienCuuChinh from '@cnpm/pages/TaoDuAnNghienCuuChinh';
 import DuyetDuAn from '@cnpm/pages/DuyetDuAn';
 import DuyetTaiTro from '@cnpm/pages/DuyetTaiTro';
+import ProjectDetailPage from '@cnpm/pages/ProjectDetailPage';
+import TrangChiTietNhiemVu from '@cnpm/pages/TrangChiTietNhiemVuThanhVienNghienCuu';
+import PhieuYeuCauTaiTro from '@cnpm/pages/PhieuYeuCauTaiTro';
+
 
 
 
@@ -49,6 +53,9 @@ export function App() {
               <Route path="/taoduannghiencuuchinh" element={<TaoDuAnNghienCuuChinh />} />
               <Route path="/duyetduan" element={<DuyetDuAn />} />
               <Route path="/duyettaitro" element={<DuyetTaiTro />} />
+              <Route path="/project-detail" element={<ProjectDetailPage />} />
+              <Route path="/trangchitietnhiemvu" element={<TrangChiTietNhiemVu />} />
+              <Route path="/phieuyeucautaitro" element={<PhieuYeuCauTaiTro />} />
             </Route>
           </Routes>
         </Router>

@@ -20,16 +20,27 @@ const mockRequests: ApprovalRequest[] = [
   { sender: "Trần Thị B", requestType: "Cập nhật hồ sơ", date: "13/05/2025", status: "Chờ duyệt" },
 ];
 
-const InputDesign: React.FC = () => {
+interface AdminDashboardProps {
+  userRole: string; // Example prop: role of the logged-in user
+}
+
+const InputDesign: React.FC<AdminDashboardProps> = ({
+  userRole
+}) => {
+  // You might use userRole here to conditionally render content or features
+  console.log("Accessing AdminDashboard with role:", userRole);
+
   return (
     <div className="flex min-h-screen bg-gray-50">
-      <aside className="w-64 bg-gray-50 border-r border-gray-200">
+      <aside className="w-64 bg-gray-50 border-r border-gray-200 fixed h-full">
         <Sidebar />
       </aside>
 
-      <div className="flex-1 flex flex-col">
-        <Header />
-        <main className="p-6 flex-1 overflow-y-auto">
+      <div className="flex-1 flex flex-col ml-64">
+        <div className="fixed w-full z-10">
+          <Header />
+        </div>
+        <main className="p-6 flex-1 overflow-y-auto mt-16">
           {/* Top bar */}
           <div className="flex flex-wrap gap-8 mb-6 items-center">
             {/* Search */}

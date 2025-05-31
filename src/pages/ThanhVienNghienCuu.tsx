@@ -42,18 +42,29 @@ const thongBaoChung = [
 	{ message: "Bạn vừa mới được ThS Nguyễn Văn Hồng cập nhật nhiệm vụ 3" },
 ];
 
-export const ThanhVienNghienCuu = () => {
+interface ThanhVienNghienCuuProps {
+	userId: string; // Example prop: ID of the logged-in user
+}
+
+export const ThanhVienNghienCuu: React.FC<ThanhVienNghienCuuProps> = ({
+	userId
+}) => {
+	// You might use userId here to fetch user-specific data or filter content
+	console.log("Accessing ThanhVienNghienCuu page for user:", userId);
+
 	return (
 		<main className="bg-slate-50 min-h-screen w-full">
 			<div className="flex flex-row min-h-screen">
 				{/* Sidebar */}
-				<div className="w-[18%] border-r border-slate-200 bg-gray">
+				<div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
 					<Sidebar />
 				</div>
 				{/* Main content */}
-				<div className="w-[82%] flex flex-col">
-					<Header />
-					<section className="flex flex-col items-center pb-20 w-full max-w-full">
+				<div className="flex-1 flex flex-col ml-64">
+					<div className="fixed w-full z-10">
+						<Header />
+					</div>
+					<section className="flex flex-col items-center pb-20 w-full max-w-full mt-16">
 						<div className="flex flex-col gap-6 p-6 w-full max-w-[1136px] max-md:p-4 max-md:w-full">
 							<h1 className="mb-6 text-3xl text-black max-sm:text-2xl">
 								Xin chào, tên !

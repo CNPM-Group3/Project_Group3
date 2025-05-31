@@ -224,7 +224,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "9156311408612600384",
+          "hash": "15437500926006697663",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -251,7 +251,7 @@
         },
         {
           "file": "src/components/Admin/Sidebar.tsx",
-          "hash": "1599157184544735134",
+          "hash": "14101936592374108604",
           "deps": [
             "npm:react"
           ]
@@ -266,6 +266,90 @@
         {
           "file": "src/components/Admin/types.ts",
           "hash": "7298806207843946438"
+        },
+        {
+          "file": "src/components/ChiTietDuAn/AttachmentItem.tsx",
+          "hash": "1254862657293625516",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/AttachmentList.tsx",
+          "hash": "9932098922058871071",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/ProjectInfo.tsx",
+          "hash": "14325437647866093221",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/Sidebar.tsx",
+          "hash": "11071280810234900397",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/TaskItem.tsx",
+          "hash": "11358246564735562645",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/TaskList.tsx",
+          "hash": "8477550636998250306",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/FileUpload.tsx",
+          "hash": "17233531108352292364",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/PresentationForm.tsx",
+          "hash": "4072694393298887298",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/Sidebar.tsx",
+          "hash": "18261982359884444895",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/SubmitButton.tsx",
+          "hash": "13841604866127433775",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/TaskDetails.tsx",
+          "hash": "7232779803718544780",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/TaskHeader.tsx",
+          "hash": "16044632032768242342",
+          "deps": [
+            "npm:react"
+          ]
         },
         {
           "file": "src/components/Duyệt Dự Án/ProjectList.tsx",
@@ -283,7 +367,7 @@
         },
         {
           "file": "src/components/Duyệt Dự Án/Sidebar.tsx",
-          "hash": "17015707755288714814",
+          "hash": "10590406202847473299",
           "deps": [
             "npm:react"
           ]
@@ -296,36 +380,8 @@
           ]
         },
         {
-          "file": "src/components/Duyệt Tài Trợ/Duyệt Dự Án/ProjectList.tsx",
-          "hash": "3866324223957042581",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Duyệt Tài Trợ/Duyệt Dự Án/ProjectListItem.tsx",
-          "hash": "18390077779614066850",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Duyệt Tài Trợ/Duyệt Dự Án/Sidebar.tsx",
-          "hash": "17015707755288714814",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/components/Duyệt Tài Trợ/Duyệt Dự Án/TabSelector.tsx",
-          "hash": "18344387491303979141",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
           "file": "src/components/Duyệt Tài Trợ/Sidebar.tsx",
-          "hash": "2494398168869515890",
+          "hash": "11387612159323909370",
           "deps": [
             "npm:react"
           ]
@@ -367,7 +423,7 @@
         },
         {
           "file": "src/components/Dự Án/Sidebar.tsx",
-          "hash": "8466291735383713882",
+          "hash": "5234921174766884226",
           "deps": [
             "npm:react"
           ]
@@ -388,14 +444,14 @@
         },
         {
           "file": "src/components/Dự Án/Tạo Dự Án/Sidebar.tsx",
-          "hash": "8466291735383713882",
+          "hash": "5234921174766884226",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Header.tsx",
-          "hash": "1253548236351817410",
+          "hash": "11157765669081642510",
           "deps": [
             "npm:react"
           ]
@@ -416,7 +472,7 @@
         },
         {
           "file": "src/components/HoiDongThamDinh/Sidebar.tsx",
-          "hash": "16466082987785366756",
+          "hash": "4607339032669907730",
           "deps": [
             "npm:react"
           ]
@@ -459,12 +515,40 @@
           ]
         },
         {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/FileUpload.tsx",
+          "hash": "17522349030526097023",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/FormField.tsx",
+          "hash": "6866189041431803980",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx",
+          "hash": "11754169194840908302",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/Sidebar.tsx",
+          "hash": "4116218424289948209",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
           "file": "src/components/Profile/ResearchInfo.tsx",
           "hash": "323846970877031587"
         },
         {
           "file": "src/components/Profile/Sidebar.tsx",
-          "hash": "7638207149640178785",
+          "hash": "906960650758406190",
           "deps": [
             "npm:react"
           ]
@@ -499,7 +583,7 @@
         },
         {
           "file": "src/components/QuanTriVien/QuanTriVien1/Sidebar.tsx",
-          "hash": "18389102204445796926",
+          "hash": "13703414732359419426",
           "deps": [
             "npm:react"
           ]
@@ -534,7 +618,7 @@
         },
         {
           "file": "src/components/QuanTriVien/QuanTriVien2/Sidebar.tsx",
-          "hash": "5930890114909801704",
+          "hash": "11934513308141447558",
           "deps": [
             "npm:react"
           ]
@@ -569,7 +653,7 @@
         },
         {
           "file": "src/components/QuanTriVien/Sidebar.tsx",
-          "hash": "16550411016937133854",
+          "hash": "2951697707522203592",
           "deps": [
             "npm:react"
           ]
@@ -651,7 +735,7 @@
         },
         {
           "file": "src/components/TrangChuThanhVienNghienCuu/Sidebar.tsx",
-          "hash": "4766608127895756965",
+          "hash": "14589591888276642220",
           "deps": [
             "npm:react"
           ]
@@ -680,7 +764,7 @@
         },
         {
           "file": "src/components/Tài Trợ/Sidebar.tsx",
-          "hash": "2420422619252127437",
+          "hash": "16333048414124069863",
           "deps": [
             "npm:react"
           ]
@@ -763,56 +847,56 @@
         },
         {
           "file": "src/pages/AdminDashboard.tsx",
-          "hash": "17050874000452882024",
+          "hash": "2474669744137766570",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardHoiOngThamInh.tsx",
-          "hash": "17544745877367561510",
+          "hash": "4784820067442144024",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien.tsx",
-          "hash": "12013400789058991253",
+          "hash": "9219768858911175539",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien1.tsx",
-          "hash": "9578543429784115238",
+          "hash": "11530373865687473152",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien2.tsx",
-          "hash": "1065750906364398101",
+          "hash": "16544843346209205801",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DuAn.tsx",
-          "hash": "4836662341767086770",
+          "hash": "12817665379035128344",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DuyetDuAn.tsx",
-          "hash": "13098729881080809944",
+          "hash": "963453486962124009",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DuyetTaiTro.tsx",
-          "hash": "8204309742444852779",
+          "hash": "10906055867514847907",
           "deps": [
             "npm:react"
           ]
@@ -832,8 +916,22 @@
           ]
         },
         {
+          "file": "src/pages/PhieuYeuCauTaiTro.tsx",
+          "hash": "15208087915830787029",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
           "file": "src/pages/Profile.tsx",
-          "hash": "15620423856449347148",
+          "hash": "18308308387643711535",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ProjectDetailPage.tsx",
+          "hash": "15001813699554504549",
           "deps": [
             "npm:react"
           ]
@@ -847,21 +945,28 @@
         },
         {
           "file": "src/pages/TaiTro.tsx",
-          "hash": "4016788262263711530",
+          "hash": "8601433762878938545",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/TaoDuAnNghienCuuChinh.tsx",
-          "hash": "7969607183771319053",
+          "hash": "1150627143264704099",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/ThanhVienNghienCuu.tsx",
-          "hash": "135209842887603993",
+          "hash": "4869219721313633678",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx",
+          "hash": "17875798482967622204",
           "deps": [
             "npm:react"
           ]

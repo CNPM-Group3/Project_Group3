@@ -7,20 +7,31 @@ import DashboardHeader from "@cnpm/components/Header";
 import ProjectEvaluation from "@cnpm/components/HoiDongThamDinh/ProjectEvaluation";
 import PhaseProgress from "@cnpm/components/HoiDongThamDinh/PhaseProgress";
 
-const DashboardHoiDongThamDinh: React.FC = () => {
+interface DashboardHoiDongThamDinhProps {
+  userRole: string; // Example prop: role of the logged-in user
+}
+
+const DashboardHoiDongThamDinh: React.FC<DashboardHoiDongThamDinhProps> = ({
+  userRole
+}) => {
+  // You might use userRole here to conditionally render content or features
+  console.log("Accessing DashboardHoiDongThamDinh with role:", userRole);
+
   return (
     <MainLayout>
       <div className="flex min-h-screen w-screen bg-gray-50">
         {/* Sidebar */}
-        <aside className="w-64 bg-gray-50 border-r border-gray-200">
+        <aside className="w-64 bg-gray-50 border-r border-gray-200 fixed h-full">
           <Sidebar />
         </aside>
 
         {/* Main content */}
-        <section className="flex-1 flex flex-col">
-          <DashboardHeader />
+        <section className="flex-1 flex flex-col ml-64">
+          <div className="fixed w-full z-10">
+            <DashboardHeader />
+          </div>
 
-          <main className="flex-1 p-6 overflow-y-auto bg-gray-50">
+          <main className="flex-1 p-6 overflow-y-auto mt-16">
             {/* Card chính bao toàn bộ phần đánh giá */}
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
               {/* Tiêu đề chính */}
@@ -30,6 +41,7 @@ const DashboardHoiDongThamDinh: React.FC = () => {
 
               {/* ProjectEvaluation block */}
               <div className="bg-gray-50 rounded-xl border border-gray-200 p-5 mb-6 shadow-sm">
+                {/* You might pass userRole to ProjectEvaluation */}
                 <ProjectEvaluation />
               </div>
 
@@ -40,6 +52,7 @@ const DashboardHoiDongThamDinh: React.FC = () => {
                   <h3 className="text-base font-semibold mb-3 text-gray-700">
                     Đánh giá mốc tiến độ
                   </h3>
+                  {/* You might pass userRole to PhaseProgress */}
                   <PhaseProgress />
                 </div>
 
