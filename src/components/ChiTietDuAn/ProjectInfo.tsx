@@ -1,9 +1,40 @@
 import React, { useState } from "react";
 
-export const ProjectInfo: React.FC = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+interface ProjectInfoProps {
+  name?: string;
+  phone?: string;
+  email?: string;
+  onNameChange?: (value: string) => void;
+  onPhoneChange?: (value: string) => void;
+  onEmailChange?: (value: string) => void;
+}
+
+export const ProjectInfo: React.FC<ProjectInfoProps> = ({
+  name: initialName = "",
+  phone: initialPhone = "",
+  email: initialEmail = "",
+  onNameChange,
+  onPhoneChange,
+  onEmailChange,
+}) => {
+  const [name, setName] = useState(initialName);
+  const [phone, setPhone] = useState(initialPhone);
+  const [email, setEmail] = useState(initialEmail);
+
+  const handleNameChange = (value: string) => {
+    setName(value);
+    onNameChange?.(value);
+  };
+
+  const handlePhoneChange = (value: string) => {
+    setPhone(value);
+    onPhoneChange?.(value);
+  };
+
+  const handleEmailChange = (value: string) => {
+    setEmail(value);
+    onEmailChange?.(value);
+  };
 
   return (
     <section className="flex flex-col px-7 py-11 mt-6 w-full rounded-xl border border-solid border-slate-200 max-w-[1069px] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] max-md:px-5 max-md:max-w-full">
@@ -22,7 +53,7 @@ export const ProjectInfo: React.FC = () => {
             type="text"
             className="mt-1 px-3 py-2 border rounded outline-none"
             value={name}
-            onChange={e => setName(e.target.value)}
+            onChange={e => handleNameChange(e.target.value)}
             placeholder="Nhập tên"
           />
         </label>
@@ -32,7 +63,7 @@ export const ProjectInfo: React.FC = () => {
             type="text"
             className="mt-1 px-3 py-2 border rounded outline-none"
             value={phone}
-            onChange={e => setPhone(e.target.value)}
+            onChange={e => handlePhoneChange(e.target.value)}
             placeholder="Nhập số điện thoại"
           />
         </label>
@@ -42,7 +73,7 @@ export const ProjectInfo: React.FC = () => {
             type="email"
             className="mt-1 px-3 py-2 border rounded outline-none"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={e => handleEmailChange(e.target.value)}
             placeholder="Nhập email"
           />
         </label>

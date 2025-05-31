@@ -1,37 +1,51 @@
 import React, { useState } from "react";
 import { TaskItem } from "./TaskItem";
 
-const initialTasks = [
+type TaskStatus = "problem" | "working" | "done" | "submitted";
+
+interface Task {
+  name: string;
+  status: TaskStatus;
+  iconSrc: string;
+}
+
+interface TaskListProps {
+  tasks?: Task[];
+}
+
+const initialTasks: Task[] = [
   {
     name: "Nhiệm vụ 1",
-    status: "problem" as const,
+    status: "problem",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
   {
     name: "Nhiệm vụ 2",
-    status: "working" as const,
+    status: "working",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
   {
     name: "Nhiệm vụ 3",
-    status: "done" as const,
+    status: "done",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
   {
     name: "Nhiệm vụ 4",
-    status: "submitted" as const,
+    status: "submitted",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
 ];
 
-export const TaskList: React.FC = () => {
-  const [tasks, setTasks] = useState(initialTasks);
+export const TaskList: React.FC<TaskListProps> = ({
+  tasks: propTasks,
+}) => {
+  const [tasks, setTasks] = useState<Task[]>(propTasks || initialTasks);
 
-  const handleStatusChange = (index: number, newStatus: "problem" | "working" | "done" | "submitted") => {
+  const handleStatusChange = (index: number, newStatus: TaskStatus) => {
     setTasks(prev =>
       prev.map((task, i) =>
         i === index ? { ...task, status: newStatus } : task

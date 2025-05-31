@@ -1,0 +1,42 @@
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+[33mThe `define` option contains an object with "Path" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m
+[2m22:52:51[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m22:53:05[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m22:53:13[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m22:56:54[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m22:56:59[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m22:57:13[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:01:50[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:02:48[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:02:53[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:03:11[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:05:51[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:06:04[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:06:11[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:08:21[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:08:35[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:08:42[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/ProjectInfo.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:12:41[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:12:46[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:14:15[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskList.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:14:23[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskList.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:14:35[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskList.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:17:34[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:17:39[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:17:43[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:23:14[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:23:17[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:23:22[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:25:51[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:25:56[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:26:00[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChiTietDuAn/TaskItem.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:30:06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:34:36[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:34:38[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:34:41[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:36:39[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:36:51[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:36:55[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:38:14[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m23:40:05[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ProjectDetailPage.tsx, /src/styles.css?direct, /src/styles.css[22m

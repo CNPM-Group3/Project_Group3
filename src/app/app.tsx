@@ -8,6 +8,7 @@ import SignUpPage from '@cnpm/pages/SignUp';
 import LoginError from '@cnpm/pages/LoginError';
 import { PublicRoute } from '@cnpm/components/Protect/PublicRoute';
 import ProjectDetailPage from '@cnpm/pages/ProjectDetailPage';
+import TrangChiTietNhiemVu from '@cnpm/pages/TrangChiTietNhiemVuThanhVienNghienCuu';
 
 
 export function App() {
@@ -26,6 +27,7 @@ export function App() {
                 <Route path="/signup" element={<SignUpPage />} />
                 <Route path="/login-error" element={<LoginError />} />
                 <Route path="/project/:projectId" element={<ProjectDetailPage />} />
+                <Route path="/task/:taskId" element={<TrangChiTietNhiemVu />} />
               </Route>
           </Routes>
         </Router>

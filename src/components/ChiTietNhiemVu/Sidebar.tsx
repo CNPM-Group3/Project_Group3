@@ -13,7 +13,7 @@ interface SidebarProps {
   logoUrl?: string;
 }
 
-const navigationItems = [
+const defaultNavigationItems: NavigationItem[] = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/ae10dc620c8906cfd90d03e5e71cfd48ef8aa9d3?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
     label: "Trang chủ",
@@ -37,13 +37,19 @@ const navigationItems = [
   },
 ];
 
-const Sidebar: React.FC = () => {
+const defaultLogoUrl =
+  "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f97f13d9cd69d09e5640a65bf4466139ca5ca8ae?placeholderIfAbsent=true";
+
+const Sidebar: React.FC<SidebarProps> = ({
+  navigationItems = defaultNavigationItems,
+  logoUrl = defaultLogoUrl,
+}) => {
   return (
     <aside className="w-[240px] h-screen bg-gray-50 border-r border-gray-200 flex flex-col">
       {/* Header logo */}
       <header className="flex justify-center items-center h-[80px] border-b border-gray-200">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f97f13d9cd69d09e5640a65bf4466139ca5ca8ae?placeholderIfAbsent=true"
+          src={logoUrl}
           alt="Logo"
           className="w-[150px] object-contain"
         />
