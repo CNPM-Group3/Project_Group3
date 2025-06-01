@@ -224,7 +224,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "15437500926006697663",
+          "hash": "3647772803429957558",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -424,6 +424,20 @@
         {
           "file": "src/components/Dự Án/Sidebar.tsx",
           "hash": "5234921174766884226",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Dự Án/Thêm Tài Liệu/DocumentUpload.tsx",
+          "hash": "4546697600813949239",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Dự Án/Thêm Tài Liệu/Sidebar.tsx",
+          "hash": "8466291735383713882",
           "deps": [
             "npm:react"
           ]
@@ -960,6 +974,13 @@
         {
           "file": "src/pages/ThanhVienNghienCuu.tsx",
           "hash": "4869219721313633678",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ThemTaiLieuNghienCuuChinh.tsx",
+          "hash": "3712360968863571988",
           "deps": [
             "npm:react"
           ]

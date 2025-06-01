@@ -22,45 +22,52 @@ import DuyetTaiTro from '@cnpm/pages/DuyetTaiTro';
 import ProjectDetailPage from '@cnpm/pages/ProjectDetailPage';
 import TrangChiTietNhiemVu from '@cnpm/pages/TrangChiTietNhiemVuThanhVienNghienCuu';
 import PhieuYeuCauTaiTro from '@cnpm/pages/PhieuYeuCauTaiTro';
-
-
-
+import ThemTaiLieuNghienCuuChinh from '@cnpm/pages/ThemTaiLieuNghienCuuChinh';
 
 export function App() {
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
+  // Mock data cho các props
+  const mockUserId = "user123";
+  const mockUserRole = "admin";
+  const mockProjectId = "project123";
+  const mockTaskId = "task123";
+  const mockOnSubmit = (data: any) => {
+    console.log('Form submitted:', data);
+  };
 
   return (
     <div className="w-screen min-h-screen bg-[#fcfcf6]">
-    <GoogleOAuthProvider clientId={googleClientId}>
-      <AuthProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Navigate to="/signin" replace />} />
+      <GoogleOAuthProvider clientId={googleClientId}>
+        <AuthProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Navigate to="/signin" replace />} />
 
-            <Route element={<PublicRoute />}>
-              <Route path="/signin" element={<SignInPage />} />
-              <Route path="/signup" element={<SignUpPage />} />
-              <Route path="/login-error" element={<LoginError />} />
-              <Route path="/hoidongthamdinh" element={<DashboardHoiOngThamInh />} />
-              <Route path="/quantrivien" element={<DashboardQuanTriVien />} />
-              <Route path="/quantrivien1" element={<DashboardQuanTriVien1 />} />
-              <Route path="/quantrivien2" element={<DashboardQuanTriVien2 />} />
-              <Route path="/admin" element={<AdminDashboard />} />
-              <Route path="/duan" element={<DuAn />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/taitro" element={<TaiTro />} />
-              <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu />} />
-              <Route path="/taoduannghiencuuchinh" element={<TaoDuAnNghienCuuChinh />} />
-              <Route path="/duyetduan" element={<DuyetDuAn />} />
-              <Route path="/duyettaitro" element={<DuyetTaiTro />} />
-              <Route path="/project-detail" element={<ProjectDetailPage />} />
-              <Route path="/trangchitietnhiemvu" element={<TrangChiTietNhiemVu />} />
-              <Route path="/phieuyeucautaitro" element={<PhieuYeuCauTaiTro />} />
-            </Route>
-          </Routes>
-        </Router>
-      </AuthProvider>
-    </GoogleOAuthProvider>
+              <Route element={<PublicRoute />}>
+                <Route path="/signin" element={<SignInPage />} />
+                <Route path="/signup" element={<SignUpPage />} />
+                <Route path="/login-error" element={<LoginError />} />
+                <Route path="/hoidongthamdinh" element={<DashboardHoiOngThamInh userRole={mockUserRole} />} />
+                <Route path="/quantrivien" element={<DashboardQuanTriVien userRole={mockUserRole} />} />
+                <Route path="/quantrivien1" element={<DashboardQuanTriVien1 userRole={mockUserRole} />} />
+                <Route path="/quantrivien2" element={<DashboardQuanTriVien2 userRole={mockUserRole} />} />
+                <Route path="/admin" element={<AdminDashboard userRole={mockUserRole} />} />
+                <Route path="/duan" element={<DuAn userId={mockUserId} />} />
+                <Route path="/profile" element={<Profile userId={mockUserId} />} />
+                <Route path="/taitro" element={<TaiTro userId={mockUserId} />} />
+                <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu userId={mockUserId} />} />
+                <Route path="/taoduannghiencuuchinh" element={<TaoDuAnNghienCuuChinh userId={mockUserId} />} />
+                <Route path="/duyetduan" element={<DuyetDuAn userRole={mockUserRole} />} />
+                <Route path="/duyettaitro" element={<DuyetTaiTro userRole={mockUserRole} />} />
+                <Route path="/project-detail" element={<ProjectDetailPage projectId={mockProjectId} />} />
+                <Route path="/trangchitietnhiemvu" element={<TrangChiTietNhiemVu taskId={mockTaskId} />} />
+                <Route path="/phieuyeucautaitro" element={<PhieuYeuCauTaiTro onSubmit={mockOnSubmit} />} />
+                <Route path="/themtailieu" element={<ThemTaiLieuNghienCuuChinh userId={mockUserId} />} />
+              </Route>
+            </Routes>
+          </Router>
+        </AuthProvider>
+      </GoogleOAuthProvider>
     </div>
   );
 }
