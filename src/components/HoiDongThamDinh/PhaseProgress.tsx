@@ -9,6 +9,11 @@ interface PhaseStatus {
   status: PhaseStatusType;
 }
 
+interface PhaseProgressProps {
+  phases: PhaseStatus[];
+  onPhaseStatusChange: (index: number, newStatus: PhaseStatusType) => void;
+}
+
 const statusOptions: Record<PhaseStatusType, { text: string; bg: string; icon: string }> = {
   completed: {
     text: "Hoàn Thành",

@@ -55,7 +55,23 @@ const rejectedProjects: Project[] = [
   },
 ];
 
-export const TabSelector = () => {
+export interface TabSelectorProps {
+  pendingProjects: Project[];
+  approvedProjects: Project[];
+  rejectedProjects: Project[];
+  onApprove: (id: string) => void;
+  onReject: (id: string) => void;
+  onView: (id: string) => void;
+}
+
+export const TabSelector: React.FC<TabSelectorProps> = ({
+  pendingProjects,
+  approvedProjects,
+  rejectedProjects,
+  onApprove,
+  onReject,
+  onView,
+}) => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
 
@@ -76,18 +92,15 @@ export const TabSelector = () => {
   };
 
   const handleApprove = (id: string) => {
-    // TODO: Implement approve logic
-    console.log("Approve project:", id);
+    onApprove(id);
   };
 
   const handleReject = (id: string) => {
-    // TODO: Implement reject logic
-    console.log("Reject project:", id);
+    onReject(id);
   };
 
   const handleView = (id: string) => {
-    // TODO: Implement view details logic
-    console.log("View project:", id);
+    onView(id);
   };
 
   return (

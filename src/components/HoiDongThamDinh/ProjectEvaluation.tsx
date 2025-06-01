@@ -9,6 +9,12 @@ interface Criterion {
   label: string;
 }
 
+interface ProjectEvaluationProps {
+  criteria: Criterion[];
+  selections: Record<string, EvaluationOption | null>;
+  onSelect: (criterionId: string, value: EvaluationOption) => void;
+}
+
 const CRITERIA: Criterion[] = [
   { id: "planning", label: "Lập kế hoạch" },
   { id: "execution", label: "Thực hiện" },

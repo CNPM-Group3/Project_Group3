@@ -2,13 +2,29 @@
 
 import React, { useState } from "react";
 
-export function SystemConfigCard() {
-  const [defaultRole, setDefaultRole] = useState("Sinh viên");
-  const [themeMode, setThemeMode] = useState("Sáng");
+interface SystemConfigCardProps {
+  timePeriod: string;
+  systemEmail: string;
+  smtpServer: string;
+  defaultRole: string;
+  themeMode: string;
+  roles: string[];
+  modes: string[];
+  onRoleChange: (newRole: string) => void;
+  onThemeChange: (newMode: string) => void;
+}
 
-  const roles = ["Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"];
-  const modes = ["Sáng", "Tối"];
-
+export function SystemConfigCard({
+  timePeriod,
+  systemEmail,
+  smtpServer,
+  defaultRole,
+  themeMode,
+  roles,
+  modes,
+  onRoleChange,
+  onThemeChange,
+}: SystemConfigCardProps) {
   return (
     <section className="flex flex-col gap-9 px-5 w-full max-w-[1095px]">
       {/* Tiêu đề */}
@@ -33,15 +49,15 @@ export function SystemConfigCard() {
           {/* Cột phải - Giá trị */}
           <div className="w-[41%] max-md:w-full">
             <dl className="flex flex-col gap-7 mt-[6px] text-base text-black">
-              <dd className="py-1.5">01/01/2025 - 30/06/2025</dd>
-              <dd className="py-1.5">system@domain.edu.vn</dd>
-              <dd className="py-1.5">smtp.domain.edu.vn</dd>
+              <dd className="py-1.5">{timePeriod}</dd>
+              <dd className="py-1.5">{systemEmail}</dd>
+              <dd className="py-1.5">{smtpServer}</dd>
 
               {/* Dropdown quyền hạn */}
               <dd className="flex items-center py-1.5">
                 <select
                   value={defaultRole}
-                  onChange={(e) => setDefaultRole(e.target.value)}
+                  onChange={(e) => onRoleChange(e.target.value)}
                   className="border border-gray-300 px-3 py-2 rounded-md bg-white text-sm text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                 >
                   {roles.map((role) => (
@@ -56,7 +72,7 @@ export function SystemConfigCard() {
               <dd className="flex items-center py-1.5">
                 <select
                   value={themeMode}
-                  onChange={(e) => setThemeMode(e.target.value)}
+                  onChange={(e) => onThemeChange(e.target.value)}
                   className="border border-gray-300 px-3 py-2 rounded-md bg-white text-sm text-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                 >
                   {modes.map((mode) => (

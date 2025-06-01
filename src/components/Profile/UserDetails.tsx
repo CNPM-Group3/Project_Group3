@@ -1,44 +1,35 @@
 import React, { useState } from "react";
 
-export const UserDetails = () => {
-  // State mẫu cho các form (bạn có thể bổ sung validate và gửi request)
-  const [userInfo, setUserInfo] = useState({
-    name: "Nguyễn Văn A",
-    class: "CNTTCLC23",
-    email: "fe@ut.edu.vn",
-    phone: "08********",
-  });
+interface UserInfo {
+  name: string;
+  class: string;
+  email: string;
+  phone: string;
+}
 
-  const [passwords, setPasswords] = useState({
-    current: "",
-    newPassword: "",
-    confirmNewPassword: "",
-  });
+interface Passwords {
+  current: string;
+  newPassword: string;
+  confirmNewPassword: string;
+}
 
-  const handleUserInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+interface UserDetailsProps {
+  userInfo: UserInfo;
+  passwords: Passwords;
+  onUserInfoChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onPasswordsChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onUserInfoSubmit: (e: React.FormEvent) => void;
+  onPasswordSubmit: (e: React.FormEvent) => void;
+}
 
-  const handlePasswordsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswords((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleUserInfoSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Xử lý gửi cập nhật thông tin
-    console.log("Cập nhật thông tin:", userInfo);
-  };
-
-  const handlePasswordSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Xử lý đổi mật khẩu
-    if (passwords.newPassword !== passwords.confirmNewPassword) {
-      alert("Mật khẩu mới và xác nhận mật khẩu không khớp!");
-      return;
-    }
-    console.log("Đổi mật khẩu:", passwords);
-  };
-
+export const UserDetails: React.FC<UserDetailsProps> = ({
+  userInfo,
+  passwords,
+  onUserInfoChange,
+  onPasswordsChange,
+  onUserInfoSubmit,
+  onPasswordSubmit,
+}: UserDetailsProps) => {
   return (
     <section className="flex flex-col grow px-14 py-11 rounded-xl border border-solid border-slate-200 shadow-[0px_1px_2px_rgba(0,0,0,0.05)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
       <h2 className="self-center text-xl font-bold text-center text-gray-700">
@@ -83,7 +74,7 @@ export const UserDetails = () => {
 
       {/* Form thay đổi thông tin */}
       <form
-        onSubmit={handleUserInfoSubmit}
+        onSubmit={onUserInfoSubmit}
         className="mt-10 border-t border-gray-300 pt-6"
       >
         <h3 className="text-lg font-semibold mb-4 text-gray-700">
@@ -96,7 +87,7 @@ export const UserDetails = () => {
               type="text"
               name="name"
               value={userInfo.name}
-              onChange={handleUserInfoChange}
+              onChange={onUserInfoChange}
               className="mt-1 rounded border border-gray-300 p-2"
               required
             />
@@ -107,7 +98,7 @@ export const UserDetails = () => {
               type="text"
               name="class"
               value={userInfo.class}
-              onChange={handleUserInfoChange}
+              onChange={onUserInfoChange}
               className="mt-1 rounded border border-gray-300 p-2"
             />
           </label>
@@ -117,7 +108,7 @@ export const UserDetails = () => {
               type="email"
               name="email"
               value={userInfo.email}
-              onChange={handleUserInfoChange}
+              onChange={onUserInfoChange}
               className="mt-1 rounded border border-gray-300 p-2"
               required
             />
@@ -128,7 +119,7 @@ export const UserDetails = () => {
               type="tel"
               name="phone"
               value={userInfo.phone}
-              onChange={handleUserInfoChange}
+              onChange={onUserInfoChange}
               className="mt-1 rounded border border-gray-300 p-2"
             />
           </label>
@@ -143,7 +134,7 @@ export const UserDetails = () => {
 
       {/* Form đổi mật khẩu */}
       <form
-        onSubmit={handlePasswordSubmit}
+        onSubmit={onPasswordSubmit}
         className="mt-10 border-t border-gray-300 pt-6 max-w-md"
       >
         <h3 className="text-lg font-semibold mb-4 text-gray-700">
@@ -156,7 +147,7 @@ export const UserDetails = () => {
               type="password"
               name="current"
               value={passwords.current}
-              onChange={handlePasswordsChange}
+              onChange={onPasswordsChange}
               className="mt-1 rounded border border-gray-300 p-2"
               required
             />
@@ -167,7 +158,7 @@ export const UserDetails = () => {
               type="password"
               name="newPassword"
               value={passwords.newPassword}
-              onChange={handlePasswordsChange}
+              onChange={onPasswordsChange}
               className="mt-1 rounded border border-gray-300 p-2"
               required
             />
@@ -178,7 +169,7 @@ export const UserDetails = () => {
               type="password"
               name="confirmNewPassword"
               value={passwords.confirmNewPassword}
-              onChange={handlePasswordsChange}
+              onChange={onPasswordsChange}
               className="mt-1 rounded border border-gray-300 p-2"
               required
             />

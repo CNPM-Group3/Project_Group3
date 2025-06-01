@@ -1,14 +1,16 @@
 import React from "react";
 
-const roles = [
-  "Tất cả",
-  "Sinh viên",
-  "Giảng viên",
-  "Nhân viên",
-  "Quản trị viên",
-];
+interface UserRoleFilterProps {
+  roles: string[];
+  selectedRole: string | null;
+  onRoleSelect: (role: string | null) => void;
+}
 
-export const UserRoleFilter = () => {
+export const UserRoleFilter: React.FC<UserRoleFilterProps> = ({
+  roles,
+  selectedRole,
+  onRoleSelect,
+}) => {
   return (
     <div className="flex flex-wrap gap-2 px-6 py-2.5 w-full text-base rounded-lg border border-solid border-slate-200 max-md:pr-5 max-md:max-w-full">
       <span className="grow my-auto text-slate-600">Lọc theo vai trò</span>
@@ -22,7 +24,10 @@ export const UserRoleFilter = () => {
           {roles.map((role, index) => (
             <button
               key={index}
-              className="self-stretch my-auto hover:text-blue-600"
+              className={`self-stretch my-auto hover:text-blue-600 ${
+                selectedRole === role ? "text-blue-600 font-bold" : ""
+              }`}
+              onClick={() => onRoleSelect(role === "Tất cả" ? null : role)}
             >
               {role}
             </button>

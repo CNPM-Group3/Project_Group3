@@ -1,12 +1,30 @@
 "use client";
-import React from "react";
+import React, { ChangeEvent, FormEvent } from "react";
 import { FormInput } from "@cnpm/components/Sign Up/FormInput";
 import { SelectField } from "@cnpm/components/Sign Up/SelectField";
 import { Button } from "@cnpm/components/Sign Up/Button";
 
-export const SignUpForm: React.FC = () => {
+interface SignUpFormProps {
+  email: string;
+  password: string;
+  onEmailChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onPasswordChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: (e: FormEvent) => void;
+  onGoogleSignIn: () => void;
+  onSignIn: () => void;
+}
+
+export const SignUpForm: React.FC<SignUpFormProps> = ({
+  email,
+  password,
+  onEmailChange,
+  onPasswordChange,
+  onSubmit,
+  onGoogleSignIn,
+  onSignIn,
+}) => {
   return (
-    <form className="flex flex-col items-center px-8 py-8 mt-7 bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.1)]">
+    <form className="flex flex-col items-center px-8 py-8 mt-7 bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.1)]" onSubmit={onSubmit}>
       <h1 className="text-3xl font-bold leading-none text-center text-gray-700">
         Tạo Tài Khoản
       </h1>
@@ -19,20 +37,24 @@ export const SignUpForm: React.FC = () => {
           label="Email:"
           placeholder="fe@ut.edu.vn"
           type="email"
+          value={email}
+          onChange={onEmailChange}
           className="mb-6"
         />
         <FormInput
           label="Mật khẩu:"
           placeholder="Nhập Mật khẩu"
           type="password"
+          value={password}
+          onChange={onPasswordChange}
           className="mb-6"
         />
         <div className="mt-5">
-          <Button variant="primary" className="py-3.5 pb-5">
+          <Button variant="primary" className="py-3.5 pb-5" type="submit">
             Tạo
           </Button>
 
-          <Button variant="social" className="mt-3">
+          <Button variant="social" className="mt-3" onClick={onGoogleSignIn}>
             <div className="flex gap-2.5 justify-center items-center max-w-full w-[177px] mx-auto">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/2a65fed3a990f1e3242a0de9ba6cd1a3d8f6effe?placeholderIfAbsent=true"
@@ -48,7 +70,7 @@ export const SignUpForm: React.FC = () => {
           <p className="self-center text-sm leading-none text-gray-700">
             Bạn đã có tài khoản rồi ư ?
           </p>
-          <Button variant="outline" className="mt-3">
+          <Button variant="outline" className="mt-3" onClick={onSignIn}>
             Đăng Nhập
           </Button>
         </div>

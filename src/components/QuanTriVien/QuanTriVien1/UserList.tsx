@@ -7,6 +7,12 @@ interface User {
   role: string;
 }
 
+interface UserListProps {
+  users: User[];
+  onAssignRole: (email: string) => void;
+  onRevokeRole: (email: string) => void;
+}
+
 const users: User[] = [
   { name: "Nguyên Văn A", email: "fe@ut.edu.vn", role: "Sinh viên" },
   { name: "Trần Thị B", email: "b@gv.ut.edu.vn", role: "Giảng viên" },
@@ -14,7 +20,11 @@ const users: User[] = [
   { name: "Bùi Bảo D", email: "d@it.ut.edu.vn", role: "Quản trị viên" },
 ];
 
-export const UserList = () => {
+export const UserList: React.FC<UserListProps> = ({
+  users,
+  onAssignRole,
+  onRevokeRole,
+}) => {
   return (
     <section className="pt-6 mt-6 w-full max-w-5xl mx-auto rounded-xl border border-slate-200 shadow-sm bg-white">
       <h2 className="text-lg font-semibold px-6 pb-4">Danh sách</h2>
@@ -40,8 +50,8 @@ export const UserList = () => {
                 <td className="px-6 py-4 whitespace-nowrap">{user.role}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex flex-col gap-2">
-                    <RoleActionButton type="assign" />
-                    <RoleActionButton type="revoke" />
+                    <RoleActionButton type="assign" onClick={() => onAssignRole(user.email)} />
+                    <RoleActionButton type="revoke" onClick={() => onRevokeRole(user.email)} />
                   </div>
                 </td>
               </tr>

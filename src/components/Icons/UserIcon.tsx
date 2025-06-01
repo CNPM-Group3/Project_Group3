@@ -1,12 +1,24 @@
-export function UserIcon() {
+import React from 'react';
+
+interface UserIconProps {
+  width?: string | number;
+  height?: string | number;
+  className?: string;
+}
+
+export function UserIcon({
+  width = 48,
+  height = 49,
+  className = '',
+}: UserIconProps) {
   return (
     <svg
-      width="48"
-      height="49"
+      width={width}
+      height={height}
       viewBox="0 0 48 49"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="avatar-icon"
+      className={`avatar-icon ${className}`}
     >
       <g clipPath="url(#clip0_9_44688)">
         <path

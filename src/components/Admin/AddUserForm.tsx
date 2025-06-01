@@ -1,6 +1,56 @@
 import React from "react";
 
-export const AddUserForm: React.FC = () => {
+// Define the structure of new user data
+interface NewUserData {
+  name: string;
+  email: string;
+  phone: string;
+  password?: string; // Password might be optional depending on backend
+  role: string | null; // Role will be one of the selected options
+}
+
+interface AddUserFormProps {
+  onSubmit: (userData: NewUserData) => void;
+}
+
+export const AddUserForm: React.FC<AddUserFormProps> = ({
+  onSubmit
+}) => {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [phone, setPhone] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [selectedRole, setSelectedRole] = React.useState<string | null>(null);
+
+  const handleRoleSelect = (role: string) => {
+    setSelectedRole(role);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!selectedRole) {
+      alert("Vui lòng chọn loại tài khoản.");
+      return;
+    }
+
+    const newUserData: NewUserData = {
+      name,
+      email,
+      phone,
+      password, // Include password
+      role: selectedRole,
+    };
+
+    onSubmit(newUserData);
+    // Optionally clear the form after submission
+    // setName("");
+    // setEmail("");
+    // setPhone("");
+    // setPassword("");
+    // setSelectedRole(null);
+  };
+
   return (
     <div className="p-6 rounded-xl border border-gray-200 bg-white w-[317px] max-sm:w-full shadow-sm">
       {/* Tiêu đề */}
@@ -15,53 +65,66 @@ export const AddUserForm: React.FC = () => {
       </div>
 
       {/* Form */}
-      <div className="flex flex-col gap-3 text-sm text-gray-700">
+      <form className="flex flex-col gap-3 text-sm text-gray-700" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Họ tên"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="email"
           placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="tel"
           placeholder="Số điện thoại"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="password"
           placeholder="Mật khẩu"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
-      </div>
 
-      {/* Loại tài khoản */}
-      <div className="mt-6">
-        <div className="text-center py-2 text-base font-medium bg-gray-100 rounded-t-lg text-gray-700">
-          Loại tài khoản
-        </div>
-        <div className="p-4 bg-gray-50 border border-gray-200 border-t-0 rounded-b-lg">
-          <div className="grid grid-cols-2 gap-3">
-            {["Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"].map((role, idx) => (
-              <button
-                key={idx}
-                className="py-2 px-4 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm hover:bg-sky-100 hover:text-sky-700 transition"
-              >
-                {role}
-              </button>
-            ))}
+        {/* Loại tài khoản */}
+        <div className="mt-6">
+          <div className="text-center py-2 text-base font-medium bg-gray-100 rounded-t-lg text-gray-700">
+            Loại tài khoản
+          </div>
+          <div className="p-4 bg-gray-50 border border-gray-200 border-t-0 rounded-b-lg">
+            <div className="grid grid-cols-2 gap-3">
+              {["Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"].map((role, idx) => (
+                <button
+                  key={idx}
+                  type="button" // Specify type button to prevent form submission on click
+                  className={`py-2 px-4 text-sm rounded-md border border-gray-300 shadow-sm transition ${selectedRole === role ? 'bg-sky-500 text-white' : 'bg-white text-gray-700 hover:bg-sky-100 hover:text-sky-700'}`}
+                  onClick={() => handleRoleSelect(role)}
+                >
+                  {role}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex justify-center mt-4">
+            <button
+              type="submit" // Set type to submit
+              className="w-[153px] h-[38px] bg-sky-500 text-white text-sm font-medium rounded-xl shadow hover:bg-sky-600 transition"
+            >
+              Tạo tài khoản
+            </button>
           </div>
         </div>
-
-        <div className="flex justify-center mt-4">
-          <button className="w-[153px] h-[38px] bg-sky-500 text-white text-sm font-medium rounded-xl shadow hover:bg-sky-600 transition">
-            Tạo tài khoản
-          </button>
-        </div>
-      </div>
+      </form> {/* Close form tag */}
     </div>
   );
 };

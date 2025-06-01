@@ -6,6 +6,8 @@ interface FormInputProps {
   placeholder: string;
   type?: string;
   className?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const FormInput: React.FC<FormInputProps> = ({
@@ -13,6 +15,8 @@ export const FormInput: React.FC<FormInputProps> = ({
   placeholder,
   type = "text",
   className = "",
+  value,
+  onChange,
 }) => {
   return (
     <div className={`w-full min-h-[74px] ${className}`}>
@@ -24,6 +28,8 @@ export const FormInput: React.FC<FormInputProps> = ({
       <input
         type={type}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         className="w-full px-4 py-3 text-base leading-6 text-gray-400 bg-white rounded-lg border border-gray-300 border-solid"
       />
     </div>

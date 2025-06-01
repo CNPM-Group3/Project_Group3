@@ -1,7 +1,17 @@
 "use client";
 import * as React from "react";
 
-export const RoleFilter: React.FC = () => {
+interface RoleFilterProps {
+  roles: string[];
+  selectedRole: string | null;
+  onSelectRole: (role: string | null) => void;
+}
+
+export const RoleFilter: React.FC<RoleFilterProps> = ({
+  roles,
+  selectedRole,
+  onSelectRole,
+}) => {
   return (
     <div className="flex flex-col md:flex-row items-start md:items-center gap-4 px-4 py-2.5 mt-4 w-full max-w-[420px] border border-slate-200 rounded-lg bg-white text-sm text-gray-700">
       {/* Label + icon */}
@@ -16,10 +26,17 @@ export const RoleFilter: React.FC = () => {
 
       {/* Button group */}
       <div className="flex flex-wrap gap-3 font-medium text-black">
-        <button className="hover:text-blue-700">Tất cả</button>
-        <button className="hover:text-blue-700">Sinh viên</button>
-        <button className="hover:text-blue-700">Giảng viên</button>
-        <button className="hover:text-blue-700">Nhân viên</button>
+        {roles.map((role) => (
+          <button
+            key={role}
+            onClick={() => onSelectRole(role === "Tất cả" ? null : role)}
+            className={`hover:text-blue-700 ${
+              selectedRole === role || (selectedRole === null && role === "Tất cả") ? "text-blue-700 font-bold" : ""
+            }`}
+          >
+            {role}
+          </button>
+        ))}
       </div>
     </div>
   );

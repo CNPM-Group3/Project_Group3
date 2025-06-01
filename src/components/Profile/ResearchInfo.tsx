@@ -1,4 +1,18 @@
-export const ResearchInfo = () => {
+import React from "react";
+
+interface ResearchInfoProps {
+  role: string;
+  researchArea: string;
+  projectCount: number;
+  githubLink?: string; // Optional prop
+}
+
+export const ResearchInfo: React.FC<ResearchInfoProps> = ({
+  role,
+  researchArea,
+  projectCount,
+  githubLink,
+}) => {
   return (
     <section className="flex flex-col grow px-14 py-16 text-gray-700 rounded-xl border border-solid border-slate-200 shadow-[0px_1px_2px_rgba(0,0,0,0.05)] max-md:px-5 max-md:mt-10 max-md:max-w-full">
       <h2 className="self-center text-xl font-bold text-center">

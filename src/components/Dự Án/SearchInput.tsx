@@ -1,6 +1,16 @@
 import React from "react";
 
-export const SearchInput = () => {
+interface SearchInputProps {
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+}
+
+export const SearchInput: React.FC<SearchInputProps> = ({
+  value,
+  onChange,
+  placeholder = "Tìm kiếm",
+}) => {
   return (
     <div className="w-full bg-black bg-opacity-0">
       <div className="flex gap-3 px-3 py-3.5 w-full rounded-lg border border-solid border-slate-200">
@@ -13,7 +23,9 @@ export const SearchInput = () => {
         </div>
         <input
           type="text"
-          placeholder="Tìm kiếm"
+          placeholder={placeholder}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
           className="flex-auto text-base text-gray-400 w-[329px] bg-transparent border-none outline-none"
         />
       </div>

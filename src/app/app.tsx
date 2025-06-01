@@ -23,6 +23,7 @@ import ProjectDetailPage from '@cnpm/pages/ProjectDetailPage';
 import TrangChiTietNhiemVu from '@cnpm/pages/TrangChiTietNhiemVuThanhVienNghienCuu';
 import PhieuYeuCauTaiTro from '@cnpm/pages/PhieuYeuCauTaiTro';
 import ThemTaiLieuNghienCuuChinh from '@cnpm/pages/ThemTaiLieuNghienCuuChinh';
+import ThemNhiemVu from '@cnpm/pages/ThemNhiemVu';
 
 export function App() {
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
@@ -34,6 +35,7 @@ export function App() {
   const mockOnSubmit = (data: any) => {
     console.log('Form submitted:', data);
   };
+  const availableMembers = ["Nguyễn Văn A", "Trần Thị B", "Lê Văn C"];
 
   return (
     <div className="w-screen min-h-screen bg-[#fcfcf6]">
@@ -63,6 +65,7 @@ export function App() {
                 <Route path="/trangchitietnhiemvu" element={<TrangChiTietNhiemVu taskId={mockTaskId} />} />
                 <Route path="/phieuyeucautaitro" element={<PhieuYeuCauTaiTro onSubmit={mockOnSubmit} />} />
                 <Route path="/themtailieu" element={<ThemTaiLieuNghienCuuChinh userId={mockUserId} />} />
+                <Route path="/themnhiemvu" element={<ThemNhiemVu availableMembers={availableMembers} />} />
               </Route>
             </Routes>
           </Router>

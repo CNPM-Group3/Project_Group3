@@ -9,6 +9,27 @@ interface ThongTinCaNhanThanhVienNghienCuuProps {
   userId: string; // Example prop: ID of the user whose profile is being viewed
 }
 
+// Define interfaces for state
+interface UserInfoState {
+  name: string;
+  class: string;
+  email: string;
+  phone: string;
+}
+
+interface PasswordsState {
+  current: string;
+  newPassword: string;
+  confirmNewPassword: string;
+}
+
+interface ResearchInfoState {
+  role: string;
+  researchArea: string;
+  projectCount: number;
+  githubLink?: string;
+}
+
 const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCuuProps> = ({
   userId
 }) => {
@@ -19,6 +40,28 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
     "https://cdn.builder.io/api/v1/image/assets/TEMP/b8abed92c5361a5449f407906e028f52aee28e22?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
   );
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+  // State for UserDetails
+  const [userInfo, setUserInfo] = useState<UserInfoState>({
+    name: "Nguyễn Văn A",
+    class: "CNTTCLC23",
+    email: "fe@ut.edu.vn",
+    phone: "08********",
+  });
+
+  const [passwords, setPasswords] = useState<PasswordsState>({
+    current: "",
+    newPassword: "",
+    confirmNewPassword: "",
+  });
+
+  // State for ResearchInfo
+  const [researchInfo, setResearchInfo] = useState<ResearchInfoState>({
+    role: "Thành viên nghiên cứu",
+    researchArea: "Công nghệ vi mạch bán dẫn",
+    projectCount: 8,
+    githubLink: "#", // Sample link
+  });
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -53,6 +96,45 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
 
   const triggerFileSelect = () => {
     fileInputRef.current?.click();
+  };
+
+  // Handlers for UserDetails
+  const handleUserInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handlePasswordsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPasswords((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleUserInfoSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Xử lý gửi cập nhật thông tin
+    console.log("Cập nhật thông tin:", userInfo);
+    alert("Thông tin người dùng đã được cập nhật (demo).");
+  };
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Xử lý đổi mật khẩu
+    if (passwords.newPassword !== passwords.confirmNewPassword) {
+      alert("Mật khẩu mới và xác nhận mật khẩu không khớp!");
+      return;
+    }
+    console.log("Đổi mật khẩu:", passwords);
+    alert("Mật khẩu đã được đổi (demo).");
+  };
+
+  // Handlers for ResearchInfo (assuming it might become editable later)
+  const handleResearchInfoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setResearchInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleResearchInfoSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Xử lý gửi cập nhật thông tin nghiên cứu
+    console.log("Cập nhật thông tin nghiên cứu:", researchInfo);
+    alert("Thông tin nghiên cứu đã được cập nhật (demo).");
   };
 
   return (
@@ -131,11 +213,23 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
               <div className="flex gap-5 max-md:flex-col">
                 <div className="w-6/12 max-md:ml-0 max-md:w-full">
                   {/* You might pass userId down to UserDetails */}
-                  <UserDetails />
+                  <UserDetails
+                    userInfo={userInfo}
+                    passwords={passwords}
+                    onUserInfoChange={handleUserInfoChange}
+                    onPasswordsChange={handlePasswordsChange}
+                    onUserInfoSubmit={handleUserInfoSubmit}
+                    onPasswordSubmit={handlePasswordSubmit}
+                  />
                 </div>
                 <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                   {/* You might pass userId down to ResearchInfo */}
-                  <ResearchInfo />
+                  <ResearchInfo
+                    role={researchInfo.role}
+                    researchArea={researchInfo.researchArea}
+                    projectCount={researchInfo.projectCount}
+                    githubLink={researchInfo.githubLink}
+                  />
                 </div>
               </div>
             </div>

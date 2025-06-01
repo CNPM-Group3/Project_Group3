@@ -1,22 +1,46 @@
+import { useState } from 'react';
+import React from 'react';
+
 interface TaskProps {
   title: string;
   status: string;
 }
 
-const tasks: TaskProps[] = [
+interface TaskListProps {
+  tasks: TaskProps[];
+  onStatusChange: (index: number, newStatus: string) => void;
+}
+
+const initialTasks: TaskProps[] = [
   { title: "Nhiệm vụ 1", status: "Xong" },
   { title: "Nhiệm vụ 2", status: "Vấn đề" },
   { title: "Nhiệm vụ 3", status: "Đang làm" },
-  { title: "Nhiệm vụ 1", status: "Xong" },
+  { title: "Nhiệm vụ 4", status: "Xong" },
 ];
 
 export const TaskList = () => {
+  const [tasks, setTasks] = useState<TaskProps[]>(initialTasks);
+  const [openMenuIndex, setOpenMenuIndex] = useState<number | null>(null);
+
+  const handleStatusChange = (index: number, newStatus: string) => {
+    setTasks(prevTasks => {
+      const newTasks = [...prevTasks];
+      newTasks[index] = { ...newTasks[index], status: newStatus };
+      return newTasks;
+    });
+    setOpenMenuIndex(null);
+  };
+
+  const toggleMenu = (index: number) => {
+    setOpenMenuIndex(openMenuIndex === index ? null : index);
+  };
+
   return (
     <section className="flex flex-col gap-5 px-8 pt-6 pb-6 bg-white rounded-xl border border-solid shadow-sm border-slate-200 w-[846px] max-md:w-full">
       <h2 className="text-xl font-bold text-gray-700">Nhiệm vụ</h2>
       <div className="flex flex-col gap-2.5">
         {tasks.map((task, index) => (
-          <article key={index} className="flex justify-between items-center py-2.5 pr-3.5 pl-5 h-16 rounded-xl border border-solid bg-slate-50 border-slate-200">
+          <article key={index} className="flex justify-between items-center py-2.5 pr-3.5 pl-5 h-16 rounded-xl border border-solid bg-slate-50 border-slate-200 relative">
             <div className="flex gap-7 items-center">
               <div className="flex relative justify-center items-center p-1 h-[46px] w-[46px]">
                 <div className="absolute bg-teal-500 rounded-lg h-[46px] w-[46px]" />
@@ -28,7 +52,47 @@ export const TaskList = () => {
               </div>
               <h3 className="text-base font-semibold text-slate-600">{task.title}</h3>
             </div>
-            <p className="px-4 py-2 text-sm font-bold rounded-lg">{task.status}</p>
+            <div
+              className={`flex items-center justify-between gap-2 px-3 py-1 text-sm font-semibold rounded-full cursor-pointer ${task.status === "Xong" ? "bg-teal-400 text-white" : task.status === "Vấn đề" ? "bg-red-400 text-white" : task.status === "Đang làm" ? "bg-blue-400 text-white" : ""}`}
+              onClick={() => toggleMenu(index)}
+            >
+              <span>{task.status}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+
+            {openMenuIndex === index && (
+              <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-10">
+                <div
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleStatusChange(index, "Xong")}
+                >
+                  Xong
+                </div>
+                <div
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleStatusChange(index, "Vấn đề")}
+                >
+                  Vấn đề
+                </div>
+                <div
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+                  onClick={() => handleStatusChange(index, "Đang làm")}
+                >
+                  Đang làm
+                </div>
+              </div>
+            )}
           </article>
         ))}
       </div>
