@@ -14,16 +14,17 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(8080); // lắng nghe tất cả IP trên port 8080
 });
 // Add services
+builder.Services.AddLogging();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddScoped<IAuthService, AuthService>();
-// builder.Services.AddScoped<IGoogleAuthService, GoogleAuthService>();
+builder.Services.AddScoped<IGoogleAuthService, GoogleAuthService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add HttpClient for Google API calls
-// builder.Services.AddHttpClient<IGoogleAuthService, GoogleAuthService>();
+builder.Services.AddHttpClient<IGoogleAuthService, GoogleAuthService>();
 
 // Cấu hình Swagger với base path "api/v1"
 builder.Services.AddSwaggerGen(c =>
