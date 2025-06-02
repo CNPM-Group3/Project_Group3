@@ -14,6 +14,22 @@ export default function DuyetTaiTro({
   // You might use userRole here to conditionally render content or features
   console.log("Accessing DuyetTaiTro page with role:", userRole);
 
+  // Handlers for sponsorship actions
+  const handleApprove = (id: string) => {
+    // TODO: Implement sponsorship approval logic
+    console.log("Approved sponsorship:", id);
+  };
+
+  const handleReject = (id: string) => {
+    // TODO: Implement sponsorship rejection logic
+    console.log("Rejected sponsorship:", id);
+  };
+
+  const handleView = (id: string) => {
+    // TODO: Implement sponsorship view logic
+    console.log("Viewing sponsorship:", id);
+  };
+
   return (
     <main className="bg-slate-50 min-h-screen w-full">
       <div className="flex flex-row min-h-screen">
@@ -32,8 +48,11 @@ export default function DuyetTaiTro({
             <h1 className="mt-8 text-3xl font-bold text-gray-700">
               Duyệt yêu cầu tài trợ
             </h1>
-            {/* You might pass userRole to TabSelector or other components */}
-            <TabSelector />
+            <TabSelector
+              onApprove={handleApprove}
+              onReject={handleReject}
+              onView={handleView}
+            />
           </section>
         </div>
       </div>

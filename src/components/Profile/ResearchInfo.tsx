@@ -22,21 +22,26 @@ export const ResearchInfo: React.FC<ResearchInfoProps> = ({
       <div className="flex flex-col mt-10 text-sm">
         <p>
           <strong className="text-gray-700">Vai trò:</strong>
-          <span className="text-gray-700"> Thành viên nghiên cứu</span>
+          <span className="text-gray-700"> {role}</span>
         </p>
 
         <p className="self-start mt-3.5 text-center">
           <strong className="text-gray-700">Lĩnh vực nghiên cứu:</strong>
-          <span className="text-gray-700"> Công nghệ vi mạch bán dẫn</span>
+          <span className="text-gray-700"> {researchArea}</span>
         </p>
 
         <p className="mt-3.5">
           <strong className="text-gray-700">Số dự án:</strong>
-          <span className="text-gray-700"> 08</span>
+          <span className="text-gray-700"> {projectCount}</span>
         </p>
 
         <p className="mt-3.5">
           <strong className="text-gray-700">Link Github:</strong>
+          {githubLink && (
+            <a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline ml-2">
+              {githubLink}
+            </a>
+          )}
         </p>
       </div>
     </section>

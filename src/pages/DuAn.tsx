@@ -15,6 +15,16 @@ export default function DuAn({
   // You might use userId here to fetch user-specific projects or filter the list
   console.log("Accessing DuAn page for user:", userId);
 
+  // State for search input
+  const [searchValue, setSearchValue] = React.useState("");
+
+  // Handler for search input changes
+  const handleSearchChange = (value: string) => {
+    setSearchValue(value);
+    // TODO: Implement search filtering logic
+    console.log("Search value:", value);
+  };
+
   return (
     <main className="bg-slate-50 min-h-screen w-full">
       <div className="flex flex-row min-h-screen">
@@ -35,7 +45,11 @@ export default function DuAn({
             </h1>
             <div className="flex flex-wrap gap-5 justify-between mt-7 w-full max-w-[800px]">
               <div className="self-start mt-2">
-                <SearchInput />
+                <SearchInput
+                  value={searchValue}
+                  onChange={handleSearchChange}
+                  placeholder="Tìm kiếm dự án..."
+                />
               </div>
               <button
                 type="button"

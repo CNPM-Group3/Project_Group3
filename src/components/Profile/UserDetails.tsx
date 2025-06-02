@@ -39,12 +39,12 @@ export const UserDetails: React.FC<UserDetailsProps> = ({
       <div className="mt-7 text-sm text-gray-700">
         <p className="mt-2">
           <strong className="text-gray-700">Tên:</strong>
-          <span className="text-gray-700"> Nguyễn Văn A</span>
+          <span className="text-gray-700"> {userInfo.name}</span>
         </p>
 
         <p className="mt-2">
           <strong className="text-gray-700">Lớp:</strong>
-          <span className="text-gray-700"> CNTTCLC23</span>
+          <span className="text-gray-700"> {userInfo.class}</span>
         </p>
 
         <p className="mt-2">
@@ -59,12 +59,12 @@ export const UserDetails: React.FC<UserDetailsProps> = ({
 
         <p className="mt-2">
           <strong className="text-gray-700">Email:</strong>
-          <span className="text-gray-700"> fe@ut.edu.vn</span>
+          <span className="text-gray-700"> {userInfo.email}</span>
         </p>
 
         <p className="mt-2">
           <strong className="text-gray-700">Số Điện Thoại:</strong>
-          <span className="text-gray-700"> 08********</span>
+          <span className="text-gray-700"> {userInfo.phone}</span>
         </p>
 
         <p className="mt-2">

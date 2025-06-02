@@ -5,6 +5,43 @@ import { NewPasswordForm } from "@cnpm/components/Sign In/NewPassWordForm";
 import { ResetCodeForm } from "@cnpm/components/Sign In/ResetCodeForm";
 
 export default function LoginPage() {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [rememberMe, setRememberMe] = React.useState(false);
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const handleRememberMeChange = (checked: boolean) => {
+    setRememberMe(checked);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // TODO: Implement login logic
+    console.log("Login submitted:", { email, password, rememberMe });
+  };
+
+  const handleGoogleSignIn = () => {
+    // TODO: Implement Google sign-in
+    console.log("Google sign-in clicked");
+  };
+
+  const handleSignUp = () => {
+    // TODO: Implement sign up navigation
+    console.log("Sign up clicked");
+  };
+
+  const handleForgotPassword = () => {
+    // TODO: Implement forgot password navigation
+    console.log("Forgot password clicked");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
       {/* Logo */}
@@ -30,7 +67,18 @@ export default function LoginPage() {
         {/* Bên phải: Form đăng nhập */}
         <div className="w-1/2 flex items-center justify-center bg-white p-8">
           <div className="w-full max-w-xs">
-            <LoginForm />
+            <LoginForm
+              email={email}
+              password={password}
+              rememberMe={rememberMe}
+              onEmailChange={handleEmailChange}
+              onPasswordChange={handlePasswordChange}
+              onRememberMeChange={handleRememberMeChange}
+              onSubmit={handleSubmit}
+              onGoogleSignIn={handleGoogleSignIn}
+              onSignUp={handleSignUp}
+              onForgotPassword={handleForgotPassword}
+            />
           </div>
         </div>
       </div>

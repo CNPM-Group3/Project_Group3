@@ -7,6 +7,7 @@ import { UserTable } from "@cnpm/components/Admin/UserTable";
 import { AddUserForm } from "@cnpm/components/Admin/AddUserForm";
 import { ApprovalSection } from "@cnpm/components/Admin/ApprovalSection";
 import { User, ApprovalRequest } from "@cnpm/components/Admin/types";
+import type { NewUserData } from "@cnpm/components/Admin/AddUserForm";
 
 const mockUsers: User[] = [
   { name: "Nguyễn Văn A", email: "fe@ut.edu.vn", phone: "0000000001", role: "Sinh viên", status: "Hoạt động" },
@@ -29,6 +30,12 @@ const InputDesign: React.FC<AdminDashboardProps> = ({
 }) => {
   // You might use userRole here to conditionally render content or features
   console.log("Accessing AdminDashboard with role:", userRole);
+
+  const handleAddUser = (userData: NewUserData) => {
+    // TODO: Implement user creation logic
+    console.log("New user data:", userData);
+    // Here you would typically make an API call to create the user
+  };
 
   return (
     <div className="flex min-h-screen bg-gray-50">
@@ -79,7 +86,7 @@ const InputDesign: React.FC<AdminDashboardProps> = ({
 
           {/* Forms */}
           <div className="flex gap-6 mt-6 flex-wrap max-md:flex-col">
-            <AddUserForm />
+            <AddUserForm onSubmit={handleAddUser} />
             <ApprovalSection requests={mockRequests} />
           </div>
         </main>

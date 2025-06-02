@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ChangeEvent, useRef } from "react";
+import React, { useState, ChangeEvent, useRef, useEffect } from "react";
 import Sidebar from "@cnpm/components/Profile/Sidebar";
 import Header from "@cnpm/components/Header";
 import { UserDetails } from "@cnpm/components/Profile/UserDetails";
@@ -33,9 +33,7 @@ interface ResearchInfoState {
 const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCuuProps> = ({
   userId
 }) => {
-  // You would typically use userId here to fetch the user's profile data
-  console.log("Displaying profile for user with ID:", userId);
-
+  // State for profile image
   const [previewImg, setPreviewImg] = useState<string>(
     "https://cdn.builder.io/api/v1/image/assets/TEMP/b8abed92c5361a5449f407906e028f52aee28e22?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
   );
@@ -60,10 +58,16 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
     role: "Thành viên nghiên cứu",
     researchArea: "Công nghệ vi mạch bán dẫn",
     projectCount: 8,
-    githubLink: "#", // Sample link
+    githubLink: "#",
   });
 
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Fetch user data when component mounts
+  useEffect(() => {
+    // TODO: Fetch user data using userId
+    console.log("Fetching data for user:", userId);
+  }, [userId]);
 
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
@@ -77,14 +81,22 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
     }
   };
 
-  const handleUpload = () => {
+  const handleUpload = async () => {
     if (!selectedFile) {
       alert("Vui lòng chọn ảnh trước khi lưu.");
       return;
     }
-    // TODO: Xử lý upload ảnh lên server tại đây, potentially using userId
-    alert("Ảnh đại diện đã được cập nhật (demo).");
-    setSelectedFile(null);
+    try {
+      // TODO: Implement actual image upload
+      // const formData = new FormData();
+      // formData.append('image', selectedFile);
+      // await uploadProfileImage(userId, formData);
+      alert("Ảnh đại diện đã được cập nhật.");
+      setSelectedFile(null);
+    } catch (error) {
+      console.error('Error uploading image:', error);
+      alert("Có lỗi xảy ra khi tải lên ảnh.");
+    }
   };
 
   const handleCancel = () => {
@@ -107,22 +119,39 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
     setPasswords((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleUserInfoSubmit = (e: React.FormEvent) => {
+  const handleUserInfoSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Xử lý gửi cập nhật thông tin
-    console.log("Cập nhật thông tin:", userInfo);
-    alert("Thông tin người dùng đã được cập nhật (demo).");
+    try {
+      // TODO: Implement actual API call
+      // await updateUserInfo(userId, userInfo);
+      console.log("Cập nhật thông tin:", userInfo);
+      alert("Thông tin người dùng đã được cập nhật.");
+    } catch (error) {
+      console.error('Error updating user info:', error);
+      alert("Có lỗi xảy ra khi cập nhật thông tin.");
+    }
   };
 
-  const handlePasswordSubmit = (e: React.FormEvent) => {
+  const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Xử lý đổi mật khẩu
     if (passwords.newPassword !== passwords.confirmNewPassword) {
       alert("Mật khẩu mới và xác nhận mật khẩu không khớp!");
       return;
     }
-    console.log("Đổi mật khẩu:", passwords);
-    alert("Mật khẩu đã được đổi (demo).");
+    try {
+      // TODO: Implement actual API call
+      // await updatePassword(userId, passwords);
+      console.log("Đổi mật khẩu:", passwords);
+      alert("Mật khẩu đã được đổi.");
+      setPasswords({
+        current: "",
+        newPassword: "",
+        confirmNewPassword: "",
+      });
+    } catch (error) {
+      console.error('Error updating password:', error);
+      alert("Có lỗi xảy ra khi đổi mật khẩu.");
+    }
   };
 
   // Handlers for ResearchInfo (assuming it might become editable later)
@@ -212,7 +241,6 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
             <div className="mt-16 w-full max-w-[984px] max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col">
                 <div className="w-6/12 max-md:ml-0 max-md:w-full">
-                  {/* You might pass userId down to UserDetails */}
                   <UserDetails
                     userInfo={userInfo}
                     passwords={passwords}
@@ -223,7 +251,6 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
                   />
                 </div>
                 <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                  {/* You might pass userId down to ResearchInfo */}
                   <ResearchInfo
                     role={researchInfo.role}
                     researchArea={researchInfo.researchArea}

@@ -15,6 +15,34 @@ export default function DashboardQuanTriVien({
   // You might use userRole here to conditionally render content or features
   console.log("Accessing DashboardQuanTriVien with role:", userRole);
 
+  // System configuration state
+  const [defaultRole, setDefaultRole] = React.useState("Sinh viên");
+  const [themeMode, setThemeMode] = React.useState("Sáng");
+
+  // Available options
+  const roles = ["Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"];
+  const modes = ["Sáng", "Tối"];
+
+  // Mock data for system configuration
+  const systemConfig = {
+    timePeriod: "2024-2025",
+    systemEmail: "system@ut.edu.vn",
+    smtpServer: "smtp.ut.edu.vn",
+  };
+
+  // Handlers for configuration changes
+  const handleRoleChange = (newRole: string) => {
+    setDefaultRole(newRole);
+    // TODO: Implement role change logic
+    console.log("Role changed to:", newRole);
+  };
+
+  const handleThemeChange = (newMode: string) => {
+    setThemeMode(newMode);
+    // TODO: Implement theme change logic
+    console.log("Theme changed to:", newMode);
+  };
+
   return (
     <MainLayout>
       <div className="flex min-h-screen w-screen bg-gray-50">
@@ -29,8 +57,17 @@ export default function DashboardQuanTriVien({
             <Header />
           </div>
           <main className="flex-1 p-6 overflow-y-auto mt-16 bg-gray-50">
-            {/* You might pass userRole to SystemConfigCard */}
-            <SystemConfigCard />
+            <SystemConfigCard
+              timePeriod={systemConfig.timePeriod}
+              systemEmail={systemConfig.systemEmail}
+              smtpServer={systemConfig.smtpServer}
+              defaultRole={defaultRole}
+              themeMode={themeMode}
+              roles={roles}
+              modes={modes}
+              onRoleChange={handleRoleChange}
+              onThemeChange={handleThemeChange}
+            />
           </main>
         </section>
       </div>

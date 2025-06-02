@@ -1,7 +1,7 @@
 import React from "react";
 
 // Define the structure of new user data
-interface NewUserData {
+export interface NewUserData {
   name: string;
   email: string;
   phone: string;
