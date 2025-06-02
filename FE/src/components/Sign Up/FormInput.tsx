@@ -28,9 +28,9 @@ export const FormInput: React.FC<FormInputProps> = ({
       <input
         type={type}
         placeholder={placeholder}
+        className="w-full px-4 py-3 text-base leading-6 text-gray-400 bg-white rounded-lg border border-gray-300 border-solid"
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-3 text-base leading-6 text-gray-400 bg-white rounded-lg border border-gray-300 border-solid"
       />
     </div>
   );

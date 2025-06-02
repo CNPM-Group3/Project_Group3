@@ -6,38 +6,29 @@ import path from 'path';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
+  const isProd = env.VITE_NODE_ENV === 'production';
 
-  // Kiểm tra và fallback nếu biến env chưa có
-  const appName = env.VITE_APP_NAME ? env.VITE_APP_NAME.toLowerCase() : 'defaultapp';
-  const nodeEnv = env.VITE_NODE_ENV || 'development';
-  const serverUrl = env.VITE_SERVER_URL || 'http://localhost:4200';
-  const apiUrl = env.VITE_API_URL || 'http://localhost:3000/api';
-
-  const isProd = nodeEnv === 'production';
-
-  let parsedServerUrl;
-  try {
-    parsedServerUrl = new URL(serverUrl);
-  } catch {
-    parsedServerUrl = new URL('http://localhost:4200');
-  }
+  const defineEnv = Object.entries(env).reduce((acc, [key, val]) => {
+    acc[`process.env.${key}`] = JSON.stringify(val);
+    return acc;
+  }, {} as Record<string, string>);
 
   return {
     root: __dirname,
-    cacheDir: `./node_modules/.vite/${appName}`,
+    cacheDir: `./node_modules/.vite/${env.VITE_APP_NAME.toLowerCase()}`,
     server: {
-      port: Number(parsedServerUrl.port) || 4200,
-      host: parsedServerUrl.hostname || 'localhost',
+      port: Number(new URL(env.VITE_SERVER_URL).port) || 4200,
+      host: new URL(env.VITE_SERVER_URL).hostname || 'localhost',
       proxy: {
         '/api': {
-          target: apiUrl,
+          target: env.VITE_API_URL,
           changeOrigin: true,
           secure: isProd,
-        }
-      }
+        },
+      },
     },
     preview: {
-      port: 4300,
+      port: 4200,
       host: 'localhost',
     },
     plugins: [react(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
@@ -51,7 +42,7 @@ export default defineConfig(({ mode }) => {
       },
     },
     build: {
-      outDir: `./dist/${appName}`,
+      outDir: `./dist/${env.VITE_APP_NAME.toLowerCase()}`,
       emptyOutDir: true,
       reportCompressedSize: true,
       commonjsOptions: {
@@ -67,12 +58,10 @@ export default defineConfig(({ mode }) => {
       include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
       reporters: ['default'],
       coverage: {
-        reportsDirectory: `./coverage/${appName}`,
+        reportsDirectory: `./coverage/${env.VITE_APP_NAME.toLowerCase()}`,
         provider: 'v8',
       },
     },
-    define: {
-      'process.env': env
-    }
+    define: defineEnv,
   };
 });

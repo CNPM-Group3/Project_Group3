@@ -1,30 +1,66 @@
+// src/component/Sign Up/
 "use client";
-import React, { ChangeEvent, FormEvent } from "react";
+import React from "react";
 import { FormInput } from "@cnpm/components/Sign Up/FormInput";
-import { SelectField } from "@cnpm/components/Sign Up/SelectField";
 import { Button } from "@cnpm/components/Sign Up/Button";
+import { Formik, Form } from 'formik';
+import { authService } from "@cnpm/services/authService";
+import { useNavigate } from "react-router-dom";
+import * as Yup from 'yup';
+import { SelectField } from "./SelectField";
 
 interface SignUpFormProps {
   email: string;
+  name: string;
   password: string;
-  onEmailChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onPasswordChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  onSubmit: (e: FormEvent) => void;
-  onGoogleSignIn: () => void;
-  onSignIn: () => void;
 }
+const SignUpSchema = Yup.object().shape({
+  name: Yup.string()
+    .required('Bắt buộc nhập tên')
+    .min(2, 'Tên bắt buộc phải trên 2 ký tự'),
+  email: Yup.string()
+    .required('Bắt buộc nhập email')
+    .min(5, 'Email bắt buộc có trên 5 ký tự'),
+  password: Yup.string()
+    .required('Bắt buộc nhập mật khẩu')
+    .min(8, 'Mật khẩu phải trên 8 ký tự')
+    .matches(/^(?=.*[A-Z])/, 'Bắt buộc nhập ít nhất 1 chữ viết hoa')
+    .matches(/^(?=.*[0-9])/, 'Bắt buộc nhập 1 số')
+    .matches(/^(?=.*[!@#$%^&*])/, 'Bắt buộc nhập 1 ký tự đặc biệt')
+    .matches(/^(?=.*[a-z])/, 'Bắt buộc nhập 1 ký tự thường'),
+});
+export const SignUpForm: React.FC = () => {
+  const navigate = useNavigate();
 
-export const SignUpForm: React.FC<SignUpFormProps> = ({
-  email,
-  password,
-  onEmailChange,
-  onPasswordChange,
-  onSubmit,
-  onGoogleSignIn,
-  onSignIn,
-}) => {
+  const [Name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await authService.completeRegistration({
+        Name,
+        email,
+        password,
+      });
+      alert("Đăng ký thành công!");
+      navigate("/signin");
+    } catch (error: any) {
+      alert("Lỗi đăng ký: " + (error?.message || "Không rõ lỗi"));
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <form className="flex flex-col items-center px-8 py-8 mt-7 bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.1)]" onSubmit={onSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col items-center px-8 py-8 mt-7 bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.1)]"
+    >
       <h1 className="text-3xl font-bold leading-none text-center text-gray-700">
         Tạo Tài Khoản
       </h1>
@@ -34,27 +70,41 @@ export const SignUpForm: React.FC<SignUpFormProps> = ({
 
       <div className="self-stretch">
         <FormInput
+          label="Họ tên:"
+          placeholder="Nhập họ tên"
+          type="text"
+          className="mb-6"
+          value={Name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <FormInput
           label="Email:"
           placeholder="fe@ut.edu.vn"
           type="email"
-          value={email}
-          onChange={onEmailChange}
           className="mb-6"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <FormInput
           label="Mật khẩu:"
           placeholder="Nhập Mật khẩu"
           type="password"
-          value={password}
-          onChange={onPasswordChange}
           className="mb-6"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
+
         <div className="mt-5">
-          <Button variant="primary" className="py-3.5 pb-5" type="submit">
-            Tạo
+          <Button
+            variant="primary"
+            className="py-3.5 pb-5"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? "Đang xử lý..." : "Tạo"}
           </Button>
 
-          <Button variant="social" className="mt-3" onClick={onGoogleSignIn}>
+          <Button variant="social" className="mt-3">
             <div className="flex gap-2.5 justify-center items-center max-w-full w-[177px] mx-auto">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/2a65fed3a990f1e3242a0de9ba6cd1a3d8f6effe?placeholderIfAbsent=true"
@@ -68,9 +118,14 @@ export const SignUpForm: React.FC<SignUpFormProps> = ({
 
         <div className="flex flex-col pt-5 mt-5 w-full text-center">
           <p className="self-center text-sm leading-none text-gray-700">
-            Bạn đã có tài khoản rồi ư ?
+            Bạn đã có tài khoản rồi ư?
           </p>
-          <Button variant="outline" className="mt-3" onClick={onSignIn}>
+          <Button
+            variant="outline"
+            className="mt-3"
+            type="button"
+            onClick={() => navigate("/signin")}
+          >
             Đăng Nhập
           </Button>
         </div>
