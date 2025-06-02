@@ -1,6 +1,174 @@
-import axios from 'axios';
+// /* eslint-disable @typescript-eslint/no-explicit-any */
+// import { AxiosResponse } from 'axios';
+// import api from './apiService';
 
-const API_BASE = 'https://657b-115-77-159-170.ngrok-free.app/api';
+// // Types
+// interface RegisterPayload {
+//   fullname: string;
+//   email: string;
+//   password: string;
+//   repeatPassword: string;
+//   address: string;
+// }
+
+// interface LoginPayload {
+//   email: string;
+//   password: string;
+// }
+
+// interface GoogleLoginPayload {
+//   // Tùy backend yêu cầu key nào, ví dụ tokenId hoặc code
+//   code: string;
+// }
+
+// interface AuthResponse {
+//   message: string;
+//   accessToken?: string;
+//   refreshToken?: string;
+// }
+
+// export interface UserProfile {
+//   fullname: string;
+//   email: string;
+//   password: string;
+//   address: string;
+//   role: string;
+//   avatarUrl?: string;
+//   createdAt?: string;
+//   updatedAt?: string;
+// }
+
+// // State lưu user
+// interface UserState {
+//   profile: UserProfile | null;
+// }
+
+// const userState: UserState = {
+//   profile: null,
+// };
+
+// export const authService = {
+//   AUTH_PATH: '/api/Auth',
+
+//   async login(payload: LoginPayload): Promise<AxiosResponse<AuthResponse>> {
+//     try {
+//       const response = await api.post<AuthResponse & { profile: UserProfile }>(
+//         `${this.AUTH_PATH}/login`,
+//         payload
+//       );
+
+//       if (response.data?.accessToken) {
+//         const token = response.data.accessToken;
+//         sessionStorage.setItem('accessToken', token);
+
+//         if (response.data.profile) {
+//           userState.profile = response.data.profile;
+//           sessionStorage.setItem(
+//             'user_profile',
+//             JSON.stringify(response.data.profile)
+//           );
+//         }
+//       }
+//       return response;
+//     } catch (error: any) {
+//       console.error('Login error details:', error);
+//       throw error;
+//     }
+//   },
+
+//   async completeRegistration(payload: RegisterPayload): Promise<AxiosResponse> {
+//     try {
+//       return await api.post(`${this.AUTH_PATH}/register`, payload);
+//     } catch (error) {
+//       throw error;
+//     }
+//   },
+
+//   // Gọi POST google-login với body chứa code
+//   async googleLogin(payload: GoogleLoginPayload): Promise<AxiosResponse<AuthResponse>> {
+//     try {
+//       const response = await api.post<AuthResponse>(
+//         `${this.AUTH_PATH}/google-login`,
+//         payload
+//       );
+
+//       if (response.data?.accessToken) {
+//         sessionStorage.setItem('accessToken', response.data.accessToken);
+//         // Xử lý fetch profile nếu backend trả về profile
+//       }
+
+//       return response;
+//     } catch (error) {
+//       throw error;
+//     }
+//   },
+
+//   logout(): void {
+//     sessionStorage.clear();
+//     document.cookie =
+//       'refreshToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+//     userState.profile = null;
+//     window.location.replace('/signin');
+//   },
+
+//   getCurrentProfile(): UserProfile | null {
+//     if (!userState.profile) {
+//       const storedProfile = sessionStorage.getItem('user_profile');
+//       if (storedProfile) {
+//         userState.profile = JSON.parse(storedProfile);
+//       }
+//     }
+//     return userState.profile;
+//   },
+//   // Lấy thông tin profile người dùng
+//   async getProfile(): Promise<AxiosResponse<UserProfile>> {
+//     try {
+//       const token = sessionStorage.getItem('accessToken');
+//       if (!token) {
+//         throw new Error('No access token found');
+//       }
+
+//       const response = await api.get<UserProfile>(`${this.AUTH_PATH}/profile`);
+//       return response;
+//     } catch (error) {
+//       console.error('Get profile error:', error);
+//       throw error;
+//     }
+//   },
+//   // Thêm method mới để lấy và lưu profile
+//   async fetchAndStoreUserProfile(): Promise<void> {
+//     try {
+//       const response = await this.getProfile();
+//       if (response.data) {
+//         userState.profile = response.data;
+//         sessionStorage.setItem('user_profile', JSON.stringify(response.data));
+//       }
+//     } catch (error) {
+//       console.error('Failed to fetch user profile:', error);
+//       throw error;
+//     }
+//   },
+// };
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { AxiosResponse } from 'axios';
+import api from './apiService';
+
+// Types
+interface RegisterPayload {
+  Name: string;
+  email: string;
+  password: string;
+}
+
+interface LoginPayload {
+  email: string;
+  password: string;
+}
+
+interface AuthResponse {
+  message: string;
+  accessToken?: string;
+}
 
 export interface UserProfile {
   fullname: string;
@@ -12,131 +180,193 @@ export interface UserProfile {
   createdAt?: string;
   updatedAt?: string;
 }
-
-interface RegisterPayload {
-  fullname: string;
-  email: string;
-  password: string;
-  repeatPassword: string;
-  address: string;
+// Thêm interface để lưu trữ user state
+interface UserState {
+  profile: UserProfile | null;
 }
 
-interface VerifyEmailPayload {
-  email: string;
-  verificationCode: string;
-}
-
-interface LoginPayload {
-  email: string;
-  password: string;
-}
-
-interface ForgotPasswordPayload {
-  email: string;
-  otp: string;
-  newPassword: string;
-  repeatNewPassword: string;
-}
-
-interface AuthResponse {
-  data: {
-    message: string;
-    accessToken?: string;
-    refreshToken?: string;
-    profile?: UserProfile;
-  };
-}
+// Khởi tạo state để lưu thông tin user
+const userState: UserState = {
+  profile: null,
+};
 
 export const authService = {
   AUTH_PATH: '/auth',
-
-  async sendOtp(email: string): Promise<{ message: string }> {
-    const res = await axios.post(`${API_BASE}/auth/send-otp`, { email });
-    return res.data;
+  
+  // Đăng ký
+  async completeRegistration(payload: RegisterPayload): Promise<AxiosResponse> {
+    try {
+      return await api.post(`${this.AUTH_PATH}/register`, payload);
+    } catch (error) {
+      throw this.handleError(error);
+    }
   },
 
-  async sendOTP(email: string): Promise<{ message: string }> {
-    const res = await axios.post(`${API_BASE}/auth/send-otp`, { email });
-    return res.data;
+  // Đăng nhập
+  async login(payload: LoginPayload): Promise<AxiosResponse<AuthResponse>> {
+    try {
+      const response = await api.post<AuthResponse & { profile: UserProfile }>(
+        `${this.AUTH_PATH}/login`,
+        payload
+      );
+
+      if (response.data?.accessToken) {
+        const token = response.data.accessToken;
+        sessionStorage.setItem('accessToken', token);
+
+        // Đợi token được lưu
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
+        try {
+          await this.fetchAndStoreUserProfile();
+        } catch (profileError) {
+          console.error('Error fetching profile:', profileError);
+          // Không throw error ở đây để vẫn cho phép login thành công
+        }
+        if (response.data.profile) {
+          userState.profile = response.data.profile;
+          sessionStorage.setItem(
+            'user_profile',
+            JSON.stringify(response.data.profile)
+          );
+        }
+      }
+      return response;
+    } catch (error: any) {
+      console.error('Login error details:', error);
+      throw error;
+    }
+  },
+  // Lấy thông tin profile người dùng
+  async getProfile(): Promise<AxiosResponse<UserProfile>> {
+    try {
+      const token = sessionStorage.getItem('accessToken');
+      if (!token) {
+        throw new Error('No access token found');
+      }
+
+      const response = await api.get<UserProfile>(`${this.AUTH_PATH}/profile`);
+      return response;
+    } catch (error) {
+      console.error('Get profile error:', error);
+      throw error;
+    }
   },
 
-  async verifyEmail(payload: VerifyEmailPayload): Promise<{ message: string }> {
-    const res = await axios.post(`${API_BASE}/auth/verify-email`, payload);
-    return res.data;
+  async updateUserProfile(
+    profile: UserProfile
+  ): Promise<AxiosResponse<any, any>> {
+    try {
+      const response = await api.put(`${this.AUTH_PATH}/profile`, profile);
+      return response;
+    } catch (error) {
+      console.error('Error updating profile:', error);
+      throw error;
+    }
   },
 
-  async completeRegistration(payload: RegisterPayload): Promise<{ message: string }> {
-    const res = await axios.post(`${API_BASE}/auth/register`, payload);
-    return res.data;
-  },
-
-  async login(payload: LoginPayload): Promise<AuthResponse> {
-    const res = await axios.post(`${API_BASE}/auth/login`, payload);
-    const { accessToken, profile } = res.data;
-
-    sessionStorage.setItem('accessToken', accessToken);
-    sessionStorage.setItem('user_profile', JSON.stringify(profile));
-
-    return { data: { message: 'Login successful', accessToken, profile } };
-  },
-
-  async forgotPassword(payload: ForgotPasswordPayload): Promise<{ message: string }> {
-    const res = await axios.post(`${API_BASE}/auth/forgot-password`, payload);
-    return res.data;
-  },
-
+  // Đăng xuất
   async logout(): Promise<void> {
-    sessionStorage.clear();
-    window.location.replace('/signin');
-  },
+    try {
+      await api.post(`${this.AUTH_PATH}/logout`);
 
-  async getProfile(): Promise<{ data: UserProfile }> {
-    const stored = sessionStorage.getItem('user_profile');
-    if (!stored) throw new Error('No profile in session');
-    return { data: JSON.parse(stored) };
+      // Xóa thông tin session, profile và token
+      sessionStorage.clear();
+      document.cookie =
+        'refreshToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      userState.profile = null;
+    } catch (error: unknown) {
+      if (
+        (error as { response?: { status?: number } })?.response?.status === 401
+      ) {
+        console.warn('Unauthorized during logout. Clearing session anyway.');
+      } else {
+        console.error('Logout error:', error);
+        throw error;
+      }
+    } finally {
+      // Chuyển hướng về trang đăng nhập
+      window.location.replace('/signin');
+    }
   },
-
-  async updateUserProfile(profile: UserProfile): Promise<{ message: string }> {
-    const res = await axios.put(`${API_BASE}/user/update`, profile); // Đường dẫn này phụ thuộc vào backend bạn
-    sessionStorage.setItem('user_profile', JSON.stringify(profile));
-    return res.data;
-  },
-
   async checkExistingUser(email: string): Promise<boolean> {
-    const res = await axios.get(`${API_BASE}/auth/check-email?email=${encodeURIComponent(email)}`);
-    return res.data.exists;
+    try {
+      const response = await api.post(`${this.AUTH_PATH}/check-email`, {
+        email,
+      });
+      return response.data.exists;
+    } catch (error) {
+      throw this.handleError(error);
+    }
   },
 
-  async googleLogin(code: string): Promise<AuthResponse> {
-    const res = await axios.post(`${API_BASE}/auth/google/login`, { code });
-    const { accessToken, profile } = res.data;
-    sessionStorage.setItem('accessToken', accessToken);
-    sessionStorage.setItem('user_profile', JSON.stringify(profile));
-    return { data: { message: 'Google login successful', accessToken, profile } };
+  async googleLogin(code: string): Promise<AxiosResponse<AuthResponse>> {
+    try {
+      const response = await api.get<AuthResponse>(
+        `/auth/google/signin/callback?code=${code}`
+      );
+
+      if (response.data?.accessToken) {
+        sessionStorage.setItem('accessToken', response.data.accessToken);
+        await this.fetchAndStoreUserProfile();
+      }
+
+      return response;
+    } catch (error) {
+      throw this.handleError(error);
+    }
   },
 
   handleError(error: any): Error {
-    return new Error(error.response?.data?.message || error.message || 'Something went wrong');
+    if (error.response) {
+      return new Error(error.response.data?.message || 'Server error');
+    }
+    return new Error('Network error occurred');
   },
 
   isAuthenticated(): boolean {
     return !!sessionStorage.getItem('accessToken');
   },
 
+  // Thêm method mới để lấy và lưu profile
   async fetchAndStoreUserProfile(): Promise<void> {
-    const profile = JSON.parse(sessionStorage.getItem('user_profile') || 'null');
-    if (profile) {
-      sessionStorage.setItem('user_profile', JSON.stringify(profile));
+    try {
+      const response = await this.getProfile();
+      if (response.data) {
+        userState.profile = response.data;
+        sessionStorage.setItem('user_profile', JSON.stringify(response.data));
+      }
+    } catch (error) {
+      console.error('Failed to fetch user profile:', error);
+      throw error;
     }
   },
 
+  // Thêm method để lấy profile từ state
   getCurrentProfile(): UserProfile | null {
-    const stored = sessionStorage.getItem('user_profile');
-    return stored ? JSON.parse(stored) : null;
+    if (!userState.profile) {
+      // Thử lấy từ sessionStorage nếu state trống
+      const storedProfile = sessionStorage.getItem('user_profile');
+      console.log('Stored Profile in Session:', storedProfile);
+      if (storedProfile) {
+        userState.profile = JSON.parse(storedProfile);
+      }
+    }
+    return userState.profile;
   },
 
-  getUserID(): number | null {
-    const profile = authService.getCurrentProfile();
-    return profile ? 1 : null; // Giả lập ID, backend thực có thể trả ID khác
-  }
+  // Thêm method để lấy userID
+  getUserID: (): number | null => {
+    const token = sessionStorage.getItem('accessToken');
+    if (!token) return null;
+
+    try {
+      const payloadBase64 = token.split('.')[1]; // Lấy phần payload (JWT có 3 phần: header.payload.signature)
+      const payloadJson = JSON.parse(atob(payloadBase64)); // Giải mã base64
+      return payloadJson.user_id || null; // Lấy userID
+    } catch (error) {
+      console.error('Lỗi khi giải mã accessToken:', error);
+      return null;
+    }
+  },
 };

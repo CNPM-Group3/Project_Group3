@@ -1,30 +1,37 @@
-// src/services/userService.ts
-
-export const findUserByEmail = async (email: string) => {
-    console.log(`🔍 [Fake] Kiểm tra email đã tồn tại: ${email}`);
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    return null; // hoặc return { email: ..., name: ... }
+interface User {
+    email: string;
+    name: string;
+    picture?: string;
+    address?: string;
+    password?: string;
+  }
+  
+  export const saveUser = (userData: User) => {
+    try {
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      users.push(userData);
+      localStorage.setItem('users', JSON.stringify(users));
+    } catch (error) {
+      console.error('Error saving user:', error);
+      throw error;
+    }
   };
   
-  export const saveUser = async (user: any) => {
-    console.log('💾 [Fake] Lưu người dùng:', user);
-    await new Promise((resolve) => setTimeout(resolve, 500));
+  export const findUserByEmail = (email: string): User | undefined => {
+    try {
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      return users.find((user: User) => user.email === email);
+    } catch (error) {
+      console.error('Error finding user:', error);
+      return undefined;
+    }
   };
   
-
-
-export const getCurrentUser = () => {
-    // Fake user data
-    const token = localStorage.getItem('token');
+  export const setCurrentUser = (userData: User) => {
+    localStorage.setItem('currentUser', JSON.stringify(userData));
+  };
   
-    if (!token) return null;
-  
-    return {
-      id: 1,
-      name: 'Nguyễn Văn A',
-      email: 'vana@example.com',
-      role: 'user',
-      avatar: 'https://i.pravatar.cc/150?img=3',
-      token,
-    };
+  export const getCurrentUser = (): User | null => {
+    const userStr = sessionStorage.getItem('user_profile');
+    return userStr ? JSON.parse(userStr) : null;
   };

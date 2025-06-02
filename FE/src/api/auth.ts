@@ -10,3 +10,11 @@ export const login = async (username: string, password: string) => {
   });
   return res.data; // thường trả về token
 };
+export const register = async (Name: string, email: string, password: string) => {
+  const res = await axios.post(`${API_BASE}/Auth/register`, {
+    name: Name,
+    email,
+    password
+  });
+  return res.data;
+};
