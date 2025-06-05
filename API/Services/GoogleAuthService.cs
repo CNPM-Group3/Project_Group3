@@ -45,8 +45,7 @@ namespace SRPM.API.Services
             try
             {
                 _logger.LogInformation("Handling Google callback for action: {Action}", action);
-                
-                // Exchange code for token
+
                 var tokenResponse = await ExchangeCodeForTokenAsync(code, action);
                 if (tokenResponse == null)
                 {
@@ -54,7 +53,6 @@ namespace SRPM.API.Services
                     return new AuthResponse { Success = false, Message = "Failed to exchange code for token" };
                 }
 
-                // Get user info from Google
                 var userInfo = await GetGoogleUserInfoAsync(tokenResponse.AccessToken);
                 if (userInfo == null)
                 {
@@ -62,17 +60,18 @@ namespace SRPM.API.Services
                     return new AuthResponse { Success = false, Message = "Failed to get user info from Google" };
                 }
 
-                // Create Google login request
                 var googleLoginRequest = new GoogleLoginRequest
                 {
                     GoogleToken = tokenResponse.IdToken
                 };
 
-                // Use existing Google login logic
+                // Trả về AuthResponse chứa token JWT
                 return await _authService.LoginWithGoogleAsync(googleLoginRequest);
             }
             catch (Exception ex)
             {
+                _logger.LogInformation("Google callback received. Code: {Code}, State: {State}", code, action);
+
                 _logger.LogError(ex, "Google authentication failed");
                 return new AuthResponse 
                 { 
@@ -82,6 +81,7 @@ namespace SRPM.API.Services
                 };
             }
         }
+
 
         private async Task<GoogleTokenResponse?> ExchangeCodeForTokenAsync(string code, string action)
         {
