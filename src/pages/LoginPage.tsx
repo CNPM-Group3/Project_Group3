@@ -1,55 +1,78 @@
 "use client";
 import * as React from "react";
 import { LoginForm } from "@cnpm/components/Sign In/LoginForm";
-import { NewPasswordForm } from "@cnpm/components/Sign In/NewPassWordForm";
-import { ResetCodeForm } from "@cnpm/components/Sign In/ResetCodeForm";
-import router from "next/dist/client/router";
+import { useNavigate } from 'react-router-dom';
+import { authService } from "@cnpm/services/authService"; // 🔁 Đảm bảo import đúng
 
 export default function LoginPage() {
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = React.useState('');
+  const [successMessage, setSuccessMessage] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
-  // Hàm xử lý đăng nhập
-  async function handleLogin(email: string, password: string, rememberMe: boolean) {
-    try {
 
-      const response = await fetch("http://aienthusiasm.vn:8080/api/v1/index.html", {
-        method: "POST",
+  // Đăng nhập bằng email + password
+  const handleLogin = async (email: string, password: string, rememberMe: boolean) => {
+    try {
+      setIsLoading(true);
+      setErrorMessage('');
+      setSuccessMessage('');
+      console.log('Đang gửi yêu cầu đăng nhập...');
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/Auth/login`, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ 
-          email: email.trim(),
-          password: password.trim() 
-        }),
+        body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+      if (response.ok) {
+        const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(data.message || "Đăng nhập thất bại");
-      }
+        const token = data.token;
+        if (token) {
+          sessionStorage.setItem('accessToken', token);
 
-      // Lưu token
-      if (data.token) {
-        if (rememberMe) {
-          localStorage.setItem("accessToken", data.token);
+          try {
+            // await authService.fetchAndStoreUserProfile();
+            setSuccessMessage('Đăng nhập thành công!');
+            console.log('Đăng nhập thành công → chuyển trang');
+            navigate('/thanhviennghiencuu');
+          } catch (profileError) {
+            console.error('Lỗi khi tải profile:', profileError);
+            setErrorMessage('Đăng nhập thành công nhưng lỗi khi tải hồ sơ người dùng');
+          }
         } else {
-          sessionStorage.setItem("accessToken", data.token);
+          console.error('Không có token trong phản hồi');
+          setErrorMessage('Đăng nhập thất bại: không nhận được token');
         }
-        
-        // Chuyển hướng sau khi đăng nhập thành công
-        router.push("/dashboard");
-        setError(null);
       } else {
-        throw new Error("Token không hợp lệ");
+        const errorData = await response.json();
+        const message = errorData.message || 'Email hoặc mật khẩu không chính xác';
+        console.error('Đăng nhập thất bại:', message);
+        setErrorMessage(message);
       }
-
-      // Xử lý sau khi đăng nhập thành công, ví dụ lưu token, chuyển trang
-      // ...
-    } catch (err: any) {
-      console.error("Login error:", err);
-      setError(err?.message || "Đăng nhập thất bại");
+    } catch (error: any) {
+      console.error('Lỗi kết nối khi đăng nhập:', error);
+      setErrorMessage('Lỗi không mong muốn xảy ra');
     } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Đăng nhập bằng Google
+  const handleGoogleLogin = async () => {
+    try {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/Auth/google/signup`);
+      const data = await res.json();
+      if (data.redirectUrl) {
+        window.location.href = data.redirectUrl;
+      } else {
+        throw new Error("Không nhận được đường dẫn đăng nhập Google.");
+      }
+    } catch (error: any) {
+      console.error("Google Login Error:", error);
+      setErrorMessage("Lỗi khi đăng nhập bằng Google");
     }
   };
 
@@ -74,12 +97,20 @@ export default function LoginPage() {
             className="w-full h-full object-cover rounded-l-2xl"
           />
         </div>
+
+        {/* Form bên phải */}
+        <div className="w-1/2 flex items-center justify-center bg-white p-8">
+          <div className="w-full max-w-xs">
             <LoginForm 
-              onLogin={(email: string, password: string, rememberMe: boolean) => handleLogin(email, password, rememberMe)}
-              error={error}
+              onLogin={handleLogin}
+              onGoogleSuccess={handleGoogleLogin}
+              errorMessage={errorMessage}
               isLoading={isLoading}
+              onSignUpClick={() => navigate("/signup")}
             />
           </div>
         </div>
+      </div>
+    </div>
   );
 }

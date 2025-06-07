@@ -1,11 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import { AuthProvider } from '@cnpm/context/AuthContext';
-import SignInPage from '@cnpm/pages/LoginPage';
 import SignUpPage from '@cnpm/pages/SignUp';
+import SignInPage from '@cnpm/pages/LoginPage';
 import LoginError from '@cnpm/pages/LoginError';
 import DashboardHoiOngThamInh from '@cnpm/pages/DashboardHoiOngThamInh';
 import DashboardQuanTriVien from '@cnpm/pages/DashboardQuanTriVien';
@@ -29,6 +28,7 @@ import ThemTaiLieuNghienCuuChinh from '@cnpm/pages/ThemTaiLieuNghienCuuChinh';
 import ThemNhiemVu from '@cnpm/pages/ThemNhiemVu';
 import { useParams } from 'react-router-dom';
 import ChiTietDuAn from '@cnpm/pages/ChiTietDuAn';
+
 function TrangChiTietNhiemVuWrapper() {
   const { taskId = '' } = useParams<{ taskId: string }>();
   return <TrangChiTietNhiemVu taskId={taskId} />;

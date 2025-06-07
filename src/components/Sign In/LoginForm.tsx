@@ -2,23 +2,26 @@
 import React, { useState } from "react";
 import { UserIcon } from "../Icons/UserIcon";
 import { GoogleIcon } from "../Icons/GoogleIcon";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 
 interface LoginFormProps {
-  onLogin: (
-    email: string,
-    password: string,
-    rememberMe: boolean
-  ) => Promise<void>;
-  onBack?: () => void;
-  error?: string | null;
+  onLogin: (email: string, password: string, rememberMe: boolean) => Promise<void>;
+  onGoogleSuccess: () => void;
+  onSignUpClick: () => void;
+  errorMessage?: string;
   isLoading?: boolean;
 }
 
-export function LoginForm({ onLogin, onBack, error, isLoading }: LoginFormProps) {
+export function LoginForm({
+  onLogin,
+  onGoogleSuccess,
+  onSignUpClick,
+  errorMessage,
+  isLoading
+}: LoginFormProps) {
   const [rememberMe, setRememberMe] = useState(true);
   const [localError, setLocalError] = useState<string | null>(null);
-  const router = useRouter();
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -30,30 +33,6 @@ export function LoginForm({ onLogin, onBack, error, isLoading }: LoginFormProps)
       await onLogin(email, password, rememberMe);
     } catch (err: any) {
       setLocalError(err?.message || "Đăng nhập thất bại, vui lòng thử lại.");
-    } finally {
-      // Reset form fields
-      (form.elements.namedItem("email") as HTMLInputElement).value = "";
-      (form.elements.namedItem("password") as HTMLInputElement).value = "";
-    }
-  };
-
-  const handleGoogleLogin = async () => {
-    try {
-      const API_URL = process.env.VITE_API_URL;
-
-      const res = await fetch(
-        `${API_URL?.replace(/\/$/, "")}/Auth/google/signup`
-      );
-
-      const data = await res.json();
-      if (data.redirectUrl) {
-        window.location.href = data.redirectUrl; // Redirect Google OAuth
-      } else {
-        alert("Không lấy được URL đăng nhập Google.");
-      }
-    } catch (error) {
-      console.error("Lỗi khi gọi API đăng nhập Google:", error);
-      alert("Đã xảy ra lỗi khi đăng nhập Google.");
     }
   };
 
@@ -110,8 +89,8 @@ export function LoginForm({ onLogin, onBack, error, isLoading }: LoginFormProps)
           </label>
         </div>
 
-        {(localError || error) && (
-          <p className="text-red-500 text-sm text-center">{localError || error}</p>
+        {(localError || errorMessage) && (
+          <p className="text-red-500 text-sm text-center">{localError || errorMessage}</p>
         )}
 
         <button
@@ -128,8 +107,7 @@ export function LoginForm({ onLogin, onBack, error, isLoading }: LoginFormProps)
       {/* ✅ Nút Google giữ lại */}
       <button
         type="button"
-        onClick={handleGoogleLogin}
-
+        onClick={onGoogleSuccess}
         className="flex items-center justify-center gap-2 w-full h-[48px] mt-5 text-base font-bold text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
         disabled={isLoading}
       >
@@ -142,8 +120,8 @@ export function LoginForm({ onLogin, onBack, error, isLoading }: LoginFormProps)
         <button
           className="w-full h-[48px] text-base font-bold text-teal-700 border border-teal-500 rounded-lg hover:bg-teal-50 transition-colors"
           disabled={isLoading}
-          onClick={() => router.push("/signup")} 
-          >
+          onClick={onSignUpClick}
+        >
           Tạo tài khoản
         </button>
       </div>
