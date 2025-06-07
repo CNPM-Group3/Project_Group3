@@ -4,19 +4,27 @@ import React, { useState } from "react";
 interface MemberSelectProps {
   members: string[]; // List of member names
   onMemberSelect: (member: string) => void; // Callback when a member is selected
+  disabled?: boolean;
 }
 
 export const MemberSelect: React.FC<MemberSelectProps> = ({
   members,
   onMemberSelect,
+  disabled = false
 }) => {
   const [selectedMember, setSelectedMember] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMemberSelect = (member: string) => {
+    if (disabled) return;
     setSelectedMember(member);
     setIsOpen(false);
     onMemberSelect(member); // Call the prop function with the selected member
+  };
+
+  const handleToggleDropdown = () => {
+    if (disabled) return;
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -27,8 +35,10 @@ export const MemberSelect: React.FC<MemberSelectProps> = ({
 
       {/* Styled select box */}
       <div
-        className="flex flex-wrap flex-auto items-center text-sm border border-gray-400 rounded-md px-4 py-2 bg-white cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        className={`flex flex-wrap flex-auto items-center text-sm border border-gray-400 rounded-md px-4 py-2 bg-white ${
+          disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'
+        }`}
+        onClick={handleToggleDropdown}
       >
         <span className={`flex-1 shrink self-stretch my-auto basis-0 ${selectedMember ? 'text-gray-800' : 'text-gray-400'}`}>
           {selectedMember || "Tên thành viên"}
@@ -41,7 +51,7 @@ export const MemberSelect: React.FC<MemberSelectProps> = ({
       </div>
 
       {/* Dropdown Menu */}
-      {isOpen && (
+      {isOpen && !disabled && (
         <div className="absolute z-10 mt-12 w-full max-w-sm bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           {members.map((member, index) => (
             <div

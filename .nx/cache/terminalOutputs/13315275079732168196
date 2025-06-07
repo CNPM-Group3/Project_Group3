@@ -1,0 +1,102 @@
+[33mThe `define` option contains an object with "PATH" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[33mThe `define` option contains an object with "PATH" for "process.env" key. It looks like you may have passed the entire `process.env` object to `define`, which can unintentionally expose all environment variables. This poses a security risk and is discouraged.[39m [33m(x2)[39m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m4200[22m/[39m
+[2m12:48:50 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@cnpm/components/sidebars/PageLayout" from "src/pages/DashboardQuanTriVien.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/buidoanhaiyen/Documents/SRPM_FE-master/src/pages/DashboardQuanTriVien.tsx[39m:3:23
+[33m  18 |  var _s = $RefreshSig$();
+  19 |  import React from "react";
+  20 |  import PageLayout from "@cnpm/components/sidebars/PageLayout";
+     |                          ^
+  21 |  import QuanTriVienSidebar from "@cnpm/components/sidebars/QuanTriVienSidebar";
+  22 |  import { SystemConfigCard } from "@cnpm/components/QuanTriVien/SystemConfigCard";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:48:50 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@cnpm/components/sidebars/PageLayout" from "src/pages/DashboardQuanTriVien.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/buidoanhaiyen/Documents/SRPM_FE-master/src/pages/DashboardQuanTriVien.tsx[39m:3:23
+[33m  18 |  var _s = $RefreshSig$();
+  19 |  import React from "react";
+  20 |  import PageLayout from "@cnpm/components/sidebars/PageLayout";
+     |                          ^
+  21 |  import QuanTriVienSidebar from "@cnpm/components/sidebars/QuanTriVienSidebar";
+  22 |  import { SystemConfigCard } from "@cnpm/components/QuanTriVien/SystemConfigCard";[39m
+      at TransformPluginContext._formatLog (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:48:52 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@cnpm/components/sidebars/PageLayout" from "src/pages/DashboardQuanTriVien.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/buidoanhaiyen/Documents/SRPM_FE-master/src/pages/DashboardQuanTriVien.tsx[39m:3:23
+[33m  18 |  var _s = $RefreshSig$();
+  19 |  import React from "react";
+  20 |  import PageLayout from "@cnpm/components/sidebars/PageLayout";
+     |                          ^
+  21 |  import QuanTriVienSidebar from "@cnpm/components/sidebars/QuanTriVienSidebar";
+  22 |  import { SystemConfigCard } from "@cnpm/components/QuanTriVien/SystemConfigCard";[39m
+      at TransformPluginContext._formatLog (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///Users/buidoanhaiyen/Documents/SRPM_FE-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24) [33m(x2)[39m
+[1m[31mWatch error: Daemon closed the connection[39m[22m

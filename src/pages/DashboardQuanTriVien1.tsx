@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import MainLayout from "@cnpm/layouts/MainLayout";
-import Sidebar from "@cnpm/components/QuanTriVien/QuanTriVien1/Sidebar";
+import QuanTriVienSidebar from "@cnpm/components/sidebars/QuanTriVienSidebar";
 import Header from "@cnpm/components/Header";
 import { UserRoleFilter } from "@cnpm/components/QuanTriVien/QuanTriVien1/UserRoleFilter";
 import { UserList } from "@cnpm/components/QuanTriVien/QuanTriVien1/UserList";
@@ -50,7 +50,7 @@ export const DashboardLayout: React.FC<DashboardLayoutProps> = ({
       <div className="min-h-screen w-screen bg-gray-50 flex">
         {/* Sidebar cố định 256px */}
         <aside className="w-64 bg-gray-50 border-r border-gray-200 fixed h-full">
-          <Sidebar />
+          <QuanTriVienSidebar />
         </aside>
 
         {/* Nội dung chính */}

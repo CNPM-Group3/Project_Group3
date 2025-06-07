@@ -4,6 +4,7 @@ import { TaskItem } from "./TaskItem";
 type TaskStatus = "problem" | "working" | "done" | "submitted";
 
 interface Task {
+  id: string;
   name: string;
   status: TaskStatus;
   iconSrc: string;
@@ -11,28 +12,33 @@ interface Task {
 
 interface TaskListProps {
   tasks?: Task[];
+  onTaskClick?: (taskId: string) => void;
 }
 
 const initialTasks: Task[] = [
   {
+    id: "1",
     name: "Nhiệm vụ 1",
     status: "problem",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
   {
+    id: "2",
     name: "Nhiệm vụ 2",
     status: "working",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
   {
+    id: "3",
     name: "Nhiệm vụ 3",
     status: "done",
     iconSrc:
       "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
   },
   {
+    id: "4",
     name: "Nhiệm vụ 4",
     status: "submitted",
     iconSrc:
@@ -42,6 +48,7 @@ const initialTasks: Task[] = [
 
 export const TaskList: React.FC<TaskListProps> = ({
   tasks: propTasks,
+  onTaskClick,
 }) => {
   const [tasks, setTasks] = useState<Task[]>(propTasks || initialTasks);
 
@@ -62,10 +69,12 @@ export const TaskList: React.FC<TaskListProps> = ({
         {tasks.map((task, index) => (
           <TaskItem
             key={index}
+            id={task.id}
             name={task.name}
             status={task.status}
             iconSrc={task.iconSrc}
             onStatusChange={newStatus => handleStatusChange(index, newStatus)}
+            onClick={() => onTaskClick?.(task.id)}
           />
         ))}
       </div>

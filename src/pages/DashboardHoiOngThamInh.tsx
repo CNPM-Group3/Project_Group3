@@ -2,7 +2,7 @@
 
 import React from "react";
 import MainLayout from "@cnpm/layouts/MainLayout";
-import Sidebar from "@cnpm/components/HoiDongThamDinh/Sidebar";
+import HoiDongThamDinhSidebar from "@cnpm/components/sidebars/HoiDongThamDinhSidebar";
 import DashboardHeader from "@cnpm/components/Header";
 import ProjectEvaluation from "@cnpm/components/HoiDongThamDinh/ProjectEvaluation";
 import PhaseProgress from "@cnpm/components/HoiDongThamDinh/PhaseProgress";
@@ -22,7 +22,7 @@ const DashboardHoiDongThamDinh: React.FC<DashboardHoiDongThamDinhProps> = ({
       <div className="flex min-h-screen w-screen bg-gray-50">
         {/* Sidebar */}
         <aside className="w-64 bg-gray-50 border-r border-gray-200 fixed h-full">
-          <Sidebar />
+          <HoiDongThamDinhSidebar />
         </aside>
 
         {/* Main content */}

@@ -1,9 +1,11 @@
 "use client";
 import React, { useState, ChangeEvent, useRef, useEffect } from "react";
-import Sidebar from "@cnpm/components/Profile/Sidebar";
 import Header from "@cnpm/components/Header";
 import { UserDetails } from "@cnpm/components/Profile/UserDetails";
 import { ResearchInfo } from "@cnpm/components/Profile/ResearchInfo";
+import AdminSidebar from '@cnpm/components/sidebars/AdminSidebar';
+import ThanhVienNghienCuuSidebar from '@cnpm/components/sidebars/ThanhVienNghienCuuSidebar';
+import ChuTriSidebar from '@cnpm/components/sidebars/ChuTriSidebar';
 
 interface ThongTinCaNhanThanhVienNghienCuuProps {
   userId: string; // Example prop: ID of the user whose profile is being viewed
@@ -171,7 +173,9 @@ const ThongTinCaNhanThanhVienNghienCuu: React.FC<ThongTinCaNhanThanhVienNghienCu
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
         <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
+          <ThanhVienNghienCuuSidebar />
+          <ChuTriSidebar />
+          <AdminSidebar />
         </div>
         {/* Main content */}
         <div className="flex-1 flex flex-col ml-64">

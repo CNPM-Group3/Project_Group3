@@ -15,11 +15,13 @@ export interface NewTaskData {
 interface TaskFormProps {
   onSubmit: (taskData: NewTaskData) => void;
   members: string[];
+  isSubmitting?: boolean;
 }
 
 export const TaskForm: React.FC<TaskFormProps> = ({
   onSubmit,
-  members
+  members,
+  isSubmitting = false
 }) => {
   const [taskName, setTaskName] = useState("");
   const [taskContent, setTaskContent] = useState("");
@@ -63,6 +65,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({
           onChange={(e) => setTaskName(e.target.value)}
           placeholder="Tên nhiệm vụ"
           className="overflow-hidden gap-2.5 self-stretch px-4 mt-5 text-base leading-6 text-gray-400 bg-white rounded-lg border border-gray-300 border-solid min-h-[50px] w-[448px] max-md:max-w-full"
+          disabled={isSubmitting}
         />
 
         <div className="mt-5 bg-black bg-opacity-0 max-md:max-w-full">
@@ -78,22 +81,31 @@ export const TaskForm: React.FC<TaskFormProps> = ({
             placeholder="Ghi tối đa 10 ký tự"
             className="overflow-hidden px-3.5 pt-4 pb-12 text-base text-gray-400 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 max-md:max-w-full w-full"
             rows={4}
+            disabled={isSubmitting}
           />
         </div>
 
-        <FileUpload />
+        <FileUpload disabled={isSubmitting} />
         <DatePicker
           label="Thời hạn hoàn thành nhiệm vụ:"
           selectedDate={taskDeadline}
           onDateChange={handleDateChange}
+          disabled={isSubmitting}
         />
-        <MemberSelect members={members} onMemberSelect={handleMemberSelect} />
+        <MemberSelect 
+          members={members} 
+          onMemberSelect={handleMemberSelect}
+          disabled={isSubmitting}
+        />
 
         <button
           type="submit"
-          className="self-center mx-auto px-16 py-3.5 mt-10 max-w-full text-2xl font-bold text-center text-white whitespace-nowrap bg-teal-500 rounded-lg border-0 border border-solid w-[300px] max-md:px-5 hover:bg-teal-600 transition-colors"
+          className={`self-center mx-auto px-16 py-3.5 mt-10 max-w-full text-2xl font-bold text-center text-white whitespace-nowrap bg-teal-500 rounded-lg border-0 border border-solid w-[300px] max-md:px-5 transition-colors ${
+            isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-teal-600'
+          }`}
+          disabled={isSubmitting}
         >
-          Tạo
+          {isSubmitting ? 'Đang tạo...' : 'Tạo'}
         </button>
       </form>
     </section>

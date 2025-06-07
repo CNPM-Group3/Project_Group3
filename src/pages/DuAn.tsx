@@ -1,9 +1,10 @@
 "use client";
 import * as React from "react";
-import Sidebar from "@cnpm/components/Dự Án/Sidebar";
+import ThanhVienNghienCuuSidebar from "@cnpm/components/sidebars/ThanhVienNghienCuuSidebar";
 import Header from "@cnpm/components/Header";
 import { ProjectCard } from "@cnpm/components/Dự Án/ProjectCard";
 import { SearchInput } from "@cnpm/components/Dự Án/SearchInput";
+import { useNavigate } from "react-router-dom";
 
 interface DuAnProps {
   userId: string; // Example prop: ID of the logged-in user
@@ -12,6 +13,7 @@ interface DuAnProps {
 export default function DuAn({
   userId
 }: DuAnProps) {
+  const navigate = useNavigate();
   // You might use userId here to fetch user-specific projects or filter the list
   console.log("Accessing DuAn page for user:", userId);
 
@@ -25,12 +27,16 @@ export default function DuAn({
     console.log("Search value:", value);
   };
 
+  const handleProjectClick = (projectId: string) => {
+    navigate(`/duan/chitietduan/${projectId}`);
+  };
+
   return (
     <main className="bg-slate-50 min-h-screen w-full">
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
         <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
+          <ThanhVienNghienCuuSidebar />
         </div>
         {/* Main content */}
         <div className="flex-1 flex flex-col ml-64">
@@ -71,16 +77,19 @@ export default function DuAn({
                 title="Hệ thống giao dịch tự động"
                 group="CNTT22"
                 supervisor="ThS. Nguyễn Văn Hồng"
+                onClick={() => handleProjectClick("1")}
               />
               <ProjectCard
                 title="Bác Sĩ AI"
                 group="CNTT3"
                 supervisor="TS. Nguyễn Văn Minh"
+                onClick={() => handleProjectClick("2")}
               />
               <ProjectCard
                 title="Ứng dụng Quản lý tiển trọ"
                 group="KHDL"
                 supervisor="TS. Nguyễn Hồ Ngọc"
+                onClick={() => handleProjectClick("3")}
               />
             </div>
           </section>

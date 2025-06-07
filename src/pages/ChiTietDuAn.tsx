@@ -1,18 +1,26 @@
 "use client";
 import React from "react";
-import Sidebar from "@cnpm/components/ChiTietDuAn/Sidebar";
+import { useNavigate, useParams } from "react-router-dom";
+import ThanhVienNghienCuuSidebar from "@cnpm/components/sidebars/ThanhVienNghienCuuSidebar";
 import Header from "@cnpm/components/Header";
-import { ProjectInfo } from "../components/ChiTietDuAn/ProjectInfo";
-import { TaskList } from "../components/ChiTietDuAn/TaskList";
-import { AttachmentList } from "../components/ChiTietDuAn/AttachmentList";
+import { ProjectInfo } from "@cnpm/components/ChiTietDuAn/ProjectInfo";
+import { TaskList } from "@cnpm/components/ChiTietDuAn/TaskList";
+import { AttachmentList } from "@cnpm/components/ChiTietDuAn/AttachmentList";
 
-interface ProjectDetailPageProps {
+interface ChiTietDuAnProps {
   projectId: string; // Example prop: ID of the project to display
 }
 
-export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
+export const ChiTietDuAn: React.FC<ChiTietDuAnProps> = ({
   projectId,
 }) => {
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+  const handleTaskClick = (taskId: string) => {
+    navigate(`/duan/chitietduan/${id}/chitietnhiemvu/${taskId}`);
+  };
+
   // You would typically use projectId here to fetch project data
   console.log("Displaying project with ID:", projectId);
 
@@ -21,7 +29,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
         <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
+          <ThanhVienNghienCuuSidebar />
         </div>
         {/* Main content */}
         <div className="flex-1 flex flex-col ml-64">
@@ -37,7 +45,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
             <div className="w-full max-w-[800px]">
               {/* You might pass projectId down to these components if they depend on it */}
               <ProjectInfo />
-              <TaskList />
+              <TaskList onTaskClick={handleTaskClick} />
               <div className="mt-10">
                 <AttachmentList />
               </div>
@@ -49,4 +57,4 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({
   );
 };
 
-export default ProjectDetailPage;
+export default ChiTietDuAn;

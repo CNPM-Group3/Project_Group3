@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import Sidebar from "@cnpm/components/Dự Án/Sidebar";
+import ThanhVienNghienCuuSidebar from "@cnpm/components/sidebars/ThanhVienNghienCuuSidebar";
 import Header from "@cnpm/components/Header";
 import { ProjectForm } from "@cnpm/components/Dự Án/Tạo Dự Án/ProjectForm";
 
@@ -19,7 +19,7 @@ export default function TaoDuAnNghienCuuChinh({
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
         <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
+          <ThanhVienNghienCuuSidebar />
         </div>
         {/* Main content */}
         <div className="flex-1 flex flex-col ml-64">

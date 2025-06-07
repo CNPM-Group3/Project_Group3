@@ -4,15 +4,20 @@ interface ProjectCardProps {
   title: string;
   group: string;
   supervisor: string;
+  onClick?: () => void;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   group,
   supervisor,
+  onClick,
 }) => {
   return (
-    <article className="px-4 py-3 mt-6 w-full rounded-xl border border-solid border-slate-200 shadow-[0px_1px_2px_rgba(0,0,0,0.05)] max-md:pr-5 max-md:max-w-full">
+    <article 
+      onClick={onClick}
+      className="px-4 py-3 mt-6 w-full rounded-xl border border-solid border-slate-200 shadow-[0px_1px_2px_rgba(0,0,0,0.05)] max-md:pr-5 max-md:max-w-full cursor-pointer hover:bg-gray-50 transition-colors duration-200"
+    >
       <div className="flex gap-5 max-md:flex-col">
         <div className="w-[29%] max-md:ml-0 max-md:w-full">
           <div className="flex shrink-0 mx-auto rounded-lg bg-zinc-300 h-[139px] w-[165px] max-md:mt-10" />

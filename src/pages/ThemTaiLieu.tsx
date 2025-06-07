@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import Sidebar from "@cnpm/components/Dự Án/Thêm Tài Liệu/Sidebar";
+import ThanhVienNghienCuuSidebar from "@cnpm/components/sidebars/ThanhVienNghienCuuSidebar";
 import Header from "@cnpm/components/Header";
 import { DocumentUpload } from "@cnpm/components/Dự Án/Thêm Tài Liệu/DocumentUpload";
 
@@ -19,7 +19,7 @@ function ThemTaiLieuNghienCuuChinh({
     <main className="bg-slate-50 min-h-screen w-full flex flex-row">
       {/* Sidebar */}
       <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-        <Sidebar />
+        <ThanhVienNghienCuuSidebar />
       </div>
 
       {/* Main Content Area: flex-1 takes remaining width, ml-64 for sidebar space */}

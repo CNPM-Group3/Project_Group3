@@ -2,7 +2,7 @@
 import * as React from "react";
 import { useState } from "react";
 import MainLayout from "@cnpm/layouts/MainLayout";
-import Sidebar from "@cnpm/components/QuanTriVien/QuanTriVien2/Sidebar";
+import QuanTriVienSidebar from "@cnpm/components/sidebars/QuanTriVienSidebar";
 import Header from "@cnpm/components/Header";
 import { UserPerformanceChart } from "@cnpm/components/QuanTriVien/QuanTriVien2/UserPerformanceChart";
 import { UserInteractionChart } from "@cnpm/components/QuanTriVien/QuanTriVien2/UserInteractionChart";
@@ -43,7 +43,7 @@ const DashboardQuanTriVien2: React.FC<DashboardQuanTriVien2Props> = ({
       <div className="flex min-h-screen w-screen bg-gray-50">
         {/* Sidebar */}
         <aside className="w-64 bg-gray-50 border-r border-gray-200 fixed h-full">
-          <Sidebar />
+          <QuanTriVienSidebar />
         </aside>
 
         {/* Main content */}

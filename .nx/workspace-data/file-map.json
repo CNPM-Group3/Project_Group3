@@ -57,7 +57,7 @@
         },
         {
           "file": "eslint.config.js",
-          "hash": "18136715864555996736",
+          "hash": "13677919190484069480",
           "deps": [
             "npm:@nx/eslint-plugin"
           ]
@@ -72,7 +72,7 @@
         },
         {
           "file": "package-lock.json",
-          "hash": "769785448830152502"
+          "hash": "2387097805578666035"
         },
         {
           "file": "package.json",
@@ -224,7 +224,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "10916937912922789003",
+          "hash": "16520967595123404522",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -297,14 +297,14 @@
         },
         {
           "file": "src/components/ChiTietDuAn/TaskItem.tsx",
-          "hash": "11358246564735562645",
+          "hash": "9587811247355241888",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/ChiTietDuAn/TaskList.tsx",
-          "hash": "8477550636998250306",
+          "hash": "6450858723856407690",
           "deps": [
             "npm:react"
           ]
@@ -409,7 +409,7 @@
         },
         {
           "file": "src/components/Dự Án/ProjectCard.tsx",
-          "hash": "8250855349937334990",
+          "hash": "7178044766994859601",
           "deps": [
             "npm:react"
           ]
@@ -764,21 +764,21 @@
         },
         {
           "file": "src/components/ThemNhiemVu/DatePicker.tsx",
-          "hash": "9487785589719638765",
+          "hash": "16517990569675116773",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/ThemNhiemVu/FileUpload.tsx",
-          "hash": "7740382597482502814",
+          "hash": "3193544167626947527",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/ThemNhiemVu/MemberSelect.tsx",
-          "hash": "14993794547105585927",
+          "hash": "2017857137126314281",
           "deps": [
             "npm:react"
           ]
@@ -792,7 +792,7 @@
         },
         {
           "file": "src/components/ThemNhiemVu/TaskForm.tsx",
-          "hash": "9450830710295529042",
+          "hash": "13160424556788616278",
           "deps": [
             "npm:react"
           ]
@@ -849,6 +849,53 @@
           "hash": "8950967419995820660",
           "deps": [
             "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/sidebars/AdminSidebar.tsx",
+          "hash": "13140651813185984299",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/sidebars/ChuTriSidebar.tsx",
+          "hash": "2319765938205455312",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/sidebars/HoiDongThamDinhSidebar.tsx",
+          "hash": "14829898814037697910",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/sidebars/QuanTriVienSidebar.tsx",
+          "hash": "17287174171344503156",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/sidebars/SidebarWrapper.tsx",
+          "hash": "8203640685066422079",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/sidebars/ThanhVienNghienCuuSidebar.tsx",
+          "hash": "1009024777852707839",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
@@ -922,56 +969,72 @@
         },
         {
           "file": "src/pages/AdminDashboard.tsx",
-          "hash": "12878953950730530093",
+          "hash": "13286254782536797185",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ChiTietDuAn.tsx",
+          "hash": "10763113782472172166",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/pages/ChiTietNhiemVu.tsx",
+          "hash": "17875798482967622204",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardHoiOngThamInh.tsx",
-          "hash": "4784820067442144024",
+          "hash": "5615046416531831353",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien.tsx",
-          "hash": "5482192603117835831",
+          "hash": "10426446094968872522",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien1.tsx",
-          "hash": "15691697832443979815",
+          "hash": "13914911703320432759",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien2.tsx",
-          "hash": "13405627246090215601",
+          "hash": "7852425019505869144",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DuAn.tsx",
-          "hash": "10079368451731222069",
+          "hash": "6044784589178353919",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
           "file": "src/pages/DuyetDuAn.tsx",
-          "hash": "6581965161181548722",
+          "hash": "17082480618169561977",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DuyetTaiTro.tsx",
-          "hash": "10577256634253966818",
+          "hash": "6139516039300479496",
           "deps": [
             "npm:react"
           ]
@@ -992,21 +1055,7 @@
         },
         {
           "file": "src/pages/PhieuYeuCauTaiTro.tsx",
-          "hash": "15208087915830787029",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/pages/Profile.tsx",
-          "hash": "11946954215369054133",
-          "deps": [
-            "npm:react"
-          ]
-        },
-        {
-          "file": "src/pages/ProjectDetailPage.tsx",
-          "hash": "15001813699554504549",
+          "hash": "9965204786334007716",
           "deps": [
             "npm:react"
           ]
@@ -1020,14 +1069,15 @@
         },
         {
           "file": "src/pages/TaiTro.tsx",
-          "hash": "8601433762878938545",
+          "hash": "16427184711077324604",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
-          "file": "src/pages/TaoDuAnNghienCuuChinh.tsx",
-          "hash": "1150627143264704099",
+          "file": "src/pages/TaoDuAn.tsx",
+          "hash": "17940626639152817033",
           "deps": [
             "npm:react"
           ]
@@ -1041,21 +1091,21 @@
         },
         {
           "file": "src/pages/ThemNhiemVu.tsx",
-          "hash": "223345391438266438",
+          "hash": "5391268518506230833",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "src/pages/ThemTaiLieuNghienCuuChinh.tsx",
-          "hash": "3712360968863571988",
+          "file": "src/pages/ThemTaiLieu.tsx",
+          "hash": "14308471495156898086",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "src/pages/TrangChiTietNhiemVuThanhVienNghienCuu.tsx",
-          "hash": "17875798482967622204",
+          "file": "src/pages/ThongTinCaNhan.tsx",
+          "hash": "14979558844867404023",
           "deps": [
             "npm:react"
           ]
@@ -1106,10 +1156,6 @@
             "npm:@vitejs/plugin-react",
             "npm:@nx/vite"
           ]
-        },
-        {
-          "file": "yarn.lock",
-          "hash": "11771755294344542889"
         }
       ],
       "my-tailwind-app": [

@@ -13,16 +13,16 @@ import DashboardQuanTriVien2 from '@cnpm/pages/DashboardQuanTriVien2';
 import AdminDashboard from '@cnpm/pages/AdminDashboard';
 import { PublicRoute } from '@cnpm/components/Protect/PublicRoute';
 import DuAn from '@cnpm/pages/DuAn';
-import Profile from '@cnpm/pages/Profile';
+import Profile from '@cnpm/pages/ThongTinCaNhan';
 import TaiTro from '@cnpm/pages/TaiTro';
 import ThanhVienNghienCuu from '@cnpm/pages/ThanhVienNghienCuu';
-import TaoDuAnNghienCuuChinh from '@cnpm/pages/TaoDuAnNghienCuuChinh';
+import TaoDuAnNghienCuuChinh from '@cnpm/pages/TaoDuAn';
 import DuyetDuAn from '@cnpm/pages/DuyetDuAn';
 import DuyetTaiTro from '@cnpm/pages/DuyetTaiTro';
-import ProjectDetailPage from '@cnpm/pages/ProjectDetailPage';
-import TrangChiTietNhiemVu from '@cnpm/pages/TrangChiTietNhiemVuThanhVienNghienCuu';
+import ChiTietDuAn from '@cnpm/pages/ChiTietDuAn';
+import TrangChiTietNhiemVu from '@cnpm/pages/ChiTietNhiemVu';
 import PhieuYeuCauTaiTro from '@cnpm/pages/PhieuYeuCauTaiTro';
-import ThemTaiLieuNghienCuuChinh from '@cnpm/pages/ThemTaiLieuNghienCuuChinh';
+import ThemTaiLieuNghienCuuChinh from '@cnpm/pages/ThemTaiLieu';
 import ThemNhiemVu from '@cnpm/pages/ThemNhiemVu';
 
 export function App() {
@@ -55,15 +55,15 @@ export function App() {
                 <Route path="/quantrivien2" element={<DashboardQuanTriVien2 userRole={mockUserRole} />} />
                 <Route path="/admin" element={<AdminDashboard userRole={mockUserRole} />} />
                 <Route path="/duan" element={<DuAn userId={mockUserId} />} />
+                <Route path="/duan/chitietduan/:id" element={<ChiTietDuAn projectId={mockProjectId} />} />
+                <Route path="/duan/chitietduan/:id/chitietnhiemvu/:taskId" element={<TrangChiTietNhiemVu taskId={mockTaskId} />} />
                 <Route path="/profile" element={<Profile userId={mockUserId} />} />
                 <Route path="/taitro" element={<TaiTro userId={mockUserId} />} />
+                <Route path="/taitro/yeucau" element={<PhieuYeuCauTaiTro onSubmit={mockOnSubmit} />} />
                 <Route path="/thanhviennghiencuu" element={<ThanhVienNghienCuu userId={mockUserId} />} />
                 <Route path="/taoduannghiencuuchinh" element={<TaoDuAnNghienCuuChinh userId={mockUserId} />} />
                 <Route path="/duyetduan" element={<DuyetDuAn userRole={mockUserRole} />} />
                 <Route path="/duyettaitro" element={<DuyetTaiTro userRole={mockUserRole} />} />
-                <Route path="/project-detail" element={<ProjectDetailPage projectId={mockProjectId} />} />
-                <Route path="/trangchitietnhiemvu" element={<TrangChiTietNhiemVu taskId={mockTaskId} />} />
-                <Route path="/phieuyeucautaitro" element={<PhieuYeuCauTaiTro onSubmit={mockOnSubmit} />} />
                 <Route path="/themtailieu" element={<ThemTaiLieuNghienCuuChinh userId={mockUserId} />} />
                 <Route path="/themnhiemvu" element={<ThemNhiemVu availableMembers={availableMembers} />} />
               </Route>

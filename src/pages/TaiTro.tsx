@@ -1,5 +1,6 @@
 import * as React from "react";
-import Sidebar from "@cnpm/components/Tài Trợ/Sidebar";
+import { useNavigate } from "react-router-dom";
+import ThanhVienNghienCuuSidebar from "@cnpm/components/sidebars/ThanhVienNghienCuuSidebar";
 import Header from "@cnpm/components/Header";
 import { SearchInput } from "@cnpm/components/Tài Trợ/SearchInput";
 import { SponsorshipTable } from "@cnpm/components/Tài Trợ/SponsorshipTable";
@@ -11,21 +12,18 @@ interface TaiTroThanhVienNghienCuuProps {
 function TaiTroThanhVienNghienCuu({
   userId
 }: TaiTroThanhVienNghienCuuProps) {
+  const navigate = useNavigate();
   // You might use userId here to fetch user-specific data or filter requests
   console.log("Accessing TaiTro page for user:", userId);
 
   const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("asc");
-  const [showForm, setShowForm] = React.useState(false);
 
   const toggleSortOrder = () => {
     setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: xử lý submit dữ liệu, possibly using userId
-    alert("Đã gửi yêu cầu tài trợ (giả lập)");
-    setShowForm(false); // ẩn form sau khi gửi
+  const handleCreateRequest = () => {
+    navigate("/taitro/yeucau");
   };
 
   return (
@@ -33,7 +31,7 @@ function TaiTroThanhVienNghienCuu({
       <div className="flex min-h-screen flex-row">
         {/* Sidebar */}
         <aside className="w-64 border-r border-slate-200 bg-gray-50 fixed h-full">
-          <Sidebar />
+          <ThanhVienNghienCuuSidebar />
         </aside>
 
         {/* Main Content */}
@@ -53,7 +51,7 @@ function TaiTroThanhVienNghienCuu({
                 <SearchInput />
               </div>
               <button
-                onClick={() => setShowForm(true)}
+                onClick={handleCreateRequest}
                 className="flex items-center gap-2 px-5 py-3 text-base font-semibold text-white bg-teal-500 rounded-lg hover:bg-teal-600 transition"
               >
                 <img

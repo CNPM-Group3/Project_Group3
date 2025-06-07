@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Sidebar from "@cnpm/components/Phiếu Yêu Cầu Tài Trợ/Sidebar";
+import ThanhVienNghienCuuSidebar from "@cnpm/components/sidebars/ThanhVienNghienCuuSidebar";
 import Header from "@cnpm/components/Header";
 import { FundingRequestForm } from "@cnpm/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm";
 
@@ -19,7 +19,7 @@ function PhieuYeuCauTaiTroNghienCuuChinh({
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
         <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
+          <ThanhVienNghienCuuSidebar />
         </div>
         {/* Main content */}
         <div className="flex-1 flex flex-col ml-64">

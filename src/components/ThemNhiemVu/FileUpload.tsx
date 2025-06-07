@@ -5,6 +5,7 @@ interface FileUploadProps {
   onFileChange?: (file: File | null) => void;
   accept?: string;
   label?: string;
+  disabled?: boolean;
 }
 
 const formatBytes = (bytes: number, decimals = 2) => {
@@ -20,10 +21,12 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   onFileChange,
   accept = ".pdf,.doc,.docx,.txt",
   label = "Tải tài liệu nhiệm vụ:",
+  disabled = false
 }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (disabled) return;
     const file = event.target.files?.[0] || null;
     setSelectedFile(file);
     if (onFileChange) {
@@ -32,6 +35,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
   };
 
   const handleEditClick = () => {
+    if (disabled) return;
     setSelectedFile(null);
     if (onFileChange) {
       onFileChange(null);
@@ -59,13 +63,18 @@ export const FileUpload: React.FC<FileUploadProps> = ({
             <button
               type="button"
               onClick={handleEditClick}
-              className="px-3 py-1 text-sm font-medium text-blue-600 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className={`px-3 py-1 text-sm font-medium text-blue-600 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                disabled ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+              disabled={disabled}
             >
               Sửa
             </button>
           </div>
         ) : (
-          <label className="flex flex-col justify-center items-center px-20 py-7 bg-white rounded-lg border-2 border-gray-300 border-dashed max-md:px-5 max-md:max-w-full cursor-pointer hover:bg-gray-50 transition-colors">
+          <label className={`flex flex-col justify-center items-center px-20 py-7 bg-white rounded-lg border-2 border-gray-300 border-dashed max-md:px-5 max-md:max-w-full ${
+            disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-gray-50'
+          } transition-colors`}>
             <div className="flex flex-col max-w-full w-[198px]">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/691c38ade3eb9038aa2283219e94bbfa83e18b3b?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a"
@@ -81,6 +90,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({
               onChange={handleFileChange}
               className="hidden"
               accept={accept}
+              disabled={disabled}
             />
           </label>
         )}

@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
-import Sidebar from "@cnpm/components/Duyệt Dự Án/Sidebar";
-import Header from "@cnpm/components/Header";
+import ChuTriSidebar from "@cnpm/components/sidebars/ChuTriSidebar";
+import Header from "@cnpm/components/Header";  
 import { TabSelector, Project } from "@cnpm/components/Duyệt Dự Án/TabSelector";
 
 interface DuyetDuAnProps {
@@ -97,7 +97,7 @@ export default function DuyetDuAn({
       <div className="flex flex-row min-h-screen">
         {/* Sidebar */}
         <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
+          <ChuTriSidebar />
         </div>
         {/* Main content */}
         <div className="flex-1 flex flex-col ml-64">

@@ -1,4 +1,310 @@
 {
+  "SRPM_Forntend/my-tailwind-app": {
+    "root": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "projectType": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.options": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.cache": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.dependsOn": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.inputs": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.outputs": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.executor": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.options.cwd": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.options.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.technologies": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.technologies.0": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.description": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.help": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.help.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.build.metadata.help.example": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.options": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.executor": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.options.cwd": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.options.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.technologies": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.technologies.0": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.description": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.help": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.help.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve.metadata.help.example": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.dependsOn": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.executor": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options.cwd": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.technologies": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.technologies.0": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.description": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help.example": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.executor": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.options": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.serve-static.options.spa": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.cache": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.inputs": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.executor": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.cwd": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.description": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "SRPM_Forntend/my-tailwind-app/vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.lint": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "SRPM_Forntend/my-tailwind-app/eslint.config.js",
+      "@nx/eslint/plugin"
+    ]
+  },
   "my-tailwind-app": {
     "root": [
       "my-tailwind-app/eslint.config.js",
@@ -636,6 +942,240 @@
     ],
     "targets.serve.options.buildTarget": [
       "project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "SRPM_Forntend": {
+    "root": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.cache": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.inputs": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.outputs": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.executor": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.cwd": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.options.command": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.technologies.0": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.description": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.command": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "targets.lint.metadata.help.example": [
+      "SRPM_Forntend/eslint.config.js",
+      "@nx/eslint/plugin"
+    ],
+    "name": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.executor": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options.script": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.scriptContent": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.runCommand": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "SRPM_Forntend/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "includedScripts": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "SRPM_Forntend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "SRPM_Forntend/project.json",
       "nx/core/project-json"
     ]
   }

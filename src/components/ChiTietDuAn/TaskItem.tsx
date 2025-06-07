@@ -1,10 +1,12 @@
 import React from "react";
 
 interface TaskItemProps {
+  id: string;
   name: string;
   status: "problem" | "working" | "done" | "submitted";
   iconSrc: string;
   onStatusChange: (status: "problem" | "working" | "done" | "submitted") => void;
+  onClick?: () => void;
 }
 
 const statusOptions = [
@@ -15,15 +17,20 @@ const statusOptions = [
 ];
 
 export const TaskItem: React.FC<TaskItemProps> = ({
+  id,
   name,
   status,
   iconSrc,
   onStatusChange,
+  onClick,
 }) => {
   const currentStatus = statusOptions.find(opt => opt.value === status);
 
   return (
-    <div className="flex flex-wrap items-center px-3.5 py-2.5 mt-2.5 w-full rounded-xl border border-solid bg-slate-50 border-slate-200 min-h-20 max-md:max-w-full">
+    <div 
+      onClick={onClick}
+      className="flex flex-wrap items-center px-3.5 py-2.5 mt-2.5 w-full rounded-xl border border-solid bg-slate-50 border-slate-200 min-h-20 max-md:max-w-full cursor-pointer hover:bg-slate-100 transition-colors duration-200"
+    >
       <div className="flex grow shrink items-center self-stretch my-auto">
         <div className="flex gap-3 self-stretch my-auto">
           <div className="flex justify-between items-center min-h-[60px]">
@@ -47,6 +54,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
               ${currentStatus?.className}
             `}
             style={{ minWidth: 110 }}
+            onClick={e => e.stopPropagation()}
           >
             {statusOptions.map(opt => (
               <option
