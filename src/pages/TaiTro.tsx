@@ -43,7 +43,7 @@ function TaiTroThanhVienNghienCuu() {
               </button>
             </div>
 
-            <div className="mt-6 px-6 pt-6 pb-20 bg-white rounded-2xl shadow-sm max-w-[1158px] mx-auto">
+            <div className="mt-6 px-6 pt-6 pb-20 bg-black rounded-2xl shadow-sm max-w-[1158px] mx-auto">
               <div className="flex justify-between items-center px-3 pb-2.5">
                 <h2 className="text-xl font-bold text-gray-700">
                   Danh sách yêu cầu tài trợ

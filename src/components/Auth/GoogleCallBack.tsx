@@ -81,5 +81,6 @@ const GoogleCallback: React.FC = () => {
 
   return null;
 };
+console.log("Google callback search:", location.search);
 
 export default GoogleCallback;

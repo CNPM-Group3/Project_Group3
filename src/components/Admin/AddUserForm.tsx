@@ -55,30 +55,7 @@ export const AddUserForm: React.FC = () => {
         />
       </div>
 
-      {/* Loại tài khoản */}
-      <div className="mt-6">
-        <div className="text-center py-2 text-base font-medium bg-gray-100 rounded-t-lg text-gray-700">
-          Loại tài khoản
-        </div>
-        <div className="p-4 bg-gray-50 border border-gray-200 border-t-0 rounded-b-lg">
-          <div className="grid grid-cols-2 gap-3">
-            {["Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"].map((role, idx) => (
-              <button
-                key={idx}
-                className="py-2 px-4 text-sm text-gray-700 bg-white rounded-md border border-gray-300 shadow-sm hover:bg-sky-100 hover:text-sky-700 transition"
-              >
-                {role}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-4">
-          <button className="w-[153px] h-[38px] bg-sky-500 text-white text-sm font-medium rounded-xl shadow hover:bg-sky-600 transition">
-            Tạo tài khoản
-          </button>
-        </div>
-      </div>
+      
     </div>
   );
 };
@@ -236,7 +213,7 @@ export default function UserManagementDashboard() {
 
         {/* Top Section */}
         <div className="flex gap-6 flex-col lg:flex-row">
-          <AddUserForm />
+       
           <ApprovalSection requests={sampleRequests} />
         </div>
 

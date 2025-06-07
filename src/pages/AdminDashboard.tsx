@@ -3,7 +3,7 @@
 import React from "react";
 import Sidebar from "@cnpm/components/Admin/Sidebar1";
 import Header from "@cnpm/components/Header";
-import { AddUserForm, ApprovalSection, 
+import { ApprovalSection, 
   UserTable,
   User,
   ApprovalRequest  } from "@cnpm/components/Admin/AddUserForm";
@@ -48,19 +48,6 @@ const InputDesign: React.FC = () => {
                 </svg>
               </div>
             </div>
-
-            {/* Role filter */}
-            <div className="flex flex-wrap gap-4 items-center text-base text-gray-700">
-              <span className="font-medium">Loại tài khoản:</span>
-              {["Tất cả", "Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"].map((label, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 rounded-md cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition"
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* User table */}
@@ -68,7 +55,7 @@ const InputDesign: React.FC = () => {
 
           {/* Forms */}
           <div className="flex gap-6 mt-6 flex-wrap max-md:flex-col">
-            <AddUserForm />
+     
             <ApprovalSection requests={mockRequests} />
           </div>
         </main>

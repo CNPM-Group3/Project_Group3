@@ -7,7 +7,6 @@ interface Notification {
   message: string;
   type: 'info' | 'success' | 'warning' | 'error';
   isRead: boolean;
-  userId: number;
   createdAt: string;
   updatedAt: string;
 }

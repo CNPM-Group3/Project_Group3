@@ -1,10 +1,28 @@
+// FundingRequestForm.tsx
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FormField } from "./FormField";
 import { FileUpload } from "./FileUpload";
+import { createFundingRequest } from "@cnpm/services/FundingService"; // Import API function
+import { getProjects } from "@cnpm/services/Project";
+
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  objectives: string;
+  expectedOutcomes: string;
+  startDate: string;
+  endDate: string;
+  researchTopicId: number;
+  ownerId?: number;
+  status?: string;
+  createdAt?: string;
+  updatedAt?: string;
+}
 
 interface FundingRequestFormProps {
-  onSubmit: (formData: { // Define the type of formData expected by the onSubmit function
+  onSubmit?: (formData: {
     project: string;
     amount: string;
     purpose: string;
@@ -13,11 +31,14 @@ interface FundingRequestFormProps {
     sponsorEmail: string;
     date: string;
   }) => void;
-  // You can add other props here if needed in the future
+  onSuccess?: () => void; // Callback when API call succeeds
+  onError?: (error: any) => void; // Callback when API call fails
 }
 
 export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
-  onSubmit
+  onSubmit,
+  onSuccess,
+  onError
 }) => {
   const [formData, setFormData] = useState({
     project: "",
@@ -29,13 +50,156 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
     date: new Date().toLocaleDateString("vi-VN"),
   });
 
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [isLoadingProjects, setIsLoadingProjects] = useState(true);
+  const [projectsError, setProjectsError] = useState<string | null>(null);
+
+  // Fetch projects when component mounts
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        setIsLoadingProjects(true);
+        setProjectsError(null);
+        const projectsData = await getProjects();
+        setProjects(projectsData);
+      } catch (error) {
+        console.error("Error fetching projects:", error);
+        setProjectsError("Không thể tải danh sách dự án. Vui lòng thử lại.");
+      } finally {
+        setIsLoadingProjects(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
   const handleInputChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = () => {
-    console.log("Form data before submit:", formData); // Optional: log data before calling onSubmit
-    onSubmit(formData); // Call the onSubmit prop with the current form data
+  const handleFileChange = (file: File | null) => {
+    setSelectedFile(file);
+  };
+
+  const validateForm = (): boolean => {
+    const requiredFields = {
+      project: "Tên dự án",
+      amount: "Số tiền yêu cầu",
+      purpose: "Mục đích yêu cầu tài trợ",
+      presentation: "Trình bày",
+      researcher: "Nghiên cứu chính",
+      sponsorEmail: "Email nhà tài trợ"
+    };
+
+    for (const [field, label] of Object.entries(requiredFields)) {
+      if (!formData[field as keyof typeof formData].trim()) {
+        alert(`Vui lòng nhập ${label}`);
+        return false;
+      }
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.sponsorEmail)) {
+      alert("Vui lòng nhập email hợp lệ");
+      return false;
+    }
+
+    // Validate amount is a positive number
+    const amount = parseFloat(formData.amount);
+    if (isNaN(amount) || amount <= 0) {
+      alert("Vui lòng nhập số tiền hợp lệ");
+      return false;
+    }
+
+    return true;
+  };
+
+  const uploadFile = async (file: File): Promise<string> => {
+    // This is a placeholder for file upload logic
+    // You'll need to implement actual file upload to your server
+    // For now, returning a mock URL
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(`https://your-server.com/uploads/${file.name}`);
+      }, 1000);
+    });
+  };
+
+  const handleSubmit = async () => {
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      // Upload file if selected
+      let justificationDocumentUrl = "";
+      if (selectedFile) {
+        try {
+          justificationDocumentUrl = await uploadFile(selectedFile);
+        } catch (uploadError) {
+          console.error("File upload failed:", uploadError);
+          alert("Lỗi tải file. Vui lòng thử lại.");
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
+      // Prepare data for API call
+      const apiData = {
+        title: formData.project,
+        description: formData.presentation,
+        amount: parseFloat(formData.amount),
+        purpose: formData.purpose,
+        justificationDocumentUrl: justificationDocumentUrl,
+        projectId: parseInt(formData.project) || 1 // Use selected project ID
+      };
+
+      // Call API
+      const response = await createFundingRequest(apiData);
+      
+      console.log("API Response:", response);
+      
+      // Call success callback if provided
+      if (onSuccess) {
+        onSuccess();
+      }
+
+      // Call original onSubmit if provided (for backward compatibility)
+      if (onSubmit) {
+        onSubmit(formData);
+      }
+
+      // Show success message
+      alert("Yêu cầu tài trợ đã được gửi thành công!");
+
+      // Reset form
+      setFormData({
+        project: "",
+        amount: "",
+        purpose: "",
+        presentation: "",
+        researcher: "",
+        sponsorEmail: "",
+        date: new Date().toLocaleDateString("vi-VN"),
+      });
+      setSelectedFile(null);
+
+    } catch (error) {
+      console.error("Error submitting funding request:", error);
+      
+      // Call error callback if provided
+      if (onError) {
+        onError(error);
+      }
+
+      // Show error message
+      alert("Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,10 +213,28 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                   className="my-auto bg-transparent border-none outline-none flex-1"
                   value={formData.project}
                   onChange={(e) => handleInputChange("project", e.target.value)}
+                  disabled={isSubmitting || isLoadingProjects}
                 >
-                  <option value="">Chọn dự án của bạn</option>
+                  <option value="">
+                    {isLoadingProjects 
+                      ? "Đang tải danh sách dự án..." 
+                      : projectsError 
+                        ? "Lỗi tải dự án" 
+                        : "Chọn dự án của bạn"
+                    }
+                  </option>
+                  {projects.map((project) => (
+                    <option key={project.id} value={project.id.toString()}>
+                      {project.title}
+                    </option>
+                  ))}
                 </select>
               </div>
+              {projectsError && (
+                <div className="mt-1 text-sm text-red-500">
+                  {projectsError}
+                </div>
+              )}
             </FormField>
 
             <FormField
@@ -69,6 +251,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                     onChange={(e) =>
                       handleInputChange("amount", e.target.value)
                     }
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -83,6 +266,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                 placeholder="Nhập vào đây"
                 value={formData.purpose}
                 onChange={(e) => handleInputChange("purpose", e.target.value)}
+                disabled={isSubmitting}
               />
             </FormField>
 
@@ -90,7 +274,9 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
               label="File sao kê :"
               className="mt-2.5 text-sm max-md:max-w-full"
             >
-              <FileUpload />
+              <FileUpload 
+                onFileChange={handleFileChange}
+              />
             </FormField>
 
             <FormField label="Trình bày :" className="mt-2.5 max-md:max-w-full">
@@ -101,6 +287,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                 onChange={(e) =>
                   handleInputChange("presentation", e.target.value)
                 }
+                disabled={isSubmitting}
               />
             </FormField>
 
@@ -117,6 +304,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                   onChange={(e) =>
                     handleInputChange("researcher", e.target.value)
                   }
+                  disabled={isSubmitting}
                 />
               </FormField>
               <FormField
@@ -131,6 +319,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                   onChange={(e) =>
                     handleInputChange("sponsorEmail", e.target.value)
                   }
+                  disabled={isSubmitting}
                 />
               </FormField>
             </div>
@@ -150,9 +339,14 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
           <button
             type="button"
             onClick={handleSubmit}
-            className="self-center mt-2.5 max-w-full text-sm font-bold text-center text-white whitespace-nowrap w-[162px] px-6 py-3 bg-blue-600 rounded-lg transition duration-200 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            disabled={isSubmitting}
+            className={`self-center mt-2.5 max-w-full text-sm font-bold text-center text-white whitespace-nowrap w-[162px] px-6 py-3 rounded-lg transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              isSubmitting 
+                ? 'bg-gray-400 cursor-not-allowed' 
+                : 'bg-blue-600 hover:bg-blue-700'
+            }`}
           >
-            Gửi
+            {isSubmitting ? "Đang gửi..." : "Gửi"}
           </button>
         </div>
         <img

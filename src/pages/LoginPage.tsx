@@ -15,7 +15,7 @@ export default function LoginPage() {
       const response = await fetch("http://aienthusiasm.vn:8080/api/v1/index.html", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
           email: email.trim(),
@@ -51,7 +51,7 @@ export default function LoginPage() {
       setError(err?.message || "Đăng nhập thất bại");
     } finally {
     }
-  }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
@@ -64,9 +64,9 @@ export default function LoginPage() {
         />
       </div>
 
-      {/* Khung chính */}
+      {/* Layout chính */}
       <div className="flex max-w-5xl w-full min-h-[440px] rounded-2xl shadow-lg bg-gray-100 overflow-hidden">
-        {/* Bên trái: Hình ảnh */}
+        {/* Hình ảnh bên trái */}
         <div className="w-1/2 bg-gray-100">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/453e0ca17db5de0e06bb80753c9fe9f400687d8e"

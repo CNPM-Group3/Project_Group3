@@ -2,17 +2,17 @@ import React from "react";
 import Sidebar from "@cnpm/components/TrangChuThanhVienNghienCuu/Sidebar";
 import Header from "@cnpm/components/Header";
 import { TaskList, AttachmentList } from "../components/ChiTietDuAn/ChiTietDuAn";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 type LocationState = {
   title?: string;
 };
 
 export const ChiTietDuAn_nnc: React.FC = () => {
-  const location = useLocation();
+  const { title } = useParams(); // 🟢 lấy title từ URL
   const navigate = useNavigate();
 
-  const projectTitle = location.state?.title || "Tên Dự án";
+  const projectTitle = decodeURIComponent(title || "Tên Dự án");
 
   const handleCreateTask = () => {
     navigate("/themnhiemvu", { state: { project: projectTitle } });
