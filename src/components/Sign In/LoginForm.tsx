@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { UserIcon } from "../Icons/UserIcon";
 import { GoogleIcon } from "../Icons/GoogleIcon";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 interface LoginFormProps {
   onLogin: (
@@ -11,14 +11,15 @@ interface LoginFormProps {
     rememberMe: boolean
   ) => Promise<void>;
   onBack?: () => void;
-  error?: string;
+  error?: string | null;
+  isLoading?: boolean;
 }
 
-export function LoginForm({ onLogin, onBack, error }: LoginFormProps) {
+export function LoginForm({ onLogin, onBack, error, isLoading }: LoginFormProps) {
   const [rememberMe, setRememberMe] = useState(true);
   const [loading, setLoading] = useState(false);
   const [localError, setLocalError] = useState<string | null>(null);
-  const navigate = useNavigate();
+  const router = useRouter();
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -40,9 +41,12 @@ export function LoginForm({ onLogin, onBack, error }: LoginFormProps) {
 
   const handleGoogleLogin = async () => {
     try {
+      const API_URL = process.env.VITE_API_URL;
+
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/Auth/google/signup`
+        `${API_URL?.replace(/\/$/, "")}/Auth/google/signup`
       );
+
       const data = await res.json();
       if (data.redirectUrl) {
         window.location.href = data.redirectUrl; // Redirect Google OAuth
@@ -163,8 +167,8 @@ export function LoginForm({ onLogin, onBack, error }: LoginFormProps) {
         <button
           className="w-full h-[48px] text-base font-bold text-teal-700 border border-teal-500 rounded-lg hover:bg-teal-50 transition-colors"
           disabled={loading}
-          onClick={() => navigate("/signup")} // Thêm sự kiện chuyển trang đăng ký// Bạn có thể thêm onClick chuyển trang đăng ký ở đây
-        >
+          onClick={() => router.push("/signup")} 
+          >
           Tạo tài khoản
         </button>
       </div>

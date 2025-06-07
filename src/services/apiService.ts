@@ -25,6 +25,9 @@ class ApiService {
     this.api.interceptors.request.use(
       (config: InternalAxiosRequestConfig) => {
         const token = sessionStorage.getItem('accessToken');
+        if (!token) {
+          window.location.href = '/login';
+        }
         if (token) {
           config.headers['Authorization'] = `Bearer ${token}`;
         }

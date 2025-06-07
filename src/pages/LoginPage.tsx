@@ -3,33 +3,53 @@ import * as React from "react";
 import { LoginForm } from "@cnpm/components/Sign In/LoginForm";
 import { NewPasswordForm } from "@cnpm/components/Sign In/NewPassWordForm";
 import { ResetCodeForm } from "@cnpm/components/Sign In/ResetCodeForm";
+import router from "next/dist/client/router";
 
 export default function LoginPage() {
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState<string | null>(null);
   // Hàm xử lý đăng nhập
   async function handleLogin(email: string, password: string, rememberMe: boolean) {
     try {
-      // Ví dụ gọi API login - thay đổi URL API cho phù hợp
-      const response = await fetch("/api/login", {
+
+      const response = await fetch("http://aienthusiasm.vn:8080/api/v1/index.html", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password, rememberMe }),
+        body: JSON.stringify({ 
+          email: email.trim(),
+          password: password.trim() 
+        }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Đăng nhập thất bại");
+        throw new Error(data.message || "Đăng nhập thất bại");
       }
 
-      const data = await response.json();
-      console.log("Đăng nhập thành công:", data);
+      // Lưu token
+      if (data.token) {
+        if (rememberMe) {
+          localStorage.setItem("accessToken", data.token);
+        } else {
+          sessionStorage.setItem("accessToken", data.token);
+        }
+        
+        // Chuyển hướng sau khi đăng nhập thành công
+        router.push("/dashboard");
+        setError(null);
+      } else {
+        throw new Error("Token không hợp lệ");
+      }
 
       // Xử lý sau khi đăng nhập thành công, ví dụ lưu token, chuyển trang
       // ...
-    } catch (error: any) {
-      // Bắn lỗi để LoginForm bắt và hiển thị
-      throw new Error(error.message || "Lỗi khi đăng nhập");
+    } catch (err: any) {
+      console.error("Login error:", err);
+      setError(err?.message || "Đăng nhập thất bại");
+    } finally {
     }
   }
 
@@ -54,15 +74,12 @@ export default function LoginPage() {
             className="w-full h-full object-cover rounded-l-2xl"
           />
         </div>
-
-        {/* Bên phải: Form đăng nhập */}
-        <div className="w-1/2 flex items-center justify-center bg-white p-8">
-          <div className="w-full max-w-xs">
-            {/* Truyền onLogin prop vào đây */}
-            <LoginForm onLogin={handleLogin} />
+            <LoginForm 
+              onLogin={(email: string, password: string, rememberMe: boolean) => handleLogin(email, password, rememberMe)}
+              error={error}
+              isLoading={isLoading}
+            />
           </div>
         </div>
-      </div>
-    </div>
   );
 }

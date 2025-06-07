@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { getNotificationById } from "src/services/Notifications";
 
 // ================ INTERFACES ================
 

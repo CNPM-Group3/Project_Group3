@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { getNotificationById } from "src/services/Notifications";
 
 interface NavigationItem {
   icon: string;

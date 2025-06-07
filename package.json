@@ -56,7 +56,7 @@
     "react-financial-charts": "^0.5.1",
     "react-i18next": "^15.2.0",
     "react-icons": "^5.4.0",
-    "react-router-dom": "^7.0.1",
+    "react-router-dom": "6",
     "react-toastify": "^11.0.5",
     "recharts": "^2.15.0",
     "shadcn-cli": "^0.0.6",

@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 import { AuthProvider } from '@cnpm/context/AuthContext';
@@ -40,9 +41,9 @@ export function App() {
     <div className="w-screen min-h-screen bg-[#fcfcf6]">
     <GoogleOAuthProvider clientId={googleClientId}>
       <AuthProvider>
-        <Router>
+        <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navigate to="/signin" replace />} />
+            <Route path="*" element={<Navigate to="/signin" replace />} />
             <Route element={<PublicRoute />}>
               <Route path="/signin" element={<SignInPage />} />
               <Route path="/signup" element={<SignUpPage />} />
@@ -85,7 +86,7 @@ export function App() {
       
             </Route>
           </Routes>
-        </Router>
+        </BrowserRouter>
       </AuthProvider>
     </GoogleOAuthProvider>
     </div>

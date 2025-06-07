@@ -4,6 +4,10 @@ import Header from "@cnpm/components/Header";
 import { TaskList, AttachmentList } from "../components/ChiTietDuAn/ChiTietDuAn";
 import { useLocation, useNavigate } from "react-router-dom";
 
+type LocationState = {
+  title?: string;
+};
+
 export const ChiTietDuAn_nnc: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
