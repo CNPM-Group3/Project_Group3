@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 const navigationItems = [
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/05adf550ab44c7ac281beec46de5aa8966845517?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+    icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
     label: "Quản lý người dùng",
     path: "/admin"
   },
@@ -72,6 +72,9 @@ const Sidebar: React.FC = () => {
                   src={item.icon}
                   alt={item.label}
                   className="w-5 h-5 object-contain"
+                  style={index === activeIndex ? {
+                    filter: "invert(16%) sepia(93%) saturate(3015%) hue-rotate(222deg) brightness(97%) contrast(92%)"
+                  } : {}}
                 />
                 <span className="text-sm">{item.label}</span>
               </div>

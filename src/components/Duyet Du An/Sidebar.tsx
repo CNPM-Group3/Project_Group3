@@ -10,7 +10,7 @@ const navigationItems = [
     path: "/profile2",
   },
   {
-    icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/a23bc1452b11f050133faef30aa2efd8a14544f3?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+    icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/548976d608c31c0e145581e31116c4038add5580?placeholderIfAbsent=true",
     label: "Phê duyệt dự án",
     path: "/duyetduan",
   },
@@ -27,16 +27,17 @@ const navigationItems = [
 ];
 
 const Sidebar: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(1); // Default active là "Phê duyệt dự án"
+  const [activeIndex, setActiveIndex] = useState(1);
   const navigate = useNavigate();
   const location = useLocation();
 
   // Đồng bộ activeIndex với URL hiện tại
   useEffect(() => {
-    const activeItemIndex = navigationItems.findIndex(
-      (item) => item.path === location.pathname
-    );
-    setActiveIndex(activeItemIndex === -1 ? 1 : activeItemIndex);
+    const currentPath = location.pathname;
+    const foundIndex = navigationItems.findIndex(item => item.path === currentPath);
+    if (foundIndex !== -1) {
+      setActiveIndex(foundIndex);
+    }
   }, [location.pathname]);
 
   const handleClick = (index: number) => {
@@ -72,6 +73,9 @@ const Sidebar: React.FC = () => {
                   src={item.icon}
                   alt={item.label}
                   className="w-5 h-5 object-contain"
+                  style={index === activeIndex ? {
+                    filter: "invert(16%) sepia(93%) saturate(3015%) hue-rotate(222deg) brightness(97%) contrast(92%)"
+                  } : {}}
                 />
                 <span className="text-sm">{item.label}</span>
               </div>

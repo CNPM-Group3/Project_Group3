@@ -72,6 +72,9 @@ const Sidebar: React.FC = () => {
                   src={item.icon}
                   alt={item.label}
                   className="w-5 h-5 object-contain"
+                  style={index === activeIndex ? {
+                    filter: "invert(16%) sepia(93%) saturate(3015%) hue-rotate(222deg) brightness(97%) contrast(92%)"
+                  } : {}}
                 />
                 <span className="text-sm">{item.label}</span>
               </div>

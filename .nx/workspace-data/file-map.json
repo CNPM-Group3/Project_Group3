@@ -221,7 +221,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "10242472299373607690",
+          "hash": "9722273184828104502",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -241,7 +241,7 @@
         },
         {
           "file": "src/components/Admin/Sidebar1.tsx",
-          "hash": "17294192264826818834",
+          "hash": "5959793485228331454",
           "deps": [
             "npm:react-router-dom",
             "npm:react"
@@ -264,9 +264,10 @@
         },
         {
           "file": "src/components/ChiTietDuAn/Sidebar.tsx",
-          "hash": "1114877867990389714",
+          "hash": "879331316748352132",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
@@ -285,9 +286,10 @@
         },
         {
           "file": "src/components/ChiTietNhiemVu/Sidebar.tsx",
-          "hash": "15275156966027010715",
+          "hash": "879331316748352132",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
@@ -362,7 +364,7 @@
         },
         {
           "file": "src/components/Duyet Du An/Sidebar.tsx",
-          "hash": "12757595301143145507",
+          "hash": "10113123600395857406",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -405,7 +407,7 @@
         },
         {
           "file": "src/components/HoiDongThamDinh/Sidebar.tsx",
-          "hash": "5420958358607997226",
+          "hash": "13224725486351289120",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -515,7 +517,7 @@
         },
         {
           "file": "src/components/QuanTriVien/Sidebar.tsx",
-          "hash": "8913759868695577282",
+          "hash": "12039576029964105386",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -638,9 +640,10 @@
         },
         {
           "file": "src/components/ThemNhiemVu/Sidebar.tsx",
-          "hash": "14601999050270859693",
+          "hash": "16806401807843062596",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
@@ -660,7 +663,7 @@
         },
         {
           "file": "src/components/TrangChuThanhVienNghienCuu/Sidebar.tsx",
-          "hash": "7032324010138472970",
+          "hash": "10003321328789515470",
           "deps": [
             "npm:react-router-dom",
             "npm:react"
@@ -853,7 +856,7 @@
         },
         {
           "file": "src/pages/Profile3.tsx",
-          "hash": "7692107929114980157",
+          "hash": "15937304699864065684",
           "deps": [
             "npm:react"
           ]
