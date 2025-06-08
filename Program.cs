@@ -102,14 +102,14 @@ builder.Services.AddCors(options =>
     });
 });
 
-var app = builder.Build(); 
+var app = builder.Build(); // ✅ Khởi tạo app trước khi dùng
 
-app.UseCors("AllowFrontend");
+app.UseCors("AllowFrontend"); // ✅ Bây giờ 'app' đã tồn tại
 
 // IMPORTANT: CORS must be one of the first middlewares
 app.UseCors(MyAllowSpecificOrigins);
 
-
+// Swagger bật với base path /api/v1
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
