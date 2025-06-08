@@ -28,6 +28,9 @@ const SignUpSchema = Yup.object().shape({
     .matches(/^(?=.*[0-9])/, 'Bắt buộc nhập 1 số')
     .matches(/^(?=.*[!@#$%^&*])/, 'Bắt buộc nhập 1 ký tự đặc biệt')
     .matches(/^(?=.*[a-z])/, 'Bắt buộc nhập 1 ký tự thường'),
+  address: Yup.string()
+    .required('Bắt buộc nhập địa chỉ')
+    .min(5, 'Địa chỉ phải trên 5 ký tự'),
 });
 export const SignUpForm: React.FC = () => {
   const navigate = useNavigate();
@@ -35,6 +38,7 @@ export const SignUpForm: React.FC = () => {
   const [Name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+  const [address, setAddress] = React.useState("");
   const [loading, setLoading] = React.useState(false);
 
   
@@ -46,6 +50,7 @@ export const SignUpForm: React.FC = () => {
         Name,
         email,
         password,
+        address,
       });
       alert("Đăng ký thành công!");
       navigate("/signin");
@@ -92,6 +97,14 @@ export const SignUpForm: React.FC = () => {
           className="mb-6"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+        />
+        <FormInput
+          label="Địa chỉ:"
+          placeholder="Nhập địa chỉ của bạn"
+          type="text"
+          className="mb-6"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
         />
 
         <div className="mt-5">

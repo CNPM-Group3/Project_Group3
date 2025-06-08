@@ -3,33 +3,45 @@ import * as React from "react";
 import { LoginForm } from "@cnpm/components/Sign In/LoginForm";
 import { NewPasswordForm } from "@cnpm/components/Sign In/NewPassWordForm";
 import { ResetCodeForm } from "@cnpm/components/Sign In/ResetCodeForm";
+import { useNavigate } from 'react-router-dom';
+
+// Import apiService và userService
+import apiService from '@cnpm/services/apiService'; // Adjusted path based on common structure
+import { getCurrentUser } from '@cnpm/services/userService'; // Assuming getCurrentUser is exported
 
 export default function LoginPage() {
+  const navigate = useNavigate(); // Add useNavigate hook
+
   // Hàm xử lý đăng nhập
   async function handleLogin(email: string, password: string, rememberMe: boolean) {
     try {
-      // Ví dụ gọi API login - thay đổi URL API cho phù hợp
-      const response = await fetch("/api/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password, rememberMe }),
+      // Gọi API login sử dụng apiService
+      const response = await apiService.post('/Auth/login', { // Assuming login endpoint is /Auth/login
+        email,
+        password,
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Đăng nhập thất bại");
-      }
+      const { token } = response.data; // Assuming API returns a token in response.data.token
 
-      const data = await response.json();
-      console.log("Đăng nhập thành công:", data);
+      // Lưu token vào sessionStorage (apiService đã làm việc này trong interceptor,
+      // nhưng nếu API login trả về token trực tiếp, ta có thể cần lưu ở đây nếu interceptor không xử lý response login)
+      // sessionStorage.setItem('authToken', token);
 
-      // Xử lý sau khi đăng nhập thành công, ví dụ lưu token, chuyển trang
-      // ...
+      console.log("Đăng nhập thành công, nhận token:", token);
+
+      // Sau khi đăng nhập thành công, gọi API lấy thông tin user
+      const user = await getCurrentUser();
+      console.log("Thông tin người dùng:", user);
+
+      // TODO: Lưu thông tin user vào state/context
+
+      // Chuyển hướng người dùng đến trang chính (ví dụ: /profile hoặc /dashboard)
+      navigate('/profile'); // Redirect to profile page after login
+
     } catch (error: any) {
+      console.error("Lỗi khi đăng nhập hoặc lấy thông tin user:", error);
       // Bắn lỗi để LoginForm bắt và hiển thị
-      throw new Error(error.message || "Lỗi khi đăng nhập");
+      throw new Error(error?.response?.data?.message || error?.message || "Đăng nhập thất bại, vui lòng kiểm tra lại thông tin.");
     }
   }
 

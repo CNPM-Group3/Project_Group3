@@ -1,13 +1,8 @@
 import React, { useState } from "react";
+import { ApiUser } from "@cnpm/services/userService";
 
 // Types
-export interface User {
-  name: string;
-  email: string;
-  phone: string;
-  role: string;
-  status: string;
-}
+export type User = ApiUser;
 
 export interface ApprovalRequest {
   sender: string;
@@ -16,8 +11,42 @@ export interface ApprovalRequest {
   status: string;
 }
 
+interface AddUserFormProps {
+  onAddUser: (userData: { name: string; email: string; password: string }) => Promise<void>;
+}
+
 // AddUserForm Component
-export const AddUserForm: React.FC = () => {
+export const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    try {
+      await onAddUser({
+        name,
+        email,
+        password,
+      });
+      setSuccess("Thêm người dùng mới thành công!");
+      setName("");
+      setEmail("");
+      setPassword("");
+    } catch (err: any) {
+      setError(err.message || "Không thể thêm người dùng. Vui lòng kiểm tra lại thông tin.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="p-6 rounded-xl border border-gray-200 bg-white w-[317px] max-sm:w-full shadow-sm">
       {/* Tiêu đề */}
@@ -31,31 +60,43 @@ export const AddUserForm: React.FC = () => {
         <span>Cấp tài khoản mới</span>
       </div>
 
+      {error && <div className="mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg">{error}</div>}
+      {success && <div className="mb-4 p-4 text-sm text-green-700 bg-green-100 rounded-lg">{success}</div>}
+
       {/* Form */}
-      <div className="flex flex-col gap-3 text-sm text-gray-700">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-sm text-gray-700">
         <input
           type="text"
           placeholder="Họ tên"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="email"
           placeholder="Email"
-          className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
-        />
-        <input
-          type="tel"
-          placeholder="Số điện thoại"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="password"
           placeholder="Mật khẩu"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
-      </div>
-
-      
+        <button
+          type="submit"
+          disabled={loading}
+          className="mt-4 px-4 py-2 bg-sky-500 text-white rounded-md hover:bg-sky-600 transition disabled:opacity-50"
+        >
+          {loading ? "Đang thêm..." : "Thêm người dùng"}
+        </button>
+      </form>
     </div>
   );
 };
@@ -106,7 +147,7 @@ export const ApprovalSection: React.FC<ApprovalSectionProps> = ({ requests }) =>
 
 // UserTable Component
 interface UserTableProps {
-  users: User[];
+  users: ApiUser[];
 }
 
 export const UserTable: React.FC<UserTableProps> = ({ users }) => {
@@ -137,9 +178,9 @@ export const UserTable: React.FC<UserTableProps> = ({ users }) => {
                 key={index}
                 className="text-gray-800 border-b border-gray-100 hover:bg-gray-50 transition"
               >
-                <td className="px-4 py-3">{user.name}</td>
+                <td className="px-4 py-3">{user.fullName}</td>
                 <td className="px-4 py-3">{user.email}</td>
-                <td className="px-4 py-3">{user.phone}</td>
+                <td className="px-4 py-3">N/A</td> {/* Phone number is not in ApiUser */}
                 <td className="px-4 py-3">{user.role}</td>
                 <td className="px-4 py-3">{user.status}</td>
                 <td className="px-4 py-3">
@@ -164,27 +205,27 @@ export const UserTable: React.FC<UserTableProps> = ({ users }) => {
 // Main Dashboard Component with demo data
 export default function UserManagementDashboard() {
   // Sample data
-  const sampleUsers: User[] = [
+  const sampleUsers: ApiUser[] = [
     {
-      name: "Nguyễn Văn A",
+      fullName: "Nguyễn Văn A",
       email: "nguyenvana@example.com",
-      phone: "0123456789",
       role: "Sinh viên",
-      status: "Hoạt động"
+      status: "Hoạt động",
+      id: 1,
     },
     {
-      name: "Trần Thị B",
+      fullName: "Trần Thị B",
       email: "tranthib@example.com",
-      phone: "0987654321",
       role: "Giảng viên",
-      status: "Hoạt động"
+      status: "Hoạt động",
+      id: 2,
     },
     {
-      name: "Lê Văn C",
+      fullName: "Lê Văn C",
       email: "levanc@example.com",
-      phone: "0111222333",
       role: "Nhân viên",
-      status: "Tạm khóa"
+      status: "Tạm khóa",
+      id: 3,
     }
   ];
 

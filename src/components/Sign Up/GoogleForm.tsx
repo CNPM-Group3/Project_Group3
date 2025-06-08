@@ -67,7 +67,6 @@ const GoogleSignUpForm: React.FC<GoogleSignUpFormProps> = ({
         email,
         Name: values.name,
         password: values.password,
-        repeatPassword: values.confirmPassword,
         address: values.address
       });
       onSubmit(values);
@@ -123,8 +122,6 @@ const GoogleSignUpForm: React.FC<GoogleSignUpFormProps> = ({
                 name="name"
                 type="text"
                 placeholder="Your name"
-                preventSpecialChars={true}
-                allowNumbers={false}
                 className="w-full h-12 px-4 rounded-md border border-gray-200 focus:border-[#1569CB]"
               />
               {errors.name && touched.name && (
@@ -137,7 +134,6 @@ const GoogleSignUpForm: React.FC<GoogleSignUpFormProps> = ({
                 name="address"
                 type="text"
                 placeholder="Your address"
-                preventSpecialChars={true}
                 className="w-full h-12 px-4 rounded-md border border-gray-200 focus:border-[#1569CB]"
               />
               {errors.address && touched.address && (
@@ -206,7 +202,6 @@ const GoogleSignUpForm: React.FC<GoogleSignUpFormProps> = ({
                   type={showConfirmPassword ? "text" : "password"}
                   placeholder="Confirm password"
                   className="w-full h-12 px-4 pr-12 rounded-md border border-gray-200 focus:border-[#1569CB]"
-                  onChange={(e) => setFieldValue('confirmPassword', e.target.value)}
                 />
                 <button
                   type="button"
@@ -230,20 +225,12 @@ const GoogleSignUpForm: React.FC<GoogleSignUpFormProps> = ({
               )}
             </div>
 
-            <div className="flex space-x-3 pt-2">
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full h-9 text-sm border border-gray-200 hover:bg-gray-50 text-gray-600"
-                onClick={onCancel}
-              >
-                Cancel
+            <div className="flex flex-col gap-2">
+              <Button type="submit" className="w-full text-base font-semibold py-3 px-4 rounded-md shadow-sm bg-[#1569CB] text-white hover:bg-blue-700 transition">
+                Complete Registration
               </Button>
-              <Button 
-                type="submit" 
-                className="w-full h-9 text-sm bg-[#1569CB] hover:bg-[#1254A3] text-white transition-colors"
-              >
-                Complete Sign Up
+              <Button type="button" onClick={onCancel} className="w-full text-base font-semibold py-3 px-4 rounded-md shadow-sm bg-gray-200 text-gray-700 hover:bg-gray-300 transition">
+                Cancel
               </Button>
             </div>
           </Form>

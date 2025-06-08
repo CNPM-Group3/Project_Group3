@@ -1,24 +1,25 @@
 import React from "react";
+import { ApiUser } from "@cnpm/services/userService";
 
 // Interface definitions
 interface RoleActionButtonProps {
   type: "assign" | "revoke";
 }
 
-interface User {
-  name: string;
-  email: string;
-  role: string;
+export type User = ApiUser;
+
+interface UserRoleFilterProps {
+  onRoleChange: (role: string | null) => void;
+  selectedRole: string | null;
+}
+
+interface UserListProps {
+  loading: boolean;
+  users: ApiUser[];
+  selectedRole: string | null;
 }
 
 // Sample data
-const users: User[] = [
-  { name: "Nguyên Văn A", email: "fe@ut.edu.vn", role: "Sinh viên" },
-  { name: "Trần Thị B", email: "b@gv.ut.edu.vn", role: "Giảng viên" },
-  { name: "Lê Văn C", email: "c@st.ut.edu.vn", role: "Nhân Viên" },
-  { name: "Bùi Bảo D", email: "d@it.ut.edu.vn", role: "Quản trị viên" },
-];
-
 const roles = [
   "Tất cả",
   "Sinh viên",
@@ -49,7 +50,7 @@ const RoleActionButton: React.FC<RoleActionButtonProps> = ({ type }) => {
 };
 
 // UserRoleFilter Component
-const UserRoleFilter = () => {
+const UserRoleFilter: React.FC<UserRoleFilterProps> = ({ onRoleChange, selectedRole }) => {
   return (
     <div className="flex flex-wrap gap-2 px-6 py-2.5 w-full text-base rounded-lg border border-solid border-slate-200 max-md:pr-5 max-md:max-w-full">
       <span className="grow my-auto text-slate-600">Lọc theo vai trò</span>
@@ -63,7 +64,10 @@ const UserRoleFilter = () => {
           {roles.map((role, index) => (
             <button
               key={index}
-              className="self-stretch my-auto hover:text-blue-600"
+              className={`self-stretch my-auto hover:text-blue-600 transition-colors ${
+                selectedRole === role ? 'text-blue-600 font-semibold' : ''
+              }`}
+              onClick={() => onRoleChange(role === "Tất cả" ? null : role)}
             >
               {role}
             </button>
@@ -75,7 +79,15 @@ const UserRoleFilter = () => {
 };
 
 // UserList Component
-const UserList = () => {
+const UserList: React.FC<UserListProps> = ({ loading, users, selectedRole }) => {
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-64">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
+
   return (
     <section className="pt-6 mt-6 w-full max-w-5xl mx-auto rounded-xl border border-slate-200 shadow-sm bg-white">
       <h2 className="text-lg font-semibold px-6 pb-4">Danh sách</h2>
@@ -96,7 +108,7 @@ const UserList = () => {
                 key={index}
                 className="border-t border-gray-200 hover:bg-gray-50"
               >
-                <td className="px-6 py-4 whitespace-nowrap">{user.name}</td>
+                <td className="px-6 py-4 whitespace-nowrap">{user.fullName}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{user.email}</td>
                 <td className="px-6 py-4 whitespace-nowrap">{user.role}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -114,15 +126,4 @@ const UserList = () => {
   );
 };
 
-// Main component that combines everything
-const UserManagement = () => {
-  return (
-    <div className="space-y-4">
-      <UserRoleFilter />
-      <UserList />
-    </div>
-  );
-};
-
-export default UserManagement;
 export { UserList, UserRoleFilter, RoleActionButton };

@@ -213,13 +213,6 @@
           "hash": "9754980678907211993"
         },
         {
-          "file": "src/api/auth.ts",
-          "hash": "7615596583909950854",
-          "deps": [
-            "npm:axios"
-          ]
-        },
-        {
           "file": "src/app/app.spec.tsx",
           "hash": "5542615320256913024",
           "deps": [
@@ -241,7 +234,7 @@
         },
         {
           "file": "src/components/Admin/AddUserForm.tsx",
-          "hash": "16393875048008579728",
+          "hash": "13351386568369167647",
           "deps": [
             "npm:react"
           ]
@@ -477,12 +470,8 @@
           ]
         },
         {
-          "file": "src/components/Profile/ResearchInfo.tsx",
-          "hash": "323846970877031587"
-        },
-        {
-          "file": "src/components/Profile/UserDetails.tsx",
-          "hash": "3168422588853628273",
+          "file": "src/components/Profile/ProfilePage.tsx",
+          "hash": "7665638262442586190",
           "deps": [
             "npm:react"
           ]
@@ -495,17 +484,33 @@
           ]
         },
         {
-          "file": "src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx",
-          "hash": "13520016767609288318",
+          "file": "src/components/QuanTriVien/QuanTriVien1/RoleActionButton.tsx",
+          "hash": "4092044069716545074",
           "deps": [
             "npm:react"
           ]
         },
         {
-          "file": "src/components/QuanTriVien/QuanTriVien2/UserPerformanceChart.tsx",
-          "hash": "13985257078825564957",
+          "file": "src/components/QuanTriVien/QuanTriVien1/UserList.tsx",
+          "hash": "12761421006047885297",
           "deps": [
             "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx",
+          "hash": "14616863493050353277",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx",
+          "hash": "15085602085615948656",
+          "deps": [
+            "npm:react",
+            "npm:react-chartjs-2",
+            "npm:chart.js"
           ]
         },
         {
@@ -565,7 +570,7 @@
         },
         {
           "file": "src/components/Sign Up/GoogleForm.tsx",
-          "hash": "49258777151970277",
+          "hash": "4092335302385337558",
           "deps": [
             "npm:react",
             "npm:formik",
@@ -581,7 +586,7 @@
         },
         {
           "file": "src/components/Sign Up/SignUpForm.tsx",
-          "hash": "4380678648255060785",
+          "hash": "12742095845464460964",
           "deps": [
             "npm:react",
             "npm:formik",
@@ -740,7 +745,7 @@
         },
         {
           "file": "src/pages/AdminDashboard.tsx",
-          "hash": "6121642504257489849",
+          "hash": "9731078012433206219",
           "deps": [
             "npm:react"
           ]
@@ -762,21 +767,21 @@
         },
         {
           "file": "src/pages/DashboardQuanTriVien.tsx",
-          "hash": "12013400789058991253",
+          "hash": "12510288021455451650",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien1.tsx",
-          "hash": "18103486106410524358",
+          "hash": "16230682440662717803",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien2.tsx",
-          "hash": "2059469168865744959",
+          "hash": "16182834786105287638",
           "deps": [
             "npm:react"
           ]
@@ -812,9 +817,10 @@
         },
         {
           "file": "src/pages/LoginPage.tsx",
-          "hash": "8217435277558289752",
+          "hash": "10505296679965626477",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
@@ -826,28 +832,28 @@
         },
         {
           "file": "src/pages/Profile.tsx",
-          "hash": "9237816991631942956",
+          "hash": "13613414962158167472",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/Profile1.tsx",
-          "hash": "12992518874927388667",
+          "hash": "7889988483044871884",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/Profile2.tsx",
-          "hash": "9123855134028185915",
+          "hash": "9286325779425766589",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/Profile3.tsx",
-          "hash": "5849746951312835131",
+          "hash": "7692107929114980157",
           "deps": [
             "npm:react"
           ]
@@ -955,7 +961,7 @@
         },
         {
           "file": "src/services/authService.ts",
-          "hash": "16413249998685245289",
+          "hash": "4805254815350421776",
           "deps": [
             "npm:axios"
           ]
@@ -969,7 +975,7 @@
         },
         {
           "file": "src/services/userService.ts",
-          "hash": "5614836459098862527"
+          "hash": "17153211779034170026"
         },
         {
           "file": "src/styles.css",
