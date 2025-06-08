@@ -1,18 +1,27 @@
 import React from "react";
 
 export interface Project {
-  id: string;
-  name: string;
-  proposer: string;
-  date: string;
+  id: number;
+  title: string;
+  proposerName?: string;
+  description: string;
+  objectives: string;
+  expectedOutcomes: string;
+  startDate: string;
+  endDate: string;
+  researchTopicId: number;
+  ownerId?: number;
+  status?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 interface ProjectListProps {
   projects: Project[];
   actionType?: "approve" | "reject" | "both";
-  onApprove?: (id: string) => void;
-  onReject?: (id: string) => void;
-  onView?: (id: string) => void;
+  onApprove?: (id: number) => void;
+  onReject?: (id: number) => void;
+  onView?: (id: number) => void;
 }
 
 export const ProjectList: React.FC<ProjectListProps> = ({ 
@@ -40,9 +49,9 @@ export const ProjectList: React.FC<ProjectListProps> = ({
             {projects.map((project: Project) => (
               <tr key={project.id} className="bg-white hover:bg-gray-50 transition border-b border-gray-200 last:border-b-0 rounded-xl">
                 <td className="px-4 py-3 text-center align-middle">{project.id}</td>
-                <td className="px-6 py-3 text-left align-middle">{project.name}</td>
-                <td className="px-6 py-3 text-left align-middle">{project.proposer}</td>
-                <td className="px-6 py-3 text-center align-middle">{project.date}</td>
+                <td className="px-6 py-3 text-left align-middle">{project.title}</td>
+                <td className="px-6 py-3 text-left align-middle">{project.proposerName || 'N/A'}</td>
+                <td className="px-6 py-3 text-center align-middle">{new Date(project.createdAt || '').toLocaleDateString()}</td>
                 <td className="px-6 py-3 text-center align-middle">
                   <button className="text-blue-600 underline" onClick={() => onView?.(project.id)}>Xem</button>
                 </td>

@@ -234,14 +234,14 @@
         },
         {
           "file": "src/components/Admin/AddUserForm.tsx",
-          "hash": "13351386568369167647",
+          "hash": "1911781738830021357",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/components/Admin/Sidebar1.tsx",
-          "hash": "5959793485228331454",
+          "hash": "10778782442568500212",
           "deps": [
             "npm:react-router-dom",
             "npm:react"
@@ -350,7 +350,7 @@
         },
         {
           "file": "src/components/Duyet Du An/ProjectList.tsx",
-          "hash": "15385540047762736921",
+          "hash": "12917530705558075566",
           "deps": [
             "npm:react"
           ]
@@ -372,7 +372,7 @@
         },
         {
           "file": "src/components/Duyet Du An/TabSelector.tsx",
-          "hash": "3509836179777048088",
+          "hash": "6726925251172671041",
           "deps": [
             "npm:react"
           ]
@@ -393,7 +393,7 @@
         },
         {
           "file": "src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx",
-          "hash": "11264344274140449993",
+          "hash": "8307220788872596127",
           "deps": [
             "npm:react"
           ]
@@ -508,7 +508,7 @@
         },
         {
           "file": "src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx",
-          "hash": "15085602085615948656",
+          "hash": "17350655443712748860",
           "deps": [
             "npm:react",
             "npm:react-chartjs-2",
@@ -943,7 +943,7 @@
         },
         {
           "file": "src/services/Project.ts",
-          "hash": "4546947293113609932",
+          "hash": "18173258901818523752",
           "deps": [
             "npm:axios"
           ]
@@ -978,7 +978,7 @@
         },
         {
           "file": "src/services/userService.ts",
-          "hash": "17153211779034170026"
+          "hash": "9588701317280036570"
         },
         {
           "file": "src/styles.css",

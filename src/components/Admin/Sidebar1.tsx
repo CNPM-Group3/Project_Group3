@@ -21,7 +21,7 @@ const navigationItems = [
   {
     icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/08232af02813e185a2f8fc37b028087b250d5b28?placeholderIfAbsent=true",
     label: "Đăng Xuất",
-    path: "/login"
+    path: "/signin"
   },
 ];
 

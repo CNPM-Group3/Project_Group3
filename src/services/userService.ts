@@ -58,10 +58,19 @@ export interface User {
     }
   };
   
-  export const getUserById = async (id: number): Promise<ApiUser> => {
+  export const getUserById = async (id: number): Promise<User> => {
     try {
       const response = await api.get(`/api/Users/${id}`);
-      return response.data;
+      const apiUser: ApiUser = response.data;
+      return {
+        id: apiUser.id,
+        email: apiUser.email,
+        name: apiUser.fullName,
+        picture: apiUser.avatar,
+        address: apiUser.address,
+        role: apiUser.role,
+        avatarUrl: apiUser.avatar,
+      };
     } catch (error) {
       console.error(`Error getting user with ID ${id}:`, error);
       throw error;

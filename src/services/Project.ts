@@ -1,7 +1,7 @@
 import api from './apiService';
 import { AxiosResponse } from 'axios';
 
-interface Project {
+export interface Project {
   id: number;
   title: string;
   description: string;

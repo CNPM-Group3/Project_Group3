@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Sponsorship, SponsorshipList } from "@cnpm/components/Duyet Tai Tro/SponsorshipList";
+import { getFundingRequestsByStatus, approveFundingRequest, rejectFundingRequest } from "@cnpm/services/FundingService";
 
 export interface Project {
   id: string;
@@ -10,65 +11,58 @@ export interface Project {
 
 type TabType = "pending" | "approved" | "rejected";
 
-const pendingSponsorships: Sponsorship[] = [
-  {
-    id: "25CN22",
-    name: "Bác sĩ online",
-    proposer: "Nguyễn Văn Hồng",
-    date: "25/05/2025",
-    amount: 30000000,
-  },
-  {
-    id: "25NN23",
-    name: "Ngữ pháp thời Edo",
-    proposer: "Nguyễn Văn Minh",
-    date: "26/05/2025",
-    amount: 20000000,
-  },
-  {
-    id: "25CN24",
-    name: "Dự án 1",
-    proposer: "Nguyễn Văn A",
-    date: "27/05/2025",
-    amount: 10000000,
-  },
-];
-
-const approvedSponsorships: Sponsorship[] = [
-  {
-    id: "25CN22",
-    name: "Bác sĩ online",
-    proposer: "Nguyễn Văn Hồng",
-    date: "25/05/2025",
-    amount: 30000000,
-  },
-  {
-    id: "25NN23",
-    name: "Ngữ pháp thời Edo",
-    proposer: "Nguyễn Văn Minh",
-    date: "26/05/2025",
-    amount: 20000000,
-  },
-];
-
-const rejectedSponsorships: Sponsorship[] = [
-  {
-    id: "25CN24",
-    name: "Dự án 1",
-    proposer: "Nguyễn Văn A",
-    date: "27/05/2025",
-    amount: 10000000,
-  },
-];
-
 export const TabSelector = () => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
+  const [pendingRequests, setPendingRequests] = useState<Sponsorship[]>([]);
+  const [approvedRequests, setApprovedRequests] = useState<Sponsorship[]>([]);
+  const [rejectedRequests, setRejectedRequests] = useState<Sponsorship[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchRequests = async (status: string) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const fetchedData = await getFundingRequestsByStatus(status);
+      // Map FundingRequest to Sponsorship type if needed
+      const mappedData: Sponsorship[] = fetchedData.map((req: any) => ({
+        id: req.id.toString(),
+        name: req.projectTitle,
+        proposer: req.requestedByName,
+        date: new Date(req.createdAt).toLocaleDateString('vi-VN'),
+        amount: req.amount,
+      }));
+
+      if (status === "Pending") {
+        setPendingRequests(mappedData);
+      } else if (status === "Approved") {
+        setApprovedRequests(mappedData);
+      } else if (status === "Rejected") {
+        setRejectedRequests(mappedData);
+      }
+    } catch (err) {
+      console.error(`Error fetching ${status} requests:`, err);
+      setError(`Không thể tải danh sách yêu cầu ${status === "Pending" ? "chờ duyệt" : status === "Approved" ? "đã duyệt" : "đã từ chối"}.`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (activeTab === "pending") {
+      fetchRequests("Pending");
+    } else if (activeTab === "approved") {
+      fetchRequests("Approved");
+    } else if (activeTab === "rejected") {
+      fetchRequests("Rejected");
+    }
+  }, [activeTab]);
 
   let projects: Sponsorship[] = [];
-  if (activeTab === "pending") projects = pendingSponsorships;
-  if (activeTab === "approved") projects = approvedSponsorships;
-  if (activeTab === "rejected") projects = rejectedSponsorships;
+  if (activeTab === "pending") projects = pendingRequests;
+  if (activeTab === "approved") projects = approvedRequests;
+  if (activeTab === "rejected") projects = rejectedRequests;
 
   // Filter projects based on search keyword
   const filteredProjects = projects.filter(project => 
@@ -81,20 +75,42 @@ export const TabSelector = () => {
     setActiveTab(tab);
   };
 
-  const handleApprove = (id: string) => {
-    // TODO: Implement approve logic
-    console.log("Approve project:", id);
+  const handleApprove = async (id: string) => {
+    try {
+      await approveFundingRequest(parseInt(id));
+      alert("Duyệt yêu cầu thành công!");
+      fetchRequests("Pending"); // Refresh pending list
+      fetchRequests("Approved"); // Refresh approved list
+    } catch (err) {
+      console.error("Error approving request:", err);
+      alert("Không thể duyệt yêu cầu. Vui lòng thử lại.");
+    }
   };
 
-  const handleReject = (id: string) => {
-    // TODO: Implement reject logic
-    console.log("Reject project:", id);
+  const handleReject = async (id: string) => {
+    try {
+      await rejectFundingRequest(parseInt(id));
+      alert("Từ chối yêu cầu thành công!");
+      fetchRequests("Pending"); // Refresh pending list
+      fetchRequests("Rejected"); // Refresh rejected list
+    } catch (err) {
+      console.error("Error rejecting request:", err);
+      alert("Không thể từ chối yêu cầu. Vui lòng thử lại.");
+    }
   };
 
   const handleView = (id: string) => {
-    // TODO: Implement view details logic
+    // TODO: Implement view details logic (e.g., navigate to detail page)
     console.log("View project:", id);
   };
+
+  if (loading) {
+    return <div className="text-center text-gray-500 mt-10">Đang tải dữ liệu...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500 mt-10">{error}</div>;
+  }
 
   return (
     <div className="w-full max-w-[992px] mx-auto">

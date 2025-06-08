@@ -13,6 +13,8 @@ import {
   LineElement,
   Title,
 } from 'chart.js';
+import { useState, useEffect } from "react";
+import { getUsersByRole, addRoleToUser, deleteRoleFromUser } from "@cnpm/services/userService";
 
 // Register Chart.js components globally for this file
 ChartJS.register(
@@ -30,6 +32,7 @@ ChartJS.register(
 
 interface RoleActionButtonProps {
   type: "assign" | "revoke";
+  onClick?: () => void;
 }
 
 interface UserPerformanceChartProps {
@@ -68,7 +71,7 @@ interface UserActivityLineChartProps {
 // --- Component Definitions ---
 
 // RoleActionButton Component (local to this file, primarily for UserList)
-const RoleActionButton: React.FC<RoleActionButtonProps> = ({ type }) => {
+const RoleActionButton: React.FC<RoleActionButtonProps> = ({ type, onClick }) => {
   const buttonStyles = {
     assign: "px-4 py-1 text-cyan-800 bg-blue-300 rounded-xl",
     revoke: "px-7 py-1 text-red-800 bg-rose-400 rounded-xl max-md:px-5",
@@ -82,6 +85,7 @@ const RoleActionButton: React.FC<RoleActionButtonProps> = ({ type }) => {
   return (
     <button
       className={`text-sm font-medium leading-none ${buttonStyles[type]}`}
+      onClick={onClick}
     >
       {buttonText[type]}
     </button>
@@ -316,6 +320,80 @@ export const UserPerformanceChart: React.FC<UserPerformanceChartProps> = ({ user
 
 // UserList Component
 export const UserList: React.FC<UserListProps> = ({ users }) => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [userList, setUserList] = useState<ApiUser[]>([]);
+
+  const handleAssignRole = async (userId: number, roleName: string) => {
+    try {
+      await addRoleToUser(userId, roleName);
+      // Refresh the user list after role assignment
+      const fetchedUsers = await getUsersByRole('all');
+      setUserList(fetchedUsers);
+    } catch (err) {
+      console.error('Error assigning role:', err);
+      setError('Không thể gán vai trò. Vui lòng thử lại sau.');
+    }
+  };
+
+  const handleRevokeRole = async (userId: number, roleName: string) => {
+    try {
+      await deleteRoleFromUser(userId, roleName);
+      // Refresh the user list after role revocation
+      const fetchedUsers = await getUsersByRole('all');
+      setUserList(fetchedUsers);
+    } catch (err) {
+      console.error('Error revoking role:', err);
+      setError('Không thể thu hồi vai trò. Vui lòng thử lại sau.');
+    }
+  };
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const fetchedUsers = await getUsersByRole('all');
+        setUserList(fetchedUsers);
+      } catch (err) {
+        console.error('Error fetching users:', err);
+        setError('Không thể tải danh sách người dùng. Vui lòng thử lại sau.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-64">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="pt-6 mt-6 w-full max-w-5xl mx-auto rounded-xl border border-slate-200 shadow-sm bg-white">
+        <div className="text-center text-red-500 p-4 font-semibold">
+          {error}
+        </div>
+      </section>
+    );
+  }
+
+  if (userList.length === 0) {
+    return (
+      <section className="pt-6 mt-6 w-full max-w-5xl mx-auto rounded-xl border border-slate-200 shadow-sm bg-white">
+        <div className="text-center text-gray-500 p-4">
+          Không tìm thấy người dùng nào.
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="pt-6 mt-6 w-full max-w-5xl mx-auto rounded-xl border border-slate-200 shadow-sm bg-white">
       <h2 className="text-lg font-semibold px-6 pb-4">Danh sách</h2>
@@ -331,9 +409,9 @@ export const UserList: React.FC<UserListProps> = ({ users }) => {
             </tr>
           </thead>
           <tbody className="text-sm text-gray-800">
-            {users.map((user, index) => (
+            {userList.map((user) => (
               <tr
-                key={user.id || index}
+                key={user.id}
                 className="border-t border-gray-200 hover:bg-gray-50"
               >
                 <td className="px-6 py-4 whitespace-nowrap">{user.fullName}</td>
@@ -341,8 +419,14 @@ export const UserList: React.FC<UserListProps> = ({ users }) => {
                 <td className="px-6 py-4 whitespace-nowrap">{user.role}</td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex flex-col gap-2">
-                    <RoleActionButton type="assign" />
-                    <RoleActionButton type="revoke" />
+                    <RoleActionButton 
+                      type="assign" 
+                      onClick={() => handleAssignRole(user.id, user.role)}
+                    />
+                    <RoleActionButton 
+                      type="revoke" 
+                      onClick={() => handleRevokeRole(user.id, user.role)}
+                    />
                   </div>
                 </td>
               </tr>
@@ -353,7 +437,6 @@ export const UserList: React.FC<UserListProps> = ({ users }) => {
     </section>
   );
 };
-
 
 // UserActivityLineChart Component
 export const UserActivityLineChart: React.FC<UserActivityLineChartProps> = ({

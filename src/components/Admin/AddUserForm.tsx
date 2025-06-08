@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ApiUser } from "@cnpm/services/userService";
+import { getUsersByRole } from "@cnpm/services/userService";
 
 // Types
 export type User = ApiUser;
@@ -202,47 +203,53 @@ export const UserTable: React.FC<UserTableProps> = ({ users }) => {
   );
 };
 
-// Main Dashboard Component with demo data
+// Main Dashboard Component with real API integration
 export default function UserManagementDashboard() {
-  // Sample data
-  const sampleUsers: ApiUser[] = [
-    {
-      fullName: "Nguyễn Văn A",
-      email: "nguyenvana@example.com",
-      role: "Sinh viên",
-      status: "Hoạt động",
-      id: 1,
-    },
-    {
-      fullName: "Trần Thị B",
-      email: "tranthib@example.com",
-      role: "Giảng viên",
-      status: "Hoạt động",
-      id: 2,
-    },
-    {
-      fullName: "Lê Văn C",
-      email: "levanc@example.com",
-      role: "Nhân viên",
-      status: "Tạm khóa",
-      id: 3,
-    }
-  ];
+  const [users, setUsers] = useState<ApiUser[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const sampleRequests: ApprovalRequest[] = [
-    {
-      sender: "Phạm Văn D",
-      requestType: "Cấp tài khoản",
-      date: "15/12/2024",
-      status: "Chờ duyệt"
-    },
-    {
-      sender: "Hoàng Thị E",
-      requestType: "Khôi phục tài khoản",
-      date: "14/12/2024",
-      status: "Chờ duyệt"
-    }
-  ];
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        const fetchedUsers = await getUsersByRole('all');
+        setUsers(fetchedUsers);
+      } catch (err) {
+        console.error('Error fetching users:', err);
+        setError('Không thể tải danh sách người dùng. Vui lòng thử lại sau.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 p-6">
+        <div className="max-w-7xl mx-auto space-y-6">
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50 p-6">
+        <div className="max-w-7xl mx-auto space-y-6">
+          <div className="text-center text-red-500 p-4 font-semibold">
+            {error}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -254,12 +261,11 @@ export default function UserManagementDashboard() {
 
         {/* Top Section */}
         <div className="flex gap-6 flex-col lg:flex-row">
-       
-          <ApprovalSection requests={sampleRequests} />
+          <ApprovalSection requests={[]} />
         </div>
 
         {/* User Table */}
-        <UserTable users={sampleUsers} />
+        <UserTable users={users} />
       </div>
     </div>
   );

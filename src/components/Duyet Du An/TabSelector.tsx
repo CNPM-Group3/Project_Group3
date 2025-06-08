@@ -1,91 +1,121 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ProjectList } from "@cnpm/components/Duyet Du An/ProjectList";
+import { getProjectsByStatus, Project as ApiProject } from "../../services/Project";
+import { getUserById, User } from "../../services/userService";
 
+// Update Project interface to match Project from ProjectList for full compatibility
 export interface Project {
-  id: string;
-  name: string;
-  proposer: string;
-  date: string;
+  id: number;
+  title: string;
+  proposerName?: string;
+  description: string;
+  objectives: string;
+  expectedOutcomes: string;
+  startDate: string;
+  endDate: string;
+  researchTopicId: number;
+  ownerId?: number;
+  status?: string;
+  createdAt?: string;
+  updatedAt?: string;
 }
 
 type TabType = "pending" | "approved" | "rejected";
 
-const pendingProjects: Project[] = [
-  {
-    id: "25CN22",
-    name: "Bác sĩ online",
-    proposer: "Ths Nguyễn Văn Hồng",
-    date: "25/05/2025",
-  },
-  {
-    id: "25NN23",
-    name: "Ngữ pháp thời Edo",
-    proposer: "Ths Nguyễn Văn Minh",
-    date: "26/05/2025",
-  },
-  {
-    id: "25CN24",
-    name: "Dự án 1",
-    proposer: "Ths Nguyễn Văn A",
-    date: "27/05/2025",
-  },
-];
-
-const approvedProjects: Project[] = [
-  {
-    id: "25CN22",
-    name: "Bác sĩ online",
-    proposer: "Ths Nguyễn Văn Hồng",
-    date: "25/05/2025",
-  },
-  {
-    id: "25NN23",
-    name: "Ngữ pháp thời Edo",
-    proposer: "Ths Nguyễn Văn Minh",
-    date: "26/05/2025",
-  },
-];
-
-const rejectedProjects: Project[] = [
-  {
-    id: "25CN24",
-    name: "Dự án 1",
-    proposer: "Ths Nguyễn Văn A",
-    date: "27/05/2025",
-  },
-];
-
 export const TabSelector = () => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  let projects: Project[] = [];
-  if (activeTab === "pending") projects = pendingProjects;
-  if (activeTab === "approved") projects = approvedProjects;
-  if (activeTab === "rejected") projects = rejectedProjects;
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        let statusToFetch: string;
+        switch (activeTab) {
+          case "pending":
+            statusToFetch = "Pending";
+            break;
+          case "approved":
+            statusToFetch = "Approved";
+            break;
+          case "rejected":
+            statusToFetch = "Rejected";
+            break;
+          default:
+            statusToFetch = "Pending";
+        }
+        const fetchedProjects: ApiProject[] = await getProjectsByStatus(statusToFetch);
+
+        // Fetch proposer names for each project and transform ApiProject to Project
+        const projectsWithProposerNames: Project[] = await Promise.all(
+          fetchedProjects.map(async (apiProject) => {
+            let proposerName = "Unknown Proposer";
+            if (apiProject.ownerId) {
+              try {
+                const proposer: User = await getUserById(apiProject.ownerId);
+                proposerName = proposer.name; // Assuming User has a 'name' property
+              } catch (userError) {
+                console.error(`Error fetching user for project ${apiProject.id}:`, userError);
+                proposerName = "Unknown Proposer";
+              }
+            }
+            return { 
+              ...apiProject, 
+              proposerName,
+              // Ensure all properties expected by ProjectList are present
+              id: apiProject.id, // Explicitly ensure id is number
+              title: apiProject.title,
+              description: apiProject.description,
+              objectives: apiProject.objectives,
+              expectedOutcomes: apiProject.expectedOutcomes,
+              startDate: apiProject.startDate,
+              endDate: apiProject.endDate,
+              researchTopicId: apiProject.researchTopicId,
+              ownerId: apiProject.ownerId,
+              status: apiProject.status,
+              createdAt: apiProject.createdAt,
+              updatedAt: apiProject.updatedAt,
+            };
+          })
+        );
+        setProjects(projectsWithProposerNames);
+      } catch (err: any) {
+        console.error("Failed to fetch projects:", err);
+        setError("Failed to load projects. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, [activeTab]);
 
   // Filter projects based on search keyword
-  const filteredProjects = projects.filter(project => 
-    project.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-    project.id.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-    project.proposer.toLowerCase().includes(searchKeyword.toLowerCase())
+  const filteredProjects = projects.filter(project =>
+    project.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+    project.id.toString().includes(searchKeyword.toLowerCase()) ||
+    (project.proposerName && project.proposerName.toLowerCase().includes(searchKeyword.toLowerCase()))
   );
 
   const handleTabClick = (tab: TabType) => {
     setActiveTab(tab);
   };
 
-  const handleApprove = (id: string) => {
-    // TODO: Implement approve logic
+  const handleApprove = (id: number) => {
+    // TODO: Implement approve logic using actual API call
     console.log("Approve project:", id);
   };
 
-  const handleReject = (id: string) => {
-    // TODO: Implement reject logic
+  const handleReject = (id: number) => {
+    // TODO: Implement reject logic using actual API call
     console.log("Reject project:", id);
   };
 
-  const handleView = (id: string) => {
+  const handleView = (id: number) => {
     // TODO: Implement view details logic
     console.log("View project:", id);
   };
@@ -93,31 +123,31 @@ export const TabSelector = () => {
   return (
     <div className="w-full max-w-[992px] mx-auto">
       <div className="flex flex-wrap gap-1 items-center justify-center px-1 py-1 mt-10 text-sm font-bold text-teal-500 bg-gray-50 rounded-lg max-md:max-w-full">
-        <button 
+        <button
           onClick={() => handleTabClick("pending")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "pending" 
-              ? "text-white bg-teal-500" 
+            activeTab === "pending"
+              ? "text-white bg-teal-500"
               : "bg-teal-100"
           }`}
         >
           Chờ duyệt
         </button>
-        <button 
+        <button
           onClick={() => handleTabClick("approved")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "approved" 
-              ? "text-white bg-teal-500" 
+            activeTab === "approved"
+              ? "text-white bg-teal-500"
               : "bg-teal-100"
           }`}
         >
           Đã duyệt
         </button>
-        <button 
+        <button
           onClick={() => handleTabClick("rejected")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "rejected" 
-              ? "text-white bg-teal-500" 
+            activeTab === "rejected"
+              ? "text-white bg-teal-500"
               : "bg-teal-100"
           }`}
         >
@@ -152,17 +182,21 @@ export const TabSelector = () => {
           Danh sách dự án
         </h2>
       </div>
-      <ProjectList 
-        projects={filteredProjects} 
-        actionType={
-          activeTab === "pending" ? "both" :
-          activeTab === "approved" ? "reject" :
-          "approve"
-        }
-        onApprove={handleApprove}
-        onReject={handleReject}
-        onView={handleView}
-      />
+      {loading && <p className="text-center text-gray-600 mt-8">Loading projects...</p>}
+      {error && <p className="text-center text-red-500 mt-8">{error}</p>}
+      {!loading && !error && (
+        <ProjectList
+          projects={filteredProjects}
+          actionType={
+            activeTab === "pending" ? "both" :
+            activeTab === "approved" ? "reject" :
+            "approve"
+          }
+          onApprove={handleApprove}
+          onReject={handleReject}
+          onView={handleView}
+        />
+      )}
     </div>
   );
 };
