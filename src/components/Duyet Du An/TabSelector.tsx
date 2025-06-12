@@ -95,7 +95,7 @@ export const TabSelector = () => {
   }, [activeTab]);
 
   // Filter projects based on search keyword
-  const filteredProjects = projects.filter(project =>
+  const filteredProjects = projects.filter(project => 
     project.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
     project.id.toString().includes(searchKeyword.toLowerCase()) ||
     (project.proposerName && project.proposerName.toLowerCase().includes(searchKeyword.toLowerCase()))
@@ -123,31 +123,31 @@ export const TabSelector = () => {
   return (
     <div className="w-full max-w-[992px] mx-auto">
       <div className="flex flex-wrap gap-1 items-center justify-center px-1 py-1 mt-10 text-sm font-bold text-teal-500 bg-gray-50 rounded-lg max-md:max-w-full">
-        <button
+        <button 
           onClick={() => handleTabClick("pending")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "pending"
-              ? "text-white bg-teal-500"
+            activeTab === "pending" 
+              ? "text-white bg-teal-500" 
               : "bg-teal-100"
           }`}
         >
           Chờ duyệt
         </button>
-        <button
+        <button 
           onClick={() => handleTabClick("approved")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "approved"
-              ? "text-white bg-teal-500"
+            activeTab === "approved" 
+              ? "text-white bg-teal-500" 
               : "bg-teal-100"
           }`}
         >
           Đã duyệt
         </button>
-        <button
+        <button 
           onClick={() => handleTabClick("rejected")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "rejected"
-              ? "text-white bg-teal-500"
+            activeTab === "rejected" 
+              ? "text-white bg-teal-500" 
               : "bg-teal-100"
           }`}
         >
@@ -185,17 +185,17 @@ export const TabSelector = () => {
       {loading && <p className="text-center text-gray-600 mt-8">Loading projects...</p>}
       {error && <p className="text-center text-red-500 mt-8">{error}</p>}
       {!loading && !error && (
-        <ProjectList
-          projects={filteredProjects}
-          actionType={
-            activeTab === "pending" ? "both" :
-            activeTab === "approved" ? "reject" :
-            "approve"
-          }
-          onApprove={handleApprove}
-          onReject={handleReject}
-          onView={handleView}
-        />
+      <ProjectList 
+        projects={filteredProjects} 
+        actionType={
+          activeTab === "pending" ? "both" :
+          activeTab === "approved" ? "reject" :
+          "approve"
+        }
+        onApprove={handleApprove}
+        onReject={handleReject}
+        onView={handleView}
+      />
       )}
     </div>
   );

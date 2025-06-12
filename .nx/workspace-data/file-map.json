@@ -221,7 +221,7 @@
         },
         {
           "file": "src/app/app.tsx",
-          "hash": "9722273184828104502",
+          "hash": "2272455853209786338",
           "deps": [
             "npm:react",
             "npm:react-router-dom",
@@ -372,7 +372,7 @@
         },
         {
           "file": "src/components/Duyet Du An/TabSelector.tsx",
-          "hash": "6726925251172671041",
+          "hash": "17115535783333077364",
           "deps": [
             "npm:react"
           ]
@@ -517,7 +517,7 @@
         },
         {
           "file": "src/components/QuanTriVien/Sidebar.tsx",
-          "hash": "12039576029964105386",
+          "hash": "10689555456275953304",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -763,28 +763,28 @@
         },
         {
           "file": "src/pages/DashboardHoiOngThamInh.tsx",
-          "hash": "17121723766945872702",
+          "hash": "2229432797007535600",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien.tsx",
-          "hash": "12510288021455451650",
+          "hash": "393169461730653419",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien1.tsx",
-          "hash": "16230682440662717803",
+          "hash": "9313011238835698085",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DashboardQuanTriVien2.tsx",
-          "hash": "16182834786105287638",
+          "hash": "5167945546455740722",
           "deps": [
             "npm:react"
           ]
@@ -835,7 +835,7 @@
         },
         {
           "file": "src/pages/Profile.tsx",
-          "hash": "13613414962158167472",
+          "hash": "16707911950283124989",
           "deps": [
             "npm:react"
           ]
@@ -1031,7 +1031,7 @@
           "hash": "16145672096969245511",
           "deps": [
             "npm:@eslint/js",
-            "npm:globals",
+            "npm:globals@15.15.0",
             "npm:eslint-plugin-react-hooks",
             "npm:eslint-plugin-react-refresh",
             "npm:typescript-eslint"
@@ -1057,7 +1057,7 @@
             "npm:eslint",
             "npm:eslint-plugin-react-hooks",
             "npm:eslint-plugin-react-refresh",
-            "npm:globals",
+            "npm:globals@15.15.0",
             "npm:postcss",
             "npm:tailwindcss",
             "npm:typescript",

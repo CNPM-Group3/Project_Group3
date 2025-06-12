@@ -91,7 +91,7 @@ const ThongTinCaNhanThanhVienNghienCuu = () => {
       alert("Lỗi khi upload ảnh đại diện. Vui lòng thử lại.");
     } finally {
       setUploadLoading(false);
-      setSelectedFile(null);
+    setSelectedFile(null);
     }
   };
 
@@ -126,70 +126,70 @@ const ThongTinCaNhanThanhVienNghienCuu = () => {
             {!loading && !error && user && (
               <>
                 {/* Avatar section */}
-                <div
-                  className="relative w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer"
-                  onClick={triggerFileSelect}
-                  title="Click để thay đổi ảnh đại diện"
+            <div
+              className="relative w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer"
+              onClick={triggerFileSelect}
+              title="Click để thay đổi ảnh đại diện"
+            >
+              <img
+                src={previewImg}
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex flex-col justify-center items-center text-white text-sm font-semibold select-none">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 mb-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
                 >
-                  <img
-                    src={previewImg}
-                    alt="Profile"
-                    className="w-full h-full object-cover"
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex flex-col justify-center items-center text-white text-sm font-semibold select-none">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-8 w-8 mb-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    Thay đổi ảnh
-                  </div>
-                </div>
+                </svg>
+                Thay đổi ảnh
+              </div>
+            </div>
 
                 {/* Hidden file input */}
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  ref={fileInputRef}
-                  className="hidden"
-                />
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
+              ref={fileInputRef}
+              className="hidden"
+            />
 
                 {/* Upload buttons */}
-                {selectedFile && (
-                  <div className="flex gap-4 mt-4">
-                    <button
-                      onClick={handleUpload}
+            {selectedFile && (
+              <div className="flex gap-4 mt-4">
+                <button
+                  onClick={handleUpload}
                       disabled={uploadLoading}
                       className={`px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition ${
                         uploadLoading ? 'opacity-50 cursor-not-allowed' : ''
                       }`}
-                    >
+                >
                       {uploadLoading ? 'Đang xử lý...' : 'Lưu ảnh'}
-                    </button>
-                    <button
-                      onClick={handleCancel}
+                </button>
+                <button
+                  onClick={handleCancel}
                       disabled={uploadLoading}
                       className={`px-6 py-2 bg-gray-300 rounded hover:bg-gray-400 transition ${
                         uploadLoading ? 'opacity-50 cursor-not-allowed' : ''
                       }`}
-                    >
-                      Hủy
-                    </button>
-                  </div>
-                )}
+                >
+                  Hủy
+                </button>
+              </div>
+            )}
 
                 {/* Profile content */}
-                <div className="mt-16 w-full max-w-[984px] max-md:mt-10 max-md:max-w-full">
+            <div className="mt-16 w-full max-w-[984px] max-md:mt-10 max-md:max-w-full">
                   <ProfilePage 
                     user={user} 
                     loading={loading}

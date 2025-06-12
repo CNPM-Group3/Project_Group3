@@ -6,7 +6,7 @@ import Sidebar from "@cnpm/components/HoiDongThamDinh/Sidebar";
 import DashboardHeader from "@cnpm/components/Header";
 import {ProjectEvaluation, PhaseProgress} from "@cnpm/components/HoiDongThamDinh/StatusIndicator";
 
-const DashboardHoiDongThamDinh: React.FC = () => {
+const DashboardHoiDongThamInh: React.FC = () => {
   return (
     <MainLayout>
       <div className="flex min-h-screen w-screen bg-gray-50">
@@ -69,4 +69,4 @@ const DashboardHoiDongThamDinh: React.FC = () => {
   );
 };
 
-export default DashboardHoiDongThamDinh;
+export default DashboardHoiDongThamInh;

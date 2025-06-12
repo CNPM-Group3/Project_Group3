@@ -44,10 +44,15 @@ export function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Navigate to="/signin" replace />} />
+
             <Route element={<PublicRoute />}>
               <Route path="/signin" element={<SignInPage />} />
               <Route path="/signup" element={<SignUpPage />} />
               <Route path="/login-error" element={<LoginError />} />
+              <Route path="/google-callback" element={<GoogleCallback />} />
+            </Route>
+            
+            <Route element={<ProtectedRoute />}>
               <Route path="/hoidongthamdinh" element={<DashboardHoiOngThamInh />} />
               <Route path="/quantrivien" element={<DashboardQuanTriVien />} />
               <Route path="/quantrivien1" element={<DashboardQuanTriVien1 />} />
@@ -72,20 +77,9 @@ export function App() {
               <Route path="/taoduannghiencuuchinh" element={<TaoDuAnNghienCuuChinh />} />
               <Route path="/duyetduan" element={<DuyetDuAn />} />
               <Route path="/duyettaitro" element={<DuyetTaiTro />} />
-              <Route path="/google-callback" element={<GoogleCallback />} />
-              
-              {/* Removed invalid route: TrangChiTietNhiemVu requires a taskId prop */}
-              {/* <Route path="/trangchitietnhiemvu" element={<TrangChiTietNhiemVu/>} /> */}
-              <Route
-                path="/phieuyeucautaitro"
-                element={
-                  <PhieuYeuCauTaiTro onSubmit={(formData) => { /* handle form submission here */ }} />
-                }
-              /> 
-              <Route path="/themtailieu" element={<ThemTaiLieuNghienCuuChinh/>} />
-              <Route path="/themnhiemvu" element={<ThemNhiemVu availableMembers={[]} />} /> 
-              
-      
+              <Route path="/phieuyeucautaitro" element={<PhieuYeuCauTaiTro onSubmit={(formData) => { /* handle form submission here */ }} />} />
+              <Route path="/themtailieu" element={<ThemTaiLieuNghienCuuChinh />} />
+              <Route path="/themnhiemvu" element={<ThemNhiemVu availableMembers={[]} />} />
             </Route>
           </Routes>
         </Router>

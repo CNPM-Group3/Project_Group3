@@ -66,8 +66,8 @@ export const DashboardLayout = () => {
               </div>
             )}
             {!loading && !error ? (
-              <div className="w-full max-w-[1280px] mx-auto px-6">
-                <div className="w-[750px] mb-4">
+            <div className="w-full max-w-[1280px] mx-auto px-6">
+              <div className="w-[750px] mb-4">
                   <UserRoleFilter onRoleChange={handleRoleChange} selectedRole={selectedRole} />
                 </div>
                 <UserList selectedRole={selectedRole} users={filteredUsers} loading={loading} />

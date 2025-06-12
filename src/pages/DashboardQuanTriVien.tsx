@@ -64,7 +64,7 @@ export default function DashboardQuanTriVien() {
             )}
             {!loading && !error ? (
               <>
-                <SystemConfigCard />
+            <SystemConfigCard />
               </>
             ) : null}
           </main>

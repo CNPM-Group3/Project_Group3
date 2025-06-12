@@ -13501,7 +13501,7 @@
       },
       {
         "source": "my-tailwind-app",
-        "target": "npm:globals",
+        "target": "npm:globals@15.15.0",
         "type": "static"
       },
       {
@@ -30491,5 +30491,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1749394008936
+  "computedAt": 1749689125326
 }

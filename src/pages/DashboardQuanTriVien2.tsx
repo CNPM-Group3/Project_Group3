@@ -80,27 +80,27 @@ const DashboardQuanTriVien2: React.FC = () => {
             )}
             {!loading && !error ? (
               <>
-                {/* Charts */}
-                <div className="flex gap-6 flex-wrap mb-6">
-                  <div className="w-full md:w-1/2">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/488d89fe7b2e7cd40a8ee8152b3048ee84cd22ed?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
-                      alt="Statistics"
-                      className="w-full rounded-xl shadow-md aspect-[1.6] object-cover"
-                    />
-                  </div>
-                  <div className="w-full md:w-1/2">
+            {/* Charts */}
+            <div className="flex gap-6 flex-wrap mb-6">
+              <div className="w-full md:w-1/2">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/488d89fe7b2e7cd40a8ee8152b3048ee84cd22ed?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
+                  alt="Statistics"
+                  className="w-full rounded-xl shadow-md aspect-[1.6] object-cover"
+                />
+              </div>
+              <div className="w-full md:w-1/2">
                     <UserPerformanceChart users={users} />
-                  </div>
-                </div>
+              </div>
+            </div>
 
-                {/* Interaction chart */}
-                <div className="mb-6">
+            {/* Interaction chart */}
+            <div className="mb-6">
                   <UserInteractionChart users={users} />
-                </div>
+            </div>
 
-                {/* Filters */}
-                <div className="flex flex-wrap gap-6">
+            {/* Filters */}
+            <div className="flex flex-wrap gap-6">
                   <TimeFilter
                     timeRanges={timeRanges}
                     selectedTimeRange={selectedTimeRange}
@@ -111,7 +111,7 @@ const DashboardQuanTriVien2: React.FC = () => {
                     selectedRole={selectedRole}
                     onSelectRole={handleRoleSelect}
                   />
-                </div>
+            </div>
               </>
             ) : null}
           </main>
