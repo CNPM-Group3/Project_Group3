@@ -2,47 +2,66 @@ import React from "react";
 import Sidebar from "@cnpm/components/ThemNhiemVu/Sidebar";
 import Header from "@cnpm/components/Header";
 import { TaskForm, NewTaskData } from "@cnpm/components/ThemNhiemVu/TaskForm";
+import { taskService } from "../services/Tasks";
+import { useNavigate } from "react-router-dom";
 
 interface ThemNhiemVuProps {
-  availableMembers: string[]; // List of members that can be assigned tasks
+  availableMembers: Array<{ id: number; name: string }>; // List of members that can be assigned tasks
 }
 
 const ThemNhiemVu: React.FC<ThemNhiemVuProps> = ({
   availableMembers
 }) => {
+  const navigate = useNavigate();
 
   // Handler function for TaskForm submission
-  const handleTaskSubmit = (taskData: NewTaskData) => {
-    console.log("Task submitted in ThemNhiemVu:", taskData);
-    // Here you would typically send the taskData to your backend API
-    alert("Nhiệm vụ đã được tạo (demo). Xem console log để biết chi tiết.");
-    // You might want to clear the form or navigate to another page after submission
+  const handleTaskSubmit = async (taskData: NewTaskData) => {
+    try {
+      // Convert taskData to match TaskCreateRequest format
+      const taskRequest = {
+        title: taskData.title,
+        description: taskData.description,
+        startDate: taskData.startDate,
+        dueDate: taskData.dueDate,
+        projectId: taskData.projectId,
+        assignedToId: taskData.assignedToId,
+        isMilestone: taskData.isMilestone,
+        attachmentUrls: taskData.attachmentUrls
+      };
+
+      const createdTask = await taskService.create(taskRequest);
+      console.log("Task created successfully:", createdTask);
+      
+      // Show success message
+      alert("Nhiệm vụ đã được tạo thành công!");
+      
+      // Navigate to task details or project page
+      navigate(`/task/${createdTask.id}`);
+    } catch (error) {
+      console.error("Error creating task:", error);
+      alert("Có lỗi xảy ra khi tạo nhiệm vụ. Vui lòng thử lại.");
+    }
   };
 
   return (
-    <main className="bg-slate-50 min-h-screen w-full flex flex-row">
-      {/* Sidebar */}
-      <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-        <Sidebar />
-      </div>
-
-      <div className="flex-1 flex flex-col ml-64">
-        <div className="fixed top-0 left-64 w-[calc(100%-16rem)] z-10">
-          <Header />
+    <main className="bg-slate-50 min-h-screen w-full">
+      <div className="flex flex-row min-h-screen">
+        {/* Sidebar */}
+        <div className="w-[18%] border-r border-slate-200 bg-gray">
+          <Sidebar />
         </div>
-
-        <section className="flex flex-col items-center pb-60 w-full max-w-screen-lg mx-auto mt-16 pt-16">
-          <h1 className="text-3xl font-bold text-gray-700">
-            Tạo nhiệm vụ
-          </h1>
-
-          <p className="mt-1.5 text-xs text-gray-400 max-md:max-w-full text-center">
-            Điền đầy đủ thông tin ở dưới để tạo nhiệm vụ. Một nhiệm vụ
-            chỉ có thể gán cho một thành viên
-          </p>
-
-          <TaskForm onSubmit={handleTaskSubmit} members={availableMembers} />
-        </section>
+        {/* Main content */}
+        <div className="w-[82%] flex flex-col">
+          <Header />
+          <div className="p-8">
+            <h1 className="text-2xl font-bold text-gray-900 mb-8">Thêm nhiệm vụ mới</h1>
+            <TaskForm 
+              onSubmit={handleTaskSubmit}
+              members={availableMembers}
+              projectId={1} // You might want to get this from props or context
+            />
+          </div>
+        </div>
       </div>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { taskService } from "../../services/Tasks";
 
 // ================ INTERFACES ================
 
@@ -45,16 +46,24 @@ interface TaskItemProps {
   status: TaskStatus;
   iconSrc: string;
   onStatusChange: (status: TaskStatus) => void;
+  description?: string;
+  deadline?: string;
+  assignedTo?: string;
 }
 
 interface Task {
+  id?: number;
   name: string;
   status: TaskStatus;
   iconSrc: string;
+  description?: string;
+  deadline?: string;
+  assignedTo?: string;
 }
 
 interface TaskListProps {
   tasks?: Task[];
+  projectId?: number;
 }
 
 interface HeaderProps {
@@ -203,13 +212,16 @@ export const TaskItem: React.FC<TaskItemProps> = ({
   status,
   iconSrc,
   onStatusChange,
+  description,
+  deadline,
+  assignedTo,
 }) => {
   const currentStatus = statusOptions.find(opt => opt.value === status);
 
   return (
-    <div className="flex flex-wrap items-center px-3.5 py-2.5 mt-2.5 w-full rounded-xl border border-solid bg-slate-50 border-slate-200 min-h-20 max-md:max-w-full">
-      <div className="flex grow shrink items-center self-stretch my-auto">
-        <div className="flex gap-3 self-stretch my-auto">
+    <div className="flex flex-col px-3.5 py-2.5 mt-2.5 w-full rounded-xl border border-solid bg-slate-50 border-slate-200 min-h-20 max-md:max-w-full">
+      <div className="flex items-center justify-between w-full">
+        <div className="flex gap-3 items-center">
           <div className="flex justify-between items-center min-h-[60px]">
             <img
               src={iconSrc}
@@ -217,83 +229,150 @@ export const TaskItem: React.FC<TaskItemProps> = ({
               className="object-contain self-stretch my-auto rounded-lg aspect-square w-[60px]"
             />
           </div>
-          <h3 className="my-auto text-base font-semibold text-center text-slate-600">
-            {name}
-          </h3>
+          <div className="flex flex-col">
+            <h3 className="text-base font-semibold text-slate-600">
+              {name}
+            </h3>
+            {description && (
+              <p className="text-sm text-gray-500 mt-1">{description}</p>
+            )}
+          </div>
+        </div>
+        <div className="flex gap-2 items-center">
+          {deadline && (
+            <div className="text-sm text-gray-500">
+              <span className="font-medium">Deadline:</span> {deadline}
+            </div>
+          )}
+          <div className="relative">
+            <select
+              value={status}
+              onChange={e => onStatusChange(e.target.value as TaskStatus)}
+              className={`appearance-none px-4 py-2 rounded-lg font-bold text-sm cursor-pointer border-2 border-transparent pr-8
+                ${currentStatus?.className}
+              `}
+              style={{ minWidth: 110 }}
+            >
+              {statusOptions.map(opt => (
+                <option
+                  key={opt.value}
+                  value={opt.value}
+                  className={opt.className}
+                >
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+            <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
-      <div className="flex gap-2 ml-auto">
-        <div className="relative">
-          <select
-            value={status}
-            onChange={e => onStatusChange(e.target.value as TaskStatus)}
-            className={`appearance-none px-4 py-2 rounded-lg font-bold text-sm cursor-pointer border-2 border-transparent pr-8
-              ${currentStatus?.className}
-            `}
-            style={{ minWidth: 110 }}
-          >
-            {statusOptions.map(opt => (
-              <option
-                key={opt.value}
-                value={opt.value}
-                className={opt.className}
-              >
-                {opt.label}
-              </option>
-            ))}
-          </select>
-          <span className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-gray-500">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-            </svg>
-          </span>
+      {assignedTo && (
+        <div className="mt-2 text-sm text-gray-500">
+          <span className="font-medium">Assigned to:</span> {assignedTo}
         </div>
-      </div>
+      )}
     </div>
   );
 };
 
 // ================ TASK LIST COMPONENT ================
 
-const initialTasks: Task[] = [
-  {
-    name: "Nhiệm vụ 1",
-    status: "problem",
-    iconSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
-  },
-  {
-    name: "Nhiệm vụ 2",
-    status: "working",
-    iconSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
-  },
-  {
-    name: "Nhiệm vụ 3",
-    status: "done",
-    iconSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
-  },
-  {
-    name: "Nhiệm vụ 4",
-    status: "submitted",
-    iconSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
-  },
-];
-
 export const TaskList: React.FC<TaskListProps> = ({
   tasks: propTasks,
+  projectId
 }) => {
-  const [tasks, setTasks] = useState<Task[]>(propTasks || initialTasks);
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleStatusChange = (index: number, newStatus: TaskStatus) => {
-    setTasks(prev =>
-      prev.map((task, i) =>
-        i === index ? { ...task, status: newStatus } : task
-      )
-    );
+  useEffect(() => {
+    const fetchTasks = async () => {
+      try {
+        if (projectId) {
+          const projectTasks = await taskService.getByProject(projectId);
+          const formattedTasks = projectTasks.map(task => ({
+            id: task.id,
+            name: task.title,
+            status: mapStatus(task.status || 'working'),
+            iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
+            description: task.description,
+            deadline: new Date(task.dueDate).toLocaleDateString(),
+            assignedTo: task.assignedToId?.toString()
+          }));
+          setTasks(formattedTasks);
+        } else if (propTasks) {
+          setTasks(propTasks);
+        }
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching tasks:", err);
+        setError("Không thể tải danh sách nhiệm vụ. Vui lòng thử lại sau.");
+        setLoading(false);
+      }
+    };
+
+    fetchTasks();
+  }, [projectId, propTasks]);
+
+  const handleStatusChange = async (index: number, newStatus: TaskStatus) => {
+    try {
+      const task = tasks[index];
+      if (task.id) {
+        await taskService.updateStatus(task.id, mapStatusToApi(newStatus));
+        setTasks(prev =>
+          prev.map((t, i) =>
+            i === index ? { ...t, status: newStatus } : t
+          )
+        );
+      }
+    } catch (error) {
+      console.error("Error updating task status:", error);
+      alert("Có lỗi xảy ra khi cập nhật trạng thái. Vui lòng thử lại.");
+    }
   };
+
+  const mapStatus = (status: string): TaskStatus => {
+    switch (status.toLowerCase()) {
+      case 'completed':
+        return 'done';
+      case 'in_progress':
+        return 'working';
+      case 'submitted':
+        return 'submitted';
+      case 'problem':
+        return 'problem';
+      default:
+        return 'working';
+    }
+  };
+
+  const mapStatusToApi = (status: TaskStatus): string => {
+    switch (status) {
+      case 'done':
+        return 'completed';
+      case 'working':
+        return 'in_progress';
+      case 'submitted':
+        return 'submitted';
+      case 'problem':
+        return 'problem';
+      default:
+        return 'in_progress';
+    }
+  };
+
+  if (loading) {
+    return <div>Đang tải danh sách nhiệm vụ...</div>;
+  }
+
+  if (error) {
+    return <div className="text-red-500">{error}</div>;
+  }
 
   return (
     <section className="px-9 pt-8 pb-16 mt-7 -mb-8 w-full rounded-xl border border-solid border-slate-200 max-w-[1077px] shadow-[0px_1px_2px_rgba(0,0,0,0.05)] max-md:px-5 max-md:mb-2.5 max-md:max-w-full">
@@ -308,12 +387,16 @@ export const TaskList: React.FC<TaskListProps> = ({
             status={task.status}
             iconSrc={task.iconSrc}
             onStatusChange={newStatus => handleStatusChange(index, newStatus)}
+            description={task.description}
+            deadline={task.deadline}
+            assignedTo={task.assignedTo}
           />
         ))}
       </div>
     </section>
   );
 };
+
 // ================ MAIN APP COMPONENT ================
 
 const App: React.FC = () => {

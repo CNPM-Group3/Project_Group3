@@ -6,47 +6,94 @@ import { MemberSelect } from "./MemberSelect";
 
 // Define the structure of a new task data
 export interface NewTaskData {
-  name: string;
-  content: string;
-  deadline: string;
-  assignedMember: string | null;
+  title: string;
+  description: string;
+  startDate: string;
+  dueDate: string;
+  projectId: number;
+  assignedToId: number;
+  isMilestone: boolean;
+  attachmentUrls: string;
 }
 
 interface TaskFormProps {
   onSubmit: (taskData: NewTaskData) => void;
-  members: string[];
+  members: Array<{ id: number; name: string }>;
+  projectId: number;
 }
 
 export const TaskForm: React.FC<TaskFormProps> = ({
   onSubmit,
-  members
+  members,
+  projectId
 }) => {
-  const [taskName, setTaskName] = useState("");
-  const [taskContent, setTaskContent] = useState("");
-  const [selectedMember, setSelectedMember] = useState<string | null>(null);
-  const [taskDeadline, setTaskDeadline] = useState<string>("");
+  const [taskTitle, setTaskTitle] = useState("");
+  const [taskDescription, setTaskDescription] = useState("");
+  const [selectedMember, setSelectedMember] = useState<number | null>(null);
+  const [startDate, setStartDate] = useState<string>(new Date().toISOString().split('T')[0]);
+  const [dueDate, setDueDate] = useState<string>("");
+  const [attachments, setAttachments] = useState<File[]>([]);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleMemberSelect = (member: string) => {
-    setSelectedMember(member);
-    console.log("Selected member in TaskForm:", member);
-    // You can do more here with the selected member, e.g., save it to state
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!taskTitle.trim()) {
+      newErrors.title = "Tên nhiệm vụ không được để trống";
+    }
+    
+    if (!taskDescription.trim()) {
+      newErrors.description = "Nội dung nhiệm vụ không được để trống";
+    }
+    
+    if (!dueDate) {
+      newErrors.dueDate = "Vui lòng chọn thời hạn hoàn thành";
+    }
+    
+    if (!selectedMember) {
+      newErrors.member = "Vui lòng chọn người thực hiện";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleMemberSelect = (memberId: number) => {
+    setSelectedMember(memberId);
+    if (errors.member) {
+      setErrors(prev => ({ ...prev, member: "" }));
+    }
   };
 
   const handleDateChange = (date: string) => {
-    setTaskDeadline(date);
-    console.log("Selected deadline in TaskForm:", date);
-    // You can do more here with the selected date
+    setDueDate(date);
+    if (errors.dueDate) {
+      setErrors(prev => ({ ...prev, dueDate: "" }));
+    }
+  };
+
+  const handleFileUpload = (files: File[]) => {
+    setAttachments(files);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    
+    if (!validateForm()) {
+      return;
+    }
+
     const newTask: NewTaskData = {
-      name: taskName,
-      content: taskContent,
-      deadline: taskDeadline,
-      assignedMember: selectedMember,
+      title: taskTitle,
+      description: taskDescription,
+      startDate: new Date(startDate).toISOString(),
+      dueDate: new Date(dueDate).toISOString(),
+      projectId,
+      assignedToId: selectedMember || 0,
+      isMilestone: false,
+      attachmentUrls: attachments.map(file => URL.createObjectURL(file)).join(",")
     };
+    
     onSubmit(newTask);
   };
 
@@ -56,14 +103,24 @@ export const TaskForm: React.FC<TaskFormProps> = ({
         Chi tiết nhiệm vụ
       </h2>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={taskName}
-          onChange={(e) => setTaskName(e.target.value)}
-          placeholder="Tên nhiệm vụ"
-          className="overflow-hidden gap-2.5 self-stretch px-4 mt-5 text-base leading-6 text-gray-400 bg-white rounded-lg border border-gray-300 border-solid min-h-[50px] w-[448px] max-md:max-w-full"
-        />
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Tên nhiệm vụ</label>
+          <input
+            type="text"
+            value={taskTitle}
+            onChange={(e) => {
+              setTaskTitle(e.target.value);
+              if (errors.title) {
+                setErrors(prev => ({ ...prev, title: "" }));
+              }
+            }}
+            className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 ${
+              errors.title ? 'border-red-500' : ''
+            }`}
+          />
+          {errors.title && <p className="mt-1 text-sm text-red-600">{errors.title}</p>}
+        </div>
 
         <div className="mt-5 bg-black bg-opacity-0 max-md:max-w-full">
           <label className="py-1 max-w-full text-xl text-gray-700 bg-black bg-opacity-0 w-[751px] max-md:pr-5">
@@ -73,21 +130,47 @@ export const TaskForm: React.FC<TaskFormProps> = ({
           </label>
 
           <textarea
-            value={taskContent}
-            onChange={(e) => setTaskContent(e.target.value)}
-            placeholder="Ghi tối đa 10 ký tự"
-            className="overflow-hidden px-3.5 pt-4 pb-12 text-base text-gray-400 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 max-md:max-w-full w-full"
+            value={taskDescription}
+            onChange={(e) => {
+              setTaskDescription(e.target.value);
+              if (errors.description) {
+                setErrors(prev => ({ ...prev, description: "" }));
+              }
+            }}
+            placeholder="Nhập nội dung nhiệm vụ"
+            className={`overflow-hidden px-3.5 pt-4 pb-12 text-base text-gray-400 bg-white rounded-md border ${
+              errors.description ? 'border-red-500' : 'border-gray-300'
+            } border-solid max-md:pr-5 max-md:max-w-full w-full`}
             rows={4}
+          />
+          {errors.description && (
+            <p className="text-red-500 text-sm mt-1">{errors.description}</p>
+          )}
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Người thực hiện</label>
+          <MemberSelect
+            members={members}
+            selectedMember={selectedMember}
+            onSelect={handleMemberSelect}
+            error={errors.member}
           />
         </div>
 
-        <FileUpload />
-        <DatePicker
-          label="Thời hạn hoàn thành nhiệm vụ:"
-          selectedDate={taskDeadline}
-          onDateChange={handleDateChange}
-        />
-        <MemberSelect members={members} onMemberSelect={handleMemberSelect} />
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Thời hạn hoàn thành</label>
+          <DatePicker
+            selectedDate={dueDate}
+            onChange={handleDateChange}
+            error={errors.dueDate}
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Tệp đính kèm</label>
+          <FileUpload onFileUpload={handleFileUpload} />
+        </div>
 
         <button
           type="submit"
