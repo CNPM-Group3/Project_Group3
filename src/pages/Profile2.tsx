@@ -54,75 +54,74 @@ const ThongTinCaNhanThanhVienNghienCuu = () => {
           <Sidebar />
         </div>
         {/* Main content */}
-        <div className="w-[82%] flex flex-col">
+        <div className="w-[82%] flex flex-col items-center">
           {/* Header */}
           <Header />
           {/* Content */}
-          <section className="flex flex-col items-center pb-60 w-full max-w-full">
-            {/* Ảnh đại diện với overlay hover */}
-            <div
-              className="relative w-[150px] h-[150px] rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer"
-              onClick={triggerFileSelect}
-              title="Click để thay đổi ảnh đại diện"
-            >
-              <img
-                src={previewImg}
-                alt="Profile"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex flex-col justify-center items-center text-white text-sm font-semibold select-none">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-8 w-8 mb-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                Thay đổi ảnh
-              </div>
-            </div>
-
-            {/* Input file ẩn */}
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleFileChange}
-              ref={fileInputRef}
-              className="hidden"
-            />
-
-            {/* Nút Lưu / Hủy khi đã chọn ảnh mới */}
-            {selectedFile && (
-              <div className="flex gap-4 mt-4">
-                <button
-                  onClick={handleUpload}
-                  className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-                >
-                  Lưu ảnh
-                </button>
-                <button
-                  onClick={handleCancel}
-                  className="px-6 py-2 bg-gray-300 rounded hover:bg-gray-400 transition"
-                >
-                  Hủy
-                </button>
-              </div>
-            )}
-
-            <div className="mt-16 w-full max-w-[984px] max-md:mt-10 max-md:max-w-full">
-              <div className="flex gap-5 max-md:flex-col">
-                <div className="w-6/12 max-md:ml-0 max-md:w-full">
-                  <UserDetails />
+          <section className="flex flex-col items-center justify-center pb-60 w-full">
+            {/* Container cho avatar và UserDetails */}
+            <div className="flex flex-col items-center w-full">
+              {/* Ảnh đại diện với overlay hover */}
+              <div
+                className="relative w-[160px] h-[160px] rounded-full overflow-hidden border-4 border-white shadow-lg cursor-pointer mb-8"
+                onClick={triggerFileSelect}
+                title="Click để thay đổi ảnh đại diện"
+              >
+                <img
+                  src={previewImg}
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition flex flex-col justify-center items-center text-white text-sm font-semibold select-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-8 w-8 mb-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Thay đổi ảnh
                 </div>
-                <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                  {/* <ResearchInfo /> */}
+              </div>
+
+              {/* Input file ẩn */}
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                ref={fileInputRef}
+                className="hidden"
+              />
+
+              {/* Nút Lưu / Hủy khi đã chọn ảnh mới */}
+              {selectedFile && (
+                <div className="flex gap-4 mt-4 justify-center">
+                  <button
+                    onClick={handleUpload}
+                    className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                  >
+                    Lưu ảnh
+                  </button>
+                  <button
+                    onClick={handleCancel}
+                    className="px-6 py-2 bg-gray-300 rounded hover:bg-gray-400 transition"
+                  >
+                    Hủy
+                  </button>
+                </div>
+              )}
+
+              {/* Khung thông tin người dùng */}
+              <div className="w-full flex justify-center mt-12">
+                <div className="w-full max-w-[1100px]">
+                  <UserDetails />
                 </div>
               </div>
             </div>

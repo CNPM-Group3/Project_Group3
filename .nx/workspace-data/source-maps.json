@@ -310,9 +310,113 @@
       "project.json",
       "nx/core/project-json"
     ],
+    "projectType": [
+      "project.json",
+      "nx/core/project-json"
+    ],
     "targets": [
-      "eslint.config.js",
-      "@nx/eslint/plugin"
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.dependsOn": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.executor": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options.cwd": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.options.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.technologies": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.technologies.0": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.description": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.preview.metadata.help.example": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.cache": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.inputs": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.executor": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.cwd": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.options.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.description": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.command": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
+    ],
+    "targets.typecheck.metadata.help.example": [
+      "vite.config.ts",
+      "@nx/vite/plugin"
     ],
     "targets.lint": [
       "eslint.config.js",
@@ -511,10 +615,6 @@
       "nx/core/project-json"
     ],
     "sourceRoot": [
-      "project.json",
-      "nx/core/project-json"
-    ],
-    "projectType": [
       "project.json",
       "nx/core/project-json"
     ],

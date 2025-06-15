@@ -27,7 +27,7 @@
               }
             ],
             "outputs": [
-              "{projectRoot}/dist"
+              "{projectRoot}\\dist"
             ],
             "metadata": {
               "technologies": [
@@ -186,7 +186,144 @@
       "type": "app",
       "data": {
         "root": ".",
+        "projectType": "application",
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "start",
+              "build",
+              "test"
+            ]
+          },
+          "js": {
+            "packageName": "nckh-fe",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
         "targets": {
+          "build": {
+            "executor": "nx:run-script",
+            "metadata": {
+              "technologies": [
+                "vite"
+              ],
+              "description": "Run Vite build",
+              "help": {
+                "command": "yarn vite build --help",
+                "example": {
+                  "options": {
+                    "sourcemap": true,
+                    "manifest": "manifest.json"
+                  }
+                }
+              },
+              "scriptContent": "nx build",
+              "runCommand": "yarn build"
+            },
+            "options": {
+              "script": "build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "serve": {
+            "executor": "@nx/vite:dev-server",
+            "options": {
+              "buildTarget": "cnpm:build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "preview": {
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "cwd": ".",
+              "command": "vite preview"
+            },
+            "metadata": {
+              "technologies": [
+                "vite"
+              ],
+              "description": "Locally preview Vite production build",
+              "help": {
+                "command": "yarn vite preview --help",
+                "example": {
+                  "options": {
+                    "port": 3000
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "serve-static": {
+            "executor": "@nx/web:file-server",
+            "options": {
+              "buildTarget": "build",
+              "spa": true
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "typecheck": {
+            "cache": true,
+            "inputs": [
+              "production",
+              "^production",
+              {
+                "externalDependencies": [
+                  "typescript"
+                ]
+              }
+            ],
+            "options": {
+              "cwd": ".",
+              "command": "tsc --noEmit -p tsconfig.app.json"
+            },
+            "metadata": {
+              "description": "Run Typechecking",
+              "help": {
+                "command": "yarn tsc --help -p tsconfig.app.json",
+                "example": {
+                  "options": {
+                    "noEmit": true
+                  }
+                }
+              }
+            },
+            "executor": "nx:run-commands",
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "technologies": [
+                "vite"
+              ],
+              "description": "Run Vite tests",
+              "help": {
+                "command": "yarn vitest --help",
+                "example": {
+                  "options": {
+                    "bail": 1,
+                    "coverage": true
+                  }
+                }
+              },
+              "scriptContent": "nx test",
+              "runCommand": "yarn test"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
           "lint": {
             "cache": true,
             "options": {
@@ -236,61 +373,15 @@
             },
             "configurations": {},
             "parallelism": true
-          },
-          "build": {
-            "executor": "nx:run-script",
-            "metadata": {
-              "scriptContent": "nx build",
-              "runCommand": "yarn build"
-            },
-            "options": {
-              "script": "build"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "test": {
-            "executor": "nx:run-script",
-            "options": {
-              "script": "test"
-            },
-            "metadata": {
-              "scriptContent": "nx test",
-              "runCommand": "yarn test"
-            },
-            "configurations": {},
-            "parallelism": true
-          },
-          "serve": {
-            "executor": "@nx/vite:dev-server",
-            "options": {
-              "buildTarget": "cnpm:build"
-            },
-            "configurations": {},
-            "parallelism": true
           }
         },
         "name": "cnpm",
         "tags": [
           "npm:private"
         ],
-        "metadata": {
-          "targetGroups": {
-            "NPM Scripts": [
-              "start",
-              "build",
-              "test"
-            ]
-          },
-          "js": {
-            "packageName": "nckh-fe",
-            "isInPackageManagerWorkspaces": true
-          }
-        },
         "$schema": "node_modules/nx/schemas/project-schema.json",
         "includedScripts": [],
         "sourceRoot": "./src",
-        "projectType": "application",
         "implicitDependencies": []
       }
     }
@@ -30734,152 +30825,6 @@
     ]
   },
   "version": "6.0",
-  "errors": [
-    {
-      "stack": " - vite.config.ts: TypeError: Cannot read properties of undefined (reading 'toLowerCase')\n    at D:\\SRPM-master\\vite.config.ts:51:57\n    at loadConfigFromFile (file:///D:/SRPM-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:49224:64)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async resolveConfig (file:///D:/SRPM-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:48718:24)\n    at async buildViteTargets (D:\\SRPM-master\\node_modules\\@nx\\vite\\src\\plugins\\plugin.js:113:29)\n    at async createNodesInternal (D:\\SRPM-master\\node_modules\\@nx\\vite\\src\\plugins\\plugin.js:79:18)\n    at async D:\\SRPM-master\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:27\n    at async Promise.all (index 1)\n    at async createNodesFromFiles (D:\\SRPM-master\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:5)\n    at async Array.createNodesV2 (D:\\SRPM-master\\node_modules\\@nx\\vite\\src\\plugins\\plugin.js:50:20)",
-      "message": "An error occurred while processing files for the @nx/vite/plugin plugin\n.\n  - vite.config.ts: Cannot read properties of undefined (reading 'toLowerCase')",
-      "errors": [
-        [
-          "vite.config.ts",
-          {
-            "stack": "TypeError: Cannot read properties of undefined (reading 'toLowerCase')\n    at D:\\SRPM-master\\vite.config.ts:51:57\n    at loadConfigFromFile (file:///D:/SRPM-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:49224:64)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async resolveConfig (file:///D:/SRPM-master/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:48718:24)\n    at async buildViteTargets (D:\\SRPM-master\\node_modules\\@nx\\vite\\src\\plugins\\plugin.js:113:29)\n    at async createNodesInternal (D:\\SRPM-master\\node_modules\\@nx\\vite\\src\\plugins\\plugin.js:79:18)\n    at async D:\\SRPM-master\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:10:27\n    at async Promise.all (index 1)\n    at async createNodesFromFiles (D:\\SRPM-master\\node_modules\\nx\\src\\project-graph\\plugins\\utils.js:8:5)\n    at async Array.createNodesV2 (D:\\SRPM-master\\node_modules\\@nx\\vite\\src\\plugins\\plugin.js:50:20)",
-            "message": "Cannot read properties of undefined (reading 'toLowerCase')"
-          }
-        ]
-      ],
-      "partialResults": [
-        [
-          "my-tailwind-app/vite.config.ts",
-          {
-            "projects": {
-              "my-tailwind-app": {
-                "root": "my-tailwind-app",
-                "targets": {
-                  "build": {
-                    "command": "vite build",
-                    "options": {
-                      "cwd": "my-tailwind-app"
-                    },
-                    "cache": true,
-                    "dependsOn": [
-                      "^build"
-                    ],
-                    "inputs": [
-                      "production",
-                      "^production",
-                      {
-                        "externalDependencies": [
-                          "vite"
-                        ]
-                      }
-                    ],
-                    "outputs": [
-                      "{projectRoot}/dist"
-                    ],
-                    "metadata": {
-                      "technologies": [
-                        "vite"
-                      ],
-                      "description": "Run Vite build",
-                      "help": {
-                        "command": "yarn vite build --help",
-                        "example": {
-                          "options": {
-                            "sourcemap": true,
-                            "manifest": "manifest.json"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "serve": {
-                    "command": "vite serve",
-                    "options": {
-                      "cwd": "my-tailwind-app"
-                    },
-                    "metadata": {
-                      "technologies": [
-                        "vite"
-                      ],
-                      "description": "Starts Vite dev server",
-                      "help": {
-                        "command": "yarn vite --help",
-                        "example": {
-                          "options": {
-                            "port": 3000
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "preview": {
-                    "command": "vite preview",
-                    "dependsOn": [
-                      "build"
-                    ],
-                    "options": {
-                      "cwd": "my-tailwind-app"
-                    },
-                    "metadata": {
-                      "technologies": [
-                        "vite"
-                      ],
-                      "description": "Locally preview Vite production build",
-                      "help": {
-                        "command": "yarn vite preview --help",
-                        "example": {
-                          "options": {
-                            "port": 3000
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "serve-static": {
-                    "executor": "@nx/web:file-server",
-                    "options": {
-                      "buildTarget": "build",
-                      "spa": true
-                    }
-                  },
-                  "typecheck": {
-                    "cache": true,
-                    "inputs": [
-                      "production",
-                      "^production",
-                      {
-                        "externalDependencies": [
-                          "typescript"
-                        ]
-                      }
-                    ],
-                    "command": "tsc --noEmit -p tsconfig.app.json",
-                    "options": {
-                      "cwd": "my-tailwind-app"
-                    },
-                    "metadata": {
-                      "description": "Run Typechecking",
-                      "help": {
-                        "command": "yarn tsc --help -p tsconfig.app.json",
-                        "example": {
-                          "options": {
-                            "noEmit": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "metadata": {},
-                "projectType": "application"
-              }
-            }
-          }
-        ]
-      ],
-      "name": "AggregateCreateNodesError",
-      "pluginIndex": 0
-    }
-  ],
-  "computedAt": 1750008319070
+  "errors": [],
+  "computedAt": 1750009702800
 }
