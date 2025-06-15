@@ -1,0 +1,267 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:38:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/LoginPage.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:39:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/app/app.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:46:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien2.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:48:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx[22m
+[2m3:48:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m3:48:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+[2m3:48:49 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component" from "src/pages/DashboardQuanTriVien2.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/DashboardQuanTriVien2.tsx[39m:8:83
+[33m  22 |  import Header from "@cnpm/components/Header";
+  23 |  import { getAllUsers } from "@cnpm/services/userService";
+  24 |  import { UserPerformanceChart, UserInteractionChart, TimeFilter, RoleFilter } from "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component";
+     |                                                                                      ^
+  25 |  const DashboardQuanTriVien2 = () => {
+  26 |    _s();[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:48:50 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component" from "src/pages/DashboardQuanTriVien2.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/DashboardQuanTriVien2.tsx[39m:8:83
+[33m  22 |  import Header from "@cnpm/components/Header";
+  23 |  import { getAllUsers } from "@cnpm/services/userService";
+  24 |  import { UserPerformanceChart, UserInteractionChart, TimeFilter, RoleFilter } from "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component";
+     |                                                                                      ^
+  25 |  const DashboardQuanTriVien2 = () => {
+  26 |    _s();[39m
+      at TransformPluginContext._formatLog (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:48:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+[2m3:48:50 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component" from "src/pages/DashboardQuanTriVien2.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/DashboardQuanTriVien2.tsx[39m:8:83
+[33m  22 |  import Header from "@cnpm/components/Header";
+  23 |  import { getAllUsers } from "@cnpm/services/userService";
+  24 |  import { UserPerformanceChart, UserInteractionChart, TimeFilter, RoleFilter } from "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component";
+     |                                                                                      ^
+  25 |  const DashboardQuanTriVien2 = () => {
+  26 |    _s();[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:48:50 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component" from "src/pages/DashboardQuanTriVien2.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/DashboardQuanTriVien2.tsx[39m:8:83
+[33m  22 |  import Header from "@cnpm/components/Header";
+  23 |  import { getAllUsers } from "@cnpm/services/userService";
+  24 |  import { UserPerformanceChart, UserInteractionChart, TimeFilter, RoleFilter } from "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component";
+     |                                                                                      ^
+  25 |  const DashboardQuanTriVien2 = () => {
+  26 |    _s();[39m
+      at TransformPluginContext._formatLog (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 8)
+      at async TransformPluginContext.transform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:03:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:03:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/pages/DashboardQuanTriVien2.tsx, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:03:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien2.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:04:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien2.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+^C
