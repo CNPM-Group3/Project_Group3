@@ -3,6 +3,9 @@ using SRPM.API.Models;
 using SRPM.API.Services;
 using System.Web;
 using Task = System.Threading.Tasks.Task;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace SRPM.API.Controllers
 {
@@ -12,28 +15,32 @@ namespace SRPM.API.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IGoogleAuthService _googleAuthService;
-        // private readonly IConfiguration _configuration;
-        public AuthController(IAuthService authService, IGoogleAuthService googleAuthService)
+        private readonly IConfiguration _configuration;
+        
+        public AuthController(IAuthService authService, IGoogleAuthService googleAuthService, IConfiguration configuration)
         {
             _authService = authService;
             _googleAuthService = googleAuthService;
-            // _configuration = configuration;
+            _configuration = configuration;
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<AuthResponse>> Login([FromBody] LoginRequest request)
+        [SwaggerOperation(Summary = "Đăng nhập")]
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
             if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
-                return BadRequest(new AuthResponse { Success = false, Message = "Email and password are required." });
+                return BadRequest(new { success = false, message = "Email and password are required." });
 
             var response = await _authService.LoginAsync(request);
             if (!response.Success)
-                return BadRequest(response);
+                return BadRequest(new { success = false, message = response.Message });
 
-            return Ok(response);
+            return Ok(new { success = true, token = response.Token, user = response.User });
         }
 
+
         [HttpPost("register")]
+        [SwaggerOperation(Summary = "Đăng ký tài khoản mới")]
         public async Task<ActionResult<AuthResponse>> Register([FromBody] RegisterRequest request)
         {
             if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Name) || string.IsNullOrEmpty(request.Password))
@@ -46,21 +53,23 @@ namespace SRPM.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost("google-login")]
-        public async Task<ActionResult<AuthResponse>> GoogleLogin([FromBody] GoogleLoginRequest request)
-        {
-            if (string.IsNullOrEmpty(request.GoogleToken))
-                return BadRequest(new AuthResponse { Success = false, Message = "Google token is required." });
+        // [HttpPost("google-login")]
+        // [SwaggerOperation(Summary = "Đăng ký tài khoản mới")]
+        // public async Task<ActionResult<AuthResponse>> GoogleLogin([FromBody] GoogleLoginRequest request)
+        // {
+        //     if (string.IsNullOrEmpty(request.GoogleToken))
+        //         return BadRequest(new AuthResponse { Success = false, Message = "Google token is required." });
 
-            var response = await _authService.LoginWithGoogleAsync(request);
-            if (!response.Success)
-                return BadRequest(response);
+        //     var response = await _authService.LoginWithGoogleAsync(request);
+        //     if (!response.Success)
+        //         return BadRequest(response);
 
-            return Ok(response);
-        }
+        //     return Ok(response);
+        // }
 
         // Google OAuth2 Endpoints
         [HttpGet("google/signup")]
+        [SwaggerOperation(Summary = "Đăng ký tài khoản mới bằng Google")]
         public IActionResult InitiateGoogleSignUp()
         {
             try
@@ -70,15 +79,13 @@ namespace SRPM.API.Controllers
             }
             catch (Exception ex)
             {
-                // return BadRequest(new { error = "Failed to initiate Google sign up", message = ex.Message });
-                 // Log lỗi (nếu bạn dùng ILogger thì log ở đây)
                 Console.WriteLine("Exception in GoogleSignup: " + ex.ToString());
-
                 return StatusCode(500, "Internal server error");
             }
         }
 
         [HttpGet("google/signin")]
+        [SwaggerOperation(Summary = "Đăng nhập bằng Google")]
         public IActionResult InitiateGoogleSignIn()
         {
             try
@@ -93,8 +100,12 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("google/signup/callback")]
+        [SwaggerOperation(Summary = "Callback sau khi đăng ký tài khoản bằng Google")]
         public async Task<ActionResult<AuthResponse>> HandleGoogleSignUpCallback([FromQuery] string code, [FromQuery] string state)
         {
+            // Lấy frontend URL một lần duy nhất
+            var frontendUrl = _configuration["Frontend:BaseUrl"] ?? "http://localhost:8081";
+            
             try
             {
                 if (string.IsNullOrEmpty(code))
@@ -102,39 +113,62 @@ namespace SRPM.API.Controllers
 
                 var response = await _googleAuthService.HandleGoogleCallbackAsync(code, "signup");
                 if (!response.Success)
-                    return BadRequest(response);
+                {
+                    // Redirect về frontend với error
+                    var errorUrl = $"{frontendUrl}/google-callback?error={Uri.EscapeDataString(response.Message)}";
+                    return Redirect(errorUrl);
+                }
 
-                return Ok(response);
+                // Nếu đăng ký thành công, redirect về trang đăng nhập
+                var redirectUrl = $"{frontendUrl}/thanhviennghiencuu?message={Uri.EscapeDataString("Registration successful! Please sign in.")}";
+                return Redirect(redirectUrl);
             }
             catch (Exception ex)
             {
-                return BadRequest(new AuthResponse 
-                { 
-                    Success = false, 
-                    Message = "Failed to process Google sign up callback", 
-                    Error = ex.Message 
-                });
+                Console.WriteLine("Exception in HandleGoogleSignUpCallback: " + ex.ToString());
+                
+                // Redirect về frontend với error
+                var errorUrl = $"{frontendUrl}/google-callback?error={Uri.EscapeDataString("Registration failed")}";
+                return Redirect(errorUrl);
             }
         }
 
         [HttpGet("google/signin/callback")]
+        [SwaggerOperation(Summary = "Callback sau khi đăng nhập bằng Google")]
         public async Task<IActionResult> HandleGoogleSignInCallback([FromQuery] string code, [FromQuery] string state)
         {
-            if (string.IsNullOrEmpty(code))
-                return BadRequest("Authorization code is required.");
+            // Lấy frontend URL một lần duy nhất
+            var frontendUrl = _configuration["Frontend:BaseUrl"] ?? "http://localhost:8081";
+            
+            try
+            {
+                if (string.IsNullOrEmpty(code))
+                    return BadRequest("Authorization code is required.");
 
-            var response = await _googleAuthService.HandleGoogleCallbackAsync(code, "signin");
-            if (!response.Success)
-                return BadRequest(response);
+                var response = await _googleAuthService.HandleGoogleCallbackAsync(code, "signin");
+                if (!response.Success)
+                {
+                    // Redirect về frontend với error
+                    var errorUrl = $"{frontendUrl}/google-callback?error={Uri.EscapeDataString(response.Message)}";
+                    return Redirect(errorUrl);
+                }
 
-            // Giả sử response chứa token
-            var token = response.AccessToken;
+                // Giả sử response chứa token
+                var token = response.AccessToken;
 
-            // Redirect về frontend, gửi token dưới dạng query param hoặc fragment
-            var redirectUrl = $"http://aienthusiasm.vn:8080//thanhviennghiencuu?token={token}";
+                // Redirect về frontend với token
+                var redirectUrl = $"{frontendUrl}/google-callback?token={Uri.EscapeDataString(token)}&success=true";
 
-            return Redirect(redirectUrl);
+                return Redirect(redirectUrl);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception in HandleGoogleSignInCallback: " + ex.ToString());
+                
+                // Redirect về frontend với error
+                var errorUrl = $"{frontendUrl}/google-callback?error={Uri.EscapeDataString("Authentication failed")}";
+                return Redirect(errorUrl);
+            }
         }
-
     }
 }
