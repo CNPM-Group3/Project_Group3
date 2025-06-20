@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 
 interface FileUploadProps {
-  onFileChange?: (file: File | null) => void;
-  accept?: string;
-  label?: string;
+  onFileUpload?: (files: File[]) => void;
+  maxFiles?: number;
+  acceptedFileTypes?: string;
 }
 
 const formatBytes = (bytes: number, decimals = 2) => {
@@ -16,75 +16,107 @@ const formatBytes = (bytes: number, decimals = 2) => {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 };
 
-export const FileUpload: React.FC<FileUploadProps> = ({
-  onFileChange,
-  accept = ".pdf,.doc,.docx,.txt",
-  label = "Tải bài nộp nhiệm vụ:",
+const FileUpload: React.FC<FileUploadProps> = ({
+  onFileUpload,
+  maxFiles = 5,
+  acceptedFileTypes = '.pdf,.doc,.docx,.ppt,.pptx'
 }) => {
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [files, setFiles] = useState<File[]>([]);
+  const [dragActive, setDragActive] = useState(false);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0] || null;
-    setSelectedFile(file);
-    if (onFileChange) {
-      onFileChange(file);
+  const handleDrag = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.type === "dragenter" || e.type === "dragover") {
+      setDragActive(true);
+    } else if (e.type === "dragleave") {
+      setDragActive(false);
     }
   };
 
-  const handleEditClick = () => {
-    setSelectedFile(null);
-    if (onFileChange) {
-      onFileChange(null);
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleFiles(e.dataTransfer.files);
     }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    if (e.target.files && e.target.files[0]) {
+      handleFiles(e.target.files);
+    }
+  };
+
+  const handleFiles = (fileList: FileList) => {
+    const newFiles = Array.from(fileList);
+    if (files.length + newFiles.length > maxFiles) {
+      alert(`Bạn chỉ có thể tải lên tối đa ${maxFiles} file`);
+      return;
+    }
+    setFiles(prev => [...prev, ...newFiles]);
+    onFileUpload?.(newFiles);
+  };
+
+  const removeFile = (index: number) => {
+    setFiles(prev => prev.filter((_, i) => i !== index));
   };
 
   return (
-    <section className="w-full bg-black bg-opacity-0 max-w-[1099px] max-md:max-w-full">
-      <label className="py-0.5 max-w-full text-xl font-bold bg-black bg-opacity-0 text-slate-600 w-[704px] max-md:pr-5 block">
-        {label}
-      </label>
-      <div className="pb-6 text-sm text-center text-gray-500 bg-black bg-opacity-0 max-md:max-w-full">
-        {selectedFile ? (
-          <div className="flex items-center justify-between px-5 py-3 bg-white rounded-lg border border-gray-300 max-md:px-3">
-            <div className="flex items-center gap-3">
-              {/* Simple file icon - replace with more specific icons if needed */}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-2m3 2v-2m0 4h.01M12 11V9m0 0V6m0 3a3 3 0 110 6m-9 4h16a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <div className="flex flex-col items-start">
-                <span className="text-sm font-medium text-gray-800">{selectedFile.name}</span>
-                <span className="text-xs text-gray-500">{formatBytes(selectedFile.size)}</span>
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={handleEditClick}
-              className="px-3 py-1 text-sm font-medium text-blue-600 rounded hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Sửa
-            </button>
-          </div>
-        ) : (
-          <label className="flex flex-col justify-center items-center px-20 py-7 bg-white rounded-lg border-2 border-gray-300 border-dashed max-md:px-5 max-md:max-w-full cursor-pointer hover:bg-gray-50 transition-colors">
-            <div className="flex flex-col max-w-full w-[198px]">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/691c38ade3eb9038aa2283219e94bbfa83e18b3b?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a"
-                alt="Upload icon"
-                className="object-contain self-center aspect-[1.27] w-[38px]"
-              />
-              <div className="px-5 py-1 mt-2 bg-black bg-opacity-0 max-md:px-5">
-                Tải file
-              </div>
-            </div>
-            <input
-              type="file"
-              onChange={handleFileChange}
-              className="hidden"
-              accept={accept}
-            />
-          </label>
-        )}
+    <div className="bg-white rounded-lg shadow p-6">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">Tải lên tài liệu</h2>
+      
+      <div
+        className={`border-2 border-dashed rounded-lg p-6 text-center ${
+          dragActive ? 'border-blue-500 bg-blue-50' : 'border-gray-300'
+        }`}
+        onDragEnter={handleDrag}
+        onDragLeave={handleDrag}
+        onDragOver={handleDrag}
+        onDrop={handleDrop}
+      >
+        <input
+          type="file"
+          multiple
+          accept={acceptedFileTypes}
+          onChange={handleChange}
+          className="hidden"
+          id="file-upload"
+        />
+        <label
+          htmlFor="file-upload"
+          className="cursor-pointer inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+        >
+          Chọn file
+        </label>
+        <p className="mt-2 text-sm text-gray-500">
+          hoặc kéo và thả file vào đây
+        </p>
       </div>
-    </section>
+
+      {files.length > 0 && (
+        <div className="mt-4">
+          <h3 className="text-sm font-medium text-gray-500 mb-2">Files đã chọn:</h3>
+          <ul className="space-y-2">
+            {files.map((file, index) => (
+              <li key={index} className="flex items-center justify-between text-sm">
+                <span className="text-gray-700">{file.name}</span>
+                <button
+                  onClick={() => removeFile(index)}
+                  className="text-red-600 hover:text-red-800"
+                >
+                  Xóa
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 };
+
+export default FileUpload;

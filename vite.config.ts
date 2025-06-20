@@ -21,9 +21,9 @@ export default defineConfig(({ mode }) => {
       host: new URL(env.VITE_SERVER_URL).hostname || 'localhost',
       proxy: {
         '/api': {
-          target: env.VITE_API_URL,
+          target: 'http://aienthusiasm.vn:8080',
           changeOrigin: true,
-          secure: isProd,
+          secure: false,
         },
       },
     },

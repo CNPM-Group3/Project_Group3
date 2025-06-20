@@ -1,32 +1,23 @@
-import React from "react";
+import React from 'react';
 
 interface TaskHeaderProps {
-  projectName?: string;
-  taskName?: string;
-  iconUrl?: string;
+  title?: string;
+  status?: string;
 }
 
-export const TaskHeader: React.FC<TaskHeaderProps> = ({
-  projectName = "Tên dự án",
-  taskName = "Nhiệm vụ 1",
-  iconUrl = "https://cdn.builder.io/api/v1/image/assets/TEMP/4009dff95255aa53a2b4ee445dcfe42f484713dd?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
-}) => {
+const TaskHeader: React.FC<TaskHeaderProps> = ({ title, status }) => {
   return (
-    <section className="flex flex-col items-center">
-      <h1 className="mt-8 text-3xl font-bold text-gray-700">{projectName}</h1>
-      <div className="shrink-0 mt-7 max-w-full h-px border border-gray-300 border-solid w-[1061px]" />
-      <div className="flex flex-wrap gap-3 items-center px-3.5 py-2.5 mt-3 w-full rounded-xl bg-slate-50 max-w-[1053px] min-h-20 max-md:max-w-full">
-        <div className="flex justify-between items-center self-stretch my-auto min-h-[60px] w-[60px]">
-          <img
-            src={iconUrl}
-            alt="Task icon"
-            className="object-contain self-stretch my-auto rounded-lg aspect-square w-[60px]"
-          />
+    <div className="bg-white rounded-lg shadow p-6">
+      <h1 className="text-2xl font-bold text-gray-900">{title || 'Chi tiết nhiệm vụ'}</h1>
+      {status && (
+        <div className="mt-2">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+            {status}
+          </span>
         </div>
-        <h2 className="self-stretch my-auto text-2xl font-semibold text-center text-slate-600">
-          {taskName}
-        </h2>
-      </div>
-    </section>
+      )}
+    </div>
   );
 };
+
+export default TaskHeader;

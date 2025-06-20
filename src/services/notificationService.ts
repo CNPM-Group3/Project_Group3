@@ -12,6 +12,13 @@ export interface Notification {
   userId: string;            // ID người dùng
 }
 
+export interface NotificationResponse {
+  data: Notification[];
+  total: number;
+  page: number;
+  limit: number;
+}
+
 // Lấy thông tin chi tiết một thông báo
 export const getNotificationDetails = async (
   id: string
@@ -76,6 +83,66 @@ export const deleteNotification = async (id: string): Promise<AxiosResponse> => 
     return response;
   } catch (error) {
     console.error(`Error deleting notification with id ${id}:`, error);
+    throw error;
+  }
+};
+
+// Lấy thông báo theo ID
+export const getNotificationById = async (id: string): Promise<Notification> => {
+  try {
+    const response = await ApiService.get<Notification>(`/notifications/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching notification with id ${id}:`, error);
+    throw error;
+  }
+};
+
+// Lấy tất cả thông báo với phân trang và lọc
+export const getAllNotifications = async (params?: {
+  page?: number;
+  limit?: number;
+  type?: string;
+  isRead?: boolean;
+}): Promise<NotificationResponse> => {
+  try {
+    const response = await ApiService.get<NotificationResponse>('/notifications', { params });
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching all notifications:', error);
+    throw error;
+  }
+};
+
+// Đếm số thông báo chưa đọc
+export const getUnreadCount = async (): Promise<number> => {
+  try {
+    const response = await getUnreadNotifications();
+    return response.length;
+  } catch (error) {
+    console.error('Error getting unread count:', error);
+    throw error;
+  }
+};
+
+// Xóa nhiều thông báo
+export const bulkDeleteNotifications = async (ids: string[]): Promise<void> => {
+  try {
+    const deletePromises = ids.map(id => deleteNotification(id));
+    await Promise.all(deletePromises);
+  } catch (error) {
+    console.error('Error bulk deleting notifications:', error);
+    throw error;
+  }
+};
+
+// Đánh dấu nhiều thông báo đã đọc
+export const markMultipleAsRead = async (ids: string[]): Promise<void> => {
+  try {
+    const markPromises = ids.map(id => markAsRead(id));
+    await Promise.all(markPromises);
+  } catch (error) {
+    console.error('Error marking multiple notifications as read:', error);
     throw error;
   }
 };

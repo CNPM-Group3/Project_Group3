@@ -40,3 +40,50 @@ export const PresentationForm: React.FC<PresentationFormProps> = ({
     </section>
   );
 };
+
+interface PresentationProps {
+  title?: string;
+  content?: string;
+  attachments?: Array<{
+    name: string;
+    url: string;
+  }>;
+}
+
+export const Presentation: React.FC<PresentationProps> = ({
+  title = 'Presentation',
+  content = 'No content available',
+  attachments = []
+}) => {
+  return (
+    <div className="bg-white rounded-lg shadow p-6">
+      <h2 className="text-xl font-semibold text-gray-900 mb-4">{title}</h2>
+      
+      <div className="prose max-w-none">
+        <p className="text-gray-700">{content}</p>
+      </div>
+
+      {attachments.length > 0 && (
+        <div className="mt-6">
+          <h3 className="text-sm font-medium text-gray-500 mb-2">Attachments:</h3>
+          <ul className="space-y-2">
+            {attachments.map((attachment, index) => (
+              <li key={index} className="flex items-center">
+                <a
+                  href={attachment.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  {attachment.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Presentation;
