@@ -7,7 +7,5 @@ export const PublicRoute = () => {
 };
 
 export const ProtectedRoute = () => {
-  const user = sessionStorage.getItem('accessToken');
-
-  return user ? <Outlet /> : <Navigate to="/signin" replace />;
+  return <Outlet />;
 };
