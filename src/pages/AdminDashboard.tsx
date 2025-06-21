@@ -1,38 +1,47 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "@cnpm/components/Admin/Sidebar1";
 import Header from "@cnpm/components/Header";
-import { AddUserForm, ApprovalSection, 
-  UserTable,
-  User,
-  ApprovalRequest  } from "@cnpm/components/Admin/AddUserForm";
-
-const mockUsers: User[] = [
-  { name: "Nguyễn Văn A", email: "fe@ut.edu.vn", phone: "0000000001", role: "Sinh viên", status: "Hoạt động" },
-  { name: "Trần Thị B", email: "b@gv.ut.edu.vn", phone: "0000000002", role: "Giảng viên", status: "Hoạt động" },
-  { name: "Lê Văn C", email: "c@st.ut.edu.vn", phone: "0000000003", role: "Nhân viên", status: "Hoạt động" },
-  { name: "Bùi Bảo D", email: "d@it.ut.edu.vn", phone: "0000000004", role: "Quản trị viên", status: "Hoạt động" },
-];
-
-const mockRequests: ApprovalRequest[] = [
-  { sender: "Nguyên Văn A", requestType: "Đăng ký đề tài", date: "12/05/2025", status: "Chờ duyệt" },
-  { sender: "Trần Thị B", requestType: "Cập nhật hồ sơ", date: "13/05/2025", status: "Chờ duyệt" },
-];
+import { UserTable, User } from "@cnpm/components/Admin/AddUserForm";
+import { ApiUser, getAllUsers } from "@cnpm/services/userService";
 
 const InputDesign: React.FC = () => {
+  const [users, setUsers] = useState<User[]>([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const apiUsers = await getAllUsers();
+        // Transform ApiUser[] to User[] to match the expected interface
+        const transformedUsers: User[] = apiUsers.map((apiUser: ApiUser) => ({
+          name: apiUser.fullName,
+          email: apiUser.email,
+          phone: "N/A", // Default value since ApiUser doesn't have phone
+          role: apiUser.role,
+          status: apiUser.status
+        }));
+        setUsers(transformedUsers);
+      } catch (error) {
+        console.error("Lỗi khi tải người dùng:", error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
   return (
     <div className="flex min-h-screen bg-gray-50">
       <aside className="w-64 bg-gray-50 border-r border-gray-200">
         <Sidebar />
       </aside>
 
+      {/* Main content */}
       <div className="flex-1 flex flex-col">
         <Header />
-        <main className="p-6 flex-1 overflow-y-auto">
+        <main className="p-6 flex-1 overflow-y-auto bg-gray-50">
           {/* Top bar */}
           <div className="flex flex-wrap gap-8 mb-6 items-center">
-            {/* Search */}
             <div className="relative w-96 max-md:w-full">
               <input
                 type="text"
@@ -48,29 +57,10 @@ const InputDesign: React.FC = () => {
                 </svg>
               </div>
             </div>
-
-            {/* Role filter */}
-            <div className="flex flex-wrap gap-4 items-center text-base text-gray-700">
-              <span className="font-medium">Loại tài khoản:</span>
-              {["Tất cả", "Sinh viên", "Giảng viên", "Nhân viên", "Quản trị viên"].map((label, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 rounded-md cursor-pointer hover:bg-blue-100 hover:text-blue-700 transition"
-                >
-                  {label}
-                </span>
-              ))}
-            </div>
           </div>
 
           {/* User table */}
-          <UserTable users={mockUsers} />
-
-          {/* Forms */}
-          <div className="flex gap-6 mt-6 flex-wrap max-md:flex-col">
-            <AddUserForm />
-            <ApprovalSection requests={mockRequests} />
-          </div>
+          <UserTable users={users} />
         </main>
       </div>
     </div>
