@@ -1,0 +1,1219 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.1",
+  "pathMappings": {
+    "@cnpm/*": [
+      "src/*"
+    ]
+  },
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/vite/plugin",
+      "options": {
+        "buildTargetName": "build",
+        "testTargetName": "test",
+        "serveTargetName": "serve",
+        "previewTargetName": "preview",
+        "serveStaticTargetName": "serve-static",
+        "typecheckTargetName": "typecheck"
+      }
+    },
+    {
+      "name": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    },
+    {
+      "name": "@nx/playwright/plugin",
+      "options": {
+        "targetName": "e2e"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "cnpm": [
+        {
+          "file": ".gitignore",
+          "hash": "1571298513858507829"
+        },
+        {
+          "file": ".hintrc",
+          "hash": "17855454579832381556"
+        },
+        {
+          "file": ".yarnrc.yml",
+          "hash": "9773565372686775399"
+        },
+        {
+          "file": "README.md",
+          "hash": "17672139874103256258"
+        },
+        {
+          "file": "components.json",
+          "hash": "11738164967971207906"
+        },
+        {
+          "file": "eslint.config.js",
+          "hash": "18136715864555996736",
+          "deps": [
+            "npm:@nx/eslint-plugin"
+          ]
+        },
+        {
+          "file": "et --hard e1de1394",
+          "hash": "13434071775584521750"
+        },
+        {
+          "file": "index.html",
+          "hash": "6574704810469411809"
+        },
+        {
+          "file": "nx",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "nx.json",
+          "hash": "9706462007831065814"
+        },
+        {
+          "file": "package-lock.json",
+          "hash": "12398773082828187497"
+        },
+        {
+          "file": "package.json",
+          "hash": "13745992578956413073",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@nx/devkit",
+            "npm:@nx/eslint",
+            "npm:@nx/eslint-plugin",
+            "npm:@nx/js",
+            "npm:@nx/playwright",
+            "npm:@nx/react",
+            "npm:@nx/vite",
+            "npm:@nx/web",
+            "npm:@nx/workspace",
+            "npm:@playwright/test",
+            "npm:@swc-node/register",
+            "npm:@swc/cli",
+            "npm:@swc/core",
+            "npm:@swc/helpers",
+            "npm:@tanstack/eslint-plugin-query",
+            "npm:@testing-library/react",
+            "npm:@types/d3-format",
+            "npm:@types/d3-time-format",
+            "npm:@types/node",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/react-router-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:@vitest/coverage-v8",
+            "npm:@vitest/ui",
+            "npm:autoprefixer",
+            "npm:eslint",
+            "npm:eslint-config-prettier",
+            "npm:eslint-plugin-import",
+            "npm:eslint-plugin-jsx-a11y",
+            "npm:eslint-plugin-playwright",
+            "npm:eslint-plugin-react",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:jsdom",
+            "npm:nx",
+            "npm:postcss",
+            "npm:prettier",
+            "npm:tailwindcss",
+            "npm:tslib",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:vitest",
+            "npm:@casl/ability",
+            "npm:@casl/react",
+            "npm:@heroicons/react",
+            "npm:@radix-ui/react-alert-dialog",
+            "npm:@radix-ui/react-avatar",
+            "npm:@radix-ui/react-dialog",
+            "npm:@radix-ui/react-menubar",
+            "npm:@radix-ui/react-separator",
+            "npm:@radix-ui/react-slot",
+            "npm:@radix-ui/react-tooltip",
+            "npm:@react-financial-charts/annotations",
+            "npm:@react-financial-charts/axes",
+            "npm:@react-financial-charts/coordinates",
+            "npm:@react-financial-charts/indicators",
+            "npm:@react-financial-charts/interactive",
+            "npm:@react-financial-charts/series",
+            "npm:@react-financial-charts/tooltip",
+            "npm:@react-financial-charts/utils",
+            "npm:@react-oauth/google",
+            "npm:@tanstack/react-query",
+            "npm:@tanstack/react-query-devtools",
+            "npm:apexcharts",
+            "npm:axios",
+            "npm:chart.js",
+            "npm:chartjs-adapter-date-fns",
+            "npm:chartjs-chart-financial",
+            "npm:class-variance-authority",
+            "npm:clsx",
+            "npm:d3",
+            "npm:d3-format",
+            "npm:d3-time-format",
+            "npm:dayjs",
+            "npm:dotenv",
+            "npm:formik",
+            "npm:i18next",
+            "npm:jwt-decode",
+            "npm:lucide-react",
+            "npm:moment",
+            "npm:moment-timezone",
+            "npm:react",
+            "npm:react-apexcharts",
+            "npm:react-chartjs-2",
+            "npm:react-d3-axis",
+            "npm:react-dom",
+            "npm:react-financial-charts",
+            "npm:react-i18next",
+            "npm:react-icons",
+            "npm:react-router-dom",
+            "npm:react-toastify",
+            "npm:recharts",
+            "npm:shadcn-cli",
+            "npm:shadcn-ui",
+            "npm:socket.io",
+            "npm:socket.io-client",
+            "npm:tailwind-merge",
+            "npm:tailwind-scrollbar-hide",
+            "npm:tailwindcss-animate",
+            "npm:toastify",
+            "npm:victory",
+            "npm:victory-chart",
+            "npm:vite-tsconfig-paths",
+            "npm:yarn",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "postcss.config.js",
+          "hash": "2759402739052110475"
+        },
+        {
+          "file": "project.json",
+          "hash": "14690660575003423352"
+        },
+        {
+          "file": "public/images/download (1).jpeg",
+          "hash": "711581090774610528"
+        },
+        {
+          "file": "public/images/images1.png",
+          "hash": "3479805116032819782"
+        },
+        {
+          "file": "public/logo-uth.png",
+          "hash": "9754980678907211993"
+        },
+        {
+          "file": "src/api/apiNoti.ts",
+          "hash": "16041305896598971655"
+        },
+        {
+          "file": "src/api/auth.ts",
+          "hash": "7615596583909950854",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/app/app.spec.tsx",
+          "hash": "5542615320256913024",
+          "deps": [
+            "npm:@testing-library/react"
+          ]
+        },
+        {
+          "file": "src/app/app.tsx",
+          "hash": "10834993879456260085",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:@react-oauth/google"
+          ]
+        },
+        {
+          "file": "src/app/nx-welcome.tsx",
+          "hash": "11014967127052082266"
+        },
+        {
+          "file": "src/components/Admin/AddUserForm.tsx",
+          "hash": "698250409640176448",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Admin/Sidebar1.tsx",
+          "hash": "5263809273236542002",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Auth/GoogleCallBack.tsx",
+          "hash": "9893962946882410308",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/ChiTietDuAn.tsx",
+          "hash": "4265892955448509566",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietDuAn/Sidebar.tsx",
+          "hash": "1114877867990389714",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/FileUpload.tsx",
+          "hash": "9672629476315711295",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/Presentation.tsx",
+          "hash": "2140216743419021158",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/Sidebar.tsx",
+          "hash": "15275156966027010715",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/SubmitButton.tsx",
+          "hash": "12777989627911903660",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/TaskDetails.tsx",
+          "hash": "9056856357423960868",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ChiTietNhiemVu/TaskHeader.tsx",
+          "hash": "11897325186075285314",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Du An/ProjectCard.tsx",
+          "hash": "8250855349937334990",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Du An/SearchInput.tsx",
+          "hash": "8462963593036480080",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Du An/Tao Du An/ProjectForm.tsx",
+          "hash": "11009057369920441023",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Du An/Tao Du An/ProjectFormSections.tsx",
+          "hash": "17875075032632473398",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Du An/Thêm Tài Liệu/DocumentUpload.tsx",
+          "hash": "8747304910366435779",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Du An/Thêm Tài Liệu/ThemTaiLieu.tsx",
+          "hash": "3643897306944704401",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Du An/ProjectList.tsx",
+          "hash": "13991331561351671",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Du An/ProjectListItem.tsx",
+          "hash": "4357120277634370846",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Du An/Sidebar.tsx",
+          "hash": "14309927980045057869",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Du An/TabSelector.tsx",
+          "hash": "8326136162790676001",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Tai Tro/SponsorshipList.tsx",
+          "hash": "9870324050288575414",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Tai Tro/SponsorshipListItem.tsx",
+          "hash": "16191936252615374882",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx",
+          "hash": "15485168853904547737",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Header.tsx",
+          "hash": "11685642227525880814",
+          "deps": [
+            "npm:react",
+            "npm:lucide-react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/HoiDongThamDinh/Sidebar.tsx",
+          "hash": "2717710824844891382",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/HoiDongThamDinh/StatusIndicator.tsx",
+          "hash": "7615769718421553533",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Icons/GoogleIcon.tsx",
+          "hash": "10511001869440559926"
+        },
+        {
+          "file": "src/components/Icons/UserIcon.tsx",
+          "hash": "17374983800139100890"
+        },
+        {
+          "file": "src/components/Log In Error/ErrorMessage.tsx",
+          "hash": "4883878513843537465",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Log In Error/FormInput.tsx",
+          "hash": "1542227349496807842"
+        },
+        {
+          "file": "src/components/Log In Error/Icons.tsx",
+          "hash": "6925858403893277148"
+        },
+        {
+          "file": "src/components/Log In Error/LoginFormError.tsx",
+          "hash": "8280679799689134186",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/FileUpload.tsx",
+          "hash": "16636490346293522305",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/FormField.tsx",
+          "hash": "15545325316749014588",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx",
+          "hash": "480446330016273443",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Profile/ResearchInfo.tsx",
+          "hash": "16400533966008214631"
+        },
+        {
+          "file": "src/components/Profile/UserDetails.tsx",
+          "hash": "12883007331288082761",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Protect/PublicRoute.tsx",
+          "hash": "13348130789805595267",
+          "deps": [
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx",
+          "hash": "2821019657314906024",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx",
+          "hash": "8281537669910457724",
+          "deps": [
+            "npm:react",
+            "npm:react-chartjs-2",
+            "npm:chart.js"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/RoleFilter.tsx",
+          "hash": "6241707677474553054",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/TimeFilter.tsx",
+          "hash": "13030960836014663211",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/UserActivityLineChart.tsx",
+          "hash": "18404068267873188398",
+          "deps": [
+            "npm:react",
+            "npm:react-chartjs-2",
+            "npm:chart.js"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/UserInteractionChart.tsx",
+          "hash": "13916280817242665745",
+          "deps": [
+            "npm:react",
+            "npm:react-chartjs-2",
+            "npm:chart.js"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien2/UserPerformanceChart.tsx",
+          "hash": "13985257078825564957",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/Sidebar.tsx",
+          "hash": "12243247896497660174",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/SystemConfigCard.tsx",
+          "hash": "6816397471141711062",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign In/LoginForm.tsx",
+          "hash": "2537584013546948776",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/Sign In/NewPassWordForm.tsx",
+          "hash": "15043673869551513888",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "src/components/Sign In/ResetCodeForm.tsx",
+          "hash": "2117138873468026487",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/Button.tsx",
+          "hash": "11354922186170937865",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/FormInput.tsx",
+          "hash": "2792370949412106661",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/GoogleForm.tsx",
+          "hash": "49258777151970277",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/SelectField.tsx",
+          "hash": "15359637236448118182",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Sign Up/SignUpForm.tsx",
+          "hash": "4380678648255060785",
+          "deps": [
+            "npm:react",
+            "npm:formik",
+            "npm:react-router-dom",
+            "npm:yup"
+          ]
+        },
+        {
+          "file": "src/components/Tai Tro/ProgressBar.tsx",
+          "hash": "16160566171485536504",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Tai Tro/SearchInput.tsx",
+          "hash": "10459861275788114305",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/Tai Tro/SponsorshipTable.tsx",
+          "hash": "13277693274043358556",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ThemNhiemVu/DatePicker.tsx",
+          "hash": "5301698676580261473",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ThemNhiemVu/FileUpload.tsx",
+          "hash": "7740382597482502814",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ThemNhiemVu/MemberSelect.tsx",
+          "hash": "13197416348958212916",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ThemNhiemVu/TaskForm.tsx",
+          "hash": "15556668261522504094",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/Icons.tsx",
+          "hash": "299484921808448417"
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/ProjectsTable.tsx",
+          "hash": "3587900464580117352",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/Sidebar.tsx",
+          "hash": "860040071547270574",
+          "deps": [
+            "npm:react-router-dom",
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/StatsCard.tsx",
+          "hash": "2533798825584812443"
+        },
+        {
+          "file": "src/components/TrangChuThanhVienNghienCuu/TaskList.tsx",
+          "hash": "11475766865778810716",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/ui/button.tsx",
+          "hash": "17804482923991153709",
+          "deps": [
+            "npm:react",
+            "npm:@radix-ui/react-slot",
+            "npm:class-variance-authority"
+          ]
+        },
+        {
+          "file": "src/components/ui/input.tsx",
+          "hash": "13649277834125760017",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/context/AuthContext.tsx",
+          "hash": "5472789045373484377",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/env.d.ts",
+          "hash": "11016168124724967822"
+        },
+        {
+          "file": "src/i18n/i18n.ts",
+          "hash": "17717553934123311592",
+          "deps": [
+            "npm:i18next",
+            "npm:react-i18next"
+          ]
+        },
+        {
+          "file": "src/layouts/MainLayout.tsx",
+          "hash": "15234978860246531782",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/lib/utils.ts",
+          "hash": "6483145186850064023",
+          "deps": [
+            "npm:clsx",
+            "npm:tailwind-merge"
+          ]
+        },
+        {
+          "file": "src/locales/en/home.json",
+          "hash": "15946693221110358903"
+        },
+        {
+          "file": "src/locales/vi/home.json",
+          "hash": "18121643604651804553"
+        },
+        {
+          "file": "src/main.tsx",
+          "hash": "6417444255490778096",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@tanstack/react-query",
+            "npm:@tanstack/react-query-devtools"
+          ]
+        },
+        {
+          "file": "src/pages/AdminDashboard.tsx",
+          "hash": "10973826845526369519",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ChiTietDuAn.tsx",
+          "hash": "6800728009567600029",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/pages/DashboardHoiOngThamInh.tsx",
+          "hash": "1435476109008533123",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/DashboardQuanTriVien.tsx",
+          "hash": "2129952357654355401",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/DashboardQuanTriVien1.tsx",
+          "hash": "5092743518698691766",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/DashboardQuanTriVien2.tsx",
+          "hash": "8426684246898373567",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/DuAn.tsx",
+          "hash": "14696900202679562733",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/pages/DuyetDuAn.tsx",
+          "hash": "9771396973012200366",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/DuyetTaiTro.tsx",
+          "hash": "12665606536720042216",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/LoginError.tsx",
+          "hash": "18390093509028508018",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/LoginPage.tsx",
+          "hash": "18360679475790447796",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/pages/PhieuYeuCauTaiTro.tsx",
+          "hash": "12407898474454150612",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/Profile.tsx",
+          "hash": "4797053697558577538",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/Profile1.tsx",
+          "hash": "2571406220778153523",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/Profile2.tsx",
+          "hash": "12831963483924290527",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/Profile3.tsx",
+          "hash": "7758035112392962103",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/SignUp.tsx",
+          "hash": "8692135595078964185",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/TaiTro.tsx",
+          "hash": "18239987921912770468",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/pages/TaoDuAnNghienCuuChinh.tsx",
+          "hash": "2857113495435293915",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ThanhVienNghienCuu.tsx",
+          "hash": "17081757431602589079",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/ThemNhiemVu.tsx",
+          "hash": "6803372604834193633",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/pages/ThemTaiLieuNghienCuuChinh.tsx",
+          "hash": "17405895044984387758",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/pages/TrangChiTietNhiemVuThanhVienNgienCuu.tsx",
+          "hash": "3290328709160722676",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/public/images/download (1).jpeg",
+          "hash": "711581090774610528"
+        },
+        {
+          "file": "src/public/images/images1.png",
+          "hash": "3479805116032819782"
+        },
+        {
+          "file": "src/public/logo-uth.png",
+          "hash": "9754980678907211993"
+        },
+        {
+          "file": "src/router/AppRouter.tsx",
+          "hash": "18269187687533389351"
+        },
+        {
+          "file": "src/services/ability.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "src/services/apiService.ts",
+          "hash": "10880955104109749882",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/authService.ts",
+          "hash": "7883105986506389703",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/evaluationsService.ts",
+          "hash": "12502114379843711607",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/fundingService.ts",
+          "hash": "2798297036502198763",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/googleAuthService.ts",
+          "hash": "18025547868767566879",
+          "deps": [
+            "npm:jwt-decode"
+          ]
+        },
+        {
+          "file": "src/services/notificationService.ts",
+          "hash": "1287475712551778372",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/projectService.ts",
+          "hash": "13014736262000048564",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/researchtopicsService.ts",
+          "hash": "5668324413581672386",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/taskService.ts",
+          "hash": "9217654613788501005",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/userService.ts",
+          "hash": "18181121316518103511"
+        },
+        {
+          "file": "src/services/usersService.ts",
+          "hash": "12678529440976805272",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/styles.css",
+          "hash": "2842605344706737863"
+        },
+        {
+          "file": "src/utils/soket.Client.ts",
+          "hash": "4973656169951058498",
+          "deps": [
+            "npm:socket.io-client"
+          ]
+        },
+        {
+          "file": "tailwind.config.js",
+          "hash": "7841738320396045976",
+          "deps": [
+            "npm:tailwindcss-animate"
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "hash": "6671581860431718916"
+        },
+        {
+          "file": "tsconfig.json",
+          "hash": "10731327959317677335"
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "hash": "11569345746867643185"
+        },
+        {
+          "file": "vite.config.ts",
+          "hash": "14006657804668827465",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react",
+            "npm:@nx/vite"
+          ]
+        },
+        {
+          "file": "yarn.lock",
+          "hash": "15585092806607304056"
+        }
+      ],
+      "my-tailwind-app": [
+        {
+          "file": "my-tailwind-app/.gitignore",
+          "hash": "13046175384202504187"
+        },
+        {
+          "file": "my-tailwind-app/README.md",
+          "hash": "13160460843517416105"
+        },
+        {
+          "file": "my-tailwind-app/eslint.config.js",
+          "hash": "16145672096969245511",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:globals",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:typescript-eslint"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/index.html",
+          "hash": "9363857189887754550"
+        },
+        {
+          "file": "my-tailwind-app/package-lock.json",
+          "hash": "10479334102634539113"
+        },
+        {
+          "file": "my-tailwind-app/package.json",
+          "hash": "2368834901205880777",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@vitejs/plugin-react",
+            "npm:autoprefixer",
+            "npm:eslint",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:globals",
+            "npm:postcss",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:typescript-eslint",
+            "npm:vite",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/postcss.config.js",
+          "hash": "1121830044826443979"
+        },
+        {
+          "file": "my-tailwind-app/public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "my-tailwind-app/src/App.css",
+          "hash": "3739391659270974612"
+        },
+        {
+          "file": "my-tailwind-app/src/App.tsx",
+          "hash": "11448401833549720588",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/src/assets/react.svg",
+          "hash": "16069471864800376455"
+        },
+        {
+          "file": "my-tailwind-app/src/index.css",
+          "hash": "13504153635654440336"
+        },
+        {
+          "file": "my-tailwind-app/src/main.tsx",
+          "hash": "11038211546439381838",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "my-tailwind-app/src/vite-env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "my-tailwind-app/tailwind.config.js",
+          "hash": "1620497832093742526"
+        },
+        {
+          "file": "my-tailwind-app/tsconfig.app.json",
+          "hash": "3992348939299782212"
+        },
+        {
+          "file": "my-tailwind-app/tsconfig.json",
+          "hash": "2365188958523842680"
+        },
+        {
+          "file": "my-tailwind-app/tsconfig.node.json",
+          "hash": "3588689360788834997"
+        },
+        {
+          "file": "my-tailwind-app/vite.config.ts",
+          "hash": "16225914092815047172",
+          "deps": [
+            "npm:vite",
+            "npm:@vitejs/plugin-react"
+          ]
+        }
+      ]
+    }
+  }
+}
