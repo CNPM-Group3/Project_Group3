@@ -1,28 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { ProjectList } from "@cnpm/components/Duyet Du An/ProjectList";
-import { getProjectsByStatus, Project as ApiProject } from "../../services/Project";
+import { ProjectList, Project } from "./ProjectList";
+import { getProjectsByStatus, Project as ApiProject } from "../../services/projectService";
 import { getUserById, User } from "../../services/userService";
-
-// Update Project interface to match Project from ProjectList for full compatibility
-export interface Project {
-  id: number;
-  title: string;
-  proposerName?: string;
-  description: string;
-  objectives: string;
-  expectedOutcomes: string;
-  startDate: string;
-  endDate: string;
-  researchTopicId: number;
-  ownerId?: number;
-  status?: string;
-  createdAt?: string;
-  updatedAt?: string;
-}
 
 type TabType = "pending" | "approved" | "rejected";
 
-export const TabSelector = () => {
+interface TabSelectorProps {
+  onApprove: (project: Project) => void;
+  onReject: (project: Project) => void;
+  onView: (project: Project) => void;
+}
+
+const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView }) => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
   const [projects, setProjects] = useState<Project[]>([]);
@@ -63,12 +52,10 @@ export const TabSelector = () => {
                 proposerName = "Unknown Proposer";
               }
             }
-            return { 
-              ...apiProject, 
+            return {
+              id: apiProject.id,
+              title: apiProject.title, // Use title as defined in ProjectList
               proposerName,
-              // Ensure all properties expected by ProjectList are present
-              id: apiProject.id, // Explicitly ensure id is number
-              title: apiProject.title,
               description: apiProject.description,
               objectives: apiProject.objectives,
               expectedOutcomes: apiProject.expectedOutcomes,
@@ -77,8 +64,8 @@ export const TabSelector = () => {
               researchTopicId: apiProject.researchTopicId,
               ownerId: apiProject.ownerId,
               status: apiProject.status,
-              createdAt: apiProject.createdAt,
-              updatedAt: apiProject.updatedAt,
+              createdAt: apiProject.createdAt, // Use createdAt as defined in ProjectList
+              updatedAt: apiProject.updatedAt
             };
           })
         );
@@ -95,7 +82,7 @@ export const TabSelector = () => {
   }, [activeTab]);
 
   // Filter projects based on search keyword
-  const filteredProjects = projects.filter(project => 
+  const filteredProjects = projects.filter(project =>
     project.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
     project.id.toString().includes(searchKeyword.toLowerCase()) ||
     (project.proposerName && project.proposerName.toLowerCase().includes(searchKeyword.toLowerCase()))
@@ -105,49 +92,46 @@ export const TabSelector = () => {
     setActiveTab(tab);
   };
 
-  const handleApprove = (id: number) => {
-    // TODO: Implement approve logic using actual API call
-    console.log("Approve project:", id);
+  const handleApprove = (project: Project) => {
+    onApprove(project);
   };
 
-  const handleReject = (id: number) => {
-    // TODO: Implement reject logic using actual API call
-    console.log("Reject project:", id);
+  const handleReject = (project: Project) => {
+    onReject(project);
   };
 
-  const handleView = (id: number) => {
-    // TODO: Implement view details logic
-    console.log("View project:", id);
+  const handleView = (project: Project) => {
+    onView(project);
   };
 
   return (
     <div className="w-full max-w-[992px] mx-auto">
       <div className="flex flex-wrap gap-1 items-center justify-center px-1 py-1 mt-10 text-sm font-bold text-teal-500 bg-gray-50 rounded-lg max-md:max-w-full">
-        <button 
+        <button
           onClick={() => handleTabClick("pending")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "pending" 
-              ? "text-white bg-teal-500" 
+            activeTab === "pending"
+              ? "text-white bg-teal-500"
               : "bg-teal-100"
           }`}
         >
           Chờ duyệt
         </button>
-        <button 
+        <button
           onClick={() => handleTabClick("approved")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "approved" 
-              ? "text-white bg-teal-500" 
+            activeTab === "approved"
+              ? "text-white bg-teal-500"
               : "bg-teal-100"
           }`}
         >
           Đã duyệt
         </button>
-        <button 
+        <button
           onClick={() => handleTabClick("rejected")}
           className={`self-stretch px-24 py-1.5 my-auto rounded-lg min-h-[27px] min-w-60 w-[271px] max-md:px-5 ${
-            activeTab === "rejected" 
-              ? "text-white bg-teal-500" 
+            activeTab === "rejected"
+              ? "text-white bg-teal-500"
               : "bg-teal-100"
           }`}
         >
@@ -185,8 +169,8 @@ export const TabSelector = () => {
       {loading && <p className="text-center text-gray-600 mt-8">Loading projects...</p>}
       {error && <p className="text-center text-red-500 mt-8">{error}</p>}
       {!loading && !error && (
-      <ProjectList 
-        projects={filteredProjects} 
+      <ProjectList
+        projects={filteredProjects}
         actionType={
           activeTab === "pending" ? "both" :
           activeTab === "approved" ? "reject" :
@@ -200,3 +184,5 @@ export const TabSelector = () => {
     </div>
   );
 };
+
+export { TabSelector };

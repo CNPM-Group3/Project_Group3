@@ -1,37 +1,70 @@
+// src/components/TrangChuThanhVienNghienCuu/TaskList.tsx
+import React from "react";
+
 interface TaskProps {
-  title: string;
-  status: string;
+	title: string;
+	status: string;
 }
 
 const tasks: TaskProps[] = [
-  { title: "Nhiệm vụ 1", status: "Xong" },
-  { title: "Nhiệm vụ 2", status: "Vấn đề" },
-  { title: "Nhiệm vụ 3", status: "Đang làm" },
-  { title: "Nhiệm vụ 1", status: "Xong" },
+	{ title: "Nhiệm vụ 1", status: "Xong" },
+	{ title: "Nhiệm vụ 2", status: "Vấn đề" },
+	{ title: "Nhiệm vụ 3", status: "Đang làm" },
+	{ title: "Nhiệm vụ 4", status: "Xong" },
 ];
 
+const getStatusColor = (status: string) => {
+	switch (status) {
+		case "Xong":
+			return "bg-green-100 text-green-800 border-green-200";
+		case "Vấn đề":
+			return "bg-red-100 text-red-800 border-red-200";
+		case "Đang làm":
+			return "bg-yellow-100 text-yellow-800 border-yellow-200";
+		default:
+			return "bg-gray-100 text-gray-800 border-gray-200";
+	}
+};
+
 export const TaskList = () => {
-  return (
-    <section className="flex flex-col gap-5 px-8 pt-6 pb-6 bg-white rounded-xl border border-solid shadow-sm border-slate-200 w-[846px] max-md:w-full">
-      <h2 className="text-xl font-bold text-gray-700">Nhiệm vụ</h2>
-      <div className="flex flex-col gap-2.5">
-        {tasks.map((task, index) => (
-          <article key={index} className="flex justify-between items-center py-2.5 pr-3.5 pl-5 h-16 rounded-xl border border-solid bg-slate-50 border-slate-200">
-            <div className="flex gap-7 items-center">
-              <div className="flex relative justify-center items-center p-1 h-[46px] w-[46px]">
-                <div className="absolute bg-teal-500 rounded-lg h-[46px] w-[46px]" />
-                <div dangerouslySetInnerHTML={{
-                  __html: `<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; position: relative; z-index: 1">
-                    <path d="M20 11.6667C20 9.89856 19.2976 8.20286 18.0474 6.95262C16.7971 5.70238 15.1014 5 13.3333 5H3.33331V30H15C16.3261 30 17.5978 30.5268 18.5355 31.4645C19.4732 32.4021 20 33.6739 20 35M20 11.6667V35M20 11.6667C20 9.89856 20.7024 8.20286 21.9526 6.95262C23.2028 5.70238 24.8985 5 26.6666 5H36.6666V30H25C23.6739 30 22.4021 30.5268 21.4644 31.4645C20.5268 32.4021 20 33.6739 20 35" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>`
-                }} />
-              </div>
-              <h3 className="text-base font-semibold text-slate-600">{task.title}</h3>
-            </div>
-            <p className="px-4 py-2 text-sm font-bold rounded-lg">{task.status}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
+	return (
+		<div className="bg-white rounded-2xl border border-slate-200 shadow-sm h-full">
+			<div className="p-6 border-b border-slate-100">
+				<h2 className="text-xl font-bold text-gray-800 flex items-center gap-2">
+					<div className="w-2 h-2 bg-teal-500 rounded-full"></div>
+					Nhiệm vụ của tôi
+				</h2>
+			</div>
+			
+			<div className="p-6 space-y-4 max-h-96 overflow-y-auto">
+				{tasks.map((task, index) => (
+					<div key={index} className="group">
+						<div className="flex items-center justify-between p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-white hover:shadow-md transition-all duration-200 group-hover:border-slate-300">
+							<div className="flex items-center gap-4">
+								<div className="relative">
+									<div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center shadow-sm">
+										<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+										</svg>
+									</div>
+								</div>
+								<div>
+									<h3 className="font-semibold text-gray-800 text-lg">
+										{task.title}
+									</h3>
+									<p className="text-sm text-gray-500 mt-1">
+										Được giao hôm qua
+									</p>
+								</div>
+							</div>
+							
+							<div className={`px-4 py-2 rounded-full text-sm font-semibold border ${getStatusColor(task.status)}`}>
+								{task.status}
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+	);
 };

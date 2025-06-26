@@ -72,7 +72,7 @@ export const SponsorshipTable: React.FC<SponsorshipTableProps> = ({ sortOrder })
   };
 
   return (
-    <section className="mt-4 w-full max-md:max-w-full">
+    <section className="w-full max-w-[1200px] mx-auto">
       {/* Header */}
       <div className="hidden md:flex items-center text-gray-700 font-semibold text-lg px-3 py-2 border-b border-gray-300">
         <div className="w-[300px] px-3">Tên dự án</div>

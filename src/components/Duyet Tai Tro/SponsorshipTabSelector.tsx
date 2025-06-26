@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Sponsorship, SponsorshipList } from "@cnpm/components/Duyet Tai Tro/SponsorshipList";
-import { getFundingRequestsByStatus, approveFundingRequest, rejectFundingRequest } from "@cnpm/services/FundingService";
+import { SponsorshipList, Sponsorship } from "@cnpm/components/Duyet Tai Tro/SponsorshipList";
+import { 
+  getFundingRequestsByStatus, 
+  approveFundingRequest, 
+  rejectFundingRequest,
+  getFundingRequestById 
+} from "@cnpm/services/fundingService";
 
 export interface Project {
   id: string;
@@ -14,55 +19,76 @@ type TabType = "pending" | "approved" | "rejected";
 export const TabSelector = () => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
-  const [pendingRequests, setPendingRequests] = useState<Sponsorship[]>([]);
-  const [approvedRequests, setApprovedRequests] = useState<Sponsorship[]>([]);
-  const [rejectedRequests, setRejectedRequests] = useState<Sponsorship[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [pendingSponsorships, setPendingSponsorships] = useState<Sponsorship[]>([]);
+  const [approvedSponsorships, setApprovedSponsorships] = useState<Sponsorship[]>([]);
+  const [rejectedSponsorships, setRejectedSponsorships] = useState<Sponsorship[]>([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchRequests = async (status: string) => {
-    setLoading(true);
-    setError(null);
-    try {
-      const fetchedData = await getFundingRequestsByStatus(status);
-      // Map FundingRequest to Sponsorship type if needed
-      const mappedData: Sponsorship[] = fetchedData.map((req: any) => ({
-        id: req.id.toString(),
-        name: req.projectTitle,
-        proposer: req.requestedByName,
-        date: new Date(req.createdAt).toLocaleDateString('vi-VN'),
-        amount: req.amount,
-      }));
+  // Mapping API data to Sponsorship interface
+  const mapApiDataToSponsorship = (apiData: any[]): Sponsorship[] => {
+    return apiData.map((item: any) => ({
+      id: item.id.toString(),
+      name: item.title || item.projectTitle || '',
+      proposer: item.requestedByName || '',
+      date: new Date(item.createdAt).toLocaleDateString('vi-VN'),
+      amount: item.amount || 0
+    }));
+  };
 
-      if (status === "Pending") {
-        setPendingRequests(mappedData);
-      } else if (status === "Approved") {
-        setApprovedRequests(mappedData);
-      } else if (status === "Rejected") {
-        setRejectedRequests(mappedData);
+  // Fetch data by status
+  const fetchDataByStatus = async (status: string) => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await getFundingRequestsByStatus(status);
+      const mappedData = mapApiDataToSponsorship(response.data || []);
+      
+      switch (status.toLowerCase()) {
+        case 'pending':
+          setPendingSponsorships(mappedData);
+          break;
+        case 'approved':
+          setApprovedSponsorships(mappedData);
+          break;
+        case 'rejected':
+          setRejectedSponsorships(mappedData);
+          break;
       }
     } catch (err) {
+      setError(`Không thể tải danh sách ${status}`);
       console.error(`Error fetching ${status} requests:`, err);
-      setError(`Không thể tải danh sách yêu cầu ${status === "Pending" ? "chờ duyệt" : status === "Approved" ? "đã duyệt" : "đã từ chối"}.`);
     } finally {
       setLoading(false);
     }
   };
 
-  useEffect(() => {
-    if (activeTab === "pending") {
-      fetchRequests("Pending");
-    } else if (activeTab === "approved") {
-      fetchRequests("Approved");
-    } else if (activeTab === "rejected") {
-      fetchRequests("Rejected");
+  // Fetch all data
+  const fetchAllData = async () => {
+    setLoading(true);
+    try {
+      await Promise.all([
+        fetchDataByStatus('pending'),
+        fetchDataByStatus('approved'), 
+        fetchDataByStatus('rejected')
+      ]);
+    } catch (err) {
+      console.error('Error fetching all data:', err);
+    } finally {
+      setLoading(false);
     }
-  }, [activeTab]);
+  };
 
+  // Initial data fetch
+  useEffect(() => {
+    fetchAllData();
+  }, []);
+
+  // Get current projects based on active tab
   let projects: Sponsorship[] = [];
-  if (activeTab === "pending") projects = pendingRequests;
-  if (activeTab === "approved") projects = approvedRequests;
-  if (activeTab === "rejected") projects = rejectedRequests;
+  if (activeTab === "pending") projects = pendingSponsorships;
+  if (activeTab === "approved") projects = approvedSponsorships;
+  if (activeTab === "rejected") projects = rejectedSponsorships;
 
   // Filter projects based on search keyword
   const filteredProjects = projects.filter(project => 
@@ -77,43 +103,67 @@ export const TabSelector = () => {
 
   const handleApprove = async (id: string) => {
     try {
-      await approveFundingRequest(parseInt(id));
-      alert("Duyệt yêu cầu thành công!");
-      fetchRequests("Pending"); // Refresh pending list
-      fetchRequests("Approved"); // Refresh approved list
+      setLoading(true);
+      await approveFundingRequest(Number(id));
+      
+      // Fetch updated data for all tabs
+      await fetchAllData();
+      
+      alert('Duyệt yêu cầu thành công!');
     } catch (err) {
-      console.error("Error approving request:", err);
-      alert("Không thể duyệt yêu cầu. Vui lòng thử lại.");
+      console.error('Error approving request:', err);
+      alert('Có lỗi xảy ra khi duyệt yêu cầu');
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleReject = async (id: string) => {
     try {
-      await rejectFundingRequest(parseInt(id));
-      alert("Từ chối yêu cầu thành công!");
-      fetchRequests("Pending"); // Refresh pending list
-      fetchRequests("Rejected"); // Refresh rejected list
+      setLoading(true);
+      await rejectFundingRequest(Number(id));
+      
+      // Fetch updated data for all tabs
+      await fetchAllData();
+      
+      alert('Từ chối yêu cầu thành công!');
     } catch (err) {
-      console.error("Error rejecting request:", err);
-      alert("Không thể từ chối yêu cầu. Vui lòng thử lại.");
+      console.error('Error rejecting request:', err);
+      alert('Có lỗi xảy ra khi từ chối yêu cầu');
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handleView = (id: string) => {
-    // TODO: Implement view details logic (e.g., navigate to detail page)
-    console.log("View project:", id);
+  const handleView = async (id: string) => {
+    try {
+      const detail = await getFundingRequestById(Number(id));
+      console.log('Funding request detail:', detail);
+      // Bạn có thể mở modal hoặc navigate đến trang chi tiết
+      alert(`Chi tiết yêu cầu ID: ${id}\nTên: ${detail.data?.title}\nMô tả: ${detail.data?.description}`);
+    } catch (err) {
+      console.error('Error fetching request detail:', err);
+      alert('Không thể tải chi tiết yêu cầu');
+    }
   };
 
-  if (loading) {
-    return <div className="text-center text-gray-500 mt-10">Đang tải dữ liệu...</div>;
-  }
-
-  if (error) {
-    return <div className="text-center text-red-500 mt-10">{error}</div>;
-  }
+  const handleRefresh = () => {
+    fetchAllData();
+  };
 
   return (
     <div className="w-full max-w-[992px] mx-auto">
+      {/* Loading overlay */}
+      {loading && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-4 rounded-lg">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="mt-2 text-gray-600">Đang xử lý...</p>
+          </div>
+        </div>
+      )}
+
+      {/* Tab buttons */}
       <div className="flex flex-wrap gap-1 items-center justify-center px-1 py-1 mt-10 text-sm font-bold text-teal-500 bg-gray-50 rounded-lg max-md:max-w-full">
         <button 
           onClick={() => handleTabClick("pending")}
@@ -123,7 +173,7 @@ export const TabSelector = () => {
               : "bg-teal-100"
           }`}
         >
-          Chờ duyệt
+          Chờ duyệt ({pendingSponsorships.length})
         </button>
         <button 
           onClick={() => handleTabClick("approved")}
@@ -133,7 +183,7 @@ export const TabSelector = () => {
               : "bg-teal-100"
           }`}
         >
-          Đã duyệt
+          Đã duyệt ({approvedSponsorships.length})
         </button>
         <button 
           onClick={() => handleTabClick("rejected")}
@@ -143,9 +193,11 @@ export const TabSelector = () => {
               : "bg-teal-100"
           }`}
         >
-          Từ chối
+          Từ chối ({rejectedSponsorships.length})
         </button>
       </div>
+
+      {/* Search and refresh */}
       <div className="flex flex-row items-center justify-between mt-4 w-full">
         <div className="flex items-center w-[250px] bg-white border border-gray-300 rounded-full px-3 py-1.5 shadow-sm">
           <input
@@ -154,6 +206,7 @@ export const TabSelector = () => {
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
             className="flex-1 bg-transparent outline-none text-base text-gray-700 placeholder-gray-400"
+            disabled={loading}
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +223,24 @@ export const TabSelector = () => {
             />
           </svg>
         </div>
+        
+        <button
+          onClick={handleRefresh}
+          disabled={loading}
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+        >
+          {loading ? 'Đang tải...' : 'Làm mới'}
+        </button>
       </div>
+
+      {/* Error display */}
+      {error && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-4">
+          {error}
+        </div>
+      )}
+
+      {/* Sponsorship list */}
       <SponsorshipList 
         projects={filteredProjects} 
         actionType={
@@ -181,6 +251,7 @@ export const TabSelector = () => {
         onApprove={handleApprove}
         onReject={handleReject}
         onView={handleView}
+        autoFetch={false} // Tắt auto fetch vì đã fetch ở component cha
       />
     </div>
   );

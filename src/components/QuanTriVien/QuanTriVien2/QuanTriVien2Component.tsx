@@ -175,7 +175,8 @@ export const TimeFilter: React.FC<TimeFilterProps> = ({
 
 // UserInteractionChart Component
 export const UserInteractionChart: React.FC<UserInteractionChartProps> = ({ users }) => {
-  const roleCounts = users.reduce((acc, user) => {
+  const safeUsers = Array.isArray(users) ? users : [];
+  const roleCounts = safeUsers.reduce((acc, user) => {
     acc[user.role] = (acc[user.role] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
@@ -250,8 +251,9 @@ export const UserInteractionChart: React.FC<UserInteractionChartProps> = ({ user
 
 // UserPerformanceChart Component
 export const UserPerformanceChart: React.FC<UserPerformanceChartProps> = ({ users }) => {
-  const activeUsers = users.filter(user => user.status === 'ACTIVE').length;
-  const totalUsers = users.length;
+  const safeUsers = Array.isArray(users) ? users : [];
+  const activeUsers = safeUsers.filter(user => user.status === 'ACTIVE').length;
+  const totalUsers = safeUsers.length;
   const performancePercentage = totalUsers > 0 ? (activeUsers / totalUsers) * 100 : 0;
 
   const data = {
@@ -320,6 +322,7 @@ export const UserPerformanceChart: React.FC<UserPerformanceChartProps> = ({ user
 
 // UserList Component
 export const UserList: React.FC<UserListProps> = ({ users }) => {
+  const safeUsers = Array.isArray(users) ? users : [];
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [userList, setUserList] = useState<ApiUser[]>([]);
@@ -443,6 +446,7 @@ export const UserActivityLineChart: React.FC<UserActivityLineChartProps> = ({
   title,
   users
 }) => {
+  const safeUsers = Array.isArray(users) ? users : [];
   const activityData = React.useMemo(() => {
     // In a real application, you would process the 'users' prop to calculate activity data
     // For now, let's keep the random data generation as a placeholder
@@ -455,7 +459,7 @@ export const UserActivityLineChart: React.FC<UserActivityLineChartProps> = ({
       'Thứ 7': Math.floor(Math.random() * 100),
       'Chủ nhật': Math.floor(Math.random() * 100),
     };
-  }, [users]); // Re-run memoization if users prop changes
+  }, [safeUsers]); // Re-run memoization if users prop changes
 
   const data = {
     labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'],

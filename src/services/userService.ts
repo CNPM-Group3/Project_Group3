@@ -38,7 +38,7 @@ export interface User {
   
   export const findUserByEmail = async (email: string): Promise<User | undefined> => {
     try {
-      const response = await api.get(`/api/Users`, {
+      const response = await api.get(`/Users`, {
         params: { email }
       });
       
@@ -60,7 +60,7 @@ export interface User {
   
   export const getUserById = async (id: number): Promise<User> => {
     try {
-      const response = await api.get(`/api/Users/${id}`);
+      const response = await api.get(`/Users/${id}`);
       const apiUser: ApiUser = response.data;
       return {
         id: apiUser.id,
@@ -79,7 +79,7 @@ export interface User {
   
   export const getUsersByRole = async (roleName: string): Promise<ApiUser[]> => {
     try {
-      const response = await api.get(`/api/Users/role/${roleName}`);
+      const response = await api.get(`/Users/role/${roleName}`);
       return response.data;
     } catch (error) {
       console.error(`Error getting users with role ${roleName}:`, error);
@@ -93,7 +93,7 @@ export interface User {
   
   export const getCurrentUser = async (): Promise<User | null> => {
     try {
-      const response = await api.get('/api/Users/me');
+      const response = await api.get('/Users/me');
       const apiUser: ApiUser = response.data;
       return {
         id: apiUser.id,
@@ -112,7 +112,7 @@ export interface User {
 
   export const updateUserProfile = async (userData: Partial<User>): Promise<ApiUser> => {
     try {
-      const response = await api.put(`/api/Users/profile`, {
+      const response = await api.put(`/Users/profile`, {
         fullName: userData.name,
         email: userData.email,
         address: userData.address,
@@ -143,7 +143,7 @@ export interface User {
 
   export const addRoleToUser = async (userId: number, roleName: string): Promise<void> => {
     try {
-      await api.post(`/api/Users/${userId}/roles`, { roleName });
+      await api.post(`/Users/${userId}/roles`, { roleName });
     } catch (error) {
       console.error(`Error adding role ${roleName} to user ${userId}:`, error);
       throw error;
@@ -152,7 +152,7 @@ export interface User {
 
   export const deleteRoleFromUser = async (userId: number, roleName: string): Promise<void> => {
     try {
-      await api.delete(`/api/Users/${userId}/roles/${roleName}`);
+      await api.delete(`/Users/${userId}/roles/${roleName}`);
     } catch (error) {
       console.error(`Error deleting role ${roleName} from user ${userId}:`, error);
       throw error;
@@ -161,7 +161,7 @@ export interface User {
 
   export const getAllUsers = async (): Promise<ApiUser[]> => {
     try {
-      const response = await api.get('/api/Users');
+      const response = await api.get('/Users');
       return response.data;
     } catch (error) {
       console.error('Error fetching all users:', error);

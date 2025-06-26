@@ -1,3 +1,4 @@
+// FileUpload.tsx
 import React, { useState } from "react";
 
 const formatBytes = (bytes: number, decimals = 2) => {

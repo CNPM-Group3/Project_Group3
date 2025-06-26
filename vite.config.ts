@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
     root: __dirname,
     cacheDir: `./node_modules/.vite/${env.VITE_APP_NAME.toLowerCase()}`,
     server: {
-      port: Number(new URL(env.VITE_SERVER_URL).port) || 4200,
+      port: Number(new URL(env.VITE_SERVER_URL).port) || 8081,
       host: new URL(env.VITE_SERVER_URL).hostname || 'localhost',
       proxy: {
         '/api': {

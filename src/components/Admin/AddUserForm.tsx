@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { ApiUser } from "@cnpm/services/userService";
-import { getUsersByRole } from "@cnpm/services/userService";
+import usersService from "../../services/usersService";
 
 // Types
-export type User = ApiUser;
+export interface User {
+  name: string;
+  email: string;
+  phone: string;
+  role: string;
+  status: string;
+}
 
 export interface ApprovalRequest {
   sender: string;
@@ -12,42 +17,8 @@ export interface ApprovalRequest {
   status: string;
 }
 
-interface AddUserFormProps {
-  onAddUser: (userData: { name: string; email: string; password: string }) => Promise<void>;
-}
-
 // AddUserForm Component
-export const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<string | null>(null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    setSuccess(null);
-
-    try {
-      await onAddUser({
-        name,
-        email,
-        password,
-      });
-      setSuccess("Thêm người dùng mới thành công!");
-      setName("");
-      setEmail("");
-      setPassword("");
-    } catch (err: any) {
-      setError(err.message || "Không thể thêm người dùng. Vui lòng kiểm tra lại thông tin.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
+export const AddUserForm: React.FC = () => {
   return (
     <div className="p-6 rounded-xl border border-gray-200 bg-white w-[317px] max-sm:w-full shadow-sm">
       {/* Tiêu đề */}
@@ -61,94 +32,40 @@ export const AddUserForm: React.FC<AddUserFormProps> = ({ onAddUser }) => {
         <span>Cấp tài khoản mới</span>
       </div>
 
-      {error && <div className="mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg">{error}</div>}
-      {success && <div className="mb-4 p-4 text-sm text-green-700 bg-green-100 rounded-lg">{success}</div>}
-
       {/* Form */}
-      <form onSubmit={handleSubmit} className="flex flex-col gap-3 text-sm text-gray-700">
+      <div className="flex flex-col gap-3 text-sm text-gray-700">
         <input
           type="text"
           placeholder="Họ tên"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+          className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
+        />
+        <input
+          type="tel"
+          placeholder="Số điện thoại"
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
         <input
           type="password"
           placeholder="Mật khẩu"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
           className="px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-300"
         />
-        <button
-          type="submit"
-          disabled={loading}
-          className="mt-4 px-4 py-2 bg-sky-500 text-white rounded-md hover:bg-sky-600 transition disabled:opacity-50"
-        >
-          {loading ? "Đang thêm..." : "Thêm người dùng"}
-        </button>
-      </form>
+      </div>
+
+      
     </div>
   );
 };
 
-// ApprovalSection Component
-interface ApprovalSectionProps {
-  requests: ApprovalRequest[];
-}
 
-export const ApprovalSection: React.FC<ApprovalSectionProps> = ({ requests }) => {
-  return (
-    <div className="flex-1 p-6 rounded-xl border border-gray-200 bg-white shadow-sm max-sm:w-full">
-      <h2 className="mb-6 text-lg font-semibold text-gray-800">
-        Phê duyệt giao dịch & hoạt động
-      </h2>
-
-      {/* Header Row */}
-      <div className="grid grid-cols-5 gap-4 py-3 text-sm font-medium text-gray-500 border-b border-gray-300">
-        <span>Người gửi</span>
-        <span>Loại yêu cầu</span>
-        <span>Ngày gửi</span>
-        <span>Trạng thái</span>
-        <span className="text-center">Hành động</span>
-      </div>
-
-      {/* Request Rows */}
-      <div className="divide-y divide-gray-200">
-        {requests.map((request, index) => (
-          <div key={index} className="grid grid-cols-5 gap-4 py-4 text-sm text-gray-700 items-center">
-            <span>{request.sender}</span>
-            <span>{request.requestType}</span>
-            <span>{request.date}</span>
-            <span>{request.status}</span>
-            <div className="flex justify-center gap-2">
-              <button className="px-3 py-1 text-xs font-medium text-white bg-green-500 rounded-md hover:bg-green-600 transition">
-                Duyệt
-              </button>
-              <button className="px-3 py-1 text-xs font-medium text-white bg-rose-500 rounded-md hover:bg-rose-600 transition">
-                Từ chối
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // UserTable Component
 interface UserTableProps {
-  users: ApiUser[];
+  users: User[];
 }
 
 export const UserTable: React.FC<UserTableProps> = ({ users }) => {
@@ -179,9 +96,9 @@ export const UserTable: React.FC<UserTableProps> = ({ users }) => {
                 key={index}
                 className="text-gray-800 border-b border-gray-100 hover:bg-gray-50 transition"
               >
-                <td className="px-4 py-3">{user.fullName}</td>
+                <td className="px-4 py-3">{user.name}</td>
                 <td className="px-4 py-3">{user.email}</td>
-                <td className="px-4 py-3">N/A</td> {/* Phone number is not in ApiUser */}
+                <td className="px-4 py-3">{user.phone}</td>
                 <td className="px-4 py-3">{user.role}</td>
                 <td className="px-4 py-3">{user.status}</td>
                 <td className="px-4 py-3">
@@ -203,53 +120,34 @@ export const UserTable: React.FC<UserTableProps> = ({ users }) => {
   );
 };
 
-// Main Dashboard Component with real API integration
+// Main Dashboard Component with demo data
 export default function UserManagementDashboard() {
-  const [users, setUsers] = useState<ApiUser[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchData = async () => {
+      setLoading(true);
       try {
-        setLoading(true);
-        setError(null);
-        const fetchedUsers = await getUsersByRole('all');
-        setUsers(fetchedUsers);
-      } catch (err) {
-        console.error('Error fetching users:', err);
-        setError('Không thể tải danh sách người dùng. Vui lòng thử lại sau.');
+        const usersData = await usersService.getAllUsers();
+        setUsers(usersData.map(u => ({
+          name: u.name || "",
+          email: u.email || "",
+          phone: "",
+          role: Array.isArray(u.roles) ? u.roles.join(", ") : "",
+          status: ""
+        })));
+      } catch (error) {
+        console.error("Lỗi khi lấy dữ liệu người dùng:", error);
+        setUsers([]);
       } finally {
         setLoading(false);
       }
     };
-
-    fetchUsers();
+    fetchData();
   }, []);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 p-6">
-        <div className="max-w-7xl mx-auto space-y-6">
-          <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gray-50 p-6">
-        <div className="max-w-7xl mx-auto space-y-6">
-          <div className="text-center text-red-500 p-4 font-semibold">
-            {error}
-          </div>
-        </div>
-      </div>
-    );
-  }
+  if (loading) return <div>Đang tải dữ liệu...</div>;
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
@@ -258,12 +156,6 @@ export default function UserManagementDashboard() {
         <h1 className="text-2xl font-bold text-gray-800 mb-6">
           Quản lý người dùng
         </h1>
-
-        {/* Top Section */}
-        <div className="flex gap-6 flex-col lg:flex-row">
-          <ApprovalSection requests={[]} />
-        </div>
-
         {/* User Table */}
         <UserTable users={users} />
       </div>

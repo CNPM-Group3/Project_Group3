@@ -19,9 +19,9 @@ export interface Project {
 interface ProjectListProps {
   projects: Project[];
   actionType?: "approve" | "reject" | "both";
-  onApprove?: (id: number) => void;
-  onReject?: (id: number) => void;
-  onView?: (id: number) => void;
+  onApprove?: (project: Project) => void;
+  onReject?: (project: Project) => void;
+  onView?: (project: Project) => void;
 }
 
 export const ProjectList: React.FC<ProjectListProps> = ({ 
@@ -53,14 +53,14 @@ export const ProjectList: React.FC<ProjectListProps> = ({
                 <td className="px-6 py-3 text-left align-middle">{project.proposerName || 'N/A'}</td>
                 <td className="px-6 py-3 text-center align-middle">{new Date(project.createdAt || '').toLocaleDateString()}</td>
                 <td className="px-6 py-3 text-center align-middle">
-                  <button className="text-blue-600 underline" onClick={() => onView?.(project.id)}>Xem</button>
+                  <button className="text-blue-600 underline" onClick={() => onView?.(project)}>Xem</button>
                 </td>
                 <td className="px-6 py-3 text-center align-middle">
                   <div className="flex flex-row items-center justify-center gap-2">
                     {(actionType === "approve" || actionType === "both") && (
                       <button
                         className="px-4 py-1 text-teal-700 bg-sky-100 rounded-xl min-h-[21px] w-20"
-                        onClick={() => onApprove?.(project.id)}
+                        onClick={() => onApprove?.(project)}
                       >
                         Duyệt
                       </button>
@@ -68,7 +68,7 @@ export const ProjectList: React.FC<ProjectListProps> = ({
                     {(actionType === "reject" || actionType === "both") && (
                       <button
                         className="px-4 py-1 text-red-700 bg-rose-100 rounded-xl min-h-[21px] w-24 whitespace-nowrap"
-                        onClick={() => onReject?.(project.id)}
+                        onClick={() => onReject?.(project)}
                       >
                         Từ chối
                       </button>
