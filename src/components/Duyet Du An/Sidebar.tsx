@@ -23,7 +23,7 @@ const Sidebar: React.FC = () => {
       path: "/profile2",  // Đường dẫn của Chủ Trì
     },
     {
-      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/a23bc1452b11f050133faef30aa2efd8a14544f3?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+      icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/548976d608c31c0e145581e31116c4038add5580?placeholderIfAbsent=true",
       label: "Phê duyệt dự án",
       path: "/duyetduan",  // Đường dẫn của Chủ Trì
     },

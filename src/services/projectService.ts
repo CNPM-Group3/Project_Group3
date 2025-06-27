@@ -191,7 +191,7 @@ export const removeMemberFromProject = async (projectId: number, memberId: numbe
 // PATCH /Projects/{id}/status - cập nhật trạng thái dự án
 export const updateProjectStatus = async (id: number, status: string): Promise<void> => {
   try {
-    await api.patch(`/Projects/${id}/status`, { status });
+    await api.patch(`/api/Projects/${id}/status`, { status });
   } catch (error) {
     handleError(error, 'Update project status');
     throw error;
