@@ -385,7 +385,7 @@
         },
         {
           "file": "src/components/Duyet Du An/Sidebar.tsx",
-          "hash": "14309927980045057869",
+          "hash": "8572841126081702031",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -438,7 +438,7 @@
         },
         {
           "file": "src/components/HoiDongThamDinh/StatusIndicator.tsx",
-          "hash": "7615769718421553533",
+          "hash": "14785051133382705313",
           "deps": [
             "npm:react"
           ]
@@ -495,6 +495,13 @@
           ]
         },
         {
+          "file": "src/components/Profile/ProfilePage.tsx",
+          "hash": "7665638262442586190",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
           "file": "src/components/Profile/ResearchInfo.tsx",
           "hash": "16400533966008214631"
         },
@@ -510,6 +517,20 @@
           "hash": "13348130789805595267",
           "deps": [
             "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien1/RoleActionButton.tsx",
+          "hash": "4092044069716545074",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "src/components/QuanTriVien/QuanTriVien1/UserList.tsx",
+          "hash": "12761421006047885297",
+          "deps": [
+            "npm:react"
           ]
         },
         {
@@ -691,6 +712,14 @@
           ]
         },
         {
+          "file": "src/components/ThemNhiemVu/Sidebar.tsx",
+          "hash": "16806401807843062596",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
           "file": "src/components/ThemNhiemVu/TaskForm.tsx",
           "hash": "15556668261522504094",
           "deps": [
@@ -813,7 +842,7 @@
         },
         {
           "file": "src/pages/DashboardHoiOngThamInh.tsx",
-          "hash": "1435476109008533123",
+          "hash": "10927364439274646563",
           "deps": [
             "npm:react"
           ]
@@ -984,7 +1013,14 @@
         },
         {
           "file": "src/services/apiService.ts",
-          "hash": "10880955104109749882",
+          "hash": "1730271492328895601",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/apiService2.ts",
+          "hash": "5122593937660432322",
           "deps": [
             "npm:axios"
           ]
@@ -1026,7 +1062,7 @@
         },
         {
           "file": "src/services/projectService.ts",
-          "hash": "13014736262000048564",
+          "hash": "18033258691457566282",
           "deps": [
             "npm:axios"
           ]
@@ -1047,11 +1083,11 @@
         },
         {
           "file": "src/services/userService.ts",
-          "hash": "18181121316518103511"
+          "hash": "17053488684552902327"
         },
         {
           "file": "src/services/usersService.ts",
-          "hash": "12678529440976805272",
+          "hash": "14818973167574187568",
           "deps": [
             "npm:axios"
           ]

@@ -6,16 +6,15 @@ import axios, {
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
-class ApiService {
-  private readonly api: AxiosInstance;
+class ApiService2 {
+  private readonly api2: AxiosInstance;
 
   constructor() {
-    this.api = axios.create({
+    this.api2 = axios.create({
       baseURL: API_BASE_URL,
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        'ngrok-skip-browser-warning': 'true',
       },
     });
 
@@ -23,7 +22,7 @@ class ApiService {
   }
 
   private setupInterceptors(): void {
-    this.api.interceptors.request.use(
+    this.api2.interceptors.request.use(
       (config: InternalAxiosRequestConfig) => {
         const token = sessionStorage.getItem('accessToken');
         if (token) {
@@ -34,11 +33,21 @@ class ApiService {
       (error) => Promise.reject(error)
     );
 
+    this.api2.interceptors.response.use(
+      (response) => response,
+      async (error) => {
+        if (error.response?.status === 401) {
+          sessionStorage.removeItem('accessToken');
+          window.location.href = '/login';
+        }
+        return Promise.reject(error);
+      }
+    );
   }
 
   public getApi(): AxiosInstance {
-    return this.api;
+    return this.api2;
   }
 }
 
-export default new ApiService().getApi();
+export default new ApiService2().getApi();

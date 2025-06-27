@@ -23,7 +23,7 @@ export interface User {
   
   export const saveUser = async (userData: User): Promise<ApiUser> => {
     try {
-      const response = await api.post('/api/Users', {
+      const response = await api.post('/Users', {
         email: userData.email,
         fullName: userData.name,
         password: userData.password,
