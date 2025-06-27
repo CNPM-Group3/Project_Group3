@@ -15,8 +15,9 @@ class ApiService {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        'ngrok-skip-browser-warning': 'true',
+        'ngrok-skip-browser-warning': '69420',
       },
+      withCredentials: false, // Set to false for ngrok tunnels
     });
 
     this.setupInterceptors();
@@ -28,12 +29,16 @@ class ApiService {
         const token = sessionStorage.getItem('accessToken');
         if (token) {
           config.headers['Authorization'] = `Bearer ${token}`;
+          console.log('[apiService] Gửi accessToken:', token);
+        } else {
+          console.warn('[apiService] Không tìm thấy accessToken trong sessionStorage!');
         }
+        // Ensure ngrok header is always present
+        config.headers['ngrok-skip-browser-warning'] = '69420';
         return config;
       },
       (error) => Promise.reject(error)
     );
-
   }
 
   public getApi(): AxiosInstance {

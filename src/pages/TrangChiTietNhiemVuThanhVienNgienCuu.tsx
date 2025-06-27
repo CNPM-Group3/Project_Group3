@@ -25,15 +25,15 @@ function TrangChiTietNhiemVu({
 
   return (
     <main className="bg-slate-50 min-h-screen w-full">
-      <div className="flex flex-row min-h-screen">
-        {/* Sidebar */}
-        <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
-          <Sidebar />
-        </div>
-        {/* Main content */}
-        <div className="flex-1 flex flex-col ml-64">
-          <div className="fixed w-full z-10">
-            <Header />
+			<div className="flex flex-row min-h-screen">
+				{/* Sidebar */}
+				<div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
+					<Sidebar />
+				</div>
+				{/* Main content */}
+				<div className="flex-1 flex flex-col ml-64">
+					<div className="fixed w-full z-10">
+						<Header />
           </div>
           <div className="flex flex-col items-center pb-12 mx-auto w-full max-w-[1000px] max-md:max-w-full mt-16">
             {/* You might pass taskId down to these components */}

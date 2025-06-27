@@ -172,16 +172,17 @@ const ThemNhiemVu: React.FC<ThemNhiemVuProps> = ({ availableMembers = [] }) => {
   // Nếu có lỗi về thông tin dự án
   if (error && !projectInfo) {
     return (
-      <main className="bg-slate-50 min-h-screen w-full flex flex-row">
-        <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
+      <main className="bg-slate-50 min-h-screen w-full">
+        {/* Sidebar cố định */}
+        <div className="fixed top-0 left-0 h-screen w-64 border-r border-slate-200 bg-gray-50 z-40">
           <Sidebar />
         </div>
-        
-        <div className="flex-1 flex flex-col ml-64">
-          <div className="fixed top-0 left-64 w-[calc(100%-16rem)] z-10">
-            <Header />
-          </div>
-
+        {/* Header cố định */}
+        <div className="fixed top-0 left-64 w-[calc(100%-16rem)] h-16 border-b border-slate-200 bg-white z-30">
+          <Header />
+        </div>
+        {/* Main content */}
+        <div className="ml-64 pt-16 flex flex-col min-h-screen">
           <section className="flex flex-col items-center justify-center w-full max-w-screen-lg mx-auto mt-16 pt-16 min-h-[calc(100vh-8rem)]">
             <div className="bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg max-w-md text-center">
               <h2 className="text-lg font-semibold mb-2">Lỗi</h2>
@@ -202,22 +203,21 @@ const ThemNhiemVu: React.FC<ThemNhiemVuProps> = ({ availableMembers = [] }) => {
   }
 
   return (
-    <main className="bg-slate-50 min-h-screen w-full flex flex-row">
-      {/* Sidebar */}
-      <div className="w-64 border-r border-slate-200 bg-gray fixed h-full">
+    <main className="bg-slate-50 min-h-screen w-full">
+      {/* Sidebar cố định */}
+      <div className="fixed top-0 left-0 h-screen w-64 border-r border-slate-200 bg-gray-50 z-40">
         <Sidebar />
       </div>
-
-      <div className="flex-1 flex flex-col ml-64">
-        <div className="fixed top-0 left-64 w-[calc(100%-16rem)] z-10">
-          <Header />
-        </div>
-
+      {/* Header cố định */}
+      <div className="fixed top-0 left-64 w-[calc(100%-16rem)] h-16 border-b border-slate-200 bg-white z-30">
+        <Header />
+      </div>
+      {/* Main content */}
+      <div className="ml-64 pt-16 flex flex-col min-h-screen">
         <section className="flex flex-col items-center pb-60 w-full max-w-screen-lg mx-auto mt-16 pt-16">
           {/* Breadcrumb và nút quay lại */}
           {projectInfo && (
             <div className="w-full max-w-2xl mb-6">
-              
               <div className="text-sm text-gray-800">
                 Dự án: <span className="font-semibold">{projectInfo.title}</span>
               </div>
