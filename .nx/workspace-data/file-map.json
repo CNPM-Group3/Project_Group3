@@ -1124,7 +1124,7 @@
         },
         {
           "file": "vite.config.ts",
-          "hash": "14006657804668827465",
+          "hash": "8625688890406230135",
           "deps": [
             "npm:vite",
             "npm:@vitejs/plugin-react",

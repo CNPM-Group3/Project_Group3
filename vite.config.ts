@@ -23,7 +23,12 @@ export default defineConfig(({ mode }) => {
         '/api': {
           target: env.VITE_API_URL,
           changeOrigin: true,
-          secure: isProd,
+          secure: false,
+          configure: (proxy, options) => {
+            proxy.on('proxyReq', (proxyReq, req, res) => {
+              proxyReq.setHeader('ngrok-skip-browser-warning', '69420');
+            });
+          },
         },
       },
     },
