@@ -774,7 +774,7 @@
         },
         {
           "file": "src/context/AuthContext.tsx",
-          "hash": "5472789045373484377",
+          "hash": "17641611210893948685",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -827,14 +827,14 @@
         },
         {
           "file": "src/pages/AdminDashboard.tsx",
-          "hash": "15647738320718976676",
+          "hash": "10973826845526369519",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/ChiTietDuAn.tsx",
-          "hash": "6800728009567600029",
+          "hash": "14569162303954990972",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -878,14 +878,14 @@
         },
         {
           "file": "src/pages/DuyetDuAn.tsx",
-          "hash": "9771396973012200366",
+          "hash": "3368130718499152870",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/DuyetTaiTro.tsx",
-          "hash": "11326847565567676342",
+          "hash": "5201725221508932637",
           "deps": [
             "npm:react"
           ]
@@ -964,14 +964,14 @@
         },
         {
           "file": "src/pages/ThanhVienNghienCuu.tsx",
-          "hash": "17739818729436741960",
+          "hash": "17081757431602589079",
           "deps": [
             "npm:react"
           ]
         },
         {
           "file": "src/pages/ThemNhiemVu.tsx",
-          "hash": "17266962220017391199",
+          "hash": "8366459192685033721",
           "deps": [
             "npm:react",
             "npm:react-router-dom"
@@ -979,14 +979,15 @@
         },
         {
           "file": "src/pages/ThemTaiLieuNghienCuuChinh.tsx",
-          "hash": "10990516709729785606",
+          "hash": "2596205619112243096",
           "deps": [
-            "npm:react"
+            "npm:react",
+            "npm:react-router-dom"
           ]
         },
         {
           "file": "src/pages/TrangChiTietNhiemVuThanhVienNgienCuu.tsx",
-          "hash": "1519051449921194459",
+          "hash": "3290328709160722676",
           "deps": [
             "npm:react"
           ]
@@ -1013,7 +1014,7 @@
         },
         {
           "file": "src/services/apiService.ts",
-          "hash": "11491694506876747014",
+          "hash": "1730271492328895601",
           "deps": [
             "npm:axios"
           ]
@@ -1028,6 +1029,13 @@
         {
           "file": "src/services/authService.ts",
           "hash": "7883105986506389703",
+          "deps": [
+            "npm:axios"
+          ]
+        },
+        {
+          "file": "src/services/documentService.ts",
+          "hash": "3580181062091518424",
           "deps": [
             "npm:axios"
           ]
@@ -1076,7 +1084,7 @@
         },
         {
           "file": "src/services/taskService.ts",
-          "hash": "9217654613788501005",
+          "hash": "9306647895708645015",
           "deps": [
             "npm:axios"
           ]

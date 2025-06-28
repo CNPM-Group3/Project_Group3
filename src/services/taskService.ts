@@ -21,7 +21,7 @@ export interface TaskCreateRequest {
   startDate: string;
   dueDate: string;
   projectId: number;
-  assignedToId: number;
+  assignedToId: number | null; 
   isMilestone: boolean;
   attachmentUrls: string;
 }

@@ -423,11 +423,11 @@ export const ChiTietDuAn: React.FC = () => {
       }
     };
 
-    const handleDownloadDocument = (document: Document) => {
+    const handleDownloadDocument = (doc: Document) => {
       // Create a temporary link to download the file
       const link = document.createElement('a');
-      link.href = document.url;
-      link.download = document.name;
+      link.href = doc.url;
+      link.download = doc.name;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
