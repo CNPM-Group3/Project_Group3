@@ -50,16 +50,16 @@ export const ProjectDetailsSection = () => {
       <h2 className="self-start text-xl font-bold leading-none text-gray-700">
         Chi tiết dự án
       </h2>
-      <div className="flex flex-wrap gap-2.5 mt-5 w-full text-base leading-6 text-gray-400 max-md:max-w-full">
+      <div className="flex flex-wrap gap-2.5 mt-5 w-full text-base leading-6 text-gray-700 max-md:max-w-full">
         <input
           type="text"
           placeholder="Tên dự án"
-          className="overflow-hidden flex-auto gap-2.5 self-stretch px-4 bg-white rounded-lg border border-gray-300 border-solid min-h-[50px] w-[448px] max-md:max-w-full"
+          className="overflow-hidden flex-auto gap-2.5 self-stretch px-4 bg-white rounded-lg border border-gray-300 border-solid min-h-[50px] w-[448px] max-md:max-w-full text-gray-700 placeholder-gray-500"
         />
         <input
           type="text"
           placeholder="Viết tắt"
-          className="overflow-hidden flex-auto gap-2.5 self-stretch px-4 bg-white rounded-lg border border-gray-300 border-solid min-h-[50px] w-[222px]"
+          className="overflow-hidden flex-auto gap-2.5 self-stretch px-4 bg-white rounded-lg border border-gray-300 border-solid min-h-[50px] w-[222px] text-gray-700 placeholder-gray-500"
         />
       </div>
       <div className="mt-1.5 bg-black bg-opacity-0 max-md:max-w-full">
@@ -68,7 +68,7 @@ export const ProjectDetailsSection = () => {
         </label>
         <textarea
           placeholder="Ghi tối đa 10 ký tự"
-          className="overflow-hidden px-3.5 pt-4 pb-12 mt-2 text-base text-gray-400 bg-white rounded-md border border-gray-300 border-solid w-full max-md:pr-5 max-md:max-w-full"
+          className="overflow-hidden px-3.5 pt-4 pb-12 mt-2 text-base text-gray-700 bg-white rounded-md border border-gray-300 border-solid w-full max-md:pr-5 max-md:max-w-full placeholder-gray-500"
         />
       </div>
     </section>
@@ -85,7 +85,7 @@ export const TeamAndDocumentsSection = () => {
         <label className="font-bold text-gray-700 max-md:max-w-full">
           Số lượng thành viên :
         </label>
-        <div className="flex flex-wrap items-center mt-2 w-full border-solid bg-white border border-gray-300 gap-2 min-h-10 min-w-60 p-3 rounded-lg text-gray-400">
+        <div className="flex flex-wrap items-center mt-2 w-full border-solid bg-white border border-gray-300 gap-2 min-h-10 min-w-60 p-3 rounded-lg text-gray-700">
           <span className="flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full">
             Thành viên (Bao gồm cả bạn)
           </span>
@@ -99,7 +99,7 @@ export const TeamAndDocumentsSection = () => {
       <label className="self-start mt-3 font-bold text-slate-600">
         Tài liệu dự án
       </label>
-      <div className="flex flex-col justify-center items-center px-20 py-7 mt-3 text-center text-gray-500 bg-white rounded-lg border-2 border-gray-300 border-dashed max-md:px-5 max-md:mr-1 max-md:max-w-full">
+      <div className="flex flex-col justify-center items-center px-20 py-7 mt-3 text-center text-gray-600 bg-white rounded-lg border-2 border-gray-300 border-dashed max-md:px-5 max-md:mr-1 max-md:max-w-full">
         <div className="flex flex-col max-w-full w-[198px]">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/4af6dbef6e38eaeb4a4d23ec77babee875c63e76?placeholderIfAbsent=true"

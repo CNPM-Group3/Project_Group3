@@ -207,14 +207,14 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
         <div className="flex flex-col grow shrink-0 basis-0 w-fit max-md:max-w-full">
           <div className="w-full max-md:max-w-full">
             <FormField label="Tên dự án :" className="max-md:max-w-full">
-              <div className="flex flex-wrap gap-5 justify-between px-2.5 py-2 text-base text-gray-300 bg-white rounded-md border border-gray-300 border-solid max-md:max-w-full">
+              <div className="flex flex-wrap gap-5 justify-between px-2.5 py-2 text-base text-gray-700 bg-white rounded-md border border-gray-300 border-solid max-md:max-w-full">
                 <select
-                  className="my-auto bg-transparent border-none outline-none flex-1"
+                  className="my-auto bg-transparent border-none outline-none flex-1 text-gray-700"
                   value={formData.project}
                   onChange={(e) => handleInputChange("project", e.target.value)}
                   disabled={isSubmitting || isLoadingProjects}
                 >
-                  <option value="">
+                  <option value="" className="text-gray-600">
                     {isLoadingProjects 
                       ? "Đang tải danh sách dự án..." 
                       : projectsError 
@@ -223,7 +223,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                     }
                   </option>
                   {projects.map((project) => (
-                    <option key={project.id} value={project.id.toString()}>
+                    <option key={project.id} value={project.id.toString()} className="text-gray-700">
                       {project.title}
                     </option>
                   ))}
@@ -244,7 +244,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
                 <div className="flex flex-wrap gap-3 px-3 pt-2.5 pb-4 bg-white rounded-md border border-gray-300 border-solid">
                   <input
                     type="number"
-                    className="flex-auto text-gray-400 w-[658px] max-md:max-w-full bg-transparent border-none outline-none"
+                    className="flex-auto text-gray-700 w-[658px] max-md:max-w-full bg-transparent border-none outline-none placeholder-gray-500"
                     placeholder="0"
                     value={formData.amount}
                     onChange={(e) =>
@@ -261,7 +261,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
               className="mt-2.5 max-md:max-w-full"
             >
               <textarea
-                className="overflow-hidden px-4 pt-2 pb-16 w-full text-base text-gray-400 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 max-md:max-w-full resize-none outline-none"
+                className="overflow-hidden px-4 pt-2 pb-16 w-full text-base text-gray-700 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 max-md:max-w-full resize-none outline-none placeholder-gray-500"
                 placeholder="Nhập vào đây"
                 value={formData.purpose}
                 onChange={(e) => handleInputChange("purpose", e.target.value)}
@@ -280,7 +280,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
 
             <FormField label="Trình bày :" className="mt-2.5 max-md:max-w-full">
               <textarea
-                className="overflow-hidden px-4 pt-2 pb-24 w-full text-base text-gray-400 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 max-md:pb-28 max-md:max-w-full resize-none outline-none"
+                className="overflow-hidden px-4 pt-2 pb-24 w-full text-base text-gray-700 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 max-md:pb-28 max-md:max-w-full resize-none outline-none placeholder-gray-500"
                 placeholder="Provide a clear explanation of why the funding is necessary"
                 value={formData.presentation}
                 onChange={(e) =>
@@ -297,7 +297,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
               >
                 <input
                   type="text"
-                  className="px-4 py-3.5 w-full text-base text-gray-400 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 outline-none"
+                  className="px-4 py-3.5 w-full text-base text-gray-700 bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 outline-none placeholder-gray-500"
                   placeholder="Họ tên"
                   value={formData.researcher}
                   onChange={(e) =>
@@ -312,7 +312,7 @@ export const FundingRequestForm: React.FC<FundingRequestFormProps> = ({
               >
                 <input
                   type="email"
-                  className="px-4 py-3.5 w-full text-base text-gray-400 whitespace-nowrap bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 outline-none"
+                  className="px-4 py-3.5 w-full text-base text-gray-700 whitespace-nowrap bg-white rounded-md border border-gray-300 border-solid max-md:pr-5 outline-none placeholder-gray-500"
                   placeholder="username@gmail.com"
                   value={formData.sponsorEmail}
                   onChange={(e) =>
