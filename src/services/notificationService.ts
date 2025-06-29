@@ -12,6 +12,7 @@ export interface Notification {
   userId: string;            // ID người dùng
 }
 
+<<<<<<< HEAD
 export interface NotificationResponse {
   data: Notification[];
   total: number;
@@ -19,12 +20,18 @@ export interface NotificationResponse {
   limit: number;
 }
 
+=======
+>>>>>>> Nhi
 // Lấy thông tin chi tiết một thông báo
 export const getNotificationDetails = async (
   id: string
 ): Promise<Notification> => {
   try {
+<<<<<<< HEAD
     const response = await ApiService.get<Notification>(`/notifications/${id}`);
+=======
+    const response = await ApiService.get<Notification>(`/Notifications/${id}`);
+>>>>>>> Nhi
     return response.data;
   } catch (error) {
     console.error(`Error fetching notification with id ${id}:`, error);
@@ -35,7 +42,11 @@ export const getNotificationDetails = async (
 // Lấy danh sách thông báo
 export const getNotifications = async (): Promise<Notification[]> => {
   try {
+<<<<<<< HEAD
     const response = await ApiService.get<Notification[]>('/notifications');
+=======
+    const response = await ApiService.get<Notification[]>('/Notifications');
+>>>>>>> Nhi
     return response.data;
   } catch (error) {
     console.error('Error fetching notifications:', error);
@@ -46,7 +57,11 @@ export const getNotifications = async (): Promise<Notification[]> => {
 // Lấy các thông báo chưa đọc
 export const getUnreadNotifications = async (): Promise<Notification[]> => {
   try {
+<<<<<<< HEAD
     const response = await ApiService.get<Notification[]>('/notifications/unread');
+=======
+    const response = await ApiService.get<Notification[]>('/Notifications/unread');
+>>>>>>> Nhi
     return response.data;
   } catch (error) {
     console.error('Error fetching unread notifications:', error);
@@ -57,7 +72,11 @@ export const getUnreadNotifications = async (): Promise<Notification[]> => {
 // Đánh dấu thông báo là đã đọc
 export const markAsRead = async (id: string): Promise<AxiosResponse> => {
   try {
+<<<<<<< HEAD
     const response = await ApiService.patch<void>(`/notifications/${id}/mark-as-read`);
+=======
+    const response = await ApiService.patch<void>(`/Notifications/${id}/mark-as-read`);
+>>>>>>> Nhi
     return response;
   } catch (error) {
     console.error(`Error marking notification ${id} as read:`, error);
@@ -68,7 +87,11 @@ export const markAsRead = async (id: string): Promise<AxiosResponse> => {
 // Đánh dấu tất cả thông báo là đã đọc
 export const markAllAsRead = async (): Promise<AxiosResponse> => {
   try {
+<<<<<<< HEAD
     const response = await ApiService.patch<void>('/notifications/mark-all-as-read');
+=======
+    const response = await ApiService.patch<void>('/Notifications/mark-all-as-read');
+>>>>>>> Nhi
     return response;
   } catch (error) {
     console.error('Error marking all notifications as read:', error);
@@ -79,13 +102,18 @@ export const markAllAsRead = async (): Promise<AxiosResponse> => {
 // Xóa thông báo theo ID
 export const deleteNotification = async (id: string): Promise<AxiosResponse> => {
   try {
+<<<<<<< HEAD
     const response = await ApiService.delete(`/notifications/${id}`);
+=======
+    const response = await ApiService.delete(`/Notifications/${id}`);
+>>>>>>> Nhi
     return response;
   } catch (error) {
     console.error(`Error deleting notification with id ${id}:`, error);
     throw error;
   }
 };
+<<<<<<< HEAD
 
 // Lấy thông báo theo ID
 export const getNotificationById = async (id: string): Promise<Notification> => {
@@ -146,3 +174,5 @@ export const markMultipleAsRead = async (ids: string[]): Promise<void> => {
     throw error;
   }
 };
+=======
+>>>>>>> Nhi

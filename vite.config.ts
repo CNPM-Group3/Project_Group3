@@ -24,6 +24,14 @@ export default defineConfig(({ mode }) => {
           target: 'http://aienthusiasm.vn:8080',
           changeOrigin: true,
           secure: false,
+<<<<<<< HEAD
+=======
+          configure: (proxy, options) => {
+            proxy.on('proxyReq', (proxyReq, req, res) => {
+              proxyReq.setHeader('ngrok-skip-browser-warning', '69420');
+            });
+          },
+>>>>>>> Nhi
         },
       },
     },

@@ -10,6 +10,7 @@ const Sidebar: React.FC = () => {
 
   // Xử lý đăng xuất
   const handleLogout = () => {
+<<<<<<< HEAD
     // Xóa token và tất cả dữ liệu session TRƯỚC KHI navigate
     sessionStorage.removeItem('accessToken');
     sessionStorage.clear();
@@ -29,11 +30,33 @@ const Sidebar: React.FC = () => {
       icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
       label: "Quản lý vai trò người dùng",
       path: "/quantrivien1",
+=======
+    sessionStorage.removeItem('accessToken');
+    sessionStorage.clear();
+    navigate('/signin');
+  };
+
+  // Danh sách navigation items của quản trị viên
+  const navigationItems = [
+    {
+      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/0c84591682f06cf8546d773fae5c47ed653898fb?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+      label: "Cấu hình hệ thống",
+      path: "/quantrivien", // Đường dẫn cho quản trị viên
+    },
+    {
+      icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
+      label: "Quản lý vai trò",
+      path: "/quantrivien1", // Đường dẫn cho quản trị viên
+>>>>>>> Nhi
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/226e99902e50dfa42a022fc320de71a0ac4b3ee4?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
       label: "Báo cáo & thống kê",
+<<<<<<< HEAD
       path: "/quantrivien2",
+=======
+      path: "/quantrivien2", // Đường dẫn cho quản trị viên
+>>>>>>> Nhi
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/08232af02813e185a2f8fc37b028087b250d5b28?placeholderIfAbsent=true",
@@ -44,46 +67,64 @@ const Sidebar: React.FC = () => {
 
   // Đồng bộ activeIndex với URL hiện tại
   useEffect(() => {
-    const activeItemIndex = navigationItems.findIndex(
-      (item) => item.path === location.pathname
-    );
-    setActiveIndex(activeItemIndex === -1 ? 0 : activeItemIndex);
+    const currentPath = location.pathname;
+    const foundIndex = navigationItems.findIndex(item => item.path === currentPath);
+    if (foundIndex !== -1) {
+      setActiveIndex(foundIndex);
+    }
   }, [location.pathname]);
 
   // Xử lý click item
   const handleItemClick = (item: any, index: number) => {
     if (item.action) {
+<<<<<<< HEAD
       // Nếu có action (như đăng xuất), gọi action
       item.action();
     } else if (item.path) {
       // Nếu có path, navigate bình thường
+=======
+      item.action(); // Nếu có action (như đăng xuất), gọi action
+    } else if (item.path) {
+>>>>>>> Nhi
       setActiveIndex(index);
       navigate(item.path);
     }
   };
 
   return (
-    <aside className="w-[240px] h-screen bg-gray-50 border-r border-gray-200 flex flex-col">
-      {/* Header logo */}
-      <header className="flex justify-center items-center h-[80px] border-b border-gray-200">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f97f13d9cd69d09e5640a65bf4466139ca5ca8ae?placeholderIfAbsent=true"
-          alt="Logo"
-          className="w-[150px] object-contain"
-        />
+    <aside className="w-[260px] h-screen bg-white border-slate-200/60 flex flex-col border-r border-gray-200">
+      {/* Header với logo */}
+      <header className="flex justify-center items-center h-[80px] border-b border-slate-200/60 bg-white/80 backdrop-blur-sm">
+        <div className="relative">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f97f13d9cd69d09e5640a65bf4466139ca5ca8ae?placeholderIfAbsent=true"
+            alt="Logo"
+            className="w-[160px] object-contain drop-shadow-sm"
+          />
+        </div>
       </header>
 
       {/* Navigation */}
+<<<<<<< HEAD
       <nav className="mt-4 px-3 flex-1">
         <ul className="space-y-1">
           {navigationItems.map((item, index) => {
             // Chỉ check active cho items có path (không phải action)
             const isActive = item.path && location.pathname === item.path;
 
+=======
+      <nav className="mt-6 px-4 flex-1">
+        <ul className="space-y-2">
+          {navigationItems.map((item, index) => {
+            const isActive = item.path && index === activeIndex;
+            const isLogout = item.action && !item.path;
+            
+>>>>>>> Nhi
             return (
               <li key={index}>
                 <div
                   onClick={() => handleItemClick(item, index)}
+<<<<<<< HEAD
                   className={`flex items-center gap-3 p-2 rounded-md cursor-pointer transition-all ${
                     isActive
                       ? "bg-blue-100 text-blue-700 font-semibold"
@@ -96,6 +137,49 @@ const Sidebar: React.FC = () => {
                     className="w-5 h-5 object-contain"
                   />
                   <span className="text-sm">{item.label}</span>
+=======
+                  className={`group flex items-center gap-4 px-4 py-3 rounded-xl cursor-pointer transition-all duration-200 ease-in-out relative overflow-hidden ${
+                    isActive
+                      ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/25 transform scale-[1.02]"
+                      : isLogout
+                      ? "text-red-600 hover:bg-red-50 hover:text-red-700 border border-red-100 hover:border-red-200"
+                      : "text-slate-600 hover:bg-slate-100/80 hover:text-slate-800 hover:shadow-md hover:transform hover:scale-[1.01]"
+                  }`}
+                >
+                  {/* Background gradient hiệu ứng */}
+                  {!isActive && !isLogout && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-100 to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                  )}
+
+                  {/* Icon container */}
+                  <div className={`relative flex-shrink-0 p-2 rounded-lg transition-all duration-200 ${
+                    isActive 
+                      ? "bg-white/20 shadow-inner" 
+                      : isLogout
+                      ? "bg-red-50 group-hover:bg-red-100"
+                      : "bg-slate-100 group-hover:bg-white group-hover:shadow-sm"
+                  }`}>
+                    <img
+                      src={item.icon}
+                      alt={item.label}
+                      className={`w-5 h-5 object-contain transition-all duration-200 ${
+                        isActive ? "brightness-0 invert" : isLogout ? "filter-none" : "group-hover:scale-110"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Label */}
+                  <span className={`relative text-sm font-medium transition-all duration-200 ${
+                    isActive ? "text-white" : ""
+                  }`}>
+                    {item.label}
+                  </span>
+
+                  {/* Active indicator */}
+                  {isActive && (
+                    <div className="absolute right-2 w-2 h-2 bg-white rounded-full shadow-sm animate-pulse" />
+                  )}
+>>>>>>> Nhi
                 </div>
               </li>
             );

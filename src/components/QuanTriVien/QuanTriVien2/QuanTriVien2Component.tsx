@@ -99,6 +99,7 @@ export const RoleFilter: React.FC<RoleFilterProps> = ({
   onSelectRole,
 }) => {
   return (
+<<<<<<< HEAD
     <div className="flex flex-col md:flex-row items-start md:items-center gap-4 px-4 py-2.5 mt-4 w-full max-w-[420px] border border-slate-200 rounded-lg bg-white text-sm text-gray-700">
       {/* Label + icon */}
       <div className="flex items-center gap-2 text-slate-500">
@@ -112,13 +113,31 @@ export const RoleFilter: React.FC<RoleFilterProps> = ({
 
       {/* Button group */}
       <div className="flex flex-wrap gap-3 font-medium text-black">
+=======
+    <div className="mx-auto max-w-3xl px-6 py-4 rounded-2xl border bg-white shadow flex flex-col items-center">
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707l-6.414 6.414A2 2 0 0013 14.414V19a1 1 0 01-1.447.894l-2-1A1 1 0 019 18v-3.586a2 2 0 00-.293-1.121L2.293 6.707A1 1 0 012 6V4z" />
+        </svg>
+        <span className="text-slate-700 font-semibold text-lg">Vai trò</span>
+      </div>
+      <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
+>>>>>>> Nhi
         {roles.map((role) => (
           <button
             key={role}
             onClick={() => onSelectRole(role === "Tất cả" ? null : role)}
+<<<<<<< HEAD
             className={`hover:text-blue-700 ${
               selectedRole === role || (selectedRole === null && role === "Tất cả") ? "text-blue-700 font-bold" : ""
             }`}
+=======
+            className={`px-4 py-2 rounded-full text-base font-semibold border transition
+              ${selectedRole === role || (selectedRole === null && role === "Tất cả")
+                ? 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white border-blue-400 shadow'
+                : 'bg-white text-blue-500 border-blue-200 hover:bg-blue-50 hover:text-blue-600'}
+            `}
+>>>>>>> Nhi
           >
             {role}
           </button>
@@ -146,6 +165,7 @@ export const TimeFilter: React.FC<TimeFilterProps> = ({
   };
 
   return (
+<<<<<<< HEAD
     <div className={`flex items-center gap-5 px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm font-medium text-gray-700 ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
       <div className="flex items-center gap-2 text-slate-500">
         <span>Thời gian</span>
@@ -162,6 +182,24 @@ export const TimeFilter: React.FC<TimeFilterProps> = ({
             className={`hover:text-blue-600 transition-colors duration-200 ${
               selectedTimeRange === range ? 'text-blue-600 font-semibold' : ''
             } ${disabled ? 'cursor-not-allowed' : ''}`}
+=======
+    <div className={`mx-auto max-w-3xl px-6 py-4 rounded-2xl border bg-white shadow flex flex-col items-center ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
+      <div className="flex items-center justify-center gap-2 mb-2 text-slate-500">
+        <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707l-6.414 6.414A2 2 0 0013 14.414V19a1 1 0 01-1.447.894l-2-1A1 1 0 019 18v-3.586a2 2 0 00-.293-1.121L2.293 6.707A1 1 0 012 6V4z" />
+        </svg>
+        <span className="text-slate-700 font-semibold text-lg">Thời gian</span>
+      </div>
+      <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
+        {timeRanges.map((range) => (
+          <button
+            key={range}
+            className={`px-4 py-2 rounded-full text-base font-semibold border transition
+              ${selectedTimeRange === range
+                ? 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white border-blue-400 shadow'
+                : 'bg-white text-blue-500 border-blue-200 hover:bg-blue-50 hover:text-blue-600'}
+              ${disabled ? 'cursor-not-allowed' : ''}`}
+>>>>>>> Nhi
             onClick={() => handleTimeRangeSelect(range)}
             disabled={disabled}
           >
@@ -175,7 +213,12 @@ export const TimeFilter: React.FC<TimeFilterProps> = ({
 
 // UserInteractionChart Component
 export const UserInteractionChart: React.FC<UserInteractionChartProps> = ({ users }) => {
+<<<<<<< HEAD
   const roleCounts = users.reduce((acc, user) => {
+=======
+  const safeUsers = Array.isArray(users) ? users : [];
+  const roleCounts = safeUsers.reduce((acc, user) => {
+>>>>>>> Nhi
     acc[user.role] = (acc[user.role] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
@@ -250,8 +293,14 @@ export const UserInteractionChart: React.FC<UserInteractionChartProps> = ({ user
 
 // UserPerformanceChart Component
 export const UserPerformanceChart: React.FC<UserPerformanceChartProps> = ({ users }) => {
+<<<<<<< HEAD
   const activeUsers = users.filter(user => user.status === 'ACTIVE').length;
   const totalUsers = users.length;
+=======
+  const safeUsers = Array.isArray(users) ? users : [];
+  const activeUsers = safeUsers.filter(user => user.status === 'ACTIVE').length;
+  const totalUsers = safeUsers.length;
+>>>>>>> Nhi
   const performancePercentage = totalUsers > 0 ? (activeUsers / totalUsers) * 100 : 0;
 
   const data = {
@@ -320,6 +369,10 @@ export const UserPerformanceChart: React.FC<UserPerformanceChartProps> = ({ user
 
 // UserList Component
 export const UserList: React.FC<UserListProps> = ({ users }) => {
+<<<<<<< HEAD
+=======
+  const safeUsers = Array.isArray(users) ? users : [];
+>>>>>>> Nhi
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [userList, setUserList] = useState<ApiUser[]>([]);
@@ -443,6 +496,10 @@ export const UserActivityLineChart: React.FC<UserActivityLineChartProps> = ({
   title,
   users
 }) => {
+<<<<<<< HEAD
+=======
+  const safeUsers = Array.isArray(users) ? users : [];
+>>>>>>> Nhi
   const activityData = React.useMemo(() => {
     // In a real application, you would process the 'users' prop to calculate activity data
     // For now, let's keep the random data generation as a placeholder
@@ -455,7 +512,11 @@ export const UserActivityLineChart: React.FC<UserActivityLineChartProps> = ({
       'Thứ 7': Math.floor(Math.random() * 100),
       'Chủ nhật': Math.floor(Math.random() * 100),
     };
+<<<<<<< HEAD
   }, [users]); // Re-run memoization if users prop changes
+=======
+  }, [safeUsers]); // Re-run memoization if users prop changes
+>>>>>>> Nhi
 
   const data = {
     labels: ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7', 'Chủ nhật'],

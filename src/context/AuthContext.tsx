@@ -27,12 +27,29 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [token, setToken] = React.useState<string | null>(
     sessionStorage.getItem('accessToken') || null
   );
+  
   useEffect(() => {
-    const currentUser = getCurrentUser()
+    // Chỉ gọi getCurrentUser khi có token
+    if (token) {
+      const fetchUser = async () => {
+        try {
+          const currentUser = await getCurrentUser();
     if (currentUser) {
       setUser(currentUser);
     }
-  }, []);
+        } catch (error: any) {
+          console.log('Không thể lấy thông tin user:', error);
+          // Nếu lỗi 401, xóa token cũ
+          if (error?.response?.status === 401) {
+            sessionStorage.removeItem('accessToken');
+            setToken(null);
+          }
+        }
+      };
+      fetchUser();
+    }
+  }, [token]);
+  
   useEffect(() => {
     // Kiểm tra xem người dùng đã đăng nhập chưa
     const token = localStorage.getItem('token');
@@ -53,11 +70,17 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const handleSignOut = async () => {
     try {
-      await import('../services/authService').then(({ authService }) => authService.logout());
+      // Xóa token và user data
+      sessionStorage.removeItem('accessToken');
+      localStorage.removeItem('token');
+      setUser(null);
+      setToken(null);
     } catch (error) {
       // fallback: vẫn xóa token local nếu có lỗi
       localStorage.removeItem('token');
+      sessionStorage.removeItem('accessToken');
       setUser(null);
+      setToken(null);
     }
   };
 

@@ -17,6 +17,7 @@ class ApiService {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
+        'ngrok-skip-browser-warning': 'true',
       },
       timeout: 30000, // Tăng timeout lên 30 giây
       withCredentials: true, // Cho phép gửi cookies trong cross-origin requests
@@ -40,6 +41,7 @@ class ApiService {
       (error) => Promise.reject(error)
     );
 
+<<<<<<< HEAD
     this.api.interceptors.response.use(
       (response) => response,
       async (error: AxiosError) => {
@@ -83,6 +85,8 @@ class ApiService {
         return Promise.reject(error);
       }
     );
+=======
+>>>>>>> Nhi
   }
 
   public getApi(): AxiosInstance {

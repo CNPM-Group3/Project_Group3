@@ -1,13 +1,82 @@
 "use client";
 
+<<<<<<< HEAD
 import React from "react";
 import MainLayout from "@cnpm/layouts/MainLayout";
 import Sidebar from "@cnpm/components/HoiDongThamDinh/Sidebar";
 import DashboardHeader from "@cnpm/components/Header";
 import { ProjectEvaluation, PhaseProgress } from "@cnpm/components/HoiDongThamDinh/StatusIndicator";
+=======
+import React, { useState, useEffect } from "react";
+import MainLayout from "../layouts/MainLayout";
+import Sidebar from "../components/HoiDongThamDinh/Sidebar";
+import DashboardHeader from "../components/Header";
+import { ProjectEvaluation, PhaseProgress } from "../components/HoiDongThamDinh/StatusIndicator";
+import { TabSelector } from "../components/Duyet Du An/TabSelector";
+import { Project } from "@cnpm/components/HoiDongThamDinh/danhgiasuan";
+import { getProjects, updateProject, updateProjectStatus } from "../services/projectService";
 
-const DashboardHoiDongThamDinh: React.FC = () => {
+export default function DashboardHoiOngThamInh() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [generalFeedback, setGeneralFeedback] = useState("");
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setLoading(true);
+      try {
+        const data = await getProjects();
+        setProjects(data);
+      } catch (error) {
+        console.error("Lỗi khi lấy danh sách dự án:", error);
+        setProjects([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchProjects();
+  }, []);
+
+  const handleViewProject = (project: Project) => {
+    setSelectedProject(project);
+  };
+
+  const handleBackToList = () => {
+    setSelectedProject(null);
+  };
+
+  const handleApprove = async (project: Project) => {
+    try {
+      await updateProjectStatus(project.id, "Approved");
+      window.alert("Duyệt dự án thành công!");
+      // Reload lại danh sách dự án
+      const data = await getProjects();
+      setProjects(data);
+      setSelectedProject(null);
+    } catch (error) {
+      window.alert("Có lỗi khi duyệt dự án!");
+      console.error(error);
+    }
+  };
+
+  const handleReject = async (project: Project) => {
+    try {
+      await updateProjectStatus(project.id, "Rejected");
+      window.alert("Từ chối dự án thành công!");
+      // Reload lại danh sách dự án
+      const data = await getProjects();
+      setProjects(data);
+      setSelectedProject(null);
+    } catch (error) {
+      window.alert("Có lỗi khi từ chối dự án!");
+      console.error(error);
+    }
+  };
+>>>>>>> Nhi
+
   return (
+<<<<<<< HEAD
     <MainLayout>
       <main className="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen w-full">
         <div className="flex flex-row min-h-screen">
@@ -31,6 +100,48 @@ const DashboardHoiDongThamDinh: React.FC = () => {
                 {/* ProjectEvaluation block */}
                 <div className="bg-gray-50 rounded-xl border border-gray-200 p-5 mb-6 shadow-sm">
                   <ProjectEvaluation />
+=======
+    <main className="bg-white min-h-screen w-full border border-gray-200">
+      <div className="flex min-h-screen w-screen">
+        {/* Sidebar */}
+        <aside className="fixed top-0 left-0 bottom-0 w-64 h-full bg-white border-r border-gray-200 z-40">
+          <Sidebar />
+        </aside>
+        {/* Main content */}
+        <div className="flex-1 flex flex-col ml-64">
+          {/* Header */}
+          <div className="fixed top-0 left-64 right-0 h-16 z-30 bg-white border-b border-gray-300">
+            <DashboardHeader />
+          </div>
+          <section className="flex-1 overflow-y-auto mt-16">
+            {!selectedProject ? (
+              // Display project list if no project is selected
+              <>
+                <h1 className="mt-8 text-3xl font-bold text-gray-700 text-center">Dự án cần thẩm định</h1>
+                <TabSelector 
+                  onApprove={handleApprove}
+                  onReject={handleReject}
+                  onView={handleViewProject}
+                />
+              </>
+            ) : (
+              // Display project evaluation if a project is selected
+              <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+                <button 
+                  onClick={handleBackToList}
+                  className="mb-4 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors duration-200"
+                >
+                  &larr; Quay lại danh sách dự án
+                </button>
+                {/* Tiêu đề chính */}
+                <h2 className="text-lg font-semibold mb-6 text-gray-800">
+                  Đánh giá dự án: {selectedProject.title}
+                </h2>
+
+                {/* ProjectEvaluation block */}
+                <div className="bg-gray-50 rounded-xl border border-gray-200 p-5 mb-6 shadow-sm">
+                  <ProjectEvaluation project={selectedProject} />
+>>>>>>> Nhi
                 </div>
 
                 {/* PhaseProgress + Comment */}
@@ -40,7 +151,11 @@ const DashboardHoiDongThamDinh: React.FC = () => {
                     <h3 className="text-base font-semibold mb-3 text-gray-700">
                       Đánh giá mốc tiến độ
                     </h3>
+<<<<<<< HEAD
                     <PhaseProgress />
+=======
+                    <PhaseProgress project={selectedProject} />
+>>>>>>> Nhi
                   </div>
 
                   {/* Phản hồi */}
@@ -52,23 +167,56 @@ const DashboardHoiDongThamDinh: React.FC = () => {
                       <textarea
                         className="w-full h-[200px] p-4 text-sm border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
                         placeholder="Nhập phản hồi tổng quan..."
+<<<<<<< HEAD
+=======
+                        value={generalFeedback}
+                        onChange={e => setGeneralFeedback(e.target.value)}
+>>>>>>> Nhi
                       />
                     </div>
 
                     <div className="flex justify-end mt-4">
+<<<<<<< HEAD
                       <button className="px-5 py-2 bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium rounded-lg shadow">
+=======
+                      <button 
+                        className="px-5 py-2 bg-sky-500 hover:bg-sky-600 text-white text-sm font-medium rounded-lg shadow"
+                        onClick={async () => {
+                          if (!generalFeedback.trim()) {
+                            window.alert("Vui lòng nhập phản hồi tổng quan!");
+                            return;
+                          }
+                          try {
+                            // TODO: Gọi API gửi phản hồi tổng quan ở đây
+                            // await evaluationService.createGeneralFeedback({ projectId: selectedProject.id, feedback: generalFeedback });
+                            console.log("Gửi phản hồi tổng quan:", { projectId: selectedProject?.id, feedback: generalFeedback });
+                            window.alert("Gửi phản hồi tổng quan thành công!");
+                            setGeneralFeedback("");
+                          } catch (error) {
+                            window.alert("Có lỗi khi gửi phản hồi tổng quan!");
+                            console.error(error);
+                          }
+                        }}
+                      >
+>>>>>>> Nhi
                         Gửi đánh giá
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
             </main>
           </div>
         </div>
       </main>
     </MainLayout>
+=======
+            )}
+          </section>
+        </div>
+      </div>
+    </main>
+>>>>>>> Nhi
   );
-};
-
-export default DashboardHoiDongThamDinh;
+}

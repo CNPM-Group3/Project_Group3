@@ -1,6 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Project } from "@cnpm/components/Duyet Du An/ProjectList";
+import { evaluationService } from "../../services/evaluationsService";
 
 // Types
 type PhaseStatusType = "completed" | "in-progress" | "not-started";
@@ -21,6 +23,14 @@ interface StatusIndicatorProps {
   label: string;
   showIcon?: boolean;
   className?: string;
+}
+
+interface ProjectEvaluationProps {
+  project: Project;
+}
+
+interface PhaseProgressProps {
+  project: Project;
 }
 
 // Constants
@@ -94,12 +104,26 @@ export const StatusIndicator: React.FC<StatusIndicatorProps> = ({
 };
 
 // PhaseProgress Component
-export const PhaseProgress: React.FC = () => {
+export const PhaseProgress: React.FC<PhaseProgressProps> = ({ project }) => {
   const [phases, setPhases] = useState<PhaseStatus[]>([
     { phase: "Giai đoạn 1", status: "completed" },
     { phase: "Giai đoạn 2", status: "in-progress" },
     { phase: "Giai đoạn 3", status: "not-started" },
   ]);
+
+  // In a real application, you would fetch phase data based on project.id
+  useEffect(() => {
+    if (project) {
+      console.log(`Fetching phase progress for project: ${project.title}`);
+      // Example: fetchPhaseProgress(project.id).then(data => setPhases(data));
+      // For now, keep dummy data, but associate with project if needed
+      setPhases([
+        { phase: "Giai đoạn 1", status: "completed" },
+        { phase: "Giai đoạn 2", status: "in-progress" },
+        { phase: "Giai đoạn 3", status: "not-started" },
+      ]);
+    }
+  }, [project]);
 
   const handleChange = (index: number, newStatus: PhaseStatusType) => {
     const newPhases = [...phases];
@@ -143,15 +167,103 @@ export const PhaseProgress: React.FC = () => {
 };
 
 // ProjectEvaluation Component
-export const ProjectEvaluation: React.FC = () => {
+export const ProjectEvaluation: React.FC<ProjectEvaluationProps> = ({ project }) => {
   const [selections, setSelections] = useState<Record<string, EvaluationOption | null>>({
     planning: null,
     execution: null,
     effectiveness: null,
   });
+  const [evaluations, setEvaluations] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const handleSelect = (criterionId: string, value: EvaluationOption) => {
+  useEffect(() => {
+    if (project) {
+      const fetchEvaluations = async () => {
+        try {
+          const data = await evaluationService.getEvaluationsByProject(project.id);
+          setEvaluations(data);
+
+          // Đồng bộ selections với dữ liệu từ API
+          const newSelections: Record<string, EvaluationOption | null> = {
+            planning: null,
+            execution: null,
+            effectiveness: null,
+          };
+          data.forEach(ev => {
+            if (ev.content && ["planning", "execution", "effectiveness"].includes(ev.content)) {
+              newSelections[ev.content] = ev.type as EvaluationOption;
+            }
+          });
+          setSelections(newSelections);
+        } catch (error) {
+          console.error("Lỗi khi lấy đánh giá theo projectId:", error);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchEvaluations();
+    }
+  }, [project]);
+
+  const handleSelect = async (criterionId: string, value: EvaluationOption) => {
     setSelections((prev) => ({ ...prev, [criterionId]: value }));
+
+    // Tìm xem đã có đánh giá cho tiêu chí này chưa
+    const existing = evaluations.find(ev => ev.content === criterionId);
+
+    // Chuẩn bị payload chỉ gồm các trường backend yêu cầu
+    const basePayload: any = {
+      type: value,
+      content: criterionId,
+      score: value === "good" ? 3 : value === "average" ? 2 : 1,
+      feedback: "",
+      projectId: project.id,
+    };
+    // Nếu có taskId hợp lệ, thêm vào payload (ví dụ: nếu có taskId thì basePayload.taskId = taskId;)
+    // Hiện tại không gửi taskId nếu không có
+
+    try {
+      if (existing) {
+        console.log("Payload gửi lên (update):", basePayload);
+        await evaluationService.updateEvaluation(existing.id, basePayload);
+      } else {
+        console.log("Payload gửi lên (create):", basePayload);
+        await evaluationService.createEvaluation(basePayload);
+      }
+      // Sau khi cập nhật, reload lại danh sách đánh giá
+      const data = await evaluationService.getEvaluationsByProject(project.id);
+      setEvaluations(data);
+
+      // Đồng bộ selections với dữ liệu mới nhất
+      const newSelections: Record<string, EvaluationOption | null> = {
+        planning: null,
+        execution: null,
+        effectiveness: null,
+      };
+      data.forEach(ev => {
+        if (ev.content && ["planning", "execution", "effectiveness"].includes(ev.content)) {
+          newSelections[ev.content] = ev.type as EvaluationOption;
+        }
+      });
+      setSelections(newSelections);
+
+      window.alert("Cập nhật đánh giá thành công!");
+    } catch (error: any) {
+      // Cải thiện log lỗi và thông báo
+      if (error.response) {
+        // Lỗi từ backend trả về (404, 500, ...)
+        console.error("Lỗi backend:", error.response.status, error.response.data);
+        window.alert(`Lỗi backend: ${error.response.status} - ${JSON.stringify(error.response.data)}`);
+      } else if (error.request) {
+        // Không nhận được phản hồi từ backend (Network Error, CORS)
+        console.error("Không nhận được phản hồi từ backend (CORS hoặc server không chạy):", error.message);
+        window.alert("Không thể kết nối tới server. Có thể do lỗi CORS hoặc server không chạy.\nChi tiết: " + error.message);
+      } else {
+        // Lỗi khác
+        console.error("Lỗi không xác định:", error.message);
+        window.alert("Lỗi không xác định: " + error.message);
+      }
+    }
   };
 
   return (
@@ -189,6 +301,21 @@ export const ProjectEvaluation: React.FC = () => {
             </div>
           </div>
         ))}
+        {/* Hiển thị danh sách đánh giá từ API */}
+        <div className="mt-8">
+          <h3 className="font-semibold mb-2">Danh sách đánh giá theo dự án:</h3>
+          {loading ? (
+            <div>Đang tải đánh giá...</div>
+          ) : (
+            <ul className="list-disc pl-5">
+              {evaluations.map((item) => (
+                <li key={item.id} className="mb-1">
+                  <span className="font-medium">{item.type}</span> - {item.content} - <span className="text-blue-600">{item.score}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </section>
   );
@@ -209,7 +336,7 @@ export default function ProjectManagementDashboard() {
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Tiến độ giai đoạn
           </h2>
-          <PhaseProgress />
+          <PhaseProgress project={{ /* dummy project for example */ id: 1, title: "Example Project", description: "", objectives: "", expectedOutcomes: "", startDate: "", endDate: "", researchTopicId: 1 }} />
         </div>
 
         {/* Project Evaluation */}
@@ -217,7 +344,7 @@ export default function ProjectManagementDashboard() {
           <h2 className="text-lg font-semibold text-gray-700 mb-4">
             Đánh giá dự án
           </h2>
-          <ProjectEvaluation />
+          <ProjectEvaluation project={{ /* dummy project for example */ id: 1, title: "Example Project", description: "", objectives: "", expectedOutcomes: "", startDate: "", endDate: "", researchTopicId: 1 }} />
         </div>
 
         {/* Status Examples */}
