@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SRPM.Data.Entities;
 using TaskEntity = SRPM.Data.Entities.Task;
-
+using SRPM.API.Models;
 namespace SRPM.Data
 {
     public class ApplicationDbContext : DbContext
@@ -21,11 +21,37 @@ namespace SRPM.Data
         public DbSet<Evaluation> Evaluations { get; set; }
         public DbSet<ResearchTopic> ResearchTopics { get; set; }
         public DbSet<Notification> Notifications { get; set; }
-
+        public DbSet<Document> Documents { get; set; }
+        public DbSet<ProjectDocument> ProjectDocuments { get; set; }
+        public DbSet<ResearchTopicDocument> ResearchTopicDocuments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            modelBuilder.Entity<ProjectDocument>()
+            .HasKey(pd => new { pd.ProjectId, pd.DocumentId });
+            
+            modelBuilder.Entity<ResearchTopicDocument>()
+                .HasKey(rtd => new { rtd.ResearchTopicId, rtd.DocumentId });
+            // Configure relationships
+            modelBuilder.Entity<ProjectDocument>()
+                .HasOne(pd => pd.Project)
+                .WithMany(p => p.ProjectDocuments)
+                .HasForeignKey(pd => pd.ProjectId);
+                
+            modelBuilder.Entity<ProjectDocument>()
+                .HasOne(pd => pd.Document)
+                .WithMany(d => d.ProjectDocuments)
+                .HasForeignKey(pd => pd.DocumentId);
+                
+            modelBuilder.Entity<ResearchTopicDocument>()
+                .HasOne(rtd => rtd.ResearchTopic)
+                .WithMany(rt => rt.ResearchTopicDocuments)
+                .HasForeignKey(rtd => rtd.ResearchTopicId);
+                
+            modelBuilder.Entity<ResearchTopicDocument>()
+                .HasOne(rtd => rtd.Document)
+                .WithMany(d => d.ResearchTopicDocuments)
+                .HasForeignKey(rtd => rtd.DocumentId);
             // Configure User entity
             modelBuilder.Entity<User>()
                 .HasIndex(u => u.Email)

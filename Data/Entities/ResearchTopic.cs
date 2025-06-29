@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using SRPM.API.Models;
 
 namespace SRPM.Data.Entities
 {
@@ -12,7 +13,7 @@ namespace SRPM.Data.Entities
 
         [Required]
         public string Description { get; set; }
-
+         public virtual ICollection<ResearchTopicDocument> ResearchTopicDocuments { get; set; }
         public string? Objectives { get; set; }
         public string? ExpectedOutcomes { get; set; }
         public string? Requirements { get; set; }

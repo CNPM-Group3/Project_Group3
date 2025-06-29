@@ -186,10 +186,10 @@ namespace SRPM.API.Services
             if (owner == null)
                 return null;
 
-            // Check if user has Principal Investigator role
-            var roles = await _userRepository.GetUserRolesAsync(ownerId);
-            if (!roles.Any(r => r.Name == "PrincipalInvestigator"))
-                return null;
+            // // Check if user has Principal Investigator role
+            // var roles = await _userRepository.GetUserRolesAsync(ownerId);
+            // if (!roles.Any(r => r.Name == "PrincipalInvestigator"))
+            //     return null;
 
             var project = new Project
             {

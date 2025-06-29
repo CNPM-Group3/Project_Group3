@@ -95,7 +95,8 @@ namespace SRPM.API.Services
             user.Name = request.Name;
             user.AvatarUrl = request.AvatarUrl;
             user.BackgroundUrl = request.BackgroundUrl;
-            user.SocialLinks = request.SocialLinks;
+            user.SocialLinks = JsonSerializer.Serialize(request.SocialLinks);
+
 
             return await _userRepository.UpdateAsync(user);
         }

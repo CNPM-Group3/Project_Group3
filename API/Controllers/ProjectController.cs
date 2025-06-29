@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SRPM.API.Models;
 using SRPM.API.Services;
 using System.Security.Claims;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace SRPM.API.Controllers
 {
@@ -19,6 +20,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Lấy chi tiết dự án theo ID")]
         public async Task<ActionResult<ProjectDto>> GetById(int id)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -30,6 +32,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation(Summary = "Lấy tất cả dự án của người dùng")]
         public async Task<ActionResult<IEnumerable<ProjectDto>>> GetAll()
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -38,6 +41,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("owner/{ownerId}")]
+        [SwaggerOperation(Summary = "Lấy dự án theo ID chủ sở hữu")]
         public async Task<ActionResult<IEnumerable<ProjectDto>>> GetByOwnerId(int ownerId)
         {
             var projects = await _projectService.GetByOwnerIdAsync(ownerId);
@@ -45,6 +49,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("member/{memberId}")]
+        [SwaggerOperation(Summary = "Lấy dự án theo ID thành viên")]
         public async Task<ActionResult<IEnumerable<ProjectDto>>> GetByMemberId(int memberId)
         {
             var projects = await _projectService.GetByMemberIdAsync(memberId);
@@ -52,6 +57,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("status/{status}")]
+        [SwaggerOperation(Summary = "Lọc đề tài theo trạng thái")]
         public async Task<ActionResult<IEnumerable<ProjectDto>>> GetByStatus(string status)
         {
             var projects = await _projectService.GetByStatusAsync(status);
@@ -59,6 +65,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("research-topic/{researchTopicId}")]
+        [SwaggerOperation(Summary = "Lấy dự án theo ID chủ đề nghiên cứu")]
         public async Task<ActionResult<IEnumerable<ProjectDto>>> GetByResearchTopicId(int researchTopicId)
         {
             var projects = await _projectService.GetByResearchTopicIdAsync(researchTopicId);
@@ -66,7 +73,8 @@ namespace SRPM.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "PrincipalInvestigator")]
+        [SwaggerOperation(Summary = "Tạo mới dự án")]
+        // [Authorize(Roles = "PrincipalInvestigator")]
         public async Task<ActionResult<ProjectDto>> Create([FromBody] CreateProjectRequest request)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -78,6 +86,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Cập nhật dự án theo ID")]
         public async Task<ActionResult> Update(int id, [FromBody] UpdateProjectRequest request)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -89,6 +98,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Xóa dự án theo ID")]
         public async Task<ActionResult> Delete(int id)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -100,6 +110,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpPost("{id}/members")]
+        [SwaggerOperation(Summary = "Thêm thành viên vào dự án")]
         public async Task<ActionResult> AddMember(int id, [FromBody] AddProjectMemberRequest request)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -111,6 +122,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpDelete("{id}/members/{memberId}")]
+        [SwaggerOperation(Summary = "Xóa thành viên khỏi dự án")]
         public async Task<ActionResult> RemoveMember(int id, int memberId)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
@@ -122,6 +134,7 @@ namespace SRPM.API.Controllers
         }
 
         [HttpGet("{id}/members")]
+        [SwaggerOperation(Summary = "Lấy danh sách thành viên của dự án")]
         public async Task<ActionResult<IEnumerable<UserDto>>> GetMembers(int id)
         {
             var members = await _projectService.GetProjectMembersAsync(id);

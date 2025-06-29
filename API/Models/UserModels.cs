@@ -16,7 +16,7 @@ namespace SRPM.API.Models
         public string Name { get; set; }
         public string? AvatarUrl { get; set; }
         public string? BackgroundUrl { get; set; }
-        public string? SocialLinks { get; set; }
+        public List<string> SocialLinks { get; set; } = new();
     }
 
     public class AddRoleRequest

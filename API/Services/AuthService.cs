@@ -11,6 +11,7 @@ using System.Text.RegularExpressions;
 using Task = System.Threading.Tasks.Task;
 using Google.Apis.Auth; 
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json;
 
 namespace SRPM.API.Services
 {
@@ -19,15 +20,30 @@ namespace SRPM.API.Services
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
         private readonly ApplicationDbContext _dbContext;
-        // public AuthService(ApplicationDbContext dbContext)
-        // {
-        //     _dbContext = dbContext;
-        // }
-        public AuthService(IUserRepository userRepository, IConfiguration configuration)
+        public interface IGoogleAuthService
+        {
+            string GetGoogleAuthUrl(string action);
+            Task<AuthResponse> HandleGoogleCallbackAsync(string code, string action);
+        }
+        public AuthService(IUserRepository userRepository, IConfiguration configuration, ApplicationDbContext dbContext)
         {
             _userRepository = userRepository;
             _configuration = configuration;
+            _dbContext = dbContext;
         }
+        private int GetRoleIdFromEmail(string email)
+        {
+            email = email.ToLower();
+
+            if (email == "admin@ut.edu.vn") return 1; // ID của Admin
+            if (email == "staff@ut.edu.vn") return 2; // ID của Staff
+            if (email == "hdtd@ut.edu.vn") return 6; // ID của AppraisalCouncil
+            if (email.EndsWith("@gv.edu.vn")) return 5; // ID của HostInstitution
+            if (email.EndsWith("@ut.edu.vn")) return 4; // ID của Researcher
+
+            return 4; // Default fallback: Researcher
+        }
+
 
         public async Task<AuthResponse> LoginAsync(LoginRequest request)
         {
@@ -72,16 +88,6 @@ namespace SRPM.API.Services
 
         public async Task<AuthResponse> RegisterAsync(RegisterRequest request)
         {
-            // Check if the email domain is valid
-            if (!request.Email.EndsWith("@ut.edu.vn"))
-            {
-                return new AuthResponse
-                {
-                    Success = false,
-                    Message = "Only users with @ut.edu.vn email domain are allowed to register."
-                };
-            }
-
             // Check if the user already exists
             var existingUser = await _userRepository.GetByEmailAsync(request.Email);
             if (existingUser != null)
@@ -89,7 +95,7 @@ namespace SRPM.API.Services
                 return new AuthResponse
                 {
                     Success = false,
-                    Message = "User with this email already exists."
+                    Message = "Người dùng tồn tại"
                 };
             }
 
@@ -116,9 +122,8 @@ namespace SRPM.API.Services
 
             await _userRepository.CreateAsync(user);
 
-            // Assign default Researcher role
-            var researcherRoleId = 4; // Assuming 4 is the ID for Researcher role
-            await _userRepository.AddUserRoleAsync(user.Id, researcherRoleId);
+            var roleId = GetRoleIdFromEmail(request.Email);
+            await _userRepository.AddUserRoleAsync(user.Id, roleId);
 
             // Generate JWT token
             var token = await GenerateJwtTokenAsync(user);
@@ -232,10 +237,11 @@ namespace SRPM.API.Services
         public async Task<AuthResponse> LoginWithGoogleAsync(GoogleLoginRequest request)
         {
             var payload = await VerifyGoogleTokenAsync(request.GoogleToken);
-            if (payload == null || !payload.Email.EndsWith("@fe.edu.vn"))
+            if (payload == null)
             {
-                return new AuthResponse { Success = false, Message = "Invalid Google account." };
+                return new AuthResponse { Success = false, Message = "Invalid Google token." };
             }
+
 
             var user = await _userRepository.GetByEmailAsync(payload.Email);
             if (user == null)
@@ -244,10 +250,13 @@ namespace SRPM.API.Services
                 user = new User
                 {
                     Email = payload.Email,
-                    Name = payload.Name
+                    Name = payload.Name,
+                    PasswordHash = string.Empty
                 };
                 await _userRepository.CreateAsync(user);
-                await _userRepository.AddUserRoleAsync(user.Id, 4); // Researcher
+                var roleId = GetRoleIdFromEmail(user.Email);
+                await _userRepository.AddUserRoleAsync(user.Id, roleId);
+
             }
 
             var token = await GenerateJwtTokenAsync(user);
@@ -283,56 +292,28 @@ namespace SRPM.API.Services
                 return null;
             }
         }
-        public async Task<AuthResponse> VerifyEmailAsync(VerifyEmailRequest request)
+        public async Task<UserDto?> GetUserByEmailAsync(string email)
         {
-            var user = await _dbContext.Users.FirstOrDefaultAsync(u => u.Email == request.Email);
+            var user = await _userRepository.GetByEmailAsync(email);
             if (user == null)
-            {
-                return new AuthResponse
-                {
-                    Success = false,
-                    Message = "User not found"
-                };
-            }
+                return null;
 
-            if (user.VerificationCode != request.VerificationCode)
+            var roles = await _userRepository.GetUserRolesAsync(user.Id);
+            
+            return new UserDto
             {
-                return new AuthResponse
-                {
-                    Success = false,
-                    Message = "Invalid verification code"
-                };
-            }
-
-            user.IsEmailVerified = true;
-            user.VerificationCode = null;
-            await _dbContext.SaveChangesAsync();
-
-            return new AuthResponse
-            {
-                Success = true,
-                Message = "Email verified successfully"
+                Id = user.Id,
+                Email = user.Email,
+                Name = user.Name,
+                AvatarUrl = user.AvatarUrl,
+                BackgroundUrl = user.BackgroundUrl,
+                SocialLinks = string.IsNullOrEmpty(user.SocialLinks) 
+                    ? new List<string>() 
+                    : JsonSerializer.Deserialize<List<string>>(user.SocialLinks) ?? new List<string>(),
+                Roles = roles.Select(r => r.Name).ToList(),
+                IsGoogleUser = string.IsNullOrEmpty(user.PasswordHash), // Giữ nguyên nếu dùng empty string
+                CreatedAt = user.CreatedAt
             };
         }
-        public async Task<AuthResponse> SendOtpForRegisterAsync(SendOtpRequest request)
-        {
-            // Dummy logic nếu chưa dùng MailKit:
-            if (string.IsNullOrWhiteSpace(request.Email))
-            {
-                return new AuthResponse { Success = false, Message = "Email is required." };
-            }
-
-            var otp = new Random().Next(100000, 999999).ToString();
-            Console.WriteLine($"[OTP] Sending to {request.Email}: {otp}");
-
-            // TODO: Lưu otp vào cache và gửi email bằng MailKit sau khi cài được package
-
-            return new AuthResponse
-            {
-                Success = true,
-                Message = "OTP has been sent to your email (mocked)."
-            };
-        }
-
     }
 }

@@ -70,22 +70,28 @@ namespace SRPM.API.Services
             if (project == null)
                 return null;
 
-            // Check if user is a member of the project or the owner
-            bool isMember = project.OwnerId == userId || project.ProjectMembers.Any(pm => pm.UserId == userId);
-            if (!isMember)
-                return null;
+            // // Check if user is a member of the project or the owner
+            // bool isMember = project.OwnerId == userId || project.ProjectMembers.Any(pm => pm.UserId == userId);
+            // if (!isMember)
+            //     return null;
 
             // Check if assigned user exists and is a member of the project
-            if (request.AssignedToId.HasValue)
-            {
-                var assignedUser = await _userRepository.GetByIdAsync(request.AssignedToId.Value);
-                if (assignedUser == null)
-                    return null;
+            // if (request.AssignedToId is > 0)
+            // {
+            //     var assignedUser = await _userRepository.GetByIdAsync(request.AssignedToId.Value);
+            //     if (assignedUser == null)
+            //         return null;
 
-                bool isAssignedUserMember = project.ProjectMembers.Any(pm => pm.UserId == request.AssignedToId.Value);
-                if (!isAssignedUserMember && project.OwnerId != request.AssignedToId.Value)
-                    return null;
-            }
+            //     bool isAssignedUserMember = project.ProjectMembers.Any(pm => pm.UserId == request.AssignedToId.Value);
+            //     if (!isAssignedUserMember && project.OwnerId != request.AssignedToId.Value)
+            //         return null;
+            // }
+            // if (request.AssignedToId is > 0)
+            // {
+            //     var assignedUser = await _userRepository.GetByIdAsync(request.AssignedToId.Value);
+            //     if (assignedUser == null)
+            //         return null;
+            // }
 
             var task = new TaskEntity
             {
@@ -97,7 +103,9 @@ namespace SRPM.API.Services
                 ProjectId = request.ProjectId,
                 AssignedToId = request.AssignedToId,
                 IsMilestone = request.IsMilestone,
-                AttachmentUrls = request.AttachmentUrls
+                AttachmentUrls = request.AttachmentUrls,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow
             };
 
             var success = await _taskRepository.CreateAsync(task);

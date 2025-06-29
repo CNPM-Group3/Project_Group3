@@ -1,3 +1,4 @@
+// Models/AuthModels.cs
 namespace SRPM.API.Models
 {
     public class UserDto
@@ -34,7 +35,8 @@ namespace SRPM.API.Models
     public class AuthResponse
     {
         public bool Success { get; set; }
-        public string? Token { get; set; }
+        public string? Token { get; set; }        
+        public string? AccessToken { get; set; }
         public UserDto? User { get; set; }
         public string? Message { get; set; }
         public string? Error { get; set; }

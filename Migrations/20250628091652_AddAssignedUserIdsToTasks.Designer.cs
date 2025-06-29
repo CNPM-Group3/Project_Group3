@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SRPM.Data;
@@ -11,9 +12,11 @@ using SRPM.Data;
 namespace SRPM.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250628091652_AddAssignedUserIdsToTasks")]
+    partial class AddAssignedUserIdsToTasks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,96 +24,6 @@ namespace SRPM.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("SRPM.API.Models.Document", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("character varying(1000)");
-
-                    b.Property<string>("FileName")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("character varying(255)");
-
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("character varying(255)");
-
-                    b.Property<long>("FileSize")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("FileType")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("character varying(255)");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("UploadedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("UploadedBy")
-                        .IsRequired()
-                        .HasMaxLength(450)
-                        .HasColumnType("character varying(450)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Documents");
-                });
-
-            modelBuilder.Entity("SRPM.API.Models.ProjectDocument", b =>
-                {
-                    b.Property<int>("ProjectId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("DocumentId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("ProjectId", "DocumentId");
-
-                    b.HasIndex("DocumentId");
-
-                    b.ToTable("ProjectDocuments");
-                });
-
-            modelBuilder.Entity("SRPM.API.Models.ResearchTopicDocument", b =>
-                {
-                    b.Property<int>("ResearchTopicId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("DocumentId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("ResearchTopicId", "DocumentId");
-
-                    b.HasIndex("DocumentId");
-
-                    b.ToTable("ResearchTopicDocuments");
-                });
 
             modelBuilder.Entity("SRPM.Data.Entities.Evaluation", b =>
                 {
@@ -452,7 +365,12 @@ namespace SRPM.API.Migrations
                     b.Property<int?>("AssignedToId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("AssignedUserIds")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("AttachmentUrls")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("CompletedDate")
@@ -462,6 +380,7 @@ namespace SRPM.API.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DueDate")
@@ -478,14 +397,15 @@ namespace SRPM.API.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(50)
+                        .HasColumnType("character varying(50)");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("character varying(200)");
 
-                    b.Property<DateTime?>("UpdatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
@@ -567,44 +487,6 @@ namespace SRPM.API.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("UserRoles");
-                });
-
-            modelBuilder.Entity("SRPM.API.Models.ProjectDocument", b =>
-                {
-                    b.HasOne("SRPM.API.Models.Document", "Document")
-                        .WithMany("ProjectDocuments")
-                        .HasForeignKey("DocumentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SRPM.Data.Entities.Project", "Project")
-                        .WithMany("ProjectDocuments")
-                        .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Document");
-
-                    b.Navigation("Project");
-                });
-
-            modelBuilder.Entity("SRPM.API.Models.ResearchTopicDocument", b =>
-                {
-                    b.HasOne("SRPM.API.Models.Document", "Document")
-                        .WithMany("ResearchTopicDocuments")
-                        .HasForeignKey("DocumentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SRPM.Data.Entities.ResearchTopic", "ResearchTopic")
-                        .WithMany("ResearchTopicDocuments")
-                        .HasForeignKey("ResearchTopicId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Document");
-
-                    b.Navigation("ResearchTopic");
                 });
 
             modelBuilder.Entity("SRPM.Data.Entities.Evaluation", b =>
@@ -746,20 +628,11 @@ namespace SRPM.API.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("SRPM.API.Models.Document", b =>
-                {
-                    b.Navigation("ProjectDocuments");
-
-                    b.Navigation("ResearchTopicDocuments");
-                });
-
             modelBuilder.Entity("SRPM.Data.Entities.Project", b =>
                 {
                     b.Navigation("Evaluations");
 
                     b.Navigation("FundingRequests");
-
-                    b.Navigation("ProjectDocuments");
 
                     b.Navigation("ProjectMembers");
 
@@ -769,8 +642,6 @@ namespace SRPM.API.Migrations
             modelBuilder.Entity("SRPM.Data.Entities.ResearchTopic", b =>
                 {
                     b.Navigation("Projects");
-
-                    b.Navigation("ResearchTopicDocuments");
                 });
 
             modelBuilder.Entity("SRPM.Data.Entities.Role", b =>
