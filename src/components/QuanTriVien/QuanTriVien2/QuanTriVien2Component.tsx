@@ -99,26 +99,23 @@ export const RoleFilter: React.FC<RoleFilterProps> = ({
   onSelectRole,
 }) => {
   return (
-    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 px-4 py-2.5 mt-4 w-full max-w-[420px] border border-slate-200 rounded-lg bg-white text-sm text-gray-700">
-      {/* Label + icon */}
-      <div className="flex items-center gap-2 text-slate-500">
-        <span>Vai trò</span>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ab69d73d717cbc6050076b3bf3e3e159135cde2"
-          alt="icon"
-          className="w-4 h-4 object-contain"
-        />
+    <div className="mx-auto max-w-3xl px-6 py-4 rounded-2xl border bg-white shadow flex flex-col items-center">
+      <div className="flex items-center justify-center gap-2 mb-2">
+        <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707l-6.414 6.414A2 2 0 0013 14.414V19a1 1 0 01-1.447.894l-2-1A1 1 0 019 18v-3.586a2 2 0 00-.293-1.121L2.293 6.707A1 1 0 012 6V4z" />
+        </svg>
+        <span className="text-slate-700 font-semibold text-lg">Vai trò</span>
       </div>
-
-      {/* Button group */}
-      <div className="flex flex-wrap gap-3 font-medium text-black">
+      <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
         {roles.map((role) => (
           <button
             key={role}
             onClick={() => onSelectRole(role === "Tất cả" ? null : role)}
-            className={`hover:text-blue-700 ${
-              selectedRole === role || (selectedRole === null && role === "Tất cả") ? "text-blue-700 font-bold" : ""
-            }`}
+            className={`px-4 py-2 rounded-full text-base font-semibold border transition
+              ${selectedRole === role || (selectedRole === null && role === "Tất cả")
+                ? 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white border-blue-400 shadow'
+                : 'bg-white text-blue-500 border-blue-200 hover:bg-blue-50 hover:text-blue-600'}
+            `}
           >
             {role}
           </button>
@@ -146,22 +143,22 @@ export const TimeFilter: React.FC<TimeFilterProps> = ({
   };
 
   return (
-    <div className={`flex items-center gap-5 px-4 py-2 border border-slate-200 rounded-lg bg-white text-sm font-medium text-gray-700 ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
-      <div className="flex items-center gap-2 text-slate-500">
-        <span>Thời gian</span>
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ab69d73d717cbc6050076b3bf3e3e159135cde2"
-          alt="icon"
-          className="w-4 h-4 object-contain"
-        />
+    <div className={`mx-auto max-w-3xl px-6 py-4 rounded-2xl border bg-white shadow flex flex-col items-center ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
+      <div className="flex items-center justify-center gap-2 mb-2 text-slate-500">
+        <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707l-6.414 6.414A2 2 0 0013 14.414V19a1 1 0 01-1.447.894l-2-1A1 1 0 019 18v-3.586a2 2 0 00-.293-1.121L2.293 6.707A1 1 0 012 6V4z" />
+        </svg>
+        <span className="text-slate-700 font-semibold text-lg">Thời gian</span>
       </div>
-      <div className="flex gap-4">
+      <div className="flex flex-row flex-wrap justify-center gap-3 w-full">
         {timeRanges.map((range) => (
           <button
             key={range}
-            className={`hover:text-blue-600 transition-colors duration-200 ${
-              selectedTimeRange === range ? 'text-blue-600 font-semibold' : ''
-            } ${disabled ? 'cursor-not-allowed' : ''}`}
+            className={`px-4 py-2 rounded-full text-base font-semibold border transition
+              ${selectedTimeRange === range
+                ? 'bg-gradient-to-r from-blue-500 to-cyan-400 text-white border-blue-400 shadow'
+                : 'bg-white text-blue-500 border-blue-200 hover:bg-blue-50 hover:text-blue-600'}
+              ${disabled ? 'cursor-not-allowed' : ''}`}
             onClick={() => handleTimeRangeSelect(range)}
             disabled={disabled}
           >

@@ -9,26 +9,29 @@ export const DashboardLayout = () => {
   const [selectedRole, setSelectedRole] = React.useState<string>("all");
   return (
     <MainLayout>
-      <div className="min-h-screen w-screen bg-gray-50 flex">
-        {/* Sidebar cố định 256px */}
-        <aside className="w-64 bg-gray-50 border-r border-gray-200">
-          <Sidebar />
-        </aside>
+      <div className="min-h-screen w-screen bg-white flex">
+        <div className="flex min-h-screen w-screen">
+          {/* Sidebar */}
+          <aside className="fixed top-0 left-0 bottom-0 w-64 h-full bg-white border-r border-gray-200 z-40">
+            <Sidebar />
+          </aside>
 
-        {/* Nội dung chính */}
-        <section className="flex-1 flex flex-col bg-white">
-          <div className="border-b border-gray-200">
-            <Header />
-          </div>
-          <main className="flex-1 p-6 overflow-y-auto bg-gray-50">
-            <div className="w-full max-w-[1280px] mx-auto px-6">
-              <div className="w-[750px] mb-4">
-                <UserRoleFilter onRoleChange={setSelectedRole} />
-              </div>
-              <UserList selectedRole={selectedRole} />
+          {/* Main content */}
+          <div className="flex-1 flex flex-col ml-64">
+            {/* Header */}
+            <div className="fixed top-0 left-64 right-0 h-16 z-30 bg-white border-b border-gray-300">
+              <Header />
             </div>
-          </main>
-        </section>
+            <main className="flex-1 p-6 mt-16 bg-white">
+              <div className="w-full max-w-[1280px] mx-auto px-6">
+                <div className="w-[750px] mb-4">
+                  <UserRoleFilter onRoleChange={setSelectedRole} />
+                </div>
+                <UserList selectedRole={selectedRole} />
+              </div>
+            </main>
+          </div>
+        </div>
       </div>
     </MainLayout>
   );

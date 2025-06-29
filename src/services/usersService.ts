@@ -11,7 +11,13 @@ const api = axios.create({
     'ngrok-skip-browser-warning': 'true', // Bỏ qua cảnh báo ngrok
   },
 });
-
+api.interceptors.request.use((config) => {
+  const token = sessionStorage.getItem('accessToken'); // ✅ Sửa ở đây
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 interface User {
   id: string;
   email: string;
@@ -47,7 +53,7 @@ const usersService = {
       throw error;
     }
   },
-
+  
   // Lấy tất cả người dùng
   getAllUsers: async (): Promise<User[]> => {
     try {
@@ -64,12 +70,12 @@ const usersService = {
   },
 
   // Lấy vai trò của người dùng
-  getUserRole: async (userId: string, roleName: string): Promise<any> => {
+  getUsersByRole: async (roleName: string): Promise<User[]> => {
     try {
-      const response = await api.get(`/Users/${userId}/role/${roleName}`);
+      const response = await api.get(`/Users/role/${roleName}`);
       return response.data;
     } catch (error) {
-      console.error('Error fetching user role:', error);
+      console.error('Error fetching users by role:', error);
       throw error;
     }
   },
@@ -96,14 +102,16 @@ const usersService = {
   },
 
   // Xóa vai trò của người dùng
-  deleteRoleFromUser: async (userId: string, roleName: string): Promise<void> => {
+  // ✅ Xóa người dùng (đúng theo swagger)
+  deleteUser: async (userId: string): Promise<void> => {
     try {
-      await api.delete(`/Users/${userId}/roles/${roleName}`);
+      await api.delete(`/Users/${userId}`);
     } catch (error) {
-      console.error('Error deleting role from user:', error);
+      console.error('Error deleting user:', error);
       throw error;
     }
-  },
+  }
+
 };
 
 export default usersService;

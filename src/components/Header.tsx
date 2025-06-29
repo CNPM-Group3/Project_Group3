@@ -28,27 +28,21 @@ const Header: React.FC = () => {
     const notis = await getNotifications();
     console.log("Kết quả API Notification:", notis);
     let filteredNotis: Notification[] = [];
-    if (Array.isArray(notis)) {
-      if (email.endsWith("@ut.edu.vn")) {
-        filteredNotis = notis.filter(n => n.type === "researcher" || n.type === "principal");
-      } else if (email.endsWith("@gv.edu.vn")) {
-        filteredNotis = notis.filter(n => n.type === "host");
-      } else if (email === "hdtd@ut.edu.vn") {
-        filteredNotis = notis.filter(n => n.type === "council");
-      } else if (email === "admin@ut.edu.vn") {
-        filteredNotis = notis.filter(n => n.type === "admin");
-      } else if (email === "staff@ut.edu.vn") {
-        filteredNotis = notis.filter(n => n.type === "staff");
-      } else {
-        filteredNotis = notis;
-      }
-      setNotifications(filteredNotis);
-      setUnreadCount(filteredNotis.filter(n => !n.isRead).length);
+    if (email.endsWith("@ut.edu.vn")) {
+      filteredNotis = notis.filter(n => n.type === "researcher" || n.type === "principal");
+    } else if (email.endsWith("@gv.edu.vn")) {
+      filteredNotis = notis.filter(n => n.type === "host");
+    } else if (email === "hdtd@ut.edu.vn") {
+      filteredNotis = notis.filter(n => n.type === "council");
+    } else if (email === "admin@ut.edu.vn") {
+      filteredNotis = notis.filter(n => n.type === "admin");
+    } else if (email === "staff@ut.edu.vn") {
+      filteredNotis = notis.filter(n => n.type === "staff");
     } else {
-      console.error("API Notification trả về không phải mảng:", notis);
-      setNotifications([]);
-      setUnreadCount(0);
+      filteredNotis = notis;
     }
+    setNotifications(filteredNotis);
+    setUnreadCount(filteredNotis.filter(n => !n.isRead).length);
     console.log("KẾT THÚC fetchNotifications");
   };
 
@@ -77,35 +71,33 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Search bar */}
-      <div className="flex-1 max-w-lg mx-8">
-        <div className={`relative flex items-center rounded-full border-2 transition-all duration-300 ${
-          searchFocused 
-            ? 'border-blue-500 shadow-lg shadow-blue-100' 
-            : 'border-gray-200 hover:border-gray-300'
-        } bg-gray-50 hover:bg-white`}>
-          <div className="pl-4 pr-3">
-            <Search className={`w-5 h-5 transition-colors duration-200 ${
-              searchFocused ? 'text-blue-500' : 'text-gray-400'
-            }`} />
+      {/* Center decorative element */}
+      <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center">
+        <div className="flex items-center gap-6">
+          {/* Decorative line pattern */}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent opacity-60 animate-pulse"></div>
+            <div className="w-2 h-2 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full shadow-sm animate-pulse" style={{animationDelay: '0.5s'}}></div>
+            <div className="w-12 h-px bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 opacity-50 animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="w-1.5 h-1.5 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent opacity-60 animate-pulse" style={{animationDelay: '2s'}}></div>
           </div>
-          <input
-            type="text"
-            placeholder="Tìm kiếm..."
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            onFocus={() => setSearchFocused(true)}
-            onBlur={() => setSearchFocused(false)}
-            className="flex-1 py-3 pr-4 bg-transparent outline-none text-gray-700 placeholder-gray-400"
-          />
-          {searchValue && (
-            <button
-              onClick={() => setSearchValue("")}
-              className="pr-4 text-gray-400 hover:text-gray-600 transition-colors duration-200"
-            >
-              ×
-            </button>
-          )}
+          
+          {/* Central logo/icon */}
+          <div className="flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-slate-100 to-slate-200 rounded-xl flex items-center justify-center shadow-inner border border-white/50 hover:shadow-lg hover:scale-110 transition-all duration-300">
+              <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-sm opacity-70 animate-pulse" style={{animationDelay: '0.3s'}}></div>
+            </div>
+          </div>
+          
+          {/* Mirror decorative line pattern */}
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-pink-300 to-transparent opacity-60 animate-pulse" style={{animationDelay: '2.5s'}}></div>
+            <div className="w-1.5 h-1.5 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full animate-pulse" style={{animationDelay: '3s'}}></div>
+            <div className="w-12 h-px bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 opacity-50 animate-pulse" style={{animationDelay: '3.5s'}}></div>
+<div className="w-2 h-2 bg-gradient-to-br from-purple-500 to-blue-400 rounded-full shadow-sm animate-pulse" style={{animationDelay: '4s'}}></div>
+            <div className="w-8 h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent opacity-60 animate-pulse" style={{animationDelay: '4.5s'}}></div>
+          </div>
         </div>
       </div>
 
@@ -141,19 +133,23 @@ const Header: React.FC = () => {
         </button>
 
         {/* Messages */}
-        <button className="relative p-3 rounded-full hover:bg-gray-100 transition-colors duration-200 group">
-          <MessageCircle className="w-5 h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-200" />
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full"></span>
+        <button className="relative p-3 rounded-2xl hover:bg-gradient-to-br hover:from-gray-50 hover:to-green-50 transition-all duration-300 group transform hover:scale-105 hover:shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent to-green-100/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <MessageCircle className="w-5 h-5 text-gray-600 group-hover:text-green-600 transition-all duration-300 relative z-10" />
+          <span className="absolute -top-1 -right-1 w-4 h-4 bg-gradient-to-br from-green-300 to-green-400 rounded-full "></span>
         </button>
 
         {/* Profile */}
         <div className="flex items-center gap-3 ml-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center hover:shadow-lg transition-shadow duration-200 cursor-pointer">
-            <User className="w-5 h-5 text-white" />
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 rounded-full blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
+            <div className="relative w-12 h-12 bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 rounded-full flex items-center justify-center hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-110 hover:rotate-3">
+              <User className="w-6 h-6 text-white drop-shadow-sm" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/30 to-transparent rounded-full"></div>
+            </div>
           </div>
         </div>
       </div>
-
       {/* Popup chi tiết thông báo */}
       {selectedNotification && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-30">

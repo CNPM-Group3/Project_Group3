@@ -19,6 +19,7 @@ export interface User {
     address?: string;
     role: string;
     status: string;
+    createdAt?: string;
   }
   
   export const saveUser = async (userData: User): Promise<ApiUser> => {
@@ -149,7 +150,16 @@ export interface User {
       throw error;
     }
   };
-
+  export const updateUserRoles = async (userId: number, roleNames: string[]): Promise<void> => {
+    try {
+      await api.put(`/Users/${userId}/roles`, {
+        roleNames,
+      });
+    } catch (error) {
+      console.error(`Error updating roles for user ${userId}:`, error);
+      throw error;
+    }
+  };
   export const deleteRoleFromUser = async (userId: number, roleName: string): Promise<void> => {
     try {
       await api.delete(`/Users/${userId}/roles/${roleName}`);

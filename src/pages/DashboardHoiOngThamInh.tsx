@@ -6,43 +6,10 @@ import Sidebar from "../components/HoiDongThamDinh/Sidebar";
 import DashboardHeader from "../components/Header";
 import { ProjectEvaluation, PhaseProgress } from "../components/HoiDongThamDinh/StatusIndicator";
 import { TabSelector } from "../components/Duyet Du An/TabSelector";
-import { Project } from "../components/Duyet Du An/ProjectList";
+import { Project } from "@cnpm/components/HoiDongThamDinh/danhgiasuan";
 import { getProjects, updateProject, updateProjectStatus } from "../services/projectService";
 
-const mockProjects: Project[] = [
-  {
-    id: 1,
-    title: "Dự án AI",
-    description: "Nghiên cứu trí tuệ nhân tạo",
-    objectives: "Phát triển mô hình AI",
-    expectedOutcomes: "Báo cáo, sản phẩm AI",
-    startDate: "2024-01-01",
-    endDate: "2024-12-31",
-    researchTopicId: 1,
-    ownerId: 1,
-    status: "pending",
-    createdAt: "2024-01-01",
-    updatedAt: "2024-01-02",
-    feedback: "Cần bổ sung tài liệu"
-  },
-  {
-    id: 2,
-    title: "Dự án IoT",
-    description: "Ứng dụng IoT trong nông nghiệp",
-    objectives: "Giám sát môi trường",
-    expectedOutcomes: "Thiết bị IoT, báo cáo",
-    startDate: "2024-02-01",
-    endDate: "2024-11-30",
-    researchTopicId: 2,
-    ownerId: 2,
-    status: "approved",
-    createdAt: "2024-02-01",
-    updatedAt: "2024-02-10",
-    feedback: "Đã đạt yêu cầu"
-  }
-];
-
-const DashboardHoiDongThamInh: React.FC = () => {
+export default function DashboardHoiOngThamInh() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
@@ -101,27 +68,27 @@ const DashboardHoiDongThamInh: React.FC = () => {
   };
 
   return (
-    <MainLayout>
-      <div className="flex min-h-screen w-screen bg-gray-50">
+    <main className="bg-white min-h-screen w-full border border-gray-200">
+      <div className="flex min-h-screen w-screen">
         {/* Sidebar */}
-        <aside className="w-64 bg-gray-50 border-r border-gray-200">
+        <aside className="fixed top-0 left-0 bottom-0 w-64 h-full bg-white border-r border-gray-200 z-40">
           <Sidebar />
         </aside>
-
         {/* Main content */}
-        <section className="flex-1 flex flex-col">
-          <DashboardHeader />
-
-          <main className="flex-1 p-6 overflow-y-auto bg-gray-50">
+        <div className="flex-1 flex flex-col ml-64">
+          {/* Header */}
+          <div className="fixed top-0 left-64 right-0 h-16 z-30 bg-white border-b border-gray-300">
+            <DashboardHeader />
+          </div>
+          <section className="flex-1 overflow-y-auto mt-16">
             {!selectedProject ? (
               // Display project list if no project is selected
               <>
-                <h1 className="mt-8 text-3xl font-bold text-gray-700">Dự án cần thẩm định</h1>
+                <h1 className="mt-8 text-3xl font-bold text-gray-700 text-center">Dự án cần thẩm định</h1>
                 <TabSelector 
                   onApprove={handleApprove}
                   onReject={handleReject}
                   onView={handleViewProject}
-                  projects={mockProjects}
                 />
               </>
             ) : (
@@ -194,11 +161,9 @@ const DashboardHoiDongThamInh: React.FC = () => {
                 </div>
               </div>
             )}
-          </main>
-        </section>
+          </section>
+        </div>
       </div>
-    </MainLayout>
+    </main>
   );
-};
-
-export default DashboardHoiDongThamInh;
+}

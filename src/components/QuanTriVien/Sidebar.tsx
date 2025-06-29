@@ -59,7 +59,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <aside className="w-[260px] h-screen bg-white border-slate-200/60 flex flex-col">
+    <aside className="w-[260px] h-screen bg-white border-slate-200/60 flex flex-col border-r border-gray-200">
       {/* Header với logo */}
       <header className="flex justify-center items-center h-[80px] border-b border-slate-200/60 bg-white/80 backdrop-blur-sm">
         <div className="relative">

@@ -22,13 +22,19 @@ const Sidebar: React.FC = () => {
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/ae10dc620c8906cfd90d03e5e71cfd48ef8aa9d3?placeholderIfAbsent=true&apiKey=2e3ce05d0ae44b27a762aa356ea6be1a",
       label: "Trang chủ",
-      path: "/hoidongthamdinh",
+      path: "/DashboardHDTD", // Đường dẫn của Hội Đồng Thẩm Định
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
       label: "Thông tin cá nhân",
       path: "/profile", // Sửa từ /profile3 thành /profile (route có sẵn)
     },
+    {
+      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/226e99902e50dfa42a022fc320de71a0ac4b3ee4?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
+      label: "Đánh giá dự án",
+      path: "/hoidongthamdinh",
+    },
+
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/08232af02813e185a2f8fc37b028087b250d5b28?placeholderIfAbsent=true",
       label: "Đăng Xuất",
@@ -65,7 +71,7 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <aside className="w-[260px] h-screen bg-white border-slate-200/60 flex flex-col">
+    <aside className="w-[260px] h-screen bg-white border-slate-200/60 flex flex-col border-r border-gray-200">
       {/* Header với logo */}
       <header className="flex justify-center items-center h-[80px] border-b border-slate-200/60 bg-white/80 backdrop-blur-sm">
         <div className="relative">
