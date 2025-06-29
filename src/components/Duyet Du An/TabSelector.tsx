@@ -9,16 +9,30 @@ interface TabSelectorProps {
   onApprove: (project: Project) => void;
   onReject: (project: Project) => void;
   onView: (project: Project) => void;
+  projects?: Project[]; // Cho phép truyền mock data
 }
 
-const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView }) => {
+const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView, projects }) => {
   const [activeTab, setActiveTab] = useState<TabType>("pending");
   const [searchKeyword, setSearchKeyword] = useState("");
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [projectsState, setProjectsState] = useState<Project[]>(projects || []);
+  const [loading, setLoading] = useState(!projects);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (projects) {
+      setProjectsState(projects);
+      setLoading(false);
+      setError(null);
+      return;
+    }
+    // Nếu không có prop projects thì fetch API như cũ (nếu muốn)
+    // setLoading(false); // hoặc giữ nguyên loading nếu không fetch
+  }, [projects]);
+
+  useEffect(() => {
+    if (projects) return; // Nếu có mock data thì không fetch API
+
     const fetchProjects = async () => {
       setLoading(true);
       setError(null);
@@ -46,7 +60,7 @@ const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView }
             if (apiProject.ownerId) {
               try {
                 const proposer: User = await getUserById(apiProject.ownerId);
-                proposerName = proposer.name; // Assuming User has a 'name' property
+                proposerName = proposer.name;
               } catch (userError) {
                 console.error(`Error fetching user for project ${apiProject.id}:`, userError);
                 proposerName = "Unknown Proposer";
@@ -54,7 +68,7 @@ const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView }
             }
             return {
               id: apiProject.id,
-              title: apiProject.title, // Use title as defined in ProjectList
+              title: apiProject.title,
               proposerName,
               description: apiProject.description,
               objectives: apiProject.objectives,
@@ -64,12 +78,12 @@ const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView }
               researchTopicId: apiProject.researchTopicId,
               ownerId: apiProject.ownerId,
               status: apiProject.status,
-              createdAt: apiProject.createdAt, // Use createdAt as defined in ProjectList
+              createdAt: apiProject.createdAt,
               updatedAt: apiProject.updatedAt
             };
           })
         );
-        setProjects(projectsWithProposerNames);
+        setProjectsState(projectsWithProposerNames);
       } catch (err: any) {
         console.error("Failed to fetch projects:", err);
         setError("Failed to load projects. Please try again later.");
@@ -79,10 +93,10 @@ const TabSelector: React.FC<TabSelectorProps> = ({ onApprove, onReject, onView }
     };
 
     fetchProjects();
-  }, [activeTab]);
+  }, [activeTab, projects]);
 
   // Filter projects based on search keyword
-  const filteredProjects = projects.filter(project =>
+  const filteredProjects = projectsState.filter(project =>
     project.title.toLowerCase().includes(searchKeyword.toLowerCase()) ||
     project.id.toString().includes(searchKeyword.toLowerCase()) ||
     (project.proposerName && project.proposerName.toLowerCase().includes(searchKeyword.toLowerCase()))

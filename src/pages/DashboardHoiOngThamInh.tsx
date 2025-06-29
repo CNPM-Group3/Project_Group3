@@ -9,6 +9,38 @@ import { TabSelector } from "../components/Duyet Du An/TabSelector";
 import { Project } from "../components/Duyet Du An/ProjectList";
 import { getProjects, updateProject, updateProjectStatus } from "../services/projectService";
 
+const mockProjects: Project[] = [
+  {
+    id: 1,
+    title: "Dự án AI",
+    description: "Nghiên cứu trí tuệ nhân tạo",
+    objectives: "Phát triển mô hình AI",
+    expectedOutcomes: "Báo cáo, sản phẩm AI",
+    startDate: "2024-01-01",
+    endDate: "2024-12-31",
+    researchTopicId: 1,
+    ownerId: 1,
+    status: "pending",
+    createdAt: "2024-01-01",
+    updatedAt: "2024-01-02",
+    feedback: "Cần bổ sung tài liệu"
+  },
+  {
+    id: 2,
+    title: "Dự án IoT",
+    description: "Ứng dụng IoT trong nông nghiệp",
+    objectives: "Giám sát môi trường",
+    expectedOutcomes: "Thiết bị IoT, báo cáo",
+    startDate: "2024-02-01",
+    endDate: "2024-11-30",
+    researchTopicId: 2,
+    ownerId: 2,
+    status: "approved",
+    createdAt: "2024-02-01",
+    updatedAt: "2024-02-10",
+    feedback: "Đã đạt yêu cầu"
+  }
+];
 
 const DashboardHoiDongThamInh: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -89,6 +121,7 @@ const DashboardHoiDongThamInh: React.FC = () => {
                   onApprove={handleApprove}
                   onReject={handleReject}
                   onView={handleViewProject}
+                  projects={mockProjects}
                 />
               </>
             ) : (

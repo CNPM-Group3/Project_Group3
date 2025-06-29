@@ -34,9 +34,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       const fetchUser = async () => {
         try {
           const currentUser = await getCurrentUser();
-          if (currentUser) {
-            setUser(currentUser);
-          }
+    if (currentUser) {
+      setUser(currentUser);
+    }
         } catch (error: any) {
           console.log('Không thể lấy thông tin user:', error);
           // Nếu lỗi 401, xóa token cũ

@@ -31,10 +31,10 @@ export const ThanhVienNghienCuu = () => {
 									
 									{/* Main content */}
 									<div className="relative z-10">
-										<h1 className="text-6xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-teal-500 bg-clip-text text-transparent mb-8 leading-tight">
+										<h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-teal-500 bg-clip-text text-transparent mb-8 leading-[1.3] break-words pb-4">
 											Chào mừng bạn đến với
 										</h1>
-										<h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-teal-500 via-blue-500 to-indigo-600 bg-clip-text text-transparent mb-6 leading-tight">
+										<h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-500 via-blue-500 to-indigo-600 bg-clip-text text-transparent mb-6 leading-[1.3] break-words pb-4">
 											hệ thống nghiên cứu khoa học SRPM
 										</h1>
 										<p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">

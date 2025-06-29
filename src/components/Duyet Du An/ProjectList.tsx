@@ -14,6 +14,7 @@ export interface Project {
   status?: string;
   createdAt?: string;
   updatedAt?: string;
+  feedback?: string;
 }
 
 interface ProjectListProps {
