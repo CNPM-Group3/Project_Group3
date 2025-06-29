@@ -5,11 +5,7 @@ import Sidebar from "@cnpm/components/QuanTriVien/Sidebar";
 import Header from "@cnpm/components/Header";
 
 import { getAllUsers, ApiUser } from "@cnpm/services/userService";
-<<<<<<< HEAD
-import { UserPerformanceChart, UserInteractionChart, TimeFilter, RoleFilter } from "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component";
-=======
 import { UserPerformanceChart, UserInteractionChart, TimeFilter, RoleFilter, UserActivityLineChart } from "@cnpm/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component";
->>>>>>> Nhi
 
 const DashboardQuanTriVien2: React.FC = () => {
   const [users, setUsers] = React.useState<ApiUser[]>([]);
@@ -19,15 +15,10 @@ const DashboardQuanTriVien2: React.FC = () => {
   const [selectedTimeRange, setSelectedTimeRange] = React.useState<string | null>('Tháng này');
   const [selectedRole, setSelectedRole] = React.useState<string | null>('Tất cả');
 
-<<<<<<< HEAD
-  const timeRanges = ['Ngày', 'Tuần', 'Tháng này', 'Năm'];
-  const roles = ['Tất cả', 'Sinh viên', 'Giảng viên', 'Quản trị viên', 'Nhân viên'];
-=======
   const availableTimeRanges: string[] = ["Hôm nay", "7 ngày", "30 ngày"];
   const availableRoles: string[] = ['Tất cả', 'Sinh viên', 'Giảng viên', 'Quản trị viên', 'Nhân viên'];
 
   const [filteredUsers, setFilteredUsers] = React.useState<ApiUser[]>([]);
->>>>>>> Nhi
 
   const handleTimeRangeSelect = (range: string) => {
     setSelectedTimeRange(range);
@@ -43,24 +34,10 @@ const DashboardQuanTriVien2: React.FC = () => {
         setLoading(true);
         setError(null);
 
-<<<<<<< HEAD
-        const token = sessionStorage.getItem('accessToken');
-        if (!token) {
-          setError('Vui lòng đăng nhập.');
-          setLoading(false);
-          return;
-        }
-
-=======
->>>>>>> Nhi
         const data = await getAllUsers();
         setUsers(data);
       } catch (err: any) {
         console.error('Error fetching users:', err);
-<<<<<<< HEAD
-        setError('Không thể tải. Vui lòng thử lại sau.');
-=======
->>>>>>> Nhi
       } finally {
         setLoading(false);
       }
@@ -69,8 +46,6 @@ const DashboardQuanTriVien2: React.FC = () => {
     fetchUsers();
   }, []);
 
-<<<<<<< HEAD
-=======
   React.useEffect(() => {
     let filtered = users;
 
@@ -110,7 +85,6 @@ const DashboardQuanTriVien2: React.FC = () => {
     setFilteredUsers(filtered);
   }, [users, selectedRole, selectedTimeRange]);
 
->>>>>>> Nhi
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -143,39 +117,6 @@ const DashboardQuanTriVien2: React.FC = () => {
                     <UserInteractionChart users={filteredUsers} />
                   </div>
 
-<<<<<<< HEAD
-          <main className="flex-1 p-6 overflow-y-auto">
-            {error && (
-              <div className="mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg">
-                {error}
-              </div>
-            )}
-            {!loading && !error ? (
-              <>
-            {/* Charts */}
-            <div className="flex gap-6 flex-wrap mb-6">
-              <div className="w-full md:w-1/2">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/488d89fe7b2e7cd40a8ee8152b3048ee84cd22ed?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
-                  alt="Statistics"
-                  className="w-full rounded-xl shadow-md aspect-[1.6] object-cover"
-                />
-              </div>
-              <div className="w-full md:w-1/2">
-                    <UserPerformanceChart users={users} />
-              </div>
-            </div>
-
-            {/* Interaction chart */}
-            <div className="mb-6">
-                  <UserInteractionChart users={users} />
-            </div>
-
-            {/* Filters */}
-            <div className="flex flex-wrap gap-6">
-                  <TimeFilter
-                    timeRanges={timeRanges}
-=======
                   {/* Hiệu suất người dùng Card (Pie Chart) */}
                   <div className="bg-white rounded-xl shadow-md p-6 flex-1 min-w-[300px]">
                     <UserPerformanceChart users={filteredUsers} />
@@ -191,24 +132,15 @@ const DashboardQuanTriVien2: React.FC = () => {
                 <div className="flex flex-wrap gap-6">
                   <TimeFilter
                     timeRanges={availableTimeRanges}
->>>>>>> Nhi
                     selectedTimeRange={selectedTimeRange}
                     onSelectTimeRange={handleTimeRangeSelect}
                   />
                   <RoleFilter
-<<<<<<< HEAD
-                    roles={roles}
-                    selectedRole={selectedRole}
-                    onSelectRole={handleRoleSelect}
-                  />
-            </div>
-=======
                     roles={availableRoles}
                     selectedRole={selectedRole}
                     onSelectRole={handleRoleSelect}
                   />
                 </div>
->>>>>>> Nhi
               </>
             ) : null}
           </main>

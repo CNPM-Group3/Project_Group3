@@ -8,28 +8,6 @@ import { SystemConfigCard } from "@cnpm/components/QuanTriVien/SystemConfigCard"
 export default function DashboardQuanTriVien() {
   return (
     <MainLayout>
-<<<<<<< HEAD
-      <main className="bg-slate-50 min-h-screen w-full">
-        <div className="flex flex-row min-h-screen">
-          {/* Sidebar */}
-          <div className="w-[18%] border-r border-slate-200 bg-gray">
-            <Sidebar />
-          </div>
-          {/* Main content */}
-          <div className="w-[110%] flex flex-col">
-            <Header />
-            {/* Frame chứa card, không dính header, sidebar */}
-            <div className="flex-1 flex justify-center items-center">
-              {/* Frame: căn giữa mọi thứ */}
-              <div className="w-[1000px] h-[500px] ">
-                {/* SystemConfigCard ở giữa frame */}
-                <SystemConfigCard />
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-=======
       <div className="flex min-h-screen w-screen bg-white border border-gray-200">
         {/* Sidebar */}
         <aside className="fixed top-0 left-0 bottom-0 w-64 h-full bg-white border-r border-gray-200 z-40">
@@ -50,7 +28,6 @@ export default function DashboardQuanTriVien() {
           </main>
         </div>
       </div>
->>>>>>> Nhi
     </MainLayout>
   );
 }

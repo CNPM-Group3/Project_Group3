@@ -106,20 +106,29 @@ export default function LoginPage() {
   };
 
   // Đăng nhập bằng Google
-  const handleGoogleLogin = async () => {
-    try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/v1/Auth/google/signup`);
-      const data = await res.json();
-      if (data.redirectUrl) {
-        window.location.href = data.redirectUrl;
-      } else {
-        throw new Error("Không nhận được đường dẫn đăng nhập Google.");
+const handleGoogleLogin = async () => {
+  try {
+    const res = await fetch(
+      `${import.meta.env.VITE_API_URL}/v1/Auth/google/signup`,
+      {
+        method: "GET",
+        headers: {
+          'ngrok-skip-browser-warning': 'true',
+        },
       }
-    } catch (error: any) {
-      console.error("Google Login Error:", error);
-      setErrorMessage("Lỗi khi đăng nhập bằng Google");
+    );
+
+    const data = await res.json();
+    if (data.redirectUrl) {
+      window.location.href = data.redirectUrl;
+    } else {
+      throw new Error("Không nhận được đường dẫn đăng nhập Google.");
     }
-  };
+  } catch (error: any) {
+    console.error("Google Login Error:", error);
+    setErrorMessage("Lỗi khi đăng nhập bằng Google");
+  }
+};
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">

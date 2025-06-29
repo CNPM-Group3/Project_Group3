@@ -8,11 +8,6 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-<<<<<<< HEAD
-  },
-});
-
-=======
     'ngrok-skip-browser-warning': 'true', // Bỏ qua cảnh báo ngrok
   },
 });
@@ -23,7 +18,6 @@ api.interceptors.request.use((config) => {
   }
   return config;
 });
->>>>>>> Nhi
 interface User {
   id: string;
   email: string;
@@ -59,24 +53,16 @@ const usersService = {
       throw error;
     }
   },
-<<<<<<< HEAD
-
-=======
   
->>>>>>> Nhi
   // Lấy tất cả người dùng
   getAllUsers: async (): Promise<User[]> => {
     try {
       const response = await api.get(`/Users`);
-<<<<<<< HEAD
-      return response.data;
-=======
       // Đảm bảo luôn trả về mảng
       if (Array.isArray(response.data)) return response.data;
       if (response.data && Array.isArray(response.data.users)) return response.data.users;
       if (response.data && Array.isArray(response.data.data)) return response.data.data;
       return [];
->>>>>>> Nhi
     } catch (error) {
       console.error('Error fetching all users:', error);
       throw error;
@@ -84,21 +70,12 @@ const usersService = {
   },
 
   // Lấy vai trò của người dùng
-<<<<<<< HEAD
-  getUserRole: async (userId: string, roleName: string): Promise<any> => {
-    try {
-      const response = await api.get(`/Users/${userId}/role/${roleName}`);
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching user role:', error);
-=======
   getUsersByRole: async (roleName: string): Promise<User[]> => {
     try {
       const response = await api.get(`/Users/role/${roleName}`);
       return response.data;
     } catch (error) {
       console.error('Error fetching users by role:', error);
->>>>>>> Nhi
       throw error;
     }
   },
@@ -125,19 +102,6 @@ const usersService = {
   },
 
   // Xóa vai trò của người dùng
-<<<<<<< HEAD
-  deleteRoleFromUser: async (userId: string, roleName: string): Promise<void> => {
-    try {
-      await api.delete(`/Users/${userId}/roles/${roleName}`);
-    } catch (error) {
-      console.error('Error deleting role from user:', error);
-      throw error;
-    }
-  },
-};
-
-export default usersService;
-=======
   // ✅ Xóa người dùng (đúng theo swagger)
   deleteUser: async (userId: string): Promise<void> => {
     try {
@@ -151,4 +115,3 @@ export default usersService;
 };
 
 export default usersService;
->>>>>>> Nhi
