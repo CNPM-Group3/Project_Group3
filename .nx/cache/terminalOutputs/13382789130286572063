@@ -1,0 +1,760 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:55:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Admin/AddUserForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:56:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ChiTietDuanHost.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:56:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ChiTietDuanHost.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+[2m12:56:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/pages/ChiTietDuanHost.tsx[22m Could not Fast Refresh (export removed)
+[2m12:56:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:57:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Admin/AddUserForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:27:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Admin/AddUserForm.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:33:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m
+[2m1:33:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:33:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx, /src/components/Header.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:35:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:36:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:36:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:37:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:38:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:39:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/AdminDashboard.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Admin/AddUserForm.tsx, /src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx[22m
+[2m1:39:22 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts:56:10: ERROR: Expected ":" but found "const"
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts[39m:56:10
+[33m  
+  [33mExpected ":" but found "const"[33m
+  54 |      }
+  55 |    },
+  56 |     export const updateUserRoles = async (userId: number, roleNames: string[]): Promise<void> => {
+     |            ^
+  57 |        try {
+  58 |          await api.put(`/Users/${userId}/roles`, {
+  [39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:39:22 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts:56:10: ERROR: Expected ":" but found "const"
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts[39m:56:10
+[33m  
+  [33mExpected ":" but found "const"[33m
+  54 |      }
+  55 |    },
+  56 |     export const updateUserRoles = async (userId: number, roleNames: string[]): Promise<void> => {
+     |            ^
+  57 |        try {
+  58 |          await api.put(`/Users/${userId}/roles`, {
+  [39m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:39:22 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts:56:10: ERROR: Expected ":" but found "const"
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts[39m:56:10
+[33m  
+  [33mExpected ":" but found "const"[33m
+  54 |      }
+  55 |    },
+  56 |     export const updateUserRoles = async (userId: number, roleNames: string[]): Promise<void> => {
+     |            ^
+  57 |        try {
+  58 |          await api.put(`/Users/${userId}/roles`, {
+  [39m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:39:22 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts:56:10: ERROR: Expected ":" but found "const"
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts[39m:56:10
+[33m  
+  [33mExpected ":" but found "const"[33m
+  54 |      }
+  55 |    },
+  56 |     export const updateUserRoles = async (userId: number, roleNames: string[]): Promise<void> => {
+     |            ^
+  57 |        try {
+  58 |          await api.put(`/Users/${userId}/roles`, {
+  [39m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:39:22 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts:56:10: ERROR: Expected ":" but found "const"[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/usersService.ts[39m:56:10
+[33m  
+  [33mExpected ":" but found "const"[33m
+  54 |      }
+  55 |    },
+  56 |     export const updateUserRoles = async (userId: number, roleNames: string[]): Promise<void> => {
+     |            ^
+  57 |        try {
+  58 |          await api.put(`/Users/${userId}/roles`, {
+  [39m
+      at failureErrorWithLog (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:1463:15)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:734:50
+      at responseCallbacks.<computed> (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:601:9)
+      at handleIncomingPacket (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:656:12)
+      at Socket.readFromStdout (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:579:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:39:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/AdminDashboard.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Admin/AddUserForm.tsx, /src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:42:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:42:36 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "./userService" from "src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx[39m:6:7
+[33m  20 |    getAllUsers,
+  21 |    updateUserRoles
+  22 |  } from "./userService";
+     |          ^
+  23 |  const convertApiUserToUser = (apiUser) => {
+  24 |    return {[39m
+      at TransformPluginContext._formatLog (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+      at async viteTransformMiddleware (file:///home/nhatlinh/SRPM_Frontend/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:37250:24)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/DashboardQuanTriVien1.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:17 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx: Unexpected token, expected "from" (2:13)
+
+[0m [90m 1 |[31m [36mimport[31m [33mReact[31m[33m,[31m { useState[33m,[31m useEffect } [36mfrom[31m [32m'react'[31m[33m;[31m
+[31m[1m>[22m[31m[90m 2 |[31m [36mimport[31m  [36mfrom[31m [32m'@cnpm/services/userService'[31m[33m;[31m
+ [90m   |[31m              [31m[1m^[22m[31m
+ [90m 3 |[31m
+ [90m 4 |[31m [90m// Interface definitions[31m
+ [90m 5 |[31m [36minterface[31m [33mRoleActionButtonProps[31m {[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx[39m:2:13
+[33m  1  |  import React, { useState, useEffect } from 'react';
+  2  |  import  from '@cnpm/services/userService';
+     |               ^
+  3  |  
+  4  |  // Interface definitions[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.unexpected (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6633:16)
+      at TypeScriptParserMixin.expectContextual (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6893:12)
+      at TypeScriptParserMixin.parseImportSpecifiersAndAfter (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:14115:10)
+      at TypeScriptParserMixin.parseImport (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:14107:17)
+      at TypeScriptParserMixin.parseImport (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9367:26)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12752:27)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9454:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12644:17)
+      at TypeScriptParserMixin.parseModuleItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12621:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13192:36)
+      at TypeScriptParserMixin.parseBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13185:10)
+      at TypeScriptParserMixin.parseProgram (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12514:10)
+      at TypeScriptParserMixin.parseTopLevel (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12504:25)
+      at TypeScriptParserMixin.parse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:14364:10)
+      at TypeScriptParserMixin.parse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10071:18)
+      at parse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:14398:38)
+      at parser (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:261:32)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:223:11)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:189:28
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:113:33
+      at step (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:287:14)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:223:11)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:43:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:44:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:46:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+^C

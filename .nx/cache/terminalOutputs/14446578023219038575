@@ -1,0 +1,556 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:16:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:21:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:21:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:21:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:26:08 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:26:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:26:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:26:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:26:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:27:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x10)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:29:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x11)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:31:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x12)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:31:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x13)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:31:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x14)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:32:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x15)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:32:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x16)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:33:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x17)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:33:27 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/components/Header.tsx: Unterminated JSX contents. (73:13)
+
+[0m [90m 71 |[31m         [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 72 |[31m       [33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 73 |[31m     [33m<[31m[33m/[31m[33mheader[31m[33m>[31m
+ [90m    |[31m              [31m[1m^[22m[31m
+ [90m 74 |[31m   )[33m;[31m
+ [90m 75 |[31m }[33m;[31m
+ [90m 76 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/components/Header.tsx[39m:73:13
+[33m  71 |          </div>
+  72 |        </div>
+  73 |      </header>
+     |               ^
+  74 |    );
+  75 |  };[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxReadToken (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4454:20)
+      at TypeScriptParserMixin.getTokenFromCode (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4780:12)
+      at TypeScriptParserMixin.getTokenFromCode (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9931:11)
+      at TypeScriptParserMixin.nextToken (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:5796:10)
+      at TypeScriptParserMixin.next (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:5706:10)
+      at TypeScriptParserMixin.eat (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:5710:12)
+      at TypeScriptParserMixin.expect (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6913:15)
+      at TypeScriptParserMixin.jsxParseClosingElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4686:10)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4701:37)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12329:16)
+      at TypeScriptParserMixin.parseExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13018:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12675:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9454:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12644:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12624:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13192:61)
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:33:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:02 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:37:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:37:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:39:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:40:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:53:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Header.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:56:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/Sidebar.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:56:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/Sidebar.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:57:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/Sidebar.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:59:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m6:59:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/pages/DashboardQuanTriVien.tsx[22m Could not Fast Refresh (new export)
+[2m6:59:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:59:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien.tsx, /src/styles.css?direct, /src/styles.css[22m
+[2m6:59:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/pages/DashboardQuanTriVien.tsx[22m Could not Fast Refresh (export removed)
+[2m6:59:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:59:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien1.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:00:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien1.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:02:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/Sidebar.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:04:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien2.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:05:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien2.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:06:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardQuanTriVien.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:09:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:10:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:14:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:14:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:16:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m7:17:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m [33m(x6)[39m
+^C

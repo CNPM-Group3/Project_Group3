@@ -1,0 +1,231 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/Thêm Tài Liệu/DocumentUpload.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/Thêm Tài Liệu/DocumentUpload.tsx, /src/styles.css, /src/styles.css?direct[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemTaiLieuNghienCuuChinh.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/pages/ThemTaiLieuNghienCuuChinh.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:23 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/documentService.ts:86:52: ERROR: Expected ")" but found end of file[39m
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/documentService.ts[39m:86:52
+[33m  
+  [33mExpected ")" but found end of file[33m
+  84 |      if (formData.entries && typeof formData.entries === 'function') {
+  85 |        const entries = Array.from(formData.entries());
+  86 |        console.log(`Total entries: ${entries.length}`
+     |                                                      ^
+  [39m
+      at failureErrorWithLog (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:1463:15)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:734:50
+      at responseCallbacks.<computed> (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:601:9)
+      at handleIncomingPacket (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:656:12)
+      at Socket.readFromStdout (/home/nhatlinh/SRPM_Frontend/node_modules/esbuild/lib/main.js:579:7)
+      at Socket.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)
+      at Readable.push (node:internal/streams/readable:392:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[2m3:35:23 PM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Transform failed with 1 error:
+/home/nhatlinh/SRPM_Frontend/src/services/documentService.ts:86:52: ERROR: Expected ")" but found end of file
+  Plugin: [35mvite:esbuild[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/services/documentService.ts[39m:86:52
+[33m  
+  [33mExpected ")" but found end of file[33m
+  84 |      if (formData.entries && typeof formData.entries === 'function') {
+  85 |        const entries = Array.from(formData.entries());
+  86 |        console.log(`Total entries: ${entries.length}`
+     |                                                      ^
+  [39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/pages/ThemTaiLieuNghienCuuChinh.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:38:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/pages/ThemTaiLieuNghienCuuChinh.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:38:57 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/pages/ThemTaiLieuNghienCuuChinh.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:39:09 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/pages/ThemTaiLieuNghienCuuChinh.tsx[22m [33m(x4)[39m
+^C

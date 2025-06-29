@@ -1,0 +1,1178 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:08:08 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:08:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:08:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:09:39 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/AdminDashboard.tsx, /src/components/Admin/AddUserForm.tsx, /src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/pages/ThemNhiemVu.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:10:10 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:10:10 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/pages/ThemNhiemVu.tsx: Binding member expression. (38:30)
+
+[0m [90m 36 |[31m       [36mtry[31m {
+ [90m 37 |[31m         [36mconst[31m users [33m=[31m [36mawait[31m usersService[33m.[31mgetUserRole([32m"Member"[31m)[33m;[31m
+[31m[1m>[22m[31m[90m 38 |[31m         setMembers(users[33m.[31mmap((u[33m.[31memail) [33m=>[31m u[33m.[31mname))[33m;[31m [90m// hoặc u.email, hoặc `${u.name} (${u.email})`[31m
+ [90m    |[31m                               [31m[1m^[22m[31m
+ [90m 39 |[31m       } [36mcatch[31m (err) {
+ [90m 40 |[31m         console[33m.[31merror([32m"Failed to fetch members:"[31m[33m,[31m err)[33m;[31m
+ [90m 41 |[31m         setError([32m"Không thể tải danh sách thành viên."[31m)[33m;[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/ThemNhiemVu.tsx[39m:38:30
+[33m  36 |        try {
+  37 |          const users = await usersService.getUserRole("Member");
+  38 |          setMembers(users.map((u.email) => u.name)); // hoặc u.email, hoặc `${u.name} (${u.email})`
+     |                                ^
+  39 |        } catch (err) {
+  40 |          console.error("Failed to fetch members:", err);[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.checkLVal (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:7474:14)
+      at TypeScriptParserMixin.checkParams (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12049:12)
+      at TypeScriptParserMixin.parseFunctionBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12012:12)
+      at TypeScriptParserMixin.parseArrowExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11993:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11603:12)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseExprListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12093:18)
+      at TypeScriptParserMixin.parseCallExpressionArguments (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11163:22)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11097:29)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11031:19)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9284:18)
+      at TypeScriptParserMixin.parseSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11005:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10996:17)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseExprListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12093:18)
+      at TypeScriptParserMixin.parseCallExpressionArguments (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11163:22)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11097:29)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11031:19)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9284:18)
+      at TypeScriptParserMixin.parseSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11005:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10996:17)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:11:36 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/AdminDashboard.tsx, /src/components/Admin/AddUserForm.tsx, /src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/pages/ThemNhiemVu.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:11:36 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/pages/ThemNhiemVu.tsx: Binding member expression. (38:30)
+
+[0m [90m 36 |[31m       [36mtry[31m {
+ [90m 37 |[31m         [36mconst[31m users [33m=[31m [36mawait[31m usersService[33m.[31mgetUserRole([32m"Member"[31m)[33m;[31m
+[31m[1m>[22m[31m[90m 38 |[31m         setMembers(users[33m.[31mmap((u[33m.[31memail) [33m=>[31m u[33m.[31mname))[33m;[31m [90m// hoặc u.email, hoặc `${u.name} (${u.email})`[31m
+ [90m    |[31m                               [31m[1m^[22m[31m
+ [90m 39 |[31m       } [36mcatch[31m (err) {
+ [90m 40 |[31m         console[33m.[31merror([32m"Failed to fetch members:"[31m[33m,[31m err)[33m;[31m
+ [90m 41 |[31m         setError([32m"Không thể tải danh sách thành viên."[31m)[33m;[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/ThemNhiemVu.tsx[39m:38:30
+[33m  36 |        try {
+  37 |          const users = await usersService.getUserRole("Member");
+  38 |          setMembers(users.map((u.email) => u.name)); // hoặc u.email, hoặc `${u.name} (${u.email})`
+     |                                ^
+  39 |        } catch (err) {
+  40 |          console.error("Failed to fetch members:", err);[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.checkLVal (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:7474:14)
+      at TypeScriptParserMixin.checkParams (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12049:12)
+      at TypeScriptParserMixin.parseFunctionBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12012:12)
+      at TypeScriptParserMixin.parseArrowExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11993:10)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11603:12)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseExprListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12093:18)
+      at TypeScriptParserMixin.parseCallExpressionArguments (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11163:22)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11097:29)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11031:19)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9284:18)
+      at TypeScriptParserMixin.parseSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11005:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10996:17)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseExprListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12093:18)
+      at TypeScriptParserMixin.parseCallExpressionArguments (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11163:22)
+      at TypeScriptParserMixin.parseCoverCallAndAsyncArrowHead (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11097:29)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11031:19)
+      at TypeScriptParserMixin.parseSubscript (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9284:18)
+      at TypeScriptParserMixin.parseSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11005:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10996:17)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:12:22 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ThemNhiemVu/TaskForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:12:56 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ThemNhiemVu/TaskForm.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:14:35 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:15:24 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:16:38 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ThemNhiemVu/TaskForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:16:38 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/components/ThemNhiemVu/TaskForm.tsx: Unexpected token, expected ";" (15:9)
+
+[0m [90m 13 |[31m [36minterface[31m [33mTaskFormProps[31m {
+ [90m 14 |[31m   onSubmit[33m:[31m (data[33m:[31m [33mNewTaskData[31m) [33m=>[31m [36mvoid[31m[33m;[31m
+[31m[1m>[22m[31m[90m 15 |[31m   members[33m=[31m{members}
+ [90m    |[31m          [31m[1m^[22m[31m
+ [90m 16 |[31m   isSubmitting[33m?[31m[33m:[31m boolean[33m;[31m
+ [90m 17 |[31m }
+ [90m 18 |[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/components/ThemNhiemVu/TaskForm.tsx[39m:15:9
+[33m  13 |  interface TaskFormProps {
+  14 |    onSubmit: (data: NewTaskData) => void;
+  15 |    members={members}
+     |           ^
+  16 |    isSubmitting?: boolean;
+  17 |  }[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.unexpected (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6633:16)
+      at TypeScriptParserMixin.expect (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6914:12)
+      at TypeScriptParserMixin.tsParseTypeMemberSemicolon (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:8086:12)
+      at TypeScriptParserMixin.tsParsePropertyOrMethodSignature (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:8165:12)
+      at TypeScriptParserMixin.tsParseTypeMember (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:8200:17)
+      at TypeScriptParserMixin.tsParseList (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:7846:19)
+      at TypeScriptParserMixin.tsParseObjectTypeMembers (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:8209:26)
+      at TypeScriptParserMixin.tsInType (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:8782:14)
+      at TypeScriptParserMixin.tsParseInterfaceDeclaration (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:8745:22)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9451:27)
+      at TypeScriptParserMixin.parseStatementLike (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12644:17)
+      at TypeScriptParserMixin.parseModuleItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12621:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13192:36)
+      at TypeScriptParserMixin.parseBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13185:10)
+      at TypeScriptParserMixin.parseProgram (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12514:10)
+      at TypeScriptParserMixin.parseTopLevel (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12504:25)
+      at TypeScriptParserMixin.parse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:14364:10)
+      at TypeScriptParserMixin.parse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10071:18)
+      at parse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:14398:38)
+      at parser (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/parser/index.js:41:34)
+      at parser.next (<anonymous>)
+      at normalizeFile (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+      at normalizeFile.next (<anonymous>)
+      at run (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/transformation/index.js:22:50)
+      at run.next (<anonymous>)
+      at transform (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/transform.js:22:33)
+      at transform.next (<anonymous>)
+      at step (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:261:32)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:223:11)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:189:28
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:113:33
+      at step (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:287:14)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:273:13
+      at async.call.result.err.err (/home/nhatlinh/SRPM_Frontend/node_modules/gensync/index.js:223:11)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:16:43 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ThemNhiemVu/TaskForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:16:57 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:18:14 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:19:16 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ThemNhiemVu/TaskForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:19:21 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:23:00 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:35:31 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/AdminDashboard.tsx, /src/components/Admin/AddUserForm.tsx, /src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/pages/ThemNhiemVu.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:35:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThemNhiemVu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:37:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ChiTietDuAn.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:38:47 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ChiTietDuAn.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:38:48 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ChiTietDuAn.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:39:28 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:39:40 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/ProjectCard.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:39:46 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/ProjectCard.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:39:56 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/ProjectCard.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:40:33 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/ProjectCard.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:40:53 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:41:20 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:41:53 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:42:11 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:42:24 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:42:36 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.26.6/static/login-start.html[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:42:36 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.26.6/static/login-end.html[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:42:39 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DuAn.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:42:55 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Du An/ProjectCard.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:46:06 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/TaiTro.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:46:29 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/TaiTro.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:52:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/TaiTro.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:52:21 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/TaiTro.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:53:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/TaiTro.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:53:19 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/TaiTro.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+^C

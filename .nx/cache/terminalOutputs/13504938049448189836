@@ -1,0 +1,142 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:08:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/TaiTro.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/pages/ThemNhiemVu.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m
+[2m1:08:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:08:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:08:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/TaiTro.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/pages/ThemNhiemVu.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:08:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/TaiTro.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/pages/ThemNhiemVu.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:12:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/TaiTro.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/pages/ThemNhiemVu.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x3)[39m
+[2m1:12:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:12:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:14:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.25.1/static/login-start.html[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:14:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.25.1/static/login-end.html[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:14:57 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/TaiTro.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/pages/ThemNhiemVu.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:24:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx[22m
+[2m1:24:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:24:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:24:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx[22m
+[2m1:24:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:24:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:24:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/TaiTro.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/pages/ThemNhiemVu.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m
+[2m1:24:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:24:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+^C
