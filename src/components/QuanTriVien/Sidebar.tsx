@@ -10,27 +10,6 @@ const Sidebar: React.FC = () => {
 
   // Xử lý đăng xuất
   const handleLogout = () => {
-<<<<<<< HEAD
-    // Xóa token và tất cả dữ liệu session TRƯỚC KHI navigate
-    sessionStorage.removeItem('accessToken');
-    sessionStorage.clear();
-    
-    // Sau đó mới navigate đến trang đăng nhập
-    navigate('/signin');
-  };
-
-  // Danh sách navigation items
-  const navigationItems = [
-    {
-      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/5a7cb54bb69cb21dd255bf8a272f3a5c47796146?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
-      label: "Cấu hình hệ thống",
-      path: "/quantrivien",
-    },
-    {
-      icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
-      label: "Quản lý vai trò người dùng",
-      path: "/quantrivien1",
-=======
     sessionStorage.removeItem('accessToken');
     sessionStorage.clear();
     navigate('/signin');
@@ -47,16 +26,11 @@ const Sidebar: React.FC = () => {
       icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/f3e88bfa9ae998efe3390d97326af3323f959e8e?placeholderIfAbsent=true",
       label: "Quản lý vai trò",
       path: "/quantrivien1", // Đường dẫn cho quản trị viên
->>>>>>> Nhi
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/226e99902e50dfa42a022fc320de71a0ac4b3ee4?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee",
       label: "Báo cáo & thống kê",
-<<<<<<< HEAD
-      path: "/quantrivien2",
-=======
       path: "/quantrivien2", // Đường dẫn cho quản trị viên
->>>>>>> Nhi
     },
     {
       icon: "https://cdn.builder.io/api/v1/image/assets/823bf4beb2774bc99c68daa06d856dec/08232af02813e185a2f8fc37b028087b250d5b28?placeholderIfAbsent=true",
@@ -77,15 +51,8 @@ const Sidebar: React.FC = () => {
   // Xử lý click item
   const handleItemClick = (item: any, index: number) => {
     if (item.action) {
-<<<<<<< HEAD
-      // Nếu có action (như đăng xuất), gọi action
-      item.action();
-    } else if (item.path) {
-      // Nếu có path, navigate bình thường
-=======
       item.action(); // Nếu có action (như đăng xuất), gọi action
     } else if (item.path) {
->>>>>>> Nhi
       setActiveIndex(index);
       navigate(item.path);
     }
@@ -105,39 +72,16 @@ const Sidebar: React.FC = () => {
       </header>
 
       {/* Navigation */}
-<<<<<<< HEAD
-      <nav className="mt-4 px-3 flex-1">
-        <ul className="space-y-1">
-          {navigationItems.map((item, index) => {
-            // Chỉ check active cho items có path (không phải action)
-            const isActive = item.path && location.pathname === item.path;
-
-=======
       <nav className="mt-6 px-4 flex-1">
         <ul className="space-y-2">
           {navigationItems.map((item, index) => {
             const isActive = item.path && index === activeIndex;
             const isLogout = item.action && !item.path;
             
->>>>>>> Nhi
             return (
               <li key={index}>
                 <div
                   onClick={() => handleItemClick(item, index)}
-<<<<<<< HEAD
-                  className={`flex items-center gap-3 p-2 rounded-md cursor-pointer transition-all ${
-                    isActive
-                      ? "bg-blue-100 text-blue-700 font-semibold"
-                      : "text-slate-600 hover:bg-gray-100"
-                  }`}
-                >
-                  <img
-                    src={item.icon}
-                    alt={item.label}
-                    className="w-5 h-5 object-contain"
-                  />
-                  <span className="text-sm">{item.label}</span>
-=======
                   className={`group flex items-center gap-4 px-4 py-3 rounded-xl cursor-pointer transition-all duration-200 ease-in-out relative overflow-hidden ${
                     isActive
                       ? "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/25 transform scale-[1.02]"
@@ -179,7 +123,6 @@ const Sidebar: React.FC = () => {
                   {isActive && (
                     <div className="absolute right-2 w-2 h-2 bg-white rounded-full shadow-sm animate-pulse" />
                   )}
->>>>>>> Nhi
                 </div>
               </li>
             );

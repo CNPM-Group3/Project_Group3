@@ -21,10 +21,7 @@ export function LoginForm({
 }: LoginFormProps) {
   const [rememberMe, setRememberMe] = useState(true);
   const [localError, setLocalError] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
   const [showPassword, setShowPassword] = useState(false);
->>>>>>> Nhi
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -38,13 +35,10 @@ export function LoginForm({
     } catch (err: any) {
       setLocalError(err?.message || "Đăng nhập thất bại, vui lòng thử lại.");
     }
-<<<<<<< HEAD
-=======
   };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
->>>>>>> Nhi
   };
 
   return (
@@ -76,17 +70,6 @@ export function LoginForm({
           <label htmlFor="password" className="text-sm font-semibold text-gray-700">
             Mật Khẩu:
           </label>
-<<<<<<< HEAD
-          <input
-            id="password"
-            name="password"
-            type="password"
-            placeholder="Nhập Mật Khẩu"
-            className="px-4 py-3 text-base rounded-lg border border-gray-300 h-[48px]"
-            required
-            disabled={isLoading}
-          />
-=======
           <div className="relative">
             <input
               id="password"
@@ -142,7 +125,6 @@ export function LoginForm({
               )}
             </button>
           </div>
->>>>>>> Nhi
         </div>
 
         <div className="flex justify-between items-center">
