@@ -1,0 +1,127 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:54:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:54:41 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m [33m(x2)[39m
+[2m1:54:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:54:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:54:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:56:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m [33m(x2)[39m
+[2m1:56:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:56:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:56:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:57:31 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m [33m(x2)[39m
+[2m1:57:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m1:57:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:57:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m2:07:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m [33m(x2)[39m
+[2m2:07:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/context/AuthContext.tsx[22m Could not Fast Refresh ("useAuth" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m2:07:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m2:07:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/LoginPage.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/Duyet Du An/TabSelector.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx, /src/pages/ThemNhiemVu.tsx, /src/components/Duyet Tai Tro/SponsorshipTabSelector.tsx, /src/components/Duyet Tai Tro/SponsorshipList.tsx[22m
+^C

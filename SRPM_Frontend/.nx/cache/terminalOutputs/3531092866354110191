@@ -1,0 +1,933 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:29:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:31:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:31:52 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:32:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:35:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:36:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+[2m5:36:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/pages/ThanhVienNghienCuu.tsx[22m Could not Fast Refresh (new export)
+[2m5:36:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/app/app.tsx[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:45:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:48:34 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:50:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:51:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:51:27 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:51:32 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:51:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:51:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m5:55:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:00:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x10)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:01:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x11)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:01:36 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/pages/ThanhVienNghienCuu.tsx: Unexpected token (198:15)
+
+[0m [90m 196 |[31m 											[33m<[31m[33mdiv[31m className[33m=[31m[32m"text-teal-100 text-lg"[31m[33m>[31m[33mTỷ[31m lệ hoàn thành[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 197 |[31m 										[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 198 |[31m 									[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m     |[31m 									      [31m[1m^[22m[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/ThanhVienNghienCuu.tsx[39m:198:15
+[33m  196|  											<div className="text-teal-100 text-lg">Tỷ lệ hoàn thành</div>
+  197|  										</div>
+  198|  									</div>
+     |                 ^[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.unexpected (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6633:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4722:18)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12329:16)
+      at TypeScriptParserMixin.parseExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13018:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12675:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9454:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12644:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12624:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13192:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13185:10)
+      at TypeScriptParserMixin.parseBlock (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13173:10)
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:01:39 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:02:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:02:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:02:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:03:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:03:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:03:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:04:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:04:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:07:38 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x10)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:08:12 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x11)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:08:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x12)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:08:54 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x13)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:09:03 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x14)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:09:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x15)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:09:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x16)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:09:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x17)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:09:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x18)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:09:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x19)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:10:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x20)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:10:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x21)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:10:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x22)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:10:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x23)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:10:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x24)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:12:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x25)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:14:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x26)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:14:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x27)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:14:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x28)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:14:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x29)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:14:58 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: /home/nhatlinh/SRPM_Frontend/src/pages/ThanhVienNghienCuu.tsx: Expected corresponding JSX closing tag for <div>. (185:5)
+
+[0m [90m 183 |[31m 							[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 184 |[31m 						[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+[31m[1m>[22m[31m[90m 185 |[31m 					[33m<[31m[33m/[31m[33msection[31m[33m>[31m
+ [90m     |[31m 					[31m[1m^[22m[31m
+ [90m 186 |[31m 				[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 187 |[31m 			[33m<[31m[33m/[31m[33mdiv[31m[33m>[31m
+ [90m 188 |[31m 		[33m<[31m[33m/[31m[33mmain[31m[33m>[31m[0m[39m
+  Plugin: [35mvite:react-babel[39m
+  File: [36m/home/nhatlinh/SRPM_Frontend/src/pages/ThanhVienNghienCuu.tsx[39m:185:5
+[33m  183|  							</div>
+  184|  						</div>
+  185|  					</section>
+     |       ^
+  186|  				</div>
+  187|  			</div>[39m
+      at constructor (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:360:19)
+      at TypeScriptParserMixin.raise (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6613:19)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4733:16)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElementAt (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4704:32)
+      at TypeScriptParserMixin.jsxParseElement (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4755:17)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4765:19)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9717:39
+      at TypeScriptParserMixin.tryParse (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:6922:20)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9717:18)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12334:12)
+      at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10714:17)
+      at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11591:28)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11242:23)
+      at TypeScriptParserMixin.parseExprAtom (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:4770:20)
+      at TypeScriptParserMixin.parseExprSubscripts (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10992:23)
+      at TypeScriptParserMixin.parseUpdate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10977:21)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10957:23)
+      at TypeScriptParserMixin.parseMaybeUnary (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9779:18)
+      at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10810:61)
+      at TypeScriptParserMixin.parseExprOps (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10815:23)
+      at TypeScriptParserMixin.parseMaybeConditional (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10792:23)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10745:21)
+      at TypeScriptParserMixin.parseMaybeAssign (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9728:20)
+      at TypeScriptParserMixin.parseExpressionBase (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10698:23)
+      at /home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10694:39
+      at TypeScriptParserMixin.allowInAnd (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12329:16)
+      at TypeScriptParserMixin.parseExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:10694:17)
+      at TypeScriptParserMixin.parseReturnStatement (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13018:28)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12675:21)
+      at TypeScriptParserMixin.parseStatementContent (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:9454:18)
+      at TypeScriptParserMixin.parseStatementLike (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12644:17)
+      at TypeScriptParserMixin.parseStatementListItem (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12624:17)
+      at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13192:61)
+      at TypeScriptParserMixin.parseBlockBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13185:10)
+      at TypeScriptParserMixin.parseBlock (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:13173:10)
+      at TypeScriptParserMixin.parseFunctionBody (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:12018:24)
+      at TypeScriptParserMixin.parseArrowExpression (/home/nhatlinh/SRPM_Frontend/node_modules/@babel/parser/lib/index.js:11993:10)
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:15:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:21:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:26:21 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:27:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:29:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:29:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:29:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:30:07 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:30:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:32:16 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Profile/UserDetails.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:33:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:34:42 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:35:05 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:35:11 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:35:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:35:30 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:35:43 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:35:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x8)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:36:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x9)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:36:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x10)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:38:17 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x11)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:38:29 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x12)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:38:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Profile.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x13)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:40:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m6:40:22 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/ThanhVienNghienCuu.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m

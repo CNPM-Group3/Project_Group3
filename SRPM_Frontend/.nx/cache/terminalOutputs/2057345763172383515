@@ -1,0 +1,15 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m12:50:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css?direct, /src/styles.css, /src/pages/LoginPage.tsx, /src/context/AuthContext.tsx, /src/components/Auth/GoogleCallBack.tsx, /src/pages/DuAn.tsx, /src/pages/TaiTro.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Sign Up/SignUpForm.tsx, /src/components/Profile/UserDetails.tsx[22m
+^C

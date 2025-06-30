@@ -1,0 +1,178 @@
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8081[22m/[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:54:25 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sign In/LoginForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:54:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sign In/LoginForm.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:58:19 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sign Up/SignUpForm.tsx, /src/styles.css?direct, /src/styles.css[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m1:59:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Sign Up/SignUpForm.tsx, /src/styles.css?direct, /src/styles.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m2:09:26 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx, /src/styles.css?direct, /src/styles.css[22m
+import React, { useState, useEffect } from 'react';
+import usersService from './usersService'; // Import service
+
+// Interface definitions
+interface RoleActionButtonProps {
+  type: "assign" | "revoke";
+  onClick?: () => void;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  avatarURL: string;
+  backgroundURL: string;
+  socialLinks: string[];
+  roles: string[];
+  isGoogleUser: boolean;
+  createdAt: string;
+}
+
+// RoleActionButton Component
+const RoleActionButton: React.FC<RoleActionButtonProps> = ({ type, onClick }) => {
+  const buttonStyles = {
+    assign: "px-4 py-1 text-cyan-800 bg-blue-300 rounded-xl hover:bg-blue-400 transition-colors",
+    revoke: "px-7 py-1 text-red-800 bg-rose-400 rounded-xl max-md:px-5 hover:bg-rose-500 transition-colors",
+  };
+
+  const buttonText = {
+    assign: "Gán vai trò",
+    revoke: "Thu hồi",
+  };
+
+  return (
+    <button
+      onClick={onClick}
+      className={`text-sm font-medium leading-none ${buttonStyles[type]}`}
+    >
+      {buttonText[type]}
+    </button>
+  );
+};
+
+// UserRoleFilter Component với API integration
+const UserRoleFilter: React.FC<{ onRoleChange: (role: string) => void }> = ({ onRoleChange }) => {
+  const [selectedRole, setSelectedRole] = useState<string>("Tất cả");
+  const [availableRoles, setAvailableRoles] = useState<string[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+
+  // Danh sách vai trò cố định - có thể mở rộng từ API
+  const defaultRoles = [
+    "Tất cả",
+    "Sinh viên", 
+    "Giảng viên",
+    "Nhân viên",
+    "Quản trị viên",
+  ];
+
+  // Effect để lấy danh sách vai trò từ API (tùy chọn)
+  useEffect(() => {
+    const fetchAvailableRoles = async () => {
+      try {
+        setLoading(true);
+        // Lấy tất cả users để extract unique roles
+        const users = await usersService.getAllUsers();
+        
+        // Extract unique roles từ tất cả users
+        const uniqueRoles = new Set<string>();
+        users.forEach(user => {
+          user.roles.forEach(role => uniqueRoles.add(role));
+        });
+        
+        // Combine với default roles và loại bỏ duplicates
+        const allRoles = ["Tất cả", ...Array.from(uniqueRoles)];
+        setAvailableRoles(allRoles);
+        
+      } catch (error) {
+        console.error('Error fetching roles:', error);
+        // Fallback to default roles nếu API fail
+        setAvailableRoles(defaultRoles);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAvailableRoles();
+  }, []);
+
+  // Handle role selection
+  const handleRoleSelect = (role: string) => {
+    setSelectedRole(role);
+    onRoleChange(role); // Callback để parent component biết role đã thay đổi
+  };
+
+  return (
+    <div className="flex flex-wrap gap-2 px-6 py-2.5 w-full text-base rounded-lg border border-solid border-slate-200 max-md:pr-5 max-md:max-w-full">
+      <span className="grow my-auto text-slate-600">
+        Lọc theo vai trò {loading && "(Đang tải...)"}
+      </span>
+      <div className="flex flex-wrap flex-auto font-medium text-black max-md:max-w-full">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/1ab69d73d717cbc6050076b3bf3e3e159135cde2?placeholderIfAbsent=true&apiKey=348dfa5857644c228c3e6010a2ab82ee"
+          className="object-contain shrink-0 my-auto aspect-[1.12] w-[19px]"
+          alt="Filter"
+        />
+        <div className="flex flex-wrap flex-auto gap-7 justify-center items-center">
+          {(availableRoles.length > 0 ? availableRoles : defaultRoles).map((role, index) => (
+            <button
+              key={index}
+              onClick={() => handleRoleSelect(role)}
+              className={`self-stretch my-auto transition-colors px-2 py-1 rounded ${
+                selectedRole === role
+                  ? 'text-blue-600 bg-blue-100 font-semibold'
+                  : 'hover:text-blue-600 hover:bg-gray-100'
+              }`}
+              disabled={loading}
+            >
+              {role}
+            </button>
+          ))}
+        </div>
+    

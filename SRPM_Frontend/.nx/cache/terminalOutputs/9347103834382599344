@@ -1,0 +1,213 @@
+Port 8081 is in use, trying another one...
+Port 8082 is in use, trying another one...
+Port 8083 is in use, trying another one...
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m8084[22m/[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:15:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.06.6/static/login-end.html[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:15:04 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.06.6/static/login-start.html[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:31:24 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/components/QuanTriVien/QuanTriVien1/UserRoleFilter.tsx[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:32:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:34:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:35:56 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:37:15 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:43:00 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:43:05 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/context/AuthContext.tsx, /src/pages/DashboardQuanTriVien2.tsx, /src/components/QuanTriVien/QuanTriVien2/QuanTriVien2Component.tsx[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:47:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/context/AuthContext.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:52:57 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.06.6/static/login-end.html[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:52:57 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.06.6/static/login-start.html[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:24:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles.css, /src/styles.css?direct, /src/pages/DuAn.tsx, /src/pages/ChiTietDuAn.tsx, /src/components/Phiếu Yêu Cầu Tài Trợ/FundingRequestForm.tsx[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:24:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Duyet Du An/TabSelector.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:24:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/HoiDongThamDinh/StatusIndicator.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:24:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/Duyet Du An/ProjectList.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:24:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/DashboardHoiOngThamInh.tsx, /src/styles.css, /src/styles.css?direct[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:44:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.06.6/static/login-end.html[22m
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:44:33 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2m.nx/cache/cloud/2506.06.6/static/login-start.html[22m
